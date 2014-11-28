@@ -128,8 +128,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Classement.resx">
+      <DependentUpon>Form_Classement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Connection.resx">
       <DependentUpon>Form_Connection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Equipe.resx">
+      <DependentUpon>Form_Equipe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -11,7 +11,7 @@ using Oracle.DataAccess.Client;
 
 namespace TPFinal
 {
-    class ConnectionOracle
+    public class ConnectionOracle
     {
         private string motDePasse;
         private string nomDutilisateur;
