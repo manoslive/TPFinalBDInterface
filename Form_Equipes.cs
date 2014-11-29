@@ -94,46 +94,46 @@ namespace TPFinal
 
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
-            Form_Ajouter_Equipe Ajouter = new Form_Ajouter_Equipe();
-            Ajouter.conn = oracon;
-            Ajouter.Text = "Ajout";
-            Ajouter.divisionEquipe = division;
-            if (Ajouter.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                string sqlAjout = "insert into Equipes (NomEquipe,DateIntroLigue,LogoEquipe,DivisionEquipe,VilleEquipe)" + // Rajout de LogoEquipe dans la commande ...incomming crashs bitches !
-                    " VALUES(:NomEquipe,:DateIntroLigue,:LogoEquipe,:DivisionEquipe,:VilleEquipe)";
-                try
-                {
+            //Form_Ajouter_Equipe Ajouter = new Form_Ajouter_Equipe();
+            //Ajouter.conn = oracon;
+            //Ajouter.Text = "Ajout";
+            //Ajouter.divisionEquipe = division;
+            //if (Ajouter.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            //{
+            //    string sqlAjout = "insert into Equipes (NomEquipe,DateIntroLigue,LogoEquipe,DivisionEquipe,VilleEquipe)" + // Rajout de LogoEquipe dans la commande ...incomming crashs bitches !
+            //        " VALUES(:NomEquipe,:DateIntroLigue,:LogoEquipe,:DivisionEquipe,:VilleEquipe)";
+            //    try
+            //    {
 
-                    OracleCommand oraAjout = new OracleCommand(sqlAjout, oracon);
+            //        OracleCommand oraAjout = new OracleCommand(sqlAjout, oracon);
 
-                    OracleParameter OraParaNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParamDateIntroLigue = new OracleParameter(":DateIntroLigue", OracleDbType.Date);
-                    OracleParameter OraParamLogoEquipe = new OracleParameter(":LogoEquipe", OracleDbType.Blob);  //Ajout
-                    OracleParameter OraParaDivEquipe = new OracleParameter(":DivisionEquipe", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParaVilleEquipe = new OracleParameter(":VilleEquipe", OracleDbType.Varchar2, 40);
+            //        OracleParameter OraParaNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
+            //        OracleParameter OraParamDateIntroLigue = new OracleParameter(":DateIntroLigue", OracleDbType.Date);
+            //        OracleParameter OraParamLogoEquipe = new OracleParameter(":LogoEquipe", OracleDbType.Blob);  //Ajout
+            //        OracleParameter OraParaDivEquipe = new OracleParameter(":DivisionEquipe", OracleDbType.Varchar2, 40);
+            //        OracleParameter OraParaVilleEquipe = new OracleParameter(":VilleEquipe", OracleDbType.Varchar2, 40);
 
-                    OraParaNomEquipe.Value = Ajouter.nomEquipe;
-                    OraParamDateIntroLigue.Value = DateTime.Parse(Ajouter.dateIntroLigue);
-                    OraParamLogoEquipe.Value = null;
-                    OraParaDivEquipe.Value = Ajouter.divisionEquipe;
-                    OraParaVilleEquipe.Value = Ajouter.villeEquipe;
+            //        OraParaNomEquipe.Value = Ajouter.nomEquipe;
+            //        OraParamDateIntroLigue.Value = DateTime.Parse(Ajouter.dateIntroLigue);
+            //        OraParamLogoEquipe.Value = null;
+            //        OraParaDivEquipe.Value = Ajouter.divisionEquipe;
+            //        OraParaVilleEquipe.Value = Ajouter.villeEquipe;
 
-                    // petit_wily
-                    if (Ajouter.image != null)
-                    {
-                        OraParamLogoEquipe.Value = Ajouter.image;
-                    }
+            //        // petit_wily
+            //        if (Ajouter.image != null)
+            //        {
+            //            OraParamLogoEquipe.Value = Ajouter.image;
+            //        }
 
-                    oraAjout.Parameters.Add(OraParaNomEquipe);
-                    oraAjout.Parameters.Add(OraParamDateIntroLigue);
-                    oraAjout.Parameters.Add(OraParamLogoEquipe);
-                    oraAjout.Parameters.Add(OraParaDivEquipe);
-                    oraAjout.Parameters.Add(OraParaVilleEquipe);
+            //        oraAjout.Parameters.Add(OraParaNomEquipe);
+            //        oraAjout.Parameters.Add(OraParamDateIntroLigue);
+            //        oraAjout.Parameters.Add(OraParamLogoEquipe);
+            //        oraAjout.Parameters.Add(OraParaDivEquipe);
+            //        oraAjout.Parameters.Add(OraParaVilleEquipe);
 
-                    oraAjout.ExecuteNonQuery();
+            //        oraAjout.ExecuteNonQuery();
 
-                    ReloadDGV();
+            //        ReloadDGV();
                 }
 
                 catch (OracleException ex)
