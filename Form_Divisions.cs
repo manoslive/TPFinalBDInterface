@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TPFinal
 {
-    public partial class Form_Equipe : Form
+    public partial class Form_Divisions : Form
     {
-        public Form_Equipe()
+        public Form_Divisions()
         {
             InitializeComponent();
         }

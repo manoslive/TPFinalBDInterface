@@ -14,20 +14,20 @@ namespace TPFinal
     public partial class Form_Connection : Form
     {
         private OracleConnection oracon;
-        private ConnectionOracle maBelleConnection;
+        private MaConnection maBelleConnection;
 
         public Form_Connection() //recoit la connection en parametre
         {
             InitializeComponent();
         }
 
-        public Form_Connection(OracleConnection connection, ConnectionOracle maBelleConnection) //recoit la connection en parametre
+        public Form_Connection(OracleConnection connection, MaConnection maBelleConnection) //recoit la connection en parametre
         {
             InitializeComponent();
             SetOracleConnection(connection); //set la connection dans l'attribut
             SetMaConnection(maBelleConnection);
         }
-        public void SetMaConnection(ConnectionOracle laConnection)
+        public void SetMaConnection(MaConnection laConnection)
         {
             maBelleConnection = laConnection;
         }

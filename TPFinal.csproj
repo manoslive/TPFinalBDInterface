@@ -47,18 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConnectionOracle.cs" />
+    <Compile Include="MaConnection.cs" />
     <Compile Include="Form_Ajouter_Division.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Ajouter_Division.Designer.cs">
       <DependentUpon>Form_Ajouter_Division.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Ajouter_Joueurs.cs">
+    <Compile Include="Form_Ajouter_Joueur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Ajouter_Joueurs.Designer.cs">
-      <DependentUpon>Form_Ajouter_Joueurs.cs</DependentUpon>
+    <Compile Include="Form_Ajouter_Joueur.Designer.cs">
+      <DependentUpon>Form_Ajouter_Joueur.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Ajouter_Match.cs">
       <SubType>Form</SubType>
@@ -90,17 +90,17 @@
     <Compile Include="Form_Connection.Designer.cs">
       <DependentUpon>Form_Connection.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Division.cs">
+    <Compile Include="Form_Divisions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Division.Designer.cs">
-      <DependentUpon>Form_Division.cs</DependentUpon>
+    <Compile Include="Form_Divisions.Designer.cs">
+      <DependentUpon>Form_Divisions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Equipe.cs">
+    <Compile Include="Form_Equipes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Equipe.Designer.cs">
-      <DependentUpon>Form_Equipe.cs</DependentUpon>
+    <Compile Include="Form_Equipes.Designer.cs">
+      <DependentUpon>Form_Equipes.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Joueurs.cs">
       <SubType>Form</SubType>
@@ -108,11 +108,11 @@
     <Compile Include="Form_Joueurs.Designer.cs">
       <DependentUpon>Form_Joueurs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Match.cs">
+    <Compile Include="Form_Matchs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Match.Designer.cs">
-      <DependentUpon>Form_Match.cs</DependentUpon>
+    <Compile Include="Form_Matchs.Designer.cs">
+      <DependentUpon>Form_Matchs.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Statistiques.cs">
       <SubType>Form</SubType>
@@ -134,8 +134,8 @@
     <EmbeddedResource Include="Form_Connection.resx">
       <DependentUpon>Form_Connection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Equipe.resx">
-      <DependentUpon>Form_Equipe.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Equipes.resx">
+      <DependentUpon>Form_Equipes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

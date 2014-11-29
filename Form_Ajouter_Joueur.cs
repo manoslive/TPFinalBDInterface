@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TPFinal
 {
-    public partial class Form_Ajouter_Joueurs : Form
+    public partial class Form_Ajouter_Joueur : Form
     {
-        public Form_Ajouter_Joueurs()
+        public Form_Ajouter_Joueur()
         {
             InitializeComponent();
         }

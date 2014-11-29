@@ -16,7 +16,7 @@ namespace TPFinal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Connection());
+            Application.Run(new Form_Equipes());
         }
     }
 }

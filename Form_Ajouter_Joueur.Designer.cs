@@ -1,6 +1,6 @@
 ﻿namespace TPFinal
 {
-    partial class Form_Division
+    partial class Form_Ajouter_Joueur
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form_Division";
+            this.Text = "Form_Ajouter_Joueur";
         }
 
         #endregion

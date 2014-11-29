@@ -1,6 +1,6 @@
 ﻿namespace TPFinal
 {
-    partial class Form_Match
+    partial class Form_Divisions
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form_Match";
+            this.Text = "Form_Division";
         }
 
         #endregion

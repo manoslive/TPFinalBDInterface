@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TPFinal
 {
-    public partial class Form_Match : Form
+    public partial class Form_Matchs : Form
     {
-        public Form_Match()
+        public Form_Matchs()
         {
             InitializeComponent();
         }

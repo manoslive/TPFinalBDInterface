@@ -1,6 +1,6 @@
 ﻿namespace TPFinal
 {
-    partial class Form_Ajouter_Joueurs
+    partial class Form_Matchs
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form_Ajouter_Joueur";
+            this.Text = "Form_Match";
         }
 
         #endregion
