@@ -16,17 +16,13 @@ namespace TPFinal
         private OracleConnection oracon;
         private MaConnection maBelleConnection;
 
-        public Form_Connection() //recoit la connection en parametre
-        {
-            InitializeComponent();
-        }
-
         public Form_Connection(OracleConnection connection, MaConnection maBelleConnection) //recoit la connection en parametre
         {
             InitializeComponent();
             SetOracleConnection(connection); //set la connection dans l'attribut
             SetMaConnection(maBelleConnection);
         }
+
         public void SetMaConnection(MaConnection laConnection)
         {
             maBelleConnection = laConnection;
@@ -60,13 +56,15 @@ namespace TPFinal
 
         private void Form_Connection_Load(object sender, EventArgs e)
         {
-            TB_Username.Focus();
+            BTN_Connect.Select();
         }
 
         private void BTN_Connect_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
                 BTN_Connection_Click(sender, e);
         }
+
+
     }
 }
