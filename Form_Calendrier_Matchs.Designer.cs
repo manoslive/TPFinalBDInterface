@@ -1,6 +1,6 @@
 ﻿namespace TPFinal
 {
-    partial class Form_Calendrier_Match
+    partial class Form_Calendrier_Matchs
     {
         /// <summary>
         /// Required designer variable.

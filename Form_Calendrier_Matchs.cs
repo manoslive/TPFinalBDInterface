@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TPFinal
 {
-    public partial class Form_Calendrier_Match : Form
+    public partial class Form_Calendrier_Matchs : Form
     {
-        public Form_Calendrier_Match()
+        public Form_Calendrier_Matchs()
         {
             InitializeComponent();
         }

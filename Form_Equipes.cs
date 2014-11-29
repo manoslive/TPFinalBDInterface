@@ -35,17 +35,16 @@ namespace TPFinal
         private void LoadDGV()
         {
             int lastIndex = -1;
-            if (DGV_Equipes.SelectedRows.Count > 0) lastIndex = DGV_Equipes.SelectedRows[0].Index;
+            if (DGV_Equipes.SelectedRows.Count > 0) 
+                lastIndex = DGV_Equipes.SelectedRows[0].Index;
             OracleCommand oraSelect = oracon.CreateCommand();
-           OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
-            oraSelect.CommandText = "SELECT NomEquipe, DateIntro, NOMDIVISION, Ville FROM Equipe E inner join Division D on D.NomDivision = E.NOMDIVISION " +
-            "where DivisionEquipe=:Division";
-            oraSelect.Parameters.Add(new OracleParameter(":Division", division));
-
-            oraAdapter.Fill(dataSetEquipe);
+            OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
+            oraSelect.CommandText = "SELECT NomEquipe, DateIntro, d.NOMDIVISION, Ville FROM Equipe E inner join Division D on D.NomDivision = E.NOMDIVISION";
+            oraAdapter.Fill(dataSetEquipe, "tableFormEquipe");
             DGV_Equipes.DataSource = dataSetEquipe.Tables[0];
 
-            if (lastIndex > -1 && DGV_Equipes.Rows.Count > 0) DGV_Equipes.Rows[Math.Min(lastIndex, DGV_Equipes.Rows.Count - 1)].Selected = true;
+            if (lastIndex > -1 && DGV_Equipes.Rows.Count > 0) 
+                DGV_Equipes.Rows[Math.Min(lastIndex, DGV_Equipes.Rows.Count - 1)].Selected = true;
 
             updateControls();
         }

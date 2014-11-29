@@ -72,11 +72,11 @@
     <Compile Include="Form_Ajouter_Stats.Designer.cs">
       <DependentUpon>Form_Ajouter_Stats.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Calendrier_Match.cs">
+    <Compile Include="Form_Calendrier_Matchs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Calendrier_Match.Designer.cs">
-      <DependentUpon>Form_Calendrier_Match.cs</DependentUpon>
+    <Compile Include="Form_Calendrier_Matchs.Designer.cs">
+      <DependentUpon>Form_Calendrier_Matchs.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Classement.cs">
       <SubType>Form</SubType>

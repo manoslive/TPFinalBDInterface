@@ -79,6 +79,7 @@
             this.BTN_Connect.Text = "Connection";
             this.BTN_Connect.UseVisualStyleBackColor = true;
             this.BTN_Connect.Click += new System.EventHandler(this.BTN_Connection_Click);
+            this.BTN_Connect.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BTN_Connect_KeyDown);
             // 
             // Form_Connection
             // 

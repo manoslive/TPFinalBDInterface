@@ -62,5 +62,11 @@ namespace TPFinal
         {
             TB_Username.Focus();
         }
+
+        private void BTN_Connect_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+                BTN_Connection_Click(sender, e);
+        }
     }
 }
