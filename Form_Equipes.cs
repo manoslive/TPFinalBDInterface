@@ -134,12 +134,12 @@ namespace TPFinal
             //        oraAjout.ExecuteNonQuery();
 
             //        ReloadDGV();
-                }
+                //}
 
-                catch (OracleException ex)
-                {
-                    MessageBox.Show(ex.Message.ToString());
-                }
+                //catch (OracleException ex)
+                //{
+                //    MessageBox.Show(ex.Message.ToString());
+                //}
             }    
         }
     }
