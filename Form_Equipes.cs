@@ -35,11 +35,15 @@ namespace TPFinal
             this.Text = "Équipes"; // Set le nom de la form
             PB_Equipe.SizeMode = PictureBoxSizeMode.StretchImage; // Met le picturebox en mode "stretch"
         }
-   
+
         private void LoadDGV()
         {
+            DGV_Equipes.AllowUserToResizeColumns = false; // Empêche le resize des colonnes
+            DGV_Equipes.AllowUserToResizeRows = false; // Empêche le resize des rangées
+            DGV_Equipes.AllowUserToAddRows = false; // Enlève la ligne vide à la fin du DGV
+            dataSetEquipe.Clear(); // Vide le dataset afin de ne pas avoir de doublons
             int lastIndex = -1;
-            if (DGV_Equipes.SelectedRows.Count > 0) 
+            if (DGV_Equipes.SelectedRows.Count > 0)
                 lastIndex = DGV_Equipes.SelectedRows[0].Index;
             OracleCommand oraSelect = oracon.CreateCommand();
             OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
@@ -47,7 +51,7 @@ namespace TPFinal
             oraAdapter.Fill(dataSetEquipe, "tableFormEquipe");
             DGV_Equipes.DataSource = dataSetEquipe.Tables[0];
             SetDGVLargeurColonne();
-            if (lastIndex > -1 && DGV_Equipes.Rows.Count > 0) 
+            if (lastIndex > -1 && DGV_Equipes.Rows.Count > 0)
                 DGV_Equipes.Rows[Math.Min(lastIndex, DGV_Equipes.Rows.Count - 1)].Selected = true;
 
             updateControls();
@@ -93,11 +97,11 @@ namespace TPFinal
 
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
-            Form_Ajouter_Equipe Ajouter = new Form_Ajouter_Equipe(oracon,maBelleConnection);
-            Ajouter.Text = "Ajout";
+            Form_Ajouter_Equipe Ajouter = new Form_Ajouter_Equipe(oracon, maBelleConnection);
+            Ajouter.Text = "Ajout d'équipe";
             if (Ajouter.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                string sql = "insert into Equipe(NomEquipe,DateIntro,Logo,Division,Ville)" + // Rajout de LogoEquipe dans la commande ...incomming crashs bitches !
+                string sql = "insert into Equipe(NomEquipe,DateIntro,Logo,NomDivision,Ville)" + // Rajout de LogoEquipe dans la commande ...incomming crashs bitches !
                     " VALUES(:NomEquipe,:DateIntroLigue,:LogoEquipe,:DivisionEquipe,:VilleEquipe)";
                 try
                 {
@@ -136,7 +140,7 @@ namespace TPFinal
                 {
                     MessageBox.Show(ex.Message.ToString());
                 }
-            }    
+            }
         }
 
         private void BTN_Ok_Click(object sender, EventArgs e)
@@ -173,6 +177,92 @@ namespace TPFinal
                                 PB_Equipe.Image = Image.FromStream(ms);
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        private void BTN_Modifier_Click(object sender, EventArgs e)
+        {
+            Form_Ajouter_Equipe Modifier = new Form_Ajouter_Equipe(oracon, maBelleConnection);
+            Modifier.Text = "Modification équipe";
+            Modifier.nomEquipe = DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString();
+            Modifier.dateIntroLigue = DGV_Equipes.SelectedRows[0].Cells[1].Value.ToString();
+            Modifier.divisionEquipe = DGV_Equipes.SelectedRows[0].Cells[2].Value.ToString();
+            Modifier.villeEquipe = DGV_Equipes.SelectedRows[0].Cells[3].Value.ToString();
+            if (image != null)
+                Modifier.image = image;
+
+            if (Modifier.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string sqlModif = "Update Equipe set NomEquipe =:NomEquipe, DateIntro =:DateIntroLigue, Logo =:LogoEquipe, " +
+                        "NomDivision =:DivisionEquipe, Ville =:VilleEquipe where NomEquipe =:NomEquipe2";
+                try
+                {
+
+                    OracleCommand oraModif = new OracleCommand(sqlModif, oracon);
+
+                    OracleParameter OraParaNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParamDateIntroLigue = new OracleParameter(":DateIntroLigue", OracleDbType.Date);
+                    OracleParameter OraParamLogoEquipe = new OracleParameter(":LogoEquipe", OracleDbType.Blob);  //Ajout
+                    OracleParameter OraParaDivEquipe = new OracleParameter(":DivisionEquipe", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaVilleEquipe = new OracleParameter(":VilleEquipe", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaNomEquipe2 = new OracleParameter(":NomEquipe2", OracleDbType.Varchar2, 40);
+
+                    OraParaNomEquipe.Value = Modifier.nomEquipe;
+                    OraParamDateIntroLigue.Value = DateTime.Parse(Modifier.dateIntroLigue);
+                    OraParamLogoEquipe.Value = image;
+                    OraParaDivEquipe.Value = Modifier.divisionEquipe;
+                    OraParaVilleEquipe.Value = Modifier.villeEquipe;
+                    OraParaNomEquipe2.Value = DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString();
+
+                    if (Modifier.image != null)
+                    {
+                        OraParamLogoEquipe.Value = Modifier.image;
+                    }
+
+                    oraModif.Parameters.Add(OraParaNomEquipe);
+                    oraModif.Parameters.Add(OraParamDateIntroLigue);
+                    oraModif.Parameters.Add(OraParamLogoEquipe);
+                    oraModif.Parameters.Add(OraParaDivEquipe);
+                    oraModif.Parameters.Add(OraParaVilleEquipe);
+                    oraModif.Parameters.Add(OraParaNomEquipe2);
+
+                    oraModif.ExecuteNonQuery();
+
+                    LoadDGV();
+
+                }
+                catch (OracleException ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+
+            }
+        }
+
+        private void BTN_Supprimer_Click(object sender, EventArgs e)
+        {
+            DialogResult Confirmation;
+            Confirmation = MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (Confirmation == System.Windows.Forms.DialogResult.OK)
+            {
+                try
+                {
+                    OracleParameter paramNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
+                    paramNomEquipe.Value = DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString();
+                    string sqlDelete = "Delete from Equipe Where NomEquipe =:paramNomEquipe";
+                    OracleCommand oraDelete = new OracleCommand(sqlDelete, oracon);
+                    oraDelete.Parameters.Add(paramNomEquipe);
+                    oraDelete.ExecuteNonQuery();
+
+                    LoadDGV();
+                }
+                catch (OracleException ex)
+                {
+                    if (ex.Number == 2292)
+                    {
+                        MessageBox.Show("L'équipe ne doit pas contenir de joueurs.", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

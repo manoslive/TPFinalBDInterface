@@ -44,9 +44,14 @@
             // 
             this.DGV_Equipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Equipes.Location = new System.Drawing.Point(12, 12);
+            this.DGV_Equipes.MultiSelect = false;
             this.DGV_Equipes.Name = "DGV_Equipes";
+            this.DGV_Equipes.ReadOnly = true;
+            this.DGV_Equipes.RowHeadersVisible = false;
+            this.DGV_Equipes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGV_Equipes.RowTemplate.Height = 28;
-            this.DGV_Equipes.Size = new System.Drawing.Size(633, 247);
+            this.DGV_Equipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Equipes.Size = new System.Drawing.Size(586, 247);
             this.DGV_Equipes.TabIndex = 0;
             this.DGV_Equipes.SelectionChanged += new System.EventHandler(this.DGV_Equipes_SelectionChanged);
             // 
@@ -68,6 +73,7 @@
             this.BTN_Supprimer.TabIndex = 1;
             this.BTN_Supprimer.Text = "Supprimer";
             this.BTN_Supprimer.UseVisualStyleBackColor = true;
+            this.BTN_Supprimer.Click += new System.EventHandler(this.BTN_Supprimer_Click);
             // 
             // BTN_Modifier
             // 
@@ -77,6 +83,7 @@
             this.BTN_Modifier.TabIndex = 1;
             this.BTN_Modifier.Text = "Modifier";
             this.BTN_Modifier.UseVisualStyleBackColor = true;
+            this.BTN_Modifier.Click += new System.EventHandler(this.BTN_Modifier_Click);
             // 
             // BTN_Ajouter
             // 
