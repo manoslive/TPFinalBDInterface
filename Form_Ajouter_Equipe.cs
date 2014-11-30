@@ -22,6 +22,19 @@ namespace TPFinal
             oracon = connection;
             cConnection = maBelleConnection;
         }
+        private void FormEquipe_Ajouter_Load(object sender, EventArgs e)
+        {
+            OracleCommand oraSelect = oracon.CreateCommand();
+            oraSelect.CommandText = "SELECT NomDivision FROM Division";
+            using (OracleDataReader oraReader = oraSelect.ExecuteReader())
+            {
+                while (oraReader.Read())
+                {
+                    CB_Division.Items.Add(oraReader.GetString(0));
+                }
+            }
+            PB_Equipe.SizeMode = PictureBoxSizeMode.StretchImage; // Met le picturebox en mode "Stretch"
+        }
         private byte[] image_;
         public byte[] image
         {
@@ -35,12 +48,11 @@ namespace TPFinal
                 if (image_ != null) {
                     using (MemoryStream ms = new MemoryStream(image_))
                     {
-                        PB_Equipes.Image = Image.FromStream(ms);
+                        PB_Equipe.Image = Image.FromStream(ms);
                     }
                 }
             }
         }
-       
         public string nomEquipe
         {
             get
@@ -56,41 +68,35 @@ namespace TPFinal
         {
             get
             {
-                return DTP_DateCreationEquipe.Value.ToShortDateString();
+                return DTP_Creation.Value.ToShortDateString();
             }
             set
             {
-                DTP_DateCreationEquipe.Value = DateTime.Parse(value);
+                DTP_Creation.Value = DateTime.Parse(value);
             }
         }
         public string divisionEquipe
         {
             get
             {
-                return CB_DivisionEquipe.Text;
+                return CB_Division.Text;
             }
             set
             {
-                CB_DivisionEquipe.Text = value;
+                CB_Division.Text = value;
             }
         }
         public string villeEquipe
         {
             get
             {
-                return TB_VilleEquipe.Text;
+                return TB_Ville.Text;
             }
             set
             {
-                TB_VilleEquipe.Text = value;
+                TB_Ville.Text = value;
             }
         }
-
-        public FormEquipe_Ajouter()
-        {
-            InitializeComponent();
-        }
-
         private void BTN_ChargerImage_Click(object sender, EventArgs e)
         {
             // Massive Will
@@ -108,27 +114,13 @@ namespace TPFinal
             if (fImage.ShowDialog() == DialogResult.OK)
             {
                 image = File.ReadAllBytes(fImage.FileName);
-                PB_Equipes.Image = Image.FromFile(fImage.FileName);
+                PB_Equipe.Image = Image.FromFile(fImage.FileName);
             }
         }
 
-        private void FormEquipe_Ajouter_Load(object sender, EventArgs e)
+        private void BTN_Ok_Click(object sender, EventArgs e)
         {
-            // Super petit_willy
-            OracleCommand oraSelect = conn.CreateCommand();
-            oraSelect.CommandText = "SELECT NomDivision FROM Divisions";
-            using (OracleDataReader oraReader = oraSelect.ExecuteReader())
-            {
-                while (oraReader.Read())
-                {
-                    CB_DivisionEquipe.Items.Add(oraReader.GetString(0));
-                }
-            }
-        }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-        
         }
     }
 }

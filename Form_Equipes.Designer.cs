@@ -35,9 +35,9 @@
             this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.BTN_Top5 = new System.Windows.Forms.Button();
             this.BTN_Ok = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PB_Equipe = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).BeginInit();
             this.SuspendLayout();
             // 
             // DGV_Equipes
@@ -48,7 +48,7 @@
             this.DGV_Equipes.RowTemplate.Height = 28;
             this.DGV_Equipes.Size = new System.Drawing.Size(633, 247);
             this.DGV_Equipes.TabIndex = 0;
-            this.DGV_Equipes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DGV_Equipes.SelectionChanged += new System.EventHandler(this.DGV_Equipes_SelectionChanged);
             // 
             // BTN_Classement
             // 
@@ -108,22 +108,22 @@
             this.BTN_Ok.UseVisualStyleBackColor = true;
             this.BTN_Ok.Click += new System.EventHandler(this.BTN_Ok_Click);
             // 
-            // pictureBox1
+            // PB_Equipe
             // 
-            this.pictureBox1.BackgroundImage = global::TPFinal.Properties.Resources.hockey_cosom7_9;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(661, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 119);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.PB_Equipe.BackgroundImage = global::TPFinal.Properties.Resources.hockey_cosom7_9;
+            this.PB_Equipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Equipe.Location = new System.Drawing.Point(661, 12);
+            this.PB_Equipe.Name = "PB_Equipe";
+            this.PB_Equipe.Size = new System.Drawing.Size(140, 119);
+            this.PB_Equipe.TabIndex = 2;
+            this.PB_Equipe.TabStop = false;
             // 
             // Form_Equipes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 343);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PB_Equipe);
             this.Controls.Add(this.BTN_Ok);
             this.Controls.Add(this.BTN_Top5);
             this.Controls.Add(this.BTN_Ajouter);
@@ -135,7 +135,7 @@
             this.Text = "Form_Equipe";
             this.Load += new System.EventHandler(this.Form_Equipe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,6 +149,6 @@
         private System.Windows.Forms.Button BTN_Ajouter;
         private System.Windows.Forms.Button BTN_Top5;
         private System.Windows.Forms.Button BTN_Ok;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PB_Equipe;
     }
 }
