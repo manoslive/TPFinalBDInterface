@@ -55,6 +55,7 @@
             this.BTN_Fermer.TabIndex = 22;
             this.BTN_Fermer.Text = "Fermer";
             this.BTN_Fermer.UseVisualStyleBackColor = true;
+            this.BTN_Fermer.Click += new System.EventHandler(this.BTN_Fermer_Click);
             // 
             // BTN_Ajouter
             // 

@@ -19,9 +19,11 @@ namespace TPFinal
         private MaConnection cConnection = null;
         private DataSet dataSetJoueur = new DataSet();
         public Form callBackForm = null;
-        public Form_Ajouter_Joueur()
+        public Form_Ajouter_Joueur(OracleConnection connection, MaConnection maBelleConnection)
         {
             InitializeComponent();
+            oracon = connection;
+            cConnection = maBelleConnection;
         }
         public string numeroJoueurs
         {
@@ -113,6 +115,11 @@ namespace TPFinal
                 callBackForm.Location = this.Location;
                 callBackForm.Show();
             }
+        }
+
+        private void BTN_Fermer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

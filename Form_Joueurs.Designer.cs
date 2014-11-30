@@ -50,12 +50,14 @@
             this.BTN_Suivant = new System.Windows.Forms.Button();
             this.BTN_Debut = new System.Windows.Forms.Button();
             this.BTN_Fin = new System.Windows.Forms.Button();
+            this.PB_Joueur = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Joueur)).BeginInit();
             this.SuspendLayout();
             // 
             // LB_NumJoueur
             // 
             this.LB_NumJoueur.AutoSize = true;
-            this.LB_NumJoueur.Location = new System.Drawing.Point(30, 30);
+            this.LB_NumJoueur.Location = new System.Drawing.Point(34, 208);
             this.LB_NumJoueur.Name = "LB_NumJoueur";
             this.LB_NumJoueur.Size = new System.Drawing.Size(135, 20);
             this.LB_NumJoueur.TabIndex = 0;
@@ -64,7 +66,7 @@
             // LB_NomJoueur
             // 
             this.LB_NomJoueur.AutoSize = true;
-            this.LB_NomJoueur.Location = new System.Drawing.Point(30, 90);
+            this.LB_NomJoueur.Location = new System.Drawing.Point(34, 268);
             this.LB_NomJoueur.Name = "LB_NomJoueur";
             this.LB_NomJoueur.Size = new System.Drawing.Size(112, 20);
             this.LB_NomJoueur.TabIndex = 0;
@@ -73,7 +75,7 @@
             // LB_PrenomJoueur
             // 
             this.LB_PrenomJoueur.AutoSize = true;
-            this.LB_PrenomJoueur.Location = new System.Drawing.Point(30, 150);
+            this.LB_PrenomJoueur.Location = new System.Drawing.Point(34, 328);
             this.LB_PrenomJoueur.Name = "LB_PrenomJoueur";
             this.LB_PrenomJoueur.Size = new System.Drawing.Size(134, 20);
             this.LB_PrenomJoueur.TabIndex = 0;
@@ -82,7 +84,7 @@
             // LB_DateNaissance
             // 
             this.LB_DateNaissance.AutoSize = true;
-            this.LB_DateNaissance.Location = new System.Drawing.Point(30, 210);
+            this.LB_DateNaissance.Location = new System.Drawing.Point(34, 388);
             this.LB_DateNaissance.Name = "LB_DateNaissance";
             this.LB_DateNaissance.Size = new System.Drawing.Size(142, 20);
             this.LB_DateNaissance.TabIndex = 0;
@@ -91,7 +93,7 @@
             // LB_NumeroMaillot
             // 
             this.LB_NumeroMaillot.AutoSize = true;
-            this.LB_NumeroMaillot.Location = new System.Drawing.Point(30, 270);
+            this.LB_NumeroMaillot.Location = new System.Drawing.Point(34, 448);
             this.LB_NumeroMaillot.Name = "LB_NumeroMaillot";
             this.LB_NumeroMaillot.Size = new System.Drawing.Size(136, 20);
             this.LB_NumeroMaillot.TabIndex = 0;
@@ -100,7 +102,7 @@
             // LB_EquipeJoueur
             // 
             this.LB_EquipeJoueur.AutoSize = true;
-            this.LB_EquipeJoueur.Location = new System.Drawing.Point(30, 330);
+            this.LB_EquipeJoueur.Location = new System.Drawing.Point(34, 508);
             this.LB_EquipeJoueur.Name = "LB_EquipeJoueur";
             this.LB_EquipeJoueur.Size = new System.Drawing.Size(129, 20);
             this.LB_EquipeJoueur.TabIndex = 0;
@@ -109,7 +111,7 @@
             // LB_PositionJoueur
             // 
             this.LB_PositionJoueur.AutoSize = true;
-            this.LB_PositionJoueur.Location = new System.Drawing.Point(30, 390);
+            this.LB_PositionJoueur.Location = new System.Drawing.Point(34, 568);
             this.LB_PositionJoueur.Name = "LB_PositionJoueur";
             this.LB_PositionJoueur.Size = new System.Drawing.Size(135, 20);
             this.LB_PositionJoueur.TabIndex = 0;
@@ -117,7 +119,7 @@
             // 
             // TB_NumJoueur
             // 
-            this.TB_NumJoueur.Location = new System.Drawing.Point(234, 27);
+            this.TB_NumJoueur.Location = new System.Drawing.Point(238, 205);
             this.TB_NumJoueur.Name = "TB_NumJoueur";
             this.TB_NumJoueur.ReadOnly = true;
             this.TB_NumJoueur.Size = new System.Drawing.Size(227, 26);
@@ -125,7 +127,7 @@
             // 
             // TB_NomJoueur
             // 
-            this.TB_NomJoueur.Location = new System.Drawing.Point(234, 87);
+            this.TB_NomJoueur.Location = new System.Drawing.Point(238, 265);
             this.TB_NomJoueur.Name = "TB_NomJoueur";
             this.TB_NomJoueur.ReadOnly = true;
             this.TB_NomJoueur.Size = new System.Drawing.Size(227, 26);
@@ -133,7 +135,7 @@
             // 
             // TB_PrenomJoueur
             // 
-            this.TB_PrenomJoueur.Location = new System.Drawing.Point(234, 147);
+            this.TB_PrenomJoueur.Location = new System.Drawing.Point(238, 325);
             this.TB_PrenomJoueur.Name = "TB_PrenomJoueur";
             this.TB_PrenomJoueur.ReadOnly = true;
             this.TB_PrenomJoueur.Size = new System.Drawing.Size(227, 26);
@@ -142,7 +144,7 @@
             // TB_NumMaillot
             // 
             this.TB_NumMaillot.Enabled = false;
-            this.TB_NumMaillot.Location = new System.Drawing.Point(234, 267);
+            this.TB_NumMaillot.Location = new System.Drawing.Point(238, 445);
             this.TB_NumMaillot.Name = "TB_NumMaillot";
             this.TB_NumMaillot.Size = new System.Drawing.Size(227, 26);
             this.TB_NumMaillot.TabIndex = 1;
@@ -150,7 +152,7 @@
             // DTP_DateNaissance
             // 
             this.DTP_DateNaissance.Enabled = false;
-            this.DTP_DateNaissance.Location = new System.Drawing.Point(234, 205);
+            this.DTP_DateNaissance.Location = new System.Drawing.Point(238, 383);
             this.DTP_DateNaissance.Name = "DTP_DateNaissance";
             this.DTP_DateNaissance.Size = new System.Drawing.Size(227, 26);
             this.DTP_DateNaissance.TabIndex = 2;
@@ -159,7 +161,7 @@
             // 
             this.CB_EquipeJoueur.Enabled = false;
             this.CB_EquipeJoueur.FormattingEnabled = true;
-            this.CB_EquipeJoueur.Location = new System.Drawing.Point(234, 327);
+            this.CB_EquipeJoueur.Location = new System.Drawing.Point(238, 505);
             this.CB_EquipeJoueur.Name = "CB_EquipeJoueur";
             this.CB_EquipeJoueur.Size = new System.Drawing.Size(227, 28);
             this.CB_EquipeJoueur.TabIndex = 3;
@@ -172,14 +174,14 @@
             "Avant",
             "Defenseur",
             "Gardien"});
-            this.CB_PosJoueur.Location = new System.Drawing.Point(234, 387);
+            this.CB_PosJoueur.Location = new System.Drawing.Point(238, 565);
             this.CB_PosJoueur.Name = "CB_PosJoueur";
             this.CB_PosJoueur.Size = new System.Drawing.Size(227, 28);
             this.CB_PosJoueur.TabIndex = 3;
             // 
             // BTN_Ajouter
             // 
-            this.BTN_Ajouter.Location = new System.Drawing.Point(196, 483);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(200, 631);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(109, 33);
             this.BTN_Ajouter.TabIndex = 4;
@@ -189,7 +191,7 @@
             // 
             // BTN_Modifier
             // 
-            this.BTN_Modifier.Location = new System.Drawing.Point(196, 535);
+            this.BTN_Modifier.Location = new System.Drawing.Point(200, 683);
             this.BTN_Modifier.Name = "BTN_Modifier";
             this.BTN_Modifier.Size = new System.Drawing.Size(109, 33);
             this.BTN_Modifier.TabIndex = 4;
@@ -199,7 +201,7 @@
             // 
             // BTN_Effacer
             // 
-            this.BTN_Effacer.Location = new System.Drawing.Point(196, 587);
+            this.BTN_Effacer.Location = new System.Drawing.Point(200, 735);
             this.BTN_Effacer.Name = "BTN_Effacer";
             this.BTN_Effacer.Size = new System.Drawing.Size(109, 33);
             this.BTN_Effacer.TabIndex = 4;
@@ -210,16 +212,17 @@
             // BTN_Fermer
             // 
             this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Fermer.Location = new System.Drawing.Point(363, 587);
+            this.BTN_Fermer.Location = new System.Drawing.Point(386, 735);
             this.BTN_Fermer.Name = "BTN_Fermer";
             this.BTN_Fermer.Size = new System.Drawing.Size(109, 33);
             this.BTN_Fermer.TabIndex = 4;
             this.BTN_Fermer.Text = "Fermer";
             this.BTN_Fermer.UseVisualStyleBackColor = true;
+            this.BTN_Fermer.Click += new System.EventHandler(this.BTN_Fermer_Click);
             // 
             // BTN_Precedent
             // 
-            this.BTN_Precedent.Location = new System.Drawing.Point(34, 483);
+            this.BTN_Precedent.Location = new System.Drawing.Point(13, 631);
             this.BTN_Precedent.Name = "BTN_Precedent";
             this.BTN_Precedent.Size = new System.Drawing.Size(109, 33);
             this.BTN_Precedent.TabIndex = 4;
@@ -229,7 +232,7 @@
             // 
             // BTN_Suivant
             // 
-            this.BTN_Suivant.Location = new System.Drawing.Point(363, 483);
+            this.BTN_Suivant.Location = new System.Drawing.Point(386, 631);
             this.BTN_Suivant.Name = "BTN_Suivant";
             this.BTN_Suivant.Size = new System.Drawing.Size(109, 33);
             this.BTN_Suivant.TabIndex = 4;
@@ -239,7 +242,7 @@
             // 
             // BTN_Debut
             // 
-            this.BTN_Debut.Location = new System.Drawing.Point(33, 535);
+            this.BTN_Debut.Location = new System.Drawing.Point(12, 683);
             this.BTN_Debut.Name = "BTN_Debut";
             this.BTN_Debut.Size = new System.Drawing.Size(109, 33);
             this.BTN_Debut.TabIndex = 4;
@@ -249,7 +252,7 @@
             // 
             // BTN_Fin
             // 
-            this.BTN_Fin.Location = new System.Drawing.Point(363, 535);
+            this.BTN_Fin.Location = new System.Drawing.Point(386, 683);
             this.BTN_Fin.Name = "BTN_Fin";
             this.BTN_Fin.Size = new System.Drawing.Size(109, 33);
             this.BTN_Fin.TabIndex = 4;
@@ -257,11 +260,20 @@
             this.BTN_Fin.UseVisualStyleBackColor = true;
             this.BTN_Fin.Click += new System.EventHandler(this.BTN_Fin_Click);
             // 
+            // PB_Joueur
+            // 
+            this.PB_Joueur.Location = new System.Drawing.Point(38, 12);
+            this.PB_Joueur.Name = "PB_Joueur";
+            this.PB_Joueur.Size = new System.Drawing.Size(198, 158);
+            this.PB_Joueur.TabIndex = 5;
+            this.PB_Joueur.TabStop = false;
+            // 
             // Form_Joueurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 643);
+            this.ClientSize = new System.Drawing.Size(506, 780);
+            this.Controls.Add(this.PB_Joueur);
             this.Controls.Add(this.BTN_Fermer);
             this.Controls.Add(this.BTN_Effacer);
             this.Controls.Add(this.BTN_Modifier);
@@ -287,6 +299,8 @@
             this.Name = "Form_Joueurs";
             this.Text = "Form_Joueurs";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Joueurs_FormClosed);
+            this.Load += new System.EventHandler(this.Form_Joueurs_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Joueur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,5 +330,6 @@
         private System.Windows.Forms.Button BTN_Suivant;
         private System.Windows.Forms.Button BTN_Debut;
         private System.Windows.Forms.Button BTN_Fin;
+        private System.Windows.Forms.PictureBox PB_Joueur;
     }
 }
