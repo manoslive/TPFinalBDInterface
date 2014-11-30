@@ -46,6 +46,10 @@
             this.BTN_Modifier = new System.Windows.Forms.Button();
             this.BTN_Effacer = new System.Windows.Forms.Button();
             this.BTN_Fermer = new System.Windows.Forms.Button();
+            this.BTN_Precedent = new System.Windows.Forms.Button();
+            this.BTN_Suivant = new System.Windows.Forms.Button();
+            this.BTN_Debut = new System.Windows.Forms.Button();
+            this.BTN_Fin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LB_NumJoueur
@@ -115,6 +119,7 @@
             // 
             this.TB_NumJoueur.Location = new System.Drawing.Point(234, 27);
             this.TB_NumJoueur.Name = "TB_NumJoueur";
+            this.TB_NumJoueur.ReadOnly = true;
             this.TB_NumJoueur.Size = new System.Drawing.Size(227, 26);
             this.TB_NumJoueur.TabIndex = 1;
             // 
@@ -122,6 +127,7 @@
             // 
             this.TB_NomJoueur.Location = new System.Drawing.Point(234, 87);
             this.TB_NomJoueur.Name = "TB_NomJoueur";
+            this.TB_NomJoueur.ReadOnly = true;
             this.TB_NomJoueur.Size = new System.Drawing.Size(227, 26);
             this.TB_NomJoueur.TabIndex = 1;
             // 
@@ -129,11 +135,13 @@
             // 
             this.TB_PrenomJoueur.Location = new System.Drawing.Point(234, 147);
             this.TB_PrenomJoueur.Name = "TB_PrenomJoueur";
+            this.TB_PrenomJoueur.ReadOnly = true;
             this.TB_PrenomJoueur.Size = new System.Drawing.Size(227, 26);
             this.TB_PrenomJoueur.TabIndex = 1;
             // 
             // TB_NumMaillot
             // 
+            this.TB_NumMaillot.Enabled = false;
             this.TB_NumMaillot.Location = new System.Drawing.Point(234, 267);
             this.TB_NumMaillot.Name = "TB_NumMaillot";
             this.TB_NumMaillot.Size = new System.Drawing.Size(227, 26);
@@ -141,6 +149,7 @@
             // 
             // DTP_DateNaissance
             // 
+            this.DTP_DateNaissance.Enabled = false;
             this.DTP_DateNaissance.Location = new System.Drawing.Point(234, 205);
             this.DTP_DateNaissance.Name = "DTP_DateNaissance";
             this.DTP_DateNaissance.Size = new System.Drawing.Size(227, 26);
@@ -148,6 +157,7 @@
             // 
             // CB_EquipeJoueur
             // 
+            this.CB_EquipeJoueur.Enabled = false;
             this.CB_EquipeJoueur.FormattingEnabled = true;
             this.CB_EquipeJoueur.Location = new System.Drawing.Point(234, 327);
             this.CB_EquipeJoueur.Name = "CB_EquipeJoueur";
@@ -156,6 +166,7 @@
             // 
             // CB_PosJoueur
             // 
+            this.CB_PosJoueur.Enabled = false;
             this.CB_PosJoueur.FormattingEnabled = true;
             this.CB_PosJoueur.Items.AddRange(new object[] {
             "Avant",
@@ -168,48 +179,96 @@
             // 
             // BTN_Ajouter
             // 
-            this.BTN_Ajouter.Location = new System.Drawing.Point(12, 438);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(196, 483);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
-            this.BTN_Ajouter.Size = new System.Drawing.Size(109, 37);
+            this.BTN_Ajouter.Size = new System.Drawing.Size(109, 33);
             this.BTN_Ajouter.TabIndex = 4;
             this.BTN_Ajouter.Text = "Ajouter";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
+            this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
             // BTN_Modifier
             // 
-            this.BTN_Modifier.Location = new System.Drawing.Point(136, 438);
+            this.BTN_Modifier.Location = new System.Drawing.Point(196, 535);
             this.BTN_Modifier.Name = "BTN_Modifier";
-            this.BTN_Modifier.Size = new System.Drawing.Size(109, 37);
+            this.BTN_Modifier.Size = new System.Drawing.Size(109, 33);
             this.BTN_Modifier.TabIndex = 4;
             this.BTN_Modifier.Text = "Modifier";
             this.BTN_Modifier.UseVisualStyleBackColor = true;
+            this.BTN_Modifier.Click += new System.EventHandler(this.BTN_Modifier_Click);
             // 
             // BTN_Effacer
             // 
-            this.BTN_Effacer.Location = new System.Drawing.Point(261, 438);
+            this.BTN_Effacer.Location = new System.Drawing.Point(196, 587);
             this.BTN_Effacer.Name = "BTN_Effacer";
-            this.BTN_Effacer.Size = new System.Drawing.Size(109, 37);
+            this.BTN_Effacer.Size = new System.Drawing.Size(109, 33);
             this.BTN_Effacer.TabIndex = 4;
             this.BTN_Effacer.Text = "Effacer";
             this.BTN_Effacer.UseVisualStyleBackColor = true;
+            this.BTN_Effacer.Click += new System.EventHandler(this.BTN_Effacer_Click);
             // 
             // BTN_Fermer
             // 
-            this.BTN_Fermer.Location = new System.Drawing.Point(385, 438);
+            this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BTN_Fermer.Location = new System.Drawing.Point(363, 587);
             this.BTN_Fermer.Name = "BTN_Fermer";
-            this.BTN_Fermer.Size = new System.Drawing.Size(109, 37);
+            this.BTN_Fermer.Size = new System.Drawing.Size(109, 33);
             this.BTN_Fermer.TabIndex = 4;
             this.BTN_Fermer.Text = "Fermer";
             this.BTN_Fermer.UseVisualStyleBackColor = true;
+            // 
+            // BTN_Precedent
+            // 
+            this.BTN_Precedent.Location = new System.Drawing.Point(34, 483);
+            this.BTN_Precedent.Name = "BTN_Precedent";
+            this.BTN_Precedent.Size = new System.Drawing.Size(109, 33);
+            this.BTN_Precedent.TabIndex = 4;
+            this.BTN_Precedent.Text = "Précédent";
+            this.BTN_Precedent.UseVisualStyleBackColor = true;
+            this.BTN_Precedent.Click += new System.EventHandler(this.BTN_Precedent_Click);
+            // 
+            // BTN_Suivant
+            // 
+            this.BTN_Suivant.Location = new System.Drawing.Point(363, 483);
+            this.BTN_Suivant.Name = "BTN_Suivant";
+            this.BTN_Suivant.Size = new System.Drawing.Size(109, 33);
+            this.BTN_Suivant.TabIndex = 4;
+            this.BTN_Suivant.Text = "Suivant";
+            this.BTN_Suivant.UseVisualStyleBackColor = true;
+            this.BTN_Suivant.Click += new System.EventHandler(this.BTN_Suivant_Click);
+            // 
+            // BTN_Debut
+            // 
+            this.BTN_Debut.Location = new System.Drawing.Point(33, 535);
+            this.BTN_Debut.Name = "BTN_Debut";
+            this.BTN_Debut.Size = new System.Drawing.Size(109, 33);
+            this.BTN_Debut.TabIndex = 4;
+            this.BTN_Debut.Text = "Début";
+            this.BTN_Debut.UseVisualStyleBackColor = true;
+            this.BTN_Debut.Click += new System.EventHandler(this.BTN_Debut_Click);
+            // 
+            // BTN_Fin
+            // 
+            this.BTN_Fin.Location = new System.Drawing.Point(363, 535);
+            this.BTN_Fin.Name = "BTN_Fin";
+            this.BTN_Fin.Size = new System.Drawing.Size(109, 33);
+            this.BTN_Fin.TabIndex = 4;
+            this.BTN_Fin.Text = "Fin";
+            this.BTN_Fin.UseVisualStyleBackColor = true;
+            this.BTN_Fin.Click += new System.EventHandler(this.BTN_Fin_Click);
             // 
             // Form_Joueurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 489);
+            this.ClientSize = new System.Drawing.Size(506, 643);
             this.Controls.Add(this.BTN_Fermer);
             this.Controls.Add(this.BTN_Effacer);
             this.Controls.Add(this.BTN_Modifier);
+            this.Controls.Add(this.BTN_Suivant);
+            this.Controls.Add(this.BTN_Fin);
+            this.Controls.Add(this.BTN_Debut);
+            this.Controls.Add(this.BTN_Precedent);
             this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.CB_PosJoueur);
             this.Controls.Add(this.CB_EquipeJoueur);
@@ -227,6 +286,7 @@
             this.Controls.Add(this.LB_NumJoueur);
             this.Name = "Form_Joueurs";
             this.Text = "Form_Joueurs";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Joueurs_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +312,9 @@
         private System.Windows.Forms.Button BTN_Modifier;
         private System.Windows.Forms.Button BTN_Effacer;
         private System.Windows.Forms.Button BTN_Fermer;
+        private System.Windows.Forms.Button BTN_Precedent;
+        private System.Windows.Forms.Button BTN_Suivant;
+        private System.Windows.Forms.Button BTN_Debut;
+        private System.Windows.Forms.Button BTN_Fin;
     }
 }

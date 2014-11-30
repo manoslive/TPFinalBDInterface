@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.BTN_Fermer = new System.Windows.Forms.Button();
-            this.BTN_Effacer = new System.Windows.Forms.Button();
-            this.BTN_Modifier = new System.Windows.Forms.Button();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.CB_PosJoueur = new System.Windows.Forms.ComboBox();
             this.CB_EquipeJoueur = new System.Windows.Forms.ComboBox();
@@ -50,34 +48,17 @@
             // 
             // BTN_Fermer
             // 
-            this.BTN_Fermer.Location = new System.Drawing.Point(384, 433);
+            this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BTN_Fermer.Location = new System.Drawing.Point(386, 437);
             this.BTN_Fermer.Name = "BTN_Fermer";
             this.BTN_Fermer.Size = new System.Drawing.Size(109, 37);
             this.BTN_Fermer.TabIndex = 22;
             this.BTN_Fermer.Text = "Fermer";
             this.BTN_Fermer.UseVisualStyleBackColor = true;
             // 
-            // BTN_Effacer
-            // 
-            this.BTN_Effacer.Location = new System.Drawing.Point(260, 433);
-            this.BTN_Effacer.Name = "BTN_Effacer";
-            this.BTN_Effacer.Size = new System.Drawing.Size(109, 37);
-            this.BTN_Effacer.TabIndex = 21;
-            this.BTN_Effacer.Text = "Effacer";
-            this.BTN_Effacer.UseVisualStyleBackColor = true;
-            // 
-            // BTN_Modifier
-            // 
-            this.BTN_Modifier.Location = new System.Drawing.Point(135, 433);
-            this.BTN_Modifier.Name = "BTN_Modifier";
-            this.BTN_Modifier.Size = new System.Drawing.Size(109, 37);
-            this.BTN_Modifier.TabIndex = 20;
-            this.BTN_Modifier.Text = "Modifier";
-            this.BTN_Modifier.UseVisualStyleBackColor = true;
-            // 
             // BTN_Ajouter
             // 
-            this.BTN_Ajouter.Location = new System.Drawing.Point(11, 433);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(254, 437);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(109, 37);
             this.BTN_Ajouter.TabIndex = 19;
@@ -208,8 +189,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 486);
             this.Controls.Add(this.BTN_Fermer);
-            this.Controls.Add(this.BTN_Effacer);
-            this.Controls.Add(this.BTN_Modifier);
             this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.CB_PosJoueur);
             this.Controls.Add(this.CB_EquipeJoueur);
@@ -227,6 +206,7 @@
             this.Controls.Add(this.LB_NumJoueur);
             this.Name = "Form_Ajouter_Joueur";
             this.Text = "Form_Ajouter_Joueur";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ajouter_Joueur_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,9 +215,7 @@
         #endregion
 
         private System.Windows.Forms.Button BTN_Fermer;
-        private System.Windows.Forms.Button BTN_Effacer;
-        private System.Windows.Forms.Button BTN_Modifier;
-        private System.Windows.Forms.Button BTN_Ajouter;
+        public System.Windows.Forms.Button BTN_Ajouter;
         private System.Windows.Forms.ComboBox CB_PosJoueur;
         private System.Windows.Forms.ComboBox CB_EquipeJoueur;
         private System.Windows.Forms.DateTimePicker DTP_DateNaissance;

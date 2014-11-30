@@ -19,6 +19,7 @@ namespace TPFinal
         private DataSet dataSetEquipe = new DataSet();
         MaConnection maBelleConnection = new MaConnection();
         private byte[] image = null;
+        public Form callBackForm = null;
         public Form_Equipes()
         {
             InitializeComponent();
@@ -268,14 +269,23 @@ namespace TPFinal
 
         private void CallFormJoueur()
         {
-            Form_Joueurs joueur = new Form_Joueurs();
+            Form_Joueurs joueur = new Form_Joueurs(oracon,maBelleConnection, DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString());
             joueur.Text = "Détail du joueur";
+            this.Hide();
+            joueur.callBackForm = this;
             joueur.ShowDialog();
+
 
         }
         private void DGV_Equipes_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             CallFormJoueur();
+        }
+
+        private void Form_Equipes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (callBackForm != null)
+                callBackForm.Show();
         }
     }
 }

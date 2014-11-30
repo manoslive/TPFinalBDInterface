@@ -140,6 +140,7 @@
             this.Controls.Add(this.DGV_Equipes);
             this.Name = "Form_Equipes";
             this.Text = "Form_Equipe";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Equipes_FormClosing);
             this.Load += new System.EventHandler(this.Form_Equipe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).EndInit();
