@@ -106,6 +106,7 @@
             this.BTN_Ok.TabIndex = 1;
             this.BTN_Ok.Text = "Ok";
             this.BTN_Ok.UseVisualStyleBackColor = true;
+            this.BTN_Ok.Click += new System.EventHandler(this.BTN_Ok_Click);
             // 
             // pictureBox1
             // 
