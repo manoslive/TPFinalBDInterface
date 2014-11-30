@@ -59,15 +59,5 @@ namespace TPFinal.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hockey_cosom7_9 {
-            get {
-                object obj = ResourceManager.GetObject("hockey-cosom7-9", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

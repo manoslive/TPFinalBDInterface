@@ -137,6 +137,9 @@
     <EmbeddedResource Include="Form_Ajouter_Equipe.resx">
       <DependentUpon>Form_Ajouter_Equipe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Ajouter_Joueur.resx">
+      <DependentUpon>Form_Ajouter_Joueur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Classement.resx">
       <DependentUpon>Form_Classement.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Equipes.resx">
       <DependentUpon>Form_Equipes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Joueurs.resx">
+      <DependentUpon>Form_Joueurs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
