@@ -243,9 +243,7 @@ namespace TPFinal
 
         private void BTN_Supprimer_Click(object sender, EventArgs e)
         {
-            DialogResult Confirmation;
-            Confirmation = MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (Confirmation == System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK);
             {
                 try
                 {
@@ -262,10 +260,22 @@ namespace TPFinal
                 {
                     if (ex.Number == 2292)
                     {
-                        MessageBox.Show("L'équipe ne doit pas contenir de joueurs.", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("L'équipe contient des joueurs et ne peut pas être effacée", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
+        }
+
+        private void CallFormJoueur()
+        {
+            Form_Joueurs joueur = new Form_Joueurs();
+            joueur.Text = "Détail du joueur";
+            joueur.ShowDialog();
+
+        }
+        private void DGV_Equipes_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            CallFormJoueur();
         }
     }
 }

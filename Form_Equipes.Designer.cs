@@ -53,6 +53,7 @@
             this.DGV_Equipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Equipes.Size = new System.Drawing.Size(586, 247);
             this.DGV_Equipes.TabIndex = 0;
+            this.DGV_Equipes.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Equipes_CellMouseDoubleClick);
             this.DGV_Equipes.SelectionChanged += new System.EventHandler(this.DGV_Equipes_SelectionChanged);
             // 
             // BTN_Classement
@@ -117,7 +118,6 @@
             // 
             // PB_Equipe
             // 
-            this.PB_Equipe.BackgroundImage = global::TPFinal.Properties.Resources.hockey_cosom7_9;
             this.PB_Equipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PB_Equipe.Location = new System.Drawing.Point(661, 12);
             this.PB_Equipe.Name = "PB_Equipe";
