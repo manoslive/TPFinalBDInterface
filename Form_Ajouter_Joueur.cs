@@ -25,17 +25,6 @@ namespace TPFinal
             oracon = connection;
             cConnection = maBelleConnection;
         }
-        public string numeroJoueurs
-        {
-            get
-            {
-                return TB_NumJoueur.Text;
-            }
-            set
-            {
-                TB_NumJoueur.Text = value;
-            }
-        }
 
         public string nomJoueurs
         {
@@ -110,16 +99,35 @@ namespace TPFinal
 
         private void Form_Ajouter_Joueur_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(callBackForm != null)
-            {
-                callBackForm.Location = this.Location;
-                callBackForm.Show();
-            }
+
         }
 
         private void BTN_Fermer_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form_Ajouter_Joueur_Load(object sender, EventArgs e)
+        {
+            OracleCommand oraSelect = oracon.CreateCommand();
+            oraSelect.CommandText = "SELECT NomEquipe FROM Equipe";
+            using (OracleDataReader oraReader = oraSelect.ExecuteReader())
+            {
+                while (oraReader.Read())
+                {
+                    CB_EquipeJoueur.Items.Add(oraReader.GetString(0));
+                }
+                oraReader.Close();
+            }
+        }
+
+        private void Form_Ajouter_Joueur_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (callBackForm != null)
+            {
+                callBackForm.Location = this.Location;
+                callBackForm.Show();
+            }
         }
     }
 }

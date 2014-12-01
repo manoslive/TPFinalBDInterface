@@ -99,22 +99,21 @@ namespace TPFinal
         }
         private void BTN_ChargerImage_Click(object sender, EventArgs e)
         {
-            // Massive Will
             image = null;
 
-            OpenFileDialog fImage = new OpenFileDialog();
-            fImage.Title = "selectionner une image";
-            fImage.CheckFileExists = true;
-            fImage.InitialDirectory = @":C\";
+            OpenFileDialog imageEquipe = new OpenFileDialog();
+            imageEquipe.Title = "selectionner une image";
+            imageEquipe.CheckFileExists = true;
+            imageEquipe.InitialDirectory = @":C\";
             //fImage.InitialDirectory = Application.StartupPath;
-            fImage.Filter = "Fichiers images (*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*";
-            fImage.FilterIndex = 1;
-            fImage.RestoreDirectory = true;
+            imageEquipe.Filter = "Fichiers images (*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*";
+            imageEquipe.FilterIndex = 1;
+            imageEquipe.RestoreDirectory = true;
 
-            if (fImage.ShowDialog() == DialogResult.OK)
+            if (imageEquipe.ShowDialog() == DialogResult.OK)
             {
-                image = File.ReadAllBytes(fImage.FileName);
-                PB_Equipe.Image = Image.FromFile(fImage.FileName);
+                image = File.ReadAllBytes(imageEquipe.FileName);
+                PB_Equipe.Image = Image.FromFile(imageEquipe.FileName);
             }
         }
 

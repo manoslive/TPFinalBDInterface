@@ -119,6 +119,7 @@
             // PB_Equipe
             // 
             this.PB_Equipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Equipe.ErrorImage = global::TPFinal.Properties.Resources.no_picture;
             this.PB_Equipe.Location = new System.Drawing.Point(661, 12);
             this.PB_Equipe.Name = "PB_Equipe";
             this.PB_Equipe.Size = new System.Drawing.Size(140, 119);

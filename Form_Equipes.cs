@@ -35,6 +35,7 @@ namespace TPFinal
             LoadDGV();
             this.Text = "Équipes"; // Set le nom de la form
             PB_Equipe.SizeMode = PictureBoxSizeMode.StretchImage; // Met le picturebox en mode "stretch"
+        
         }
 
         private void LoadDGV()

@@ -39,27 +39,12 @@ namespace TPFinal
             aJ.Text = "Ajout de joueur";
             aJ.Location = this.Location;
             this.Hide(); // Cache la fenêtre actuelle
-            aJ.ShowDialog();
+            //aJ.ShowDialog();
 
             if (!currval)
                 commandeSQL = "SELECT MAX(numjoueur) from joueur ";
             else
                 commandeSQL = "SELECT Seq_num_joueur.currval from dual";
-
-            OracleCommand oraCommande = new OracleCommand(commandeSQL, oracon);
-            oraCommande.CommandType = CommandType.Text;
-            try
-            {
-                OracleDataReader oraReader = oraCommande.ExecuteReader();
-                while (oraReader.Read())
-                    aJ.numeroJoueurs = (oraReader.GetInt32(0) + 1).ToString();
-                oraReader.Close();
-
-            }
-            catch (OracleException ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
 
             if (aJ.ShowDialog() == DialogResult.OK)
             {
@@ -119,12 +104,14 @@ namespace TPFinal
 
                 oraAdapter.Fill(dataSetJoueur, "Joueur");
             }
+            PB_Joueur.ImageLocation = dataSetJoueur.Tables["Joueur"].Rows[0].ToString();
 
             UpdateLinkTB();
         }
         private void UpdateLinkTB()
         {
             UnbindTB();
+            TB_Url.DataBindings.Add("Text", dataSetJoueur, "Joueur.Photo");
             TB_NumJoueur.DataBindings.Add("Text", dataSetJoueur, "Joueur.NumeroJoueur");
             TB_NomJoueur.DataBindings.Add("Text", dataSetJoueur, "Joueur.NomJoueur");
             TB_PrenomJoueur.DataBindings.Add("Text", dataSetJoueur, "Joueur.PrenomJoueur");
@@ -135,6 +122,7 @@ namespace TPFinal
         }
         private void UnbindTB()
         {
+            TB_Url.DataBindings.Clear();
             TB_NumJoueur.DataBindings.Clear();
             TB_NumJoueur.Clear();
             TB_NomJoueur.DataBindings.Clear();
@@ -222,7 +210,6 @@ namespace TPFinal
             Form_Ajouter_Joueur aj = new Form_Ajouter_Joueur(oracon, cConnection);
             aj.callBackForm = this;
             aj.Text = "Modification du joueur";
-            aj.numeroJoueurs = TB_NumJoueur.Text;
             aj.nomJoueurs = TB_NomJoueur.Text;
             aj.prenomJoueurs = TB_PrenomJoueur.Text;
             aj.DDN = DTP_DateNaissance.Value.ToString();
@@ -248,7 +235,6 @@ namespace TPFinal
                     OracleParameter OraParanumeromaillot = new OracleParameter(":numeromaillot", OracleDbType.Int32);
                     OracleParameter OraParaequipejoueurs = new OracleParameter(":equipejoueur", OracleDbType.Varchar2, 40);
                     OracleParameter OraParpositionjoueur = new OracleParameter(":positionjoueur", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParnumerojoueurs = new OracleParameter(":numerojoueurs", OracleDbType.Int32);
 
                     OraParaNomjoueurs.Value = aj.nomJoueurs;
                     OraParamPrenomjoueurs.Value = aj.prenomJoueurs;
@@ -256,7 +242,6 @@ namespace TPFinal
                     OraParanumeromaillot.Value = aj.maillot;
                     OraParaequipejoueurs.Value = aj.Equipe;
                     OraParpositionjoueur.Value = aj.Position;
-                    OraParnumerojoueurs.Value = aj.numeroJoueurs;
 
                     oraAjout.Parameters.Add(OraParaNomjoueurs);
                     oraAjout.Parameters.Add(OraParamPrenomjoueurs);
@@ -264,7 +249,6 @@ namespace TPFinal
                     oraAjout.Parameters.Add(OraParanumeromaillot);
                     oraAjout.Parameters.Add(OraParaequipejoueurs);
                     oraAjout.Parameters.Add(OraParpositionjoueur);
-                    oraAjout.Parameters.Add(OraParnumerojoueurs);
 
                     oraAjout.ExecuteNonQuery();
 
@@ -290,6 +274,7 @@ namespace TPFinal
                 }
             }
 
+            PB_Joueur.SizeMode = PictureBoxSizeMode.StretchImage; // Met le picturebox en mode "stretch"
             MiseAJourFormulaire();
         }
 
