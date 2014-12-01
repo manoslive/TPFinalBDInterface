@@ -118,7 +118,8 @@ namespace TPFinal
 
         private void BTN_Classement_Click(object sender, EventArgs e)
         {
-            Form_Classement classement = new Form_Classement();
+            Form_Classement classement = new Form_Classement(oracon, maBelleConnection);
+            classement.Text = "Classement des équipes";
             classement.ShowDialog();
         }
 
