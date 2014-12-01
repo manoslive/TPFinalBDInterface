@@ -49,7 +49,7 @@ namespace TPFinal
             {
                 string sql = "insert into joueur" +
                              "(nomjoueur, prenomjoueur, datenaissance, numeromaillot, photo, positionjoueur, nomequipe)" +
-                             "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:Photo,:positionjoueur,:equipejoueur)";
+                             "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:Photo,:positionjoueur, 'Tunak')"; //:equipejoueur
                 currval = true;
                 try
                 {
@@ -99,7 +99,7 @@ namespace TPFinal
         private void RemplirFormulaire()
         {
             OracleCommand oraSelect = oracon.CreateCommand();
-            oraSelect.CommandText = "SELECT * FROM Joueur WHERE nomequipe=:NomEquipe";
+            oraSelect.CommandText = "SELECT * FROM Joueur WHERE nomequipe= :NomEquipe";
             oraSelect.Parameters.Add(new OracleParameter(":NomEquipe", equipe));
             using (OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect))
             {
@@ -107,7 +107,6 @@ namespace TPFinal
                 {
                     dataSetJoueur.Tables["Joueur"].Clear();
                 }
-
                 oraAdapter.Fill(dataSetJoueur, "Joueur");
             }
             if (TB_Url.Text != "")
@@ -198,7 +197,7 @@ namespace TPFinal
 
         private void BTN_Effacer_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) ;
+            if (MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 try
                 {
@@ -208,6 +207,7 @@ namespace TPFinal
                     OracleCommand oraDelete = new OracleCommand(sql, oracon);
                     oraDelete.Parameters.Add(paramNomEquipe);
                     oraDelete.ExecuteNonQuery();
+                    RemplirFormulaire();
                 }
                 catch (OracleException ex)
                 {
@@ -265,9 +265,9 @@ namespace TPFinal
                     oraAjout.Parameters.Add(OraParamPrenomjoueurs);
                     oraAjout.Parameters.Add(OraParamdatenaissance);
                     oraAjout.Parameters.Add(OraParanumeromaillot);
+                    oraAjout.Parameters.Add(OraParaPhoto);
                     oraAjout.Parameters.Add(OraParaequipejoueurs);
                     oraAjout.Parameters.Add(OraParpositionjoueur);
-                    oraAjout.Parameters.Add(OraParaPhoto);
 
                     oraAjout.ExecuteNonQuery();
 
