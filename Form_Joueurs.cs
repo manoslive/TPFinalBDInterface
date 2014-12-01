@@ -108,6 +108,7 @@ namespace TPFinal
                     dataSetJoueur.Tables["Joueur"].Clear();
                 }
                 oraAdapter.Fill(dataSetJoueur, "Joueur");
+                oraAdapter.Dispose();
             }
             if (TB_Url.Text != "")
                 PB_Joueur.ImageLocation = TB_Url.Text;
