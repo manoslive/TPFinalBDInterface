@@ -90,6 +90,7 @@
             this.Controls.Add(this.DGV_Classement);
             this.Name = "Form_Classement";
             this.Text = "Form_Classement";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Classement_FormClosing);
             this.Load += new System.EventHandler(this.Form_Classement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Classement)).EndInit();
             this.ResumeLayout(false);

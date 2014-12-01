@@ -42,7 +42,7 @@ namespace TPFinal
                 divisions = "Est' or e.nomdivision='Ouest'";
             else
                 divisions += "'";
-            oraSelect.CommandText = "select * from statsjoueur";
+            oraSelect.CommandText = "select * from joueur";
             oraAdapter.Fill(dataSetClassement, "tableFormEquipe");
             DGV_Classement.DataSource = dataSetClassement.Tables[0];
             // SetDGVLargeurColonne();
@@ -72,6 +72,11 @@ namespace TPFinal
         }
 
         private void CB_Division_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDGV();
+        }
+
+        private void Form_Classement_FormClosing(object sender, FormClosingEventArgs e)
         {
             LoadDGV();
         }
