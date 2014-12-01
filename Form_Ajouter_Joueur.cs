@@ -140,6 +140,7 @@ namespace TPFinal
 
         private void BTN_Ajouter_Click_1(object sender, EventArgs e)
         {
+            /*
             string sql = "insert into joueur" +
                              "(nomjoueur, prenomjoueur, datenaissance, numeromaillot, photo, nomequipe, positionjoueur)" +
                              "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:Photo,:equipejoueur,:positionjoueur)";
@@ -159,9 +160,8 @@ namespace TPFinal
                 OraParamPrenomjoueurs.Value = TB_PrenomJoueur.Text;
                 OraParamdatenaissance.Value = DTP_DateNaissance.Value;
                 OraParanumeromaillot.Value = TB_NumMaillot.Text;
-                MessageBox.Show(CB_EquipeJoueur.SelectedValue.ToString());
-                OraParaequipejoueurs.Value = CB_EquipeJoueur.SelectedValue.ToString();
-                OraParpositionjoueur.Value = CB_PosJoueur.SelectedValue.ToString();
+                OraParaequipejoueurs.Value = CB_EquipeJoueur.Text;
+                OraParpositionjoueur.Value = CB_PosJoueur.Text;
                 OraParaPhoto.Value = TB_Url.Text;
 
                 oraAjout.Parameters.Add(OraParaNomjoueurs);
@@ -178,6 +178,7 @@ namespace TPFinal
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+             */
         }
     }
 }

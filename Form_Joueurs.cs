@@ -49,8 +49,8 @@ namespace TPFinal
             if (aJ.ShowDialog() == DialogResult.OK)
             {
                 string sql = "insert into joueur" +
-                             "(nomjoueur, prenomjoueur, datanaissance, numeromaillot, photo, nomequipe, positionjoueur)" +
-                             "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,numeromaillot,:Photo,:equipejoueur,:positionjoueur)";
+                             "(nomjoueur, prenomjoueur, datanaissance, numeromaillot, photo, positionjoueur, nomequipe)" +
+                             "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,numeromaillot,:Photo,:positionjoueur,:equipejoueur)";
                 currval = true;
                 try
                 {
@@ -70,6 +70,7 @@ namespace TPFinal
                     OraParanumeromaillot.Value = aJ.maillot;
                     OraParaequipejoueurs.Value = aJ.Equipe;
                     OraParpositionjoueur.Value = aJ.Position;
+                    OraParaPhoto.Value = aJ.Photo;
 
                     oraAjout.Parameters.Add(OraParaNomjoueurs);
                     oraAjout.Parameters.Add(OraParamPrenomjoueurs);
@@ -85,6 +86,8 @@ namespace TPFinal
                 {
                     if (ex.Number == 2292)
                         MessageBox.Show("Le joueur ne doit pas avoir de statistique dans les matchs", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if(ex.Number == 00984)
+                        MessageBox.Show("Erreur dans la syntaxe de la commande SQL", "Erreur 00984", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else
                         MessageBox.Show(ex.Message.ToString());
                 }
@@ -166,21 +169,29 @@ namespace TPFinal
         private void BTN_Debut_Click(object sender, EventArgs e)
         {
             this.BindingContext[dataSetJoueur, "Joueur"].Position = 0;
+            if (TB_Url.Text != "")
+                PB_Joueur.ImageLocation = TB_Url.Text;
         }
 
         private void BTN_Fin_Click(object sender, EventArgs e)
         {
             this.BindingContext[dataSetJoueur, "Joueur"].Position = this.BindingContext[dataSetJoueur, "Joueur"].Count - 1;
+            if (TB_Url.Text != "")
+                PB_Joueur.ImageLocation = TB_Url.Text;
         }
 
         private void BTN_Precedent_Click(object sender, EventArgs e)
         {
             this.BindingContext[dataSetJoueur, "Joueur"].Position--;
+            if (TB_Url.Text != "")
+                PB_Joueur.ImageLocation = TB_Url.Text;
         }
 
         private void BTN_Suivant_Click(object sender, EventArgs e)
         {
             this.BindingContext[dataSetJoueur, "Joueur"].Position++;
+            if (TB_Url.Text != "")
+                PB_Joueur.ImageLocation = TB_Url.Text;
         }
 
         private void BTN_Effacer_Click(object sender, EventArgs e)

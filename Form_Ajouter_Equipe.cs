@@ -117,9 +117,5 @@ namespace TPFinal
             }
         }
 
-        private void BTN_Ok_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -34,7 +34,7 @@
             this.BTN_Modifier = new System.Windows.Forms.Button();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.BTN_Top5 = new System.Windows.Forms.Button();
-            this.BTN_Ok = new System.Windows.Forms.Button();
+            this.BTN_Fermer = new System.Windows.Forms.Button();
             this.PB_Equipe = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).BeginInit();
@@ -106,15 +106,15 @@
             this.BTN_Top5.UseVisualStyleBackColor = true;
             this.BTN_Top5.Click += new System.EventHandler(this.BTN_Top5_Click);
             // 
-            // BTN_Ok
+            // BTN_Fermer
             // 
-            this.BTN_Ok.Location = new System.Drawing.Point(670, 288);
-            this.BTN_Ok.Name = "BTN_Ok";
-            this.BTN_Ok.Size = new System.Drawing.Size(119, 40);
-            this.BTN_Ok.TabIndex = 1;
-            this.BTN_Ok.Text = "Ok";
-            this.BTN_Ok.UseVisualStyleBackColor = true;
-            this.BTN_Ok.Click += new System.EventHandler(this.BTN_Ok_Click);
+            this.BTN_Fermer.Location = new System.Drawing.Point(670, 288);
+            this.BTN_Fermer.Name = "BTN_Fermer";
+            this.BTN_Fermer.Size = new System.Drawing.Size(119, 40);
+            this.BTN_Fermer.TabIndex = 1;
+            this.BTN_Fermer.Text = "Fermer";
+            this.BTN_Fermer.UseVisualStyleBackColor = true;
+            this.BTN_Fermer.Click += new System.EventHandler(this.BTN_Ok_Click);
             // 
             // PB_Equipe
             // 
@@ -132,7 +132,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 343);
             this.Controls.Add(this.PB_Equipe);
-            this.Controls.Add(this.BTN_Ok);
+            this.Controls.Add(this.BTN_Fermer);
             this.Controls.Add(this.BTN_Top5);
             this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.BTN_Modifier);
@@ -158,7 +158,7 @@
         private System.Windows.Forms.Button BTN_Modifier;
         private System.Windows.Forms.Button BTN_Ajouter;
         private System.Windows.Forms.Button BTN_Top5;
-        private System.Windows.Forms.Button BTN_Ok;
+        private System.Windows.Forms.Button BTN_Fermer;
         private System.Windows.Forms.PictureBox PB_Equipe;
     }
 }
