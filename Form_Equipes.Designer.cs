@@ -36,6 +36,7 @@
             this.BTN_Top5 = new System.Windows.Forms.Button();
             this.BTN_Fermer = new System.Windows.Forms.Button();
             this.PB_Equipe = new System.Windows.Forms.PictureBox();
+            this.BTN_Matchs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,7 @@
             // 
             // BTN_Classement
             // 
-            this.BTN_Classement.Location = new System.Drawing.Point(121, 288);
+            this.BTN_Classement.Location = new System.Drawing.Point(230, 288);
             this.BTN_Classement.Name = "BTN_Classement";
             this.BTN_Classement.Size = new System.Drawing.Size(119, 40);
             this.BTN_Classement.TabIndex = 1;
@@ -98,7 +99,7 @@
             // 
             // BTN_Top5
             // 
-            this.BTN_Top5.Location = new System.Drawing.Point(421, 288);
+            this.BTN_Top5.Location = new System.Drawing.Point(479, 288);
             this.BTN_Top5.Name = "BTN_Top5";
             this.BTN_Top5.Size = new System.Drawing.Size(119, 40);
             this.BTN_Top5.TabIndex = 1;
@@ -126,12 +127,23 @@
             this.PB_Equipe.TabIndex = 2;
             this.PB_Equipe.TabStop = false;
             // 
+            // BTN_Matchs
+            // 
+            this.BTN_Matchs.Location = new System.Drawing.Point(12, 288);
+            this.BTN_Matchs.Name = "BTN_Matchs";
+            this.BTN_Matchs.Size = new System.Drawing.Size(119, 40);
+            this.BTN_Matchs.TabIndex = 1;
+            this.BTN_Matchs.Text = "Matchs";
+            this.BTN_Matchs.UseVisualStyleBackColor = true;
+            this.BTN_Matchs.Click += new System.EventHandler(this.BTN_Matchs_Click);
+            // 
             // Form_Equipes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 343);
             this.Controls.Add(this.PB_Equipe);
+            this.Controls.Add(this.BTN_Matchs);
             this.Controls.Add(this.BTN_Fermer);
             this.Controls.Add(this.BTN_Top5);
             this.Controls.Add(this.BTN_Ajouter);
@@ -160,5 +172,6 @@
         private System.Windows.Forms.Button BTN_Top5;
         private System.Windows.Forms.Button BTN_Fermer;
         private System.Windows.Forms.PictureBox PB_Equipe;
+        private System.Windows.Forms.Button BTN_Matchs;
     }
 }
