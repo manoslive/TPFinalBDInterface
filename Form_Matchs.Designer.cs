@@ -32,19 +32,19 @@
             this.LB_EquipeAway = new System.Windows.Forms.Label();
             this.TB_EquipeHome = new System.Windows.Forms.TextBox();
             this.TB_EquipeAway = new System.Windows.Forms.TextBox();
-            this.DGV_Matchs = new System.Windows.Forms.DataGridView();
             this.PB_EquipeHome = new System.Windows.Forms.PictureBox();
             this.PB_EquipeAway = new System.Windows.Forms.PictureBox();
-            this.DGV_Joueurs = new System.Windows.Forms.DataGridView();
             this.BTN_AjoutRencontre = new System.Windows.Forms.Button();
             this.BTN_ModifierMatch = new System.Windows.Forms.Button();
             this.BTN_Calendrier = new System.Windows.Forms.Button();
             this.BTN_Stats = new System.Windows.Forms.Button();
             this.BTN_AjoutStats = new System.Windows.Forms.Button();
             this.BTN_Fermer = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).BeginInit();
+            this.DGV_Matchs = new System.Windows.Forms.DataGridView();
+            this.DGV_Joueurs = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,15 +80,6 @@
             this.TB_EquipeAway.Size = new System.Drawing.Size(101, 26);
             this.TB_EquipeAway.TabIndex = 2;
             // 
-            // DGV_Matchs
-            // 
-            this.DGV_Matchs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Matchs.Location = new System.Drawing.Point(12, 241);
-            this.DGV_Matchs.Name = "DGV_Matchs";
-            this.DGV_Matchs.RowTemplate.Height = 28;
-            this.DGV_Matchs.Size = new System.Drawing.Size(761, 150);
-            this.DGV_Matchs.TabIndex = 3;
-            // 
             // PB_EquipeHome
             // 
             this.PB_EquipeHome.Location = new System.Drawing.Point(29, 67);
@@ -105,15 +96,6 @@
             this.PB_EquipeAway.TabIndex = 1;
             this.PB_EquipeAway.TabStop = false;
             // 
-            // DGV_Joueurs
-            // 
-            this.DGV_Joueurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Joueurs.Location = new System.Drawing.Point(12, 447);
-            this.DGV_Joueurs.Name = "DGV_Joueurs";
-            this.DGV_Joueurs.RowTemplate.Height = 28;
-            this.DGV_Joueurs.Size = new System.Drawing.Size(761, 150);
-            this.DGV_Joueurs.TabIndex = 3;
-            // 
             // BTN_AjoutRencontre
             // 
             this.BTN_AjoutRencontre.Location = new System.Drawing.Point(12, 397);
@@ -122,19 +104,21 @@
             this.BTN_AjoutRencontre.TabIndex = 4;
             this.BTN_AjoutRencontre.Text = "Ajouter match";
             this.BTN_AjoutRencontre.UseVisualStyleBackColor = true;
+            this.BTN_AjoutRencontre.Click += new System.EventHandler(this.BTN_AjoutRencontre_Click);
             // 
             // BTN_ModifierMatch
             // 
-            this.BTN_ModifierMatch.Location = new System.Drawing.Point(208, 397);
+            this.BTN_ModifierMatch.Location = new System.Drawing.Point(362, 397);
             this.BTN_ModifierMatch.Name = "BTN_ModifierMatch";
             this.BTN_ModifierMatch.Size = new System.Drawing.Size(164, 32);
             this.BTN_ModifierMatch.TabIndex = 4;
             this.BTN_ModifierMatch.Text = "Modifier Match";
             this.BTN_ModifierMatch.UseVisualStyleBackColor = true;
+            this.BTN_ModifierMatch.Click += new System.EventHandler(this.BTN_ModifierMatch_Click);
             // 
             // BTN_Calendrier
             // 
-            this.BTN_Calendrier.Location = new System.Drawing.Point(405, 397);
+            this.BTN_Calendrier.Location = new System.Drawing.Point(681, 397);
             this.BTN_Calendrier.Name = "BTN_Calendrier";
             this.BTN_Calendrier.Size = new System.Drawing.Size(164, 32);
             this.BTN_Calendrier.TabIndex = 4;
@@ -143,7 +127,7 @@
             // 
             // BTN_Stats
             // 
-            this.BTN_Stats.Location = new System.Drawing.Point(609, 397);
+            this.BTN_Stats.Location = new System.Drawing.Point(992, 397);
             this.BTN_Stats.Name = "BTN_Stats";
             this.BTN_Stats.Size = new System.Drawing.Size(164, 32);
             this.BTN_Stats.TabIndex = 4;
@@ -162,26 +146,55 @@
             // BTN_Fermer
             // 
             this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Fermer.Location = new System.Drawing.Point(609, 603);
+            this.BTN_Fermer.Location = new System.Drawing.Point(992, 603);
             this.BTN_Fermer.Name = "BTN_Fermer";
             this.BTN_Fermer.Size = new System.Drawing.Size(164, 32);
             this.BTN_Fermer.TabIndex = 4;
             this.BTN_Fermer.Text = "Fermer";
             this.BTN_Fermer.UseVisualStyleBackColor = true;
             // 
+            // DGV_Matchs
+            // 
+            this.DGV_Matchs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Matchs.Location = new System.Drawing.Point(12, 235);
+            this.DGV_Matchs.MultiSelect = false;
+            this.DGV_Matchs.Name = "DGV_Matchs";
+            this.DGV_Matchs.ReadOnly = true;
+            this.DGV_Matchs.RowHeadersVisible = false;
+            this.DGV_Matchs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DGV_Matchs.RowTemplate.Height = 28;
+            this.DGV_Matchs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Matchs.Size = new System.Drawing.Size(1144, 156);
+            this.DGV_Matchs.TabIndex = 5;
+            this.DGV_Matchs.SelectionChanged += new System.EventHandler(this.DGV_Matchs_SelectionChanged);
+            // 
+            // DGV_Joueurs
+            // 
+            this.DGV_Joueurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Joueurs.Location = new System.Drawing.Point(12, 435);
+            this.DGV_Joueurs.MultiSelect = false;
+            this.DGV_Joueurs.Name = "DGV_Joueurs";
+            this.DGV_Joueurs.ReadOnly = true;
+            this.DGV_Joueurs.RowHeadersVisible = false;
+            this.DGV_Joueurs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DGV_Joueurs.RowTemplate.Height = 28;
+            this.DGV_Joueurs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Joueurs.Size = new System.Drawing.Size(1144, 156);
+            this.DGV_Joueurs.TabIndex = 5;
+            // 
             // Form_Matchs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 647);
+            this.ClientSize = new System.Drawing.Size(1168, 647);
+            this.Controls.Add(this.DGV_Joueurs);
+            this.Controls.Add(this.DGV_Matchs);
             this.Controls.Add(this.BTN_Stats);
             this.Controls.Add(this.BTN_Calendrier);
             this.Controls.Add(this.BTN_ModifierMatch);
             this.Controls.Add(this.BTN_Fermer);
             this.Controls.Add(this.BTN_AjoutStats);
             this.Controls.Add(this.BTN_AjoutRencontre);
-            this.Controls.Add(this.DGV_Joueurs);
-            this.Controls.Add(this.DGV_Matchs);
             this.Controls.Add(this.TB_EquipeAway);
             this.Controls.Add(this.TB_EquipeHome);
             this.Controls.Add(this.PB_EquipeHome);
@@ -190,9 +203,10 @@
             this.Controls.Add(this.LB_EquipeHome);
             this.Name = "Form_Matchs";
             this.Text = "Form_Match";
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).EndInit();
+            this.Load += new System.EventHandler(this.Form_Matchs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,14 +221,14 @@
         private System.Windows.Forms.PictureBox PB_EquipeHome;
         private System.Windows.Forms.TextBox TB_EquipeHome;
         private System.Windows.Forms.TextBox TB_EquipeAway;
-        private System.Windows.Forms.DataGridView DGV_Matchs;
-        private System.Windows.Forms.DataGridView DGV_Joueurs;
         private System.Windows.Forms.Button BTN_AjoutRencontre;
         private System.Windows.Forms.Button BTN_ModifierMatch;
         private System.Windows.Forms.Button BTN_Calendrier;
         private System.Windows.Forms.Button BTN_Stats;
         private System.Windows.Forms.Button BTN_AjoutStats;
         private System.Windows.Forms.Button BTN_Fermer;
+        private System.Windows.Forms.DataGridView DGV_Matchs;
+        private System.Windows.Forms.DataGridView DGV_Joueurs;
 
     }
 }

@@ -297,7 +297,7 @@ namespace TPFinal
 
         private void BTN_Matchs_Click(object sender, EventArgs e)
         {
-            Form_Matchs match = new Form_Matchs();
+            Form_Matchs match = new Form_Matchs(oracon, maBelleConnection);
             match.Text = "Matchs";
             match.ShowDialog();
         }

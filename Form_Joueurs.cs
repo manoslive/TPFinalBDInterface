@@ -15,7 +15,7 @@ namespace TPFinal
     public partial class Form_Joueurs : Form
     {
         private OracleConnection oracon = null;
-        private MaConnection cConnection = null;
+        private MaConnection connection = null;
         private DataSet dataSetJoueur = new DataSet();
         public Form callBackForm = null;
         private string equipe { get; set; }
@@ -26,7 +26,7 @@ namespace TPFinal
         {
             InitializeComponent();
             oracon = connectionoracle;
-            cConnection = maBelleConnection;
+            connection = maBelleConnection;
             equipe = equipeEnCours;
             currval = false;
             commandeSQL = null;
@@ -34,7 +34,7 @@ namespace TPFinal
 
         private void BTN_Ajouter_Click(object sender, EventArgs e) // Ouvre la form d'ajout de joueur
         {
-            Form_Ajouter_Joueur aJ = new Form_Ajouter_Joueur(oracon, cConnection);
+            Form_Ajouter_Joueur aJ = new Form_Ajouter_Joueur(oracon, connection);
             aJ.callBackForm = this;
             aJ.Text = "Ajout de joueur";
             aJ.Location = this.Location;
@@ -221,7 +221,7 @@ namespace TPFinal
 
         private void BTN_Modifier_Click(object sender, EventArgs e)
         {
-            Form_Ajouter_Joueur aj = new Form_Ajouter_Joueur(oracon, cConnection);
+            Form_Ajouter_Joueur aj = new Form_Ajouter_Joueur(oracon, connection);
             aj.callBackForm = this;
             aj.Text = "Modification du joueur";
             aj.nomJoueurs = TB_NomJoueur.Text;
