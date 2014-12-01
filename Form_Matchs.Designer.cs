@@ -127,7 +127,7 @@
             // 
             // BTN_Stats
             // 
-            this.BTN_Stats.Location = new System.Drawing.Point(992, 397);
+            this.BTN_Stats.Location = new System.Drawing.Point(228, 603);
             this.BTN_Stats.Name = "BTN_Stats";
             this.BTN_Stats.Size = new System.Drawing.Size(164, 32);
             this.BTN_Stats.TabIndex = 4;
