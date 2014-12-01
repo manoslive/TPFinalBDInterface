@@ -39,7 +39,6 @@ namespace TPFinal
             aJ.Text = "Ajout de joueur";
             aJ.Location = this.Location;
             this.Hide(); // Cache la fenêtre actuelle
-            //aJ.ShowDialog();
 
             if (!currval)
                 commandeSQL = "SELECT MAX(numjoueur) from joueur ";
@@ -49,7 +48,7 @@ namespace TPFinal
             if (aJ.ShowDialog() == DialogResult.OK)
             {
                 string sql = "insert into joueur" +
-                             "(nomjoueur, prenomjoueur, datanaissance, numeromaillot, photo, positionjoueur, nomequipe)" +
+                             "(nomjoueur, prenomjoueur, datenaissance, numeromaillot, photo, positionjoueur, nomequipe)" +
                              "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,numeromaillot,:Photo,:positionjoueur,:equipejoueur)";
                 currval = true;
                 try
@@ -78,6 +77,7 @@ namespace TPFinal
                     oraAjout.Parameters.Add(OraParanumeromaillot);
                     oraAjout.Parameters.Add(OraParaequipejoueurs);
                     oraAjout.Parameters.Add(OraParpositionjoueur);
+                    oraAjout.Parameters.Add(OraParaPhoto);
 
                     oraAjout.ExecuteNonQuery();
                     RemplirFormulaire();
@@ -86,8 +86,9 @@ namespace TPFinal
                 {
                     if (ex.Number == 2292)
                         MessageBox.Show("Le joueur ne doit pas avoir de statistique dans les matchs", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    if(ex.Number == 00984)
+                   /* if(ex.Number == 00984)
                         MessageBox.Show("Erreur dans la syntaxe de la commande SQL", "Erreur 00984", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    */
                     else
                         MessageBox.Show(ex.Message.ToString());
                 }
