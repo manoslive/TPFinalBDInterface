@@ -35,11 +35,27 @@ namespace TPFinal
             LoadDGV();
             this.Text = "Équipes"; // Set le nom de la form
             PB_Equipe.SizeMode = PictureBoxSizeMode.StretchImage; // Met le picturebox en mode "stretch"
-        
+            LoadCBDivision();
+        }
+
+        private void LoadCBDivision()
+        {
+            OracleCommand oraSelect = oracon.CreateCommand();
+            oraSelect.CommandText = "SELECT NomDivision FROM division";
+            using (OracleDataReader oraReader = oraSelect.ExecuteReader())
+            {
+                while (oraReader.Read())
+                {
+                    CB_Division.Items.Add(oraReader.GetString(0));
+                }
+                oraReader.Close();
+            }
+            CB_Division.SelectedIndex = 0;
         }
 
         private void LoadDGV()
         {
+            string divisionDGV = null;
             DGV_Equipes.AllowUserToResizeColumns = false; // Empêche le resize des colonnes
             DGV_Equipes.AllowUserToResizeRows = false; // Empêche le resize des rangées
             DGV_Equipes.AllowUserToAddRows = false; // Enlève la ligne vide à la fin du DGV
@@ -49,7 +65,15 @@ namespace TPFinal
                 lastIndex = DGV_Equipes.SelectedRows[0].Index;
             OracleCommand oraSelect = oracon.CreateCommand();
             OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
-            oraSelect.CommandText = "SELECT NomEquipe, DateIntro as DateIntroLigue, d.NOMDIVISION, Ville FROM Equipe E inner join Division D on D.NomDivision = E.NOMDIVISION";
+            
+            divisionDGV = CB_Division.Text;
+            if (divisionDGV != "Est" && divisionDGV != "Ouest")
+                divisionDGV = "Est' or e.nomdivision='Ouest'";
+            else
+                divisionDGV += "'";
+            oraSelect.CommandText = "SELECT NomEquipe, DateIntro as DateIntroLigue, d.NOMDIVISION, Ville FROM Equipe E "+ 
+                                    "inner join Division D on D.NomDivision = E.NOMDIVISION "+
+                                    "WHERE e.nomDivision = '" + divisionDGV;
             oraAdapter.Fill(dataSetEquipe, "tableFormEquipe");
             DGV_Equipes.DataSource = dataSetEquipe.Tables[0];
             SetDGVLargeurColonne();
@@ -300,6 +324,11 @@ namespace TPFinal
             Form_Matchs match = new Form_Matchs(oracon, maBelleConnection);
             match.Text = "Matchs";
             match.ShowDialog();
+        }
+
+        private void CB_Division_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDGV();
         }
     }
 }

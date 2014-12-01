@@ -37,6 +37,8 @@
             this.BTN_Fermer = new System.Windows.Forms.Button();
             this.PB_Equipe = new System.Windows.Forms.PictureBox();
             this.BTN_Matchs = new System.Windows.Forms.Button();
+            this.CB_Division = new System.Windows.Forms.ComboBox();
+            this.LB_Division = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +61,7 @@
             // 
             // BTN_Classement
             // 
-            this.BTN_Classement.Location = new System.Drawing.Point(230, 288);
+            this.BTN_Classement.Location = new System.Drawing.Point(148, 288);
             this.BTN_Classement.Name = "BTN_Classement";
             this.BTN_Classement.Size = new System.Drawing.Size(119, 40);
             this.BTN_Classement.TabIndex = 1;
@@ -99,7 +101,7 @@
             // 
             // BTN_Top5
             // 
-            this.BTN_Top5.Location = new System.Drawing.Point(479, 288);
+            this.BTN_Top5.Location = new System.Drawing.Point(286, 288);
             this.BTN_Top5.Name = "BTN_Top5";
             this.BTN_Top5.Size = new System.Drawing.Size(119, 40);
             this.BTN_Top5.TabIndex = 1;
@@ -137,11 +139,33 @@
             this.BTN_Matchs.UseVisualStyleBackColor = true;
             this.BTN_Matchs.Click += new System.EventHandler(this.BTN_Matchs_Click);
             // 
+            // CB_Division
+            // 
+            this.CB_Division.FormattingEnabled = true;
+            this.CB_Division.Items.AddRange(new object[] {
+            "Est / Ouest"});
+            this.CB_Division.Location = new System.Drawing.Point(461, 295);
+            this.CB_Division.Name = "CB_Division";
+            this.CB_Division.Size = new System.Drawing.Size(152, 28);
+            this.CB_Division.TabIndex = 3;
+            this.CB_Division.SelectedIndexChanged += new System.EventHandler(this.CB_Division_SelectedIndexChanged);
+            // 
+            // LB_Division
+            // 
+            this.LB_Division.AutoSize = true;
+            this.LB_Division.Location = new System.Drawing.Point(457, 273);
+            this.LB_Division.Name = "LB_Division";
+            this.LB_Division.Size = new System.Drawing.Size(63, 20);
+            this.LB_Division.TabIndex = 4;
+            this.LB_Division.Text = "Division";
+            // 
             // Form_Equipes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 343);
+            this.Controls.Add(this.LB_Division);
+            this.Controls.Add(this.CB_Division);
             this.Controls.Add(this.PB_Equipe);
             this.Controls.Add(this.BTN_Matchs);
             this.Controls.Add(this.BTN_Fermer);
@@ -159,6 +183,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -173,5 +198,7 @@
         private System.Windows.Forms.Button BTN_Fermer;
         private System.Windows.Forms.PictureBox PB_Equipe;
         private System.Windows.Forms.Button BTN_Matchs;
+        public System.Windows.Forms.ComboBox CB_Division;
+        private System.Windows.Forms.Label LB_Division;
     }
 }
