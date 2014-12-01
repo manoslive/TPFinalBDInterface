@@ -288,5 +288,11 @@ namespace TPFinal
             if (callBackForm != null)
                 callBackForm.Show();
         }
+
+        private void Form_Equipes_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                CallFormJoueur();
+        }
     }
 }

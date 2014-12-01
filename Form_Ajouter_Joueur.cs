@@ -85,6 +85,19 @@ namespace TPFinal
                 CB_EquipeJoueur.Text = value;
             }
         }
+
+        public string Photo
+        {
+            get
+            {
+                return TB_Url.Text;
+            }
+            set
+            {
+                TB_Url.Text = value;
+            }
+        }
+
         public string Position
         {
             get
@@ -99,7 +112,11 @@ namespace TPFinal
 
         private void Form_Ajouter_Joueur_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            if (callBackForm != null)
+            {
+                callBackForm.Location = this.Location;
+                callBackForm.Show();
+            }
         }
 
         private void BTN_Fermer_Click(object sender, EventArgs e)
@@ -121,12 +138,45 @@ namespace TPFinal
             }
         }
 
-        private void Form_Ajouter_Joueur_FormClosed(object sender, FormClosedEventArgs e)
+        private void BTN_Ajouter_Click_1(object sender, EventArgs e)
         {
-            if (callBackForm != null)
+            string sql = "insert into joueur" +
+                             "(nomjoueur, prenomjoueur, datenaissance, numeromaillot, photo, nomequipe, positionjoueur)" +
+                             "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:Photo,:equipejoueur,:positionjoueur)";
+            try
             {
-                callBackForm.Location = this.Location;
-                callBackForm.Show();
+                OracleCommand oraAjout = new OracleCommand(sql, oracon);
+
+                OracleParameter OraParaNomjoueurs = new OracleParameter(":Nomjoueurs", OracleDbType.Varchar2, 40);
+                OracleParameter OraParamPrenomjoueurs = new OracleParameter(":Prenomjoueurs", OracleDbType.Varchar2, 40);
+                OracleParameter OraParamdatenaissance = new OracleParameter(":datenaissance", OracleDbType.Date);
+                OracleParameter OraParanumeromaillot = new OracleParameter(":numeromaillot", OracleDbType.Int32);
+                OracleParameter OraParaequipejoueurs = new OracleParameter(":equipejoueur", OracleDbType.Varchar2, 40);
+                OracleParameter OraParpositionjoueur = new OracleParameter(":positionjoueur", OracleDbType.Varchar2, 40);
+                OracleParameter OraParaPhoto = new OracleParameter(":Photo", OracleDbType.Varchar2, 1500);
+
+                OraParaNomjoueurs.Value = TB_NomJoueur.Text;
+                OraParamPrenomjoueurs.Value = TB_PrenomJoueur.Text;
+                OraParamdatenaissance.Value = DTP_DateNaissance.Value;
+                OraParanumeromaillot.Value = TB_NumMaillot.Text;
+                MessageBox.Show(CB_EquipeJoueur.SelectedValue.ToString());
+                OraParaequipejoueurs.Value = CB_EquipeJoueur.SelectedValue.ToString();
+                OraParpositionjoueur.Value = CB_PosJoueur.SelectedValue.ToString();
+                OraParaPhoto.Value = TB_Url.Text;
+
+                oraAjout.Parameters.Add(OraParaNomjoueurs);
+                oraAjout.Parameters.Add(OraParamPrenomjoueurs);
+                oraAjout.Parameters.Add(OraParamdatenaissance);
+                oraAjout.Parameters.Add(OraParanumeromaillot);
+                oraAjout.Parameters.Add(OraParaequipejoueurs);
+                oraAjout.Parameters.Add(OraParpositionjoueur);
+                oraAjout.Parameters.Add(OraParaPhoto);
+
+                oraAjout.ExecuteNonQuery();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
             }
         }
     }

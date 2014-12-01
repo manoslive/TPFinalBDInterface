@@ -268,6 +268,7 @@
             this.PB_Joueur.Location = new System.Drawing.Point(512, 24);
             this.PB_Joueur.Name = "PB_Joueur";
             this.PB_Joueur.Size = new System.Drawing.Size(150, 150);
+            this.PB_Joueur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Joueur.TabIndex = 5;
             this.PB_Joueur.TabStop = false;
             // 
@@ -322,6 +323,7 @@
             this.Text = "Form_Joueurs";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Joueurs_FormClosed);
             this.Load += new System.EventHandler(this.Form_Joueurs_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Joueurs_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Joueur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

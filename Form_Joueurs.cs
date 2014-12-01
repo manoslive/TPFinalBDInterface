@@ -49,8 +49,8 @@ namespace TPFinal
             if (aJ.ShowDialog() == DialogResult.OK)
             {
                 string sql = "insert into joueur" +
-                             "(nomjoueur, prenomjoueur, datanaissance, numeromaillot, nomequipe, positionjoueur)" +
-                             "VALUES(:Nomjoueurs, :PrenomJoueurs, :datenaissance, :numeromaillot, :equipejoueur, :positionjoueur)";
+                             "(nomjoueur, prenomjoueur, datanaissance, numeromaillot, photo, nomequipe, positionjoueur)" +
+                             "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,numeromaillot,:Photo,:equipejoueur,:positionjoueur)";
                 currval = true;
                 try
                 {
@@ -62,6 +62,7 @@ namespace TPFinal
                     OracleParameter OraParanumeromaillot = new OracleParameter(":numeromaillot", OracleDbType.Int32);
                     OracleParameter OraParaequipejoueurs = new OracleParameter(":equipejoueur", OracleDbType.Varchar2, 40);
                     OracleParameter OraParpositionjoueur = new OracleParameter(":positionjoueur", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaPhoto = new OracleParameter(":Photo", OracleDbType.Varchar2, 1500);
 
                     OraParaNomjoueurs.Value = aJ.nomJoueurs;
                     OraParamPrenomjoueurs.Value = aJ.prenomJoueurs;
@@ -104,7 +105,8 @@ namespace TPFinal
 
                 oraAdapter.Fill(dataSetJoueur, "Joueur");
             }
-            PB_Joueur.ImageLocation = dataSetJoueur.Tables["Joueur"].Rows[0].ToString();
+            if (TB_Url.Text != "")
+                PB_Joueur.ImageLocation = TB_Url.Text;
 
             UpdateLinkTB();
         }
@@ -217,13 +219,13 @@ namespace TPFinal
             aj.Equipe = CB_EquipeJoueur.SelectedItem.ToString();
             aj.Position = CB_PosJoueur.SelectedItem.ToString();
             aj.Location = this.Location;
-            aj.BTN_Ajouter.Text = "Modifier";
+            aj.BTN_Fermer.Text = "Modifier";
             this.Hide();
 
             if (aj.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                string sql = "Update joueur set Nomjoueur =:Nomjoueurs, Prenomjoueur =:Prenomjoueur, datenaissance =:datenaissance, numeromaillot =:numeromaillot, nomequipe =:equipejoueur , positionjoueur=:positionjoueur" +
-                             "where numerojoueur =:numerojoueurs";
+                string sql = "update joueur set nomjoueur=:NomJoueurs, prenomjoueur=:Prenomjoueurs, datanaissance=:datenaissance, numeromaillot=:numeromaillot, photo=:Photo, nomequipe=:equipejoueur, positionjoueur=:positionjoueur)" +
+             "where numerojoueur=:numerojoueurs)";
                 try
                 {
 
@@ -231,10 +233,12 @@ namespace TPFinal
 
                     OracleParameter OraParaNomjoueurs = new OracleParameter(":Nomjoueurs", OracleDbType.Varchar2, 40);
                     OracleParameter OraParamPrenomjoueurs = new OracleParameter(":Prenomjoueur", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParamdatenaissance = new OracleParameter(":datenaissance", OracleDbType.Date);  //Ajout
+                    OracleParameter OraParamdatenaissance = new OracleParameter(":datenaissance", OracleDbType.Date);
                     OracleParameter OraParanumeromaillot = new OracleParameter(":numeromaillot", OracleDbType.Int32);
                     OracleParameter OraParaequipejoueurs = new OracleParameter(":equipejoueur", OracleDbType.Varchar2, 40);
                     OracleParameter OraParpositionjoueur = new OracleParameter(":positionjoueur", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParnumerojoueurs = new OracleParameter(":numerojoueurs", OracleDbType.Int32);
+                    OracleParameter OraParaPhoto = new OracleParameter(":Photo", OracleDbType.Varchar2, 100);
 
                     OraParaNomjoueurs.Value = aj.nomJoueurs;
                     OraParamPrenomjoueurs.Value = aj.prenomJoueurs;
@@ -242,6 +246,7 @@ namespace TPFinal
                     OraParanumeromaillot.Value = aj.maillot;
                     OraParaequipejoueurs.Value = aj.Equipe;
                     OraParpositionjoueur.Value = aj.Position;
+                    OraParaPhoto.Value = aj.Photo;
 
                     oraAjout.Parameters.Add(OraParaNomjoueurs);
                     oraAjout.Parameters.Add(OraParamPrenomjoueurs);
@@ -249,6 +254,7 @@ namespace TPFinal
                     oraAjout.Parameters.Add(OraParanumeromaillot);
                     oraAjout.Parameters.Add(OraParaequipejoueurs);
                     oraAjout.Parameters.Add(OraParpositionjoueur);
+                    oraAjout.Parameters.Add(OraParaPhoto);
 
                     oraAjout.ExecuteNonQuery();
 
@@ -276,6 +282,8 @@ namespace TPFinal
 
             PB_Joueur.SizeMode = PictureBoxSizeMode.StretchImage; // Met le picturebox en mode "stretch"
             MiseAJourFormulaire();
+            if (TB_Url.Text != "")
+                PB_Joueur.ImageLocation = TB_Url.Text;
         }
 
         private void MiseAJourFormulaire()
@@ -293,6 +301,14 @@ namespace TPFinal
         private void BTN_Fermer_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form_Joueurs_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Right)
+                BTN_Suivant_Click(sender, e);
+            if (e.KeyCode == Keys.Left)
+                BTN_Precedent_Click(sender, e);
         }
     }
 }

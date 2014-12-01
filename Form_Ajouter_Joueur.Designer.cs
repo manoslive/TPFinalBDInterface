@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.BTN_Fermer = new System.Windows.Forms.Button();
-            this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.CB_PosJoueur = new System.Windows.Forms.ComboBox();
             this.CB_EquipeJoueur = new System.Windows.Forms.ComboBox();
             this.DTP_DateNaissance = new System.Windows.Forms.DateTimePicker();
@@ -42,27 +41,21 @@
             this.LB_EquipeJoueur = new System.Windows.Forms.Label();
             this.LB_NomJoueur = new System.Windows.Forms.Label();
             this.LB_NumeroMaillot = new System.Windows.Forms.Label();
+            this.TB_Url = new System.Windows.Forms.TextBox();
+            this.LB_Url = new System.Windows.Forms.Label();
+            this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BTN_Fermer
             // 
             this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Fermer.Location = new System.Drawing.Point(386, 387);
+            this.BTN_Fermer.Location = new System.Drawing.Point(386, 445);
             this.BTN_Fermer.Name = "BTN_Fermer";
             this.BTN_Fermer.Size = new System.Drawing.Size(109, 37);
             this.BTN_Fermer.TabIndex = 22;
             this.BTN_Fermer.Text = "Fermer";
             this.BTN_Fermer.UseVisualStyleBackColor = true;
             this.BTN_Fermer.Click += new System.EventHandler(this.BTN_Fermer_Click);
-            // 
-            // BTN_Ajouter
-            // 
-            this.BTN_Ajouter.Location = new System.Drawing.Point(254, 387);
-            this.BTN_Ajouter.Name = "BTN_Ajouter";
-            this.BTN_Ajouter.Size = new System.Drawing.Size(109, 37);
-            this.BTN_Ajouter.TabIndex = 19;
-            this.BTN_Ajouter.Text = "Ajouter";
-            this.BTN_Ajouter.UseVisualStyleBackColor = true;
             // 
             // CB_PosJoueur
             // 
@@ -166,13 +159,42 @@
             this.LB_NumeroMaillot.TabIndex = 11;
             this.LB_NumeroMaillot.Text = "Numéro du maillot";
             // 
+            // TB_Url
+            // 
+            this.TB_Url.Location = new System.Drawing.Point(238, 385);
+            this.TB_Url.Name = "TB_Url";
+            this.TB_Url.Size = new System.Drawing.Size(227, 26);
+            this.TB_Url.TabIndex = 24;
+            // 
+            // LB_Url
+            // 
+            this.LB_Url.AutoSize = true;
+            this.LB_Url.Location = new System.Drawing.Point(34, 388);
+            this.LB_Url.Name = "LB_Url";
+            this.LB_Url.Size = new System.Drawing.Size(137, 20);
+            this.LB_Url.TabIndex = 23;
+            this.LB_Url.Text = "URL image joueur";
+            // 
+            // BTN_Ajouter
+            // 
+            this.BTN_Ajouter.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BTN_Ajouter.Location = new System.Drawing.Point(259, 445);
+            this.BTN_Ajouter.Name = "BTN_Ajouter";
+            this.BTN_Ajouter.Size = new System.Drawing.Size(109, 37);
+            this.BTN_Ajouter.TabIndex = 22;
+            this.BTN_Ajouter.Text = "Ajouter";
+            this.BTN_Ajouter.UseVisualStyleBackColor = true;
+            this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click_1);
+            // 
             // Form_Ajouter_Joueur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 435);
-            this.Controls.Add(this.BTN_Fermer);
+            this.ClientSize = new System.Drawing.Size(507, 497);
+            this.Controls.Add(this.TB_Url);
+            this.Controls.Add(this.LB_Url);
             this.Controls.Add(this.BTN_Ajouter);
+            this.Controls.Add(this.BTN_Fermer);
             this.Controls.Add(this.CB_PosJoueur);
             this.Controls.Add(this.CB_EquipeJoueur);
             this.Controls.Add(this.DTP_DateNaissance);
@@ -188,7 +210,6 @@
             this.Name = "Form_Ajouter_Joueur";
             this.Text = "Form_Ajouter_Joueur";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ajouter_Joueur_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Ajouter_Joueur_FormClosed);
             this.Load += new System.EventHandler(this.Form_Ajouter_Joueur_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -197,8 +218,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button BTN_Fermer;
-        public System.Windows.Forms.Button BTN_Ajouter;
+        public System.Windows.Forms.Button BTN_Fermer;
         private System.Windows.Forms.ComboBox CB_PosJoueur;
         private System.Windows.Forms.ComboBox CB_EquipeJoueur;
         private System.Windows.Forms.DateTimePicker DTP_DateNaissance;
@@ -211,5 +231,8 @@
         private System.Windows.Forms.Label LB_EquipeJoueur;
         private System.Windows.Forms.Label LB_NomJoueur;
         private System.Windows.Forms.Label LB_NumeroMaillot;
+        private System.Windows.Forms.TextBox TB_Url;
+        private System.Windows.Forms.Label LB_Url;
+        public System.Windows.Forms.Button BTN_Ajouter;
     }
 }
