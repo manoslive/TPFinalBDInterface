@@ -77,6 +77,7 @@
             this.CB_Division.Name = "CB_Division";
             this.CB_Division.Size = new System.Drawing.Size(152, 28);
             this.CB_Division.TabIndex = 5;
+            this.CB_Division.SelectedIndexChanged += new System.EventHandler(this.CB_Division_SelectedIndexChanged);
             // 
             // Form_Classement
             // 

@@ -26,7 +26,7 @@ namespace TPFinal
         }
         private void LoadDGV()
         {
-            string classementDGV = null;
+            string divisions = null;
             DGV_Classement.AllowUserToResizeColumns = false; // Empêche le resize des colonnes
             DGV_Classement.AllowUserToResizeRows = false; // Empêche le resize des rangées
             DGV_Classement.AllowUserToAddRows = false; // Enlève la ligne vide à la fin du DGV
@@ -37,14 +37,12 @@ namespace TPFinal
             OracleCommand oraSelect = oracon.CreateCommand();
             OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
 
-            classementDGV = DGV_Classement.Text;
-            if (classementDGV != "Est" && classementDGV != "Ouest")
-                classementDGV = "Est' or e.nomdivision='Ouest'";
+            divisions = DGV_Classement.Text;
+            if (divisions != "Est" && divisions != "Ouest")
+                divisions = "Est' or e.nomdivision='Ouest'";
             else
-                classementDGV += "'";
-            oraSelect.CommandText = "SELECT NomEquipe, DateIntro as DateIntroLigue, d.NOMDIVISION, Ville FROM Equipe E " +
-                                    "inner join Division D on D.NomDivision = E.NOMDIVISION " +
-                                    "WHERE e.nomDivision = '" + classementDGV;
+                divisions += "'";
+            oraSelect.CommandText = "select * from statsjoueur";
             oraAdapter.Fill(dataSetClassement, "tableFormEquipe");
             DGV_Classement.DataSource = dataSetClassement.Tables[0];
             // SetDGVLargeurColonne();
@@ -71,6 +69,11 @@ namespace TPFinal
                 oraReader.Close();
             }
             CB_Division.SelectedIndex = 0;
+        }
+
+        private void CB_Division_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDGV();
         }
     }
 }
