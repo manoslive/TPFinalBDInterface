@@ -294,5 +294,12 @@ namespace TPFinal
             if (e.KeyCode == Keys.Enter)
                 CallFormJoueur();
         }
+
+        private void BTN_Matchs_Click(object sender, EventArgs e)
+        {
+            Form_Matchs match = new Form_Matchs();
+            match.Text = "Matchs";
+            match.ShowDialog();
+        }
     }
 }
