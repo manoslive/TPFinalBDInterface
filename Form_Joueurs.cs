@@ -49,7 +49,7 @@ namespace TPFinal
             {
                 string sql = "insert into joueur" +
                              "(nomjoueur, prenomjoueur, datenaissance, numeromaillot, photo, positionjoueur, nomequipe)" +
-                             "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,numeromaillot,:Photo,:positionjoueur,:equipejoueur)";
+                             "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:Photo,:positionjoueur,:equipejoueur)";
                 currval = true;
                 try
                 {
@@ -65,9 +65,9 @@ namespace TPFinal
 
                     OraParaNomjoueurs.Value = aJ.nomJoueurs;
                     OraParamPrenomjoueurs.Value = aJ.prenomJoueurs;
-                    OraParamdatenaissance.Value = DateTime.Parse(aJ.DDN);
+                    OraParamdatenaissance.Value = aJ.DDN;// 
                     OraParanumeromaillot.Value = aJ.maillot;
-                    OraParaequipejoueurs.Value = aJ.Equipe;
+                    OraParaequipejoueurs.Value = aJ.Equipe; ////// erreur contrainte equipe
                     OraParpositionjoueur.Value = aJ.Position;
                     OraParaPhoto.Value = aJ.Photo;
 
@@ -75,9 +75,10 @@ namespace TPFinal
                     oraAjout.Parameters.Add(OraParamPrenomjoueurs);
                     oraAjout.Parameters.Add(OraParamdatenaissance);
                     oraAjout.Parameters.Add(OraParanumeromaillot);
+                    oraAjout.Parameters.Add(OraParaPhoto);
                     oraAjout.Parameters.Add(OraParaequipejoueurs);
                     oraAjout.Parameters.Add(OraParpositionjoueur);
-                    oraAjout.Parameters.Add(OraParaPhoto);
+                    
 
                     oraAjout.ExecuteNonQuery();
                     RemplirFormulaire();
@@ -226,7 +227,7 @@ namespace TPFinal
             aj.Text = "Modification du joueur";
             aj.nomJoueurs = TB_NomJoueur.Text;
             aj.prenomJoueurs = TB_PrenomJoueur.Text;
-            aj.DDN = DTP_DateNaissance.Value.ToString();
+            aj.DDN = DTP_DateNaissance.Value; //.ToString()
             aj.maillot = TB_NumMaillot.Text;
             aj.Equipe = CB_EquipeJoueur.SelectedItem.ToString();
             aj.Position = CB_PosJoueur.SelectedItem.ToString();
@@ -254,7 +255,7 @@ namespace TPFinal
 
                     OraParaNomjoueurs.Value = aj.nomJoueurs;
                     OraParamPrenomjoueurs.Value = aj.prenomJoueurs;
-                    OraParamdatenaissance.Value = DateTime.Parse(aj.DDN);
+                    OraParamdatenaissance.Value = aj.DDN;
                     OraParanumeromaillot.Value = aj.maillot;
                     OraParaequipejoueurs.Value = aj.Equipe;
                     OraParpositionjoueur.Value = aj.Position;

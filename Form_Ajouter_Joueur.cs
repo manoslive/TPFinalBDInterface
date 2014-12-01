@@ -50,15 +50,15 @@ namespace TPFinal
             }
         }
 
-        public string DDN
+        public DateTime DDN
         {
             get
             {
-                return DTP_DateNaissance.Value.ToString();
+                return DTP_DateNaissance.Value;
             }
             set
             {
-                DTP_DateNaissance.Value = DateTime.Parse(value);
+                DTP_DateNaissance.Value = (value);
             }
         }
 
