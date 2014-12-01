@@ -28,58 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PB_Top1 = new System.Windows.Forms.PictureBox();
-            this.PB_Top3 = new System.Windows.Forms.PictureBox();
-            this.PB_Top2 = new System.Windows.Forms.PictureBox();
             this.DGV_Top3 = new System.Windows.Forms.DataGridView();
             this.LB_Top1 = new System.Windows.Forms.Label();
             this.LB_Top2 = new System.Windows.Forms.Label();
             this.LB_Top3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Top1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Top3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Top2)).BeginInit();
+            this.PB_Star = new System.Windows.Forms.PictureBox();
+            this.PB_Top2 = new System.Windows.Forms.PictureBox();
+            this.PB_Top3 = new System.Windows.Forms.PictureBox();
+            this.PB_Top1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Top3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Star)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Top2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Top3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Top1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::TPFinal.Properties.Resources.Podium;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 126);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(408, 143);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // PB_Top1
-            // 
-            this.PB_Top1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PB_Top1.Location = new System.Drawing.Point(200, 33);
-            this.PB_Top1.Name = "PB_Top1";
-            this.PB_Top1.Size = new System.Drawing.Size(117, 87);
-            this.PB_Top1.TabIndex = 1;
-            this.PB_Top1.TabStop = false;
-            // 
-            // PB_Top3
-            // 
-            this.PB_Top3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PB_Top3.Location = new System.Drawing.Point(346, 103);
-            this.PB_Top3.Name = "PB_Top3";
-            this.PB_Top3.Size = new System.Drawing.Size(117, 87);
-            this.PB_Top3.TabIndex = 2;
-            this.PB_Top3.TabStop = false;
-            // 
-            // PB_Top2
-            // 
-            this.PB_Top2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PB_Top2.Location = new System.Drawing.Point(55, 75);
-            this.PB_Top2.Name = "PB_Top2";
-            this.PB_Top2.Size = new System.Drawing.Size(117, 87);
-            this.PB_Top2.TabIndex = 3;
-            this.PB_Top2.TabStop = false;
             // 
             // DGV_Top3
             // 
@@ -117,11 +81,61 @@
             this.LB_Top3.TabIndex = 7;
             this.LB_Top3.Text = "label3";
             // 
+            // PB_Star
+            // 
+            this.PB_Star.BackColor = System.Drawing.Color.Transparent;
+            this.PB_Star.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Star.Image = global::TPFinal.Properties.Resources.Star;
+            this.PB_Star.Location = new System.Drawing.Point(217, 196);
+            this.PB_Star.Name = "PB_Star";
+            this.PB_Star.Size = new System.Drawing.Size(84, 73);
+            this.PB_Star.TabIndex = 8;
+            this.PB_Star.TabStop = false;
+            // 
+            // PB_Top2
+            // 
+            this.PB_Top2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Top2.Location = new System.Drawing.Point(55, 75);
+            this.PB_Top2.Name = "PB_Top2";
+            this.PB_Top2.Size = new System.Drawing.Size(117, 87);
+            this.PB_Top2.TabIndex = 3;
+            this.PB_Top2.TabStop = false;
+            // 
+            // PB_Top3
+            // 
+            this.PB_Top3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Top3.Location = new System.Drawing.Point(346, 103);
+            this.PB_Top3.Name = "PB_Top3";
+            this.PB_Top3.Size = new System.Drawing.Size(117, 87);
+            this.PB_Top3.TabIndex = 2;
+            this.PB_Top3.TabStop = false;
+            // 
+            // PB_Top1
+            // 
+            this.PB_Top1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Top1.Location = new System.Drawing.Point(200, 33);
+            this.PB_Top1.Name = "PB_Top1";
+            this.PB_Top1.Size = new System.Drawing.Size(117, 87);
+            this.PB_Top1.TabIndex = 1;
+            this.PB_Top1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::TPFinal.Properties.Resources.Podium;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 126);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(408, 143);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form_Top5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 263);
+            this.ClientSize = new System.Drawing.Size(524, 287);
+            this.Controls.Add(this.PB_Star);
             this.Controls.Add(this.LB_Top3);
             this.Controls.Add(this.LB_Top2);
             this.Controls.Add(this.LB_Top1);
@@ -133,11 +147,12 @@
             this.Name = "Form_Top5";
             this.Text = "Form_Top5";
             this.Load += new System.EventHandler(this.Form_Top5_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Top1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Top3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Top2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Top3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Star)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Top2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Top3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Top1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +168,6 @@
         private System.Windows.Forms.Label LB_Top1;
         private System.Windows.Forms.Label LB_Top2;
         private System.Windows.Forms.Label LB_Top3;
+        private System.Windows.Forms.PictureBox PB_Star;
     }
 }
