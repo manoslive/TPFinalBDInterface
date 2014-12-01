@@ -140,6 +140,9 @@
     <EmbeddedResource Include="Form_Ajouter_Joueur.resx">
       <DependentUpon>Form_Ajouter_Joueur.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Ajouter_Match.resx">
+      <DependentUpon>Form_Ajouter_Match.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Classement.resx">
       <DependentUpon>Form_Classement.cs</DependentUpon>
     </EmbeddedResource>
