@@ -31,19 +31,21 @@ namespace TPFinal
             DGV_Classement.AllowUserToResizeRows = false; // Empêche le resize des rangées
             DGV_Classement.AllowUserToAddRows = false; // Enlève la ligne vide à la fin du DGV
             dataSetClassement.Clear(); // Vide le dataset afin de ne pas avoir de doublons
+
             int lastIndex = -1;
             if (DGV_Classement.SelectedRows.Count > 0)
                 lastIndex = DGV_Classement.SelectedRows[0].Index;
             OracleCommand oraSelect = oracon.CreateCommand();
             OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
 
-            divisions = DGV_Classement.Text;
+            divisions = CB_Division.Text;
             if (divisions != "Est" && divisions != "Ouest")
-                divisions = "Est' or e.nomdivision='Ouest'";
+                divisions = "Est' or nomdivision='Ouest'";
             else
                 divisions += "'";
-            oraSelect.CommandText = "select * from joueur";
-            oraAdapter.Fill(dataSetClassement, "tableFormEquipe");
+            oraSelect.CommandText = "SELECT * from classement " + 
+                                    "where nomdivision= '" + divisions ;
+            oraAdapter.Fill(dataSetClassement, "tableclassement");
             DGV_Classement.DataSource = dataSetClassement.Tables[0];
             // SetDGVLargeurColonne();
             if (lastIndex > -1 && DGV_Classement.Rows.Count > 0)
@@ -73,6 +75,7 @@ namespace TPFinal
 
         private void CB_Division_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             LoadDGV();
         }
 

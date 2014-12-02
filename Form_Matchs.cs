@@ -232,15 +232,15 @@ namespace TPFinal
                 oraImage.Parameters.Add(new OracleParameter(":NomEquipe2", DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString()));
 
                 OracleCommand oraJoueurs = oracon.CreateCommand();
-                oraJoueurs.CommandText = " SELECT NUMEROMAILLOT, J.NOMJOUEUR, POSITIONJOUEUR, NOMEQUIPE, F.NOMBREBUTS, F.NOMBREPASSES, NOMBREPOINTS FROM JOUEUR J INNER JOIN MATCH M ON J.NOMEQUIPE = M.EQUIPERECEVEUR " +
+                oraJoueurs.CommandText = " SELECT J.NUMEROJOUEUR, NUMEROMAILLOT, J.NOMJOUEUR, POSITIONJOUEUR, NOMEQUIPE, F.NOMBREBUTS, F.NOMBREPASSES, NOMBREPOINTS FROM JOUEUR J INNER JOIN MATCH M ON J.NOMEQUIPE = M.EQUIPERECEVEUR " +
                                          " INNER JOIN FICHEJOUEUR F ON J.NUMEROJOUEUR = F.NUMEROJOUEUR" +
                                          " INNER JOIN STATSJOUEUR S ON S.NOMJOUEUR = J.NOMJOUEUR" +
                                          " WHERE M.EQUIPERECEVEUR='" + DGV_Matchs.SelectedRows[0].Cells[1].Value.ToString() + "' and M.NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() + "  UNION " +
 
-                                         " SELECT NUMEROMAILLOT, J.NOMJOUEUR, POSITIONJOUEUR, NOMEQUIPE, F.NOMBREBUTS, F.NOMBREPASSES, NOMBREPOINTS FROM JOUEUR J INNER JOIN MATCH M ON J.NOMEQUIPE = M.EQUIPEVISITEUR" +
+                                         " SELECT J.NUMEROJOUEUR, NUMEROMAILLOT, J.NOMJOUEUR, POSITIONJOUEUR, NOMEQUIPE, F.NOMBREBUTS, F.NOMBREPASSES, NOMBREPOINTS FROM JOUEUR J INNER JOIN MATCH M ON J.NOMEQUIPE = M.EQUIPEVISITEUR" +
                                          " INNER JOIN FICHEJOUEUR F ON J.NUMEROJOUEUR = F.NUMEROJOUEUR" +
                                          " INNER JOIN STATSJOUEUR S ON S.NOMJOUEUR = J.NOMJOUEUR" +
-                                         " WHERE M.EQUIPEVISITEUR='" + DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString() + "' and M.NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() +
+                                         " WHERE M.EQUIPEVISITEUR='" + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() + "' and M.NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() +
                                          " ORDER BY 7 DESC";
                 OracleDataAdapter oraDataJoueurs = new OracleDataAdapter(oraJoueurs);
                 joueursDataSet = new DataSet();
@@ -314,7 +314,8 @@ namespace TPFinal
             Form_Statistiques Stats = new Form_Statistiques(oracon, connection);
             this.Hide();
             Stats.callBackForm = this;
-            Stats.numeroJoueurs = DGV_Joueurs.SelectedRows[0].Cells[2].Value.ToString();
+            MessageBox.Show(DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString());
+            Stats.numeroJoueurs = DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString();
             Stats.ShowDialog();
         }
 
