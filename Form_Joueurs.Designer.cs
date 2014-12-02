@@ -319,6 +319,7 @@
             this.Controls.Add(this.LB_NumeroMaillot);
             this.Controls.Add(this.LB_Url);
             this.Controls.Add(this.LB_NumJoueur);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Joueurs";
             this.Text = "Form_Joueurs";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Joueurs_FormClosed);

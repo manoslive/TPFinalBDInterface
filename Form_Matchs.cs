@@ -157,13 +157,65 @@ namespace TPFinal
 
         private void BTN_ModifierMatch_Click(object sender, EventArgs e)
         {
+            Form_Ajouter_Match Modifier = new Form_Ajouter_Match(oracon, connection);
+            Modifier.Text = "Modification";
+            Modifier.numeroMatch = DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString();
+            Modifier.equipeHome = DGV_Matchs.SelectedRows[0].Cells[1].Value.ToString();
+            Modifier.equipeVisiteur = DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString();
+            Modifier.dateRencontre = DGV_Matchs.SelectedRows[0].Cells[3].Value.ToString();
+            Modifier.lieuRencontre = DGV_Matchs.SelectedRows[0].Cells[4].Value.ToString();
+            Modifier.scoreHome = DGV_Matchs.SelectedRows[0].Cells[5].Value.ToString();
+            Modifier.scoreVisiteur = DGV_Matchs.SelectedRows[0].Cells[6].Value.ToString();
 
+            if (Modifier.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string sqlModif = "Update Match set EquipeReceveur =:EquipeHome, EquipeVisiteur =:EquipeVisiteur, DateRecontre =:DateRencontre, " +
+                    "LieuRencontre =:Lieu, ScoreFinalReceveur =:ScoreHome, ScoreFinalVisiteur =:ScoreVisiteur where NumeroMatch =:NumeroMatch";
+
+                try
+                {
+                    OracleCommand oraMatchModif = new OracleCommand(sqlModif, oracon);
+
+
+                    OracleParameter OraParaEquipeHome = new OracleParameter(":EquipeHome", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaEquipeVisiteur = new OracleParameter(":EquipeVisiteur", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaDateRencontre = new OracleParameter(":DateRencontre", OracleDbType.Date);
+                    OracleParameter OraParaLieu = new OracleParameter(":Lieu", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaScoreHome = new OracleParameter(":ScoreHome", OracleDbType.Int32);
+                    OracleParameter OraParaScoreVisiteur = new OracleParameter(":ScoreVisiteur", OracleDbType.Int32);
+                    OracleParameter OraParaNumMatch = new OracleParameter(":NumeroMatch", OracleDbType.Int32);
+
+                    OraParaEquipeHome.Value = Modifier.equipeHome;
+                    OraParaEquipeVisiteur.Value = Modifier.equipeVisiteur;
+                    OraParaDateRencontre.Value = DateTime.Parse(Modifier.dateRencontre);
+                    OraParaLieu.Value = Modifier.lieuRencontre;
+                    OraParaNumMatch.Value = Modifier.numeroMatch;
+                    OraParaScoreHome.Value = int.Parse(Modifier.scoreHome);
+                    OraParaScoreVisiteur.Value = int.Parse(Modifier.scoreVisiteur);
+
+                    oraMatchModif.Parameters.Add(OraParaEquipeHome);
+                    oraMatchModif.Parameters.Add(OraParaEquipeVisiteur);
+                    oraMatchModif.Parameters.Add(OraParaDateRencontre);
+                    oraMatchModif.Parameters.Add(OraParaLieu);
+                    oraMatchModif.Parameters.Add(OraParaScoreHome);
+                    oraMatchModif.Parameters.Add(OraParaScoreVisiteur);
+                    oraMatchModif.Parameters.Add(OraParaNumMatch);
+
+                    oraMatchModif.ExecuteNonQuery();
+
+                    LoadDGVmatch();
+                }
+                catch (OracleException ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
 
         private void Form_Matchs_Load(object sender, EventArgs e)
         {
             LoadDGVmatch();
-            //LoadDGVstats();
+            LoadDGVstats();
             TB_EquipeHome.Select();
         }
 
@@ -190,7 +242,7 @@ namespace TPFinal
             Form_Statistiques Stats = new Form_Statistiques(oracon, connection);
             this.Hide();
             Stats.callBackForm = this;
-            Stats.numeroJoueurs = DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString();
+            Stats.numeroJoueurs = DGV_Joueurs.SelectedRows[0].Cells[1].Value.ToString();
             Stats.ShowDialog();
         }
 

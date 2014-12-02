@@ -176,6 +176,7 @@
             this.Controls.Add(this.LB_NumJoueur);
             this.Controls.Add(this.LB_NumMatch);
             this.Controls.Add(this.BTN_OK);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Ajouter_Stats";
             this.Text = "Form_Ajouter_Stats";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ajouter_Stats_FormClosing);

@@ -119,11 +119,6 @@ namespace TPFinal
             }
         }
 
-        private void BTN_Fermer_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form_Ajouter_Joueur_Load(object sender, EventArgs e)
         {
             OracleCommand oraSelect = oracon.CreateCommand();
@@ -136,11 +131,6 @@ namespace TPFinal
                 }
                 oraReader.Close();
             }
-        }
-
-        private void BTN_Ajouter_Click_1(object sender, EventArgs e)
-        {
-            
         }
     }
 }

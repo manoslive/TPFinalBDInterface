@@ -245,6 +245,7 @@
             this.Controls.Add(this.TB_NumJoueur);
             this.Controls.Add(this.TB_Nom);
             this.Controls.Add(this.TB_Prenom);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Statistiques";
             this.Text = "Form_Statistiques";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Statistiques_FormClosing);

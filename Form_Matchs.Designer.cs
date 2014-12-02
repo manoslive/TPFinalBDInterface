@@ -204,6 +204,7 @@
             this.Controls.Add(this.PB_EquipeAway);
             this.Controls.Add(this.LB_EquipeAway);
             this.Controls.Add(this.LB_EquipeHome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Matchs";
             this.Text = "Form_Match";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Matchs_FormClosed);

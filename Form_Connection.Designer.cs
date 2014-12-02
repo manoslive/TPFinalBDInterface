@@ -91,6 +91,7 @@
             this.Controls.Add(this.TB_Username);
             this.Controls.Add(this.LB_Password);
             this.Controls.Add(this.LB_Username);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Connection";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form_Connection_Load);

@@ -223,6 +223,7 @@
             this.Controls.Add(this.LB_EquipeHome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BTN_Ok);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Ajouter_Match";
             this.Text = "Form_Ajouter_Match";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Ajouter_Match_FormClosed);

@@ -163,6 +163,7 @@
             this.Controls.Add(this.LB_Division);
             this.Controls.Add(this.LB_DateCreation);
             this.Controls.Add(this.LB_Equipe);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Ajouter_Equipe";
             this.Text = "Form_Ajouter_Equipe";
             this.Load += new System.EventHandler(this.FormEquipe_Ajouter_Load);
