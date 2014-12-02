@@ -52,7 +52,7 @@
             // DGV_Stats
             // 
             this.DGV_Stats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Stats.Location = new System.Drawing.Point(3, 555);
+            this.DGV_Stats.Location = new System.Drawing.Point(2, 555);
             this.DGV_Stats.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DGV_Stats.Name = "DGV_Stats";
             this.DGV_Stats.Size = new System.Drawing.Size(10, 10);
@@ -226,7 +226,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 566);
+            this.ClientSize = new System.Drawing.Size(395, 571);
             this.Controls.Add(this.DGV_Stats);
             this.Controls.Add(this.BTN_Ok);
             this.Controls.Add(this.LB_TempsPunition);
