@@ -92,6 +92,7 @@
             this.TB_ScoreAway.Name = "TB_ScoreAway";
             this.TB_ScoreAway.Size = new System.Drawing.Size(196, 26);
             this.TB_ScoreAway.TabIndex = 29;
+            this.TB_ScoreAway.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VerifScoreValide);
             // 
             // TB_ScoreHome
             // 
@@ -101,6 +102,7 @@
             this.TB_ScoreHome.Name = "TB_ScoreHome";
             this.TB_ScoreHome.Size = new System.Drawing.Size(196, 26);
             this.TB_ScoreHome.TabIndex = 27;
+            this.TB_ScoreHome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VerifScoreValide);
             // 
             // BTN_Cancel
             // 
@@ -223,6 +225,8 @@
             this.Controls.Add(this.BTN_Ok);
             this.Name = "Form_Ajouter_Match";
             this.Text = "Form_Ajouter_Match";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Ajouter_Match_FormClosed);
+            this.Load += new System.EventHandler(this.Form_Ajouter_Match_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

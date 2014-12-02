@@ -32,8 +32,6 @@
             this.LB_EquipeAway = new System.Windows.Forms.Label();
             this.TB_EquipeHome = new System.Windows.Forms.TextBox();
             this.TB_EquipeAway = new System.Windows.Forms.TextBox();
-            this.PB_EquipeHome = new System.Windows.Forms.PictureBox();
-            this.PB_EquipeAway = new System.Windows.Forms.PictureBox();
             this.BTN_AjoutRencontre = new System.Windows.Forms.Button();
             this.BTN_ModifierMatch = new System.Windows.Forms.Button();
             this.BTN_Calendrier = new System.Windows.Forms.Button();
@@ -42,10 +40,12 @@
             this.BTN_Fermer = new System.Windows.Forms.Button();
             this.DGV_Matchs = new System.Windows.Forms.DataGridView();
             this.DGV_Joueurs = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).BeginInit();
+            this.PB_EquipeHome = new System.Windows.Forms.PictureBox();
+            this.PB_EquipeAway = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).BeginInit();
             this.SuspendLayout();
             // 
             // LB_EquipeHome
@@ -80,22 +80,6 @@
             this.TB_EquipeAway.Size = new System.Drawing.Size(101, 26);
             this.TB_EquipeAway.TabIndex = 2;
             // 
-            // PB_EquipeHome
-            // 
-            this.PB_EquipeHome.Location = new System.Drawing.Point(29, 67);
-            this.PB_EquipeHome.Name = "PB_EquipeHome";
-            this.PB_EquipeHome.Size = new System.Drawing.Size(100, 108);
-            this.PB_EquipeHome.TabIndex = 1;
-            this.PB_EquipeHome.TabStop = false;
-            // 
-            // PB_EquipeAway
-            // 
-            this.PB_EquipeAway.Location = new System.Drawing.Point(228, 67);
-            this.PB_EquipeAway.Name = "PB_EquipeAway";
-            this.PB_EquipeAway.Size = new System.Drawing.Size(100, 108);
-            this.PB_EquipeAway.TabIndex = 1;
-            this.PB_EquipeAway.TabStop = false;
-            // 
             // BTN_AjoutRencontre
             // 
             this.BTN_AjoutRencontre.Location = new System.Drawing.Point(12, 397);
@@ -124,6 +108,7 @@
             this.BTN_Calendrier.TabIndex = 4;
             this.BTN_Calendrier.Text = "Calendrier";
             this.BTN_Calendrier.UseVisualStyleBackColor = true;
+            this.BTN_Calendrier.Click += new System.EventHandler(this.BTN_Calendrier_Click);
             // 
             // BTN_Stats
             // 
@@ -133,6 +118,7 @@
             this.BTN_Stats.TabIndex = 4;
             this.BTN_Stats.Text = "Stats";
             this.BTN_Stats.UseVisualStyleBackColor = true;
+            this.BTN_Stats.Click += new System.EventHandler(this.BTN_Stats_Click);
             // 
             // BTN_AjoutStats
             // 
@@ -142,6 +128,7 @@
             this.BTN_AjoutStats.TabIndex = 4;
             this.BTN_AjoutStats.Text = "Ajouter stats";
             this.BTN_AjoutStats.UseVisualStyleBackColor = true;
+            this.BTN_AjoutStats.Click += new System.EventHandler(this.BTN_AjoutStats_Click);
             // 
             // BTN_Fermer
             // 
@@ -182,6 +169,22 @@
             this.DGV_Joueurs.Size = new System.Drawing.Size(1144, 156);
             this.DGV_Joueurs.TabIndex = 5;
             // 
+            // PB_EquipeHome
+            // 
+            this.PB_EquipeHome.Location = new System.Drawing.Point(29, 67);
+            this.PB_EquipeHome.Name = "PB_EquipeHome";
+            this.PB_EquipeHome.Size = new System.Drawing.Size(100, 108);
+            this.PB_EquipeHome.TabIndex = 1;
+            this.PB_EquipeHome.TabStop = false;
+            // 
+            // PB_EquipeAway
+            // 
+            this.PB_EquipeAway.Location = new System.Drawing.Point(228, 67);
+            this.PB_EquipeAway.Name = "PB_EquipeAway";
+            this.PB_EquipeAway.Size = new System.Drawing.Size(100, 108);
+            this.PB_EquipeAway.TabIndex = 1;
+            this.PB_EquipeAway.TabStop = false;
+            // 
             // Form_Matchs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -203,11 +206,12 @@
             this.Controls.Add(this.LB_EquipeHome);
             this.Name = "Form_Matchs";
             this.Text = "Form_Match";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Matchs_FormClosed);
             this.Load += new System.EventHandler(this.Form_Matchs_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

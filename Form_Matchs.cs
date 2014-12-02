@@ -30,11 +30,80 @@ namespace TPFinal
 
         private void BTN_AjoutRencontre_Click(object sender, EventArgs e)
         {
-            Form_Ajouter_Match ajm = new Form_Ajouter_Match();
+            Form_Ajouter_Match ajm = new Form_Ajouter_Match(oracon, connection);
             ajm.Text = "Ajout de match";
-            callBackForm = this;
+            ajm.callBackForm = this;
             this.Hide();
             ajm.ShowDialog();
+            string sqlAjout = null;
+
+            if (!Currval)
+            {
+                sqlAjout = "Select MAX(NumeroMatch) from Match ";
+            }
+            else
+            {
+                sqlAjout = "Select Seqmatch.currval from dual ";
+            }
+            OracleCommand oraCMD = new OracleCommand(sqlAjout, oracon);
+            oraCMD.CommandType = CommandType.Text;
+
+            try
+            {
+                OracleDataReader oraRead = oraCMD.ExecuteReader();
+                while (oraRead.Read())
+                {
+                    ajm.numeroMatch = (oraRead.GetInt32(0) + 1).ToString();
+
+                }
+                oraRead.Close();
+            }
+
+            catch (OracleException ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+            if (ajm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                Currval = true;
+                string sqlMatchAjout = "insert into Match (EquipeReceveur,EquipeVisiteur,DateRecontre,LieuRencontre,ScoreFinalReceveur,ScoreFinalVisiteur)" +
+                    " VALUES(:EquipeHome,:EquipeVisiteur,:DateRencontre,:Lieu,:ScoreHome,:ScoreVisiteur)";
+
+                try
+                {
+                    OracleCommand oraMatchAjout = new OracleCommand(sqlMatchAjout, oracon);
+
+
+                    OracleParameter OraParaEquipeHome = new OracleParameter(":EquipeHome", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaEquipeVisiteur = new OracleParameter(":EquipeVisiteur", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaDateRencontre = new OracleParameter(":DateRencontre", OracleDbType.Date);
+                    OracleParameter OraParaLieu = new OracleParameter(":Lieu", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaScoreHome = new OracleParameter(":ScoreHome", OracleDbType.Int32);
+                    OracleParameter OraParaScoreVisiteur = new OracleParameter(":ScoreVisiteur", OracleDbType.Int32);
+
+                    OraParaEquipeHome.Value = ajm.equipeHome;
+                    OraParaEquipeVisiteur.Value = ajm.equipeVisiteur;
+                    OraParaDateRencontre.Value = DateTime.Parse(ajm.dateRencontre);
+                    OraParaLieu.Value = ajm.lieuRencontre;
+                    OraParaScoreHome.Value = ajm.scoreHome;
+                    OraParaScoreVisiteur.Value = ajm.scoreVisiteur;
+
+                    oraMatchAjout.Parameters.Add(OraParaEquipeHome);
+                    oraMatchAjout.Parameters.Add(OraParaEquipeVisiteur);
+                    oraMatchAjout.Parameters.Add(OraParaDateRencontre);
+                    oraMatchAjout.Parameters.Add(OraParaLieu);
+                    oraMatchAjout.Parameters.Add(OraParaScoreHome);
+                    oraMatchAjout.Parameters.Add(OraParaScoreVisiteur);
+
+                    oraMatchAjout.ExecuteNonQuery();
+
+                    LoadDGVmatch();
+                }
+                catch (OracleException ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
 
         private void LoadDGVstats()
@@ -94,72 +163,87 @@ namespace TPFinal
         private void Form_Matchs_Load(object sender, EventArgs e)
         {
             LoadDGVmatch();
-            LoadDGVstats();
+            //LoadDGVstats();
             TB_EquipeHome.Select();
         }
 
         private void DGV_Matchs_SelectionChanged(object sender, EventArgs e)
         {
-            //PB_EquipeHome.Image = null;
-            //PB_EquipeAway.Image = null;
+        }
+
+        private void Form_Matchs_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (callBackForm != null)
+                callBackForm.Show();
+        }
+
+        private void BTN_Calendrier_Click(object sender, EventArgs e)
+        {
+            Form_Calendrier_Matchs cal = new Form_Calendrier_Matchs(oracon, connection);
+            this.Hide();
+            cal.callBackForm = this;
+            cal.ShowDialog();
+        }
+
+        private void BTN_Stats_Click(object sender, EventArgs e)
+        {
+            Form_Statistiques Stats = new Form_Statistiques(oracon, connection);
+            this.Hide();
+            Stats.callBackForm = this;
+            Stats.numeroJoueurs = DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString();
+            Stats.ShowDialog();
+        }
+
+        private void BTN_AjoutStats_Click(object sender, EventArgs e)
+        {
+            Form_Ajouter_Stats AjoutStats = new Form_Ajouter_Stats(oracon, connection);
+            this.Hide();
+            AjoutStats.callBackForm = this;
+            AjoutStats.numMatch = DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString();
+            AjoutStats.equipeHome = DGV_Matchs.SelectedRows[0].Cells[1].Value.ToString();
+            AjoutStats.equipeVisiteur = DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString();
+
+            if (AjoutStats.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string sqlAjoutStats = "insert into FicheJoueur(NumeroMatch,NumeroJoueur,NombreButs,NombrePasses,TempsPunition)" +
+                    " VALUES(:NumeroMatch,:NumeroJoueurs,:NBBUTS,:NBPASSES,:TEMPSPUNITION)";
+                try
+                {
+                    OracleCommand oraAjoutStats = new OracleCommand(sqlAjoutStats, oracon);
+
+                    OracleParameter OraParaNumJoueurs = new OracleParameter(":NumeroJoueurs", OracleDbType.Int32);
+                    OracleParameter OraParaNumMatch = new OracleParameter(":NumeroMatch", OracleDbType.Int32);
+                    OracleParameter OraParaNBButs = new OracleParameter(":NBBUTS", OracleDbType.Int32);
+                    OracleParameter OraParaNbPasses = new OracleParameter(":NBPASSES", OracleDbType.Int32);
+                    OracleParameter OraParaTempsPunition = new OracleParameter(":TEMPSPUNITION", OracleDbType.Int32);
+
+                    OraParaNumJoueurs.Value = AjoutStats.numJoueurs;
+                    OraParaNumMatch.Value = AjoutStats.numMatch;
+                    OraParaNBButs.Value = AjoutStats.nbButs;
+                    OraParaNbPasses.Value = AjoutStats.nbPasses;
+                    OraParaTempsPunition.Value = AjoutStats.tempsPunition;
+
+                    oraAjoutStats.Parameters.Add(OraParaNumJoueurs);
+                    oraAjoutStats.Parameters.Add(OraParaNumMatch);
+                    oraAjoutStats.Parameters.Add(OraParaNBButs);
+                    oraAjoutStats.Parameters.Add(OraParaNbPasses);
+                    oraAjoutStats.Parameters.Add(OraParaTempsPunition);
 
 
-            //if (DGV_Matchs.SelectedRows.Count > 0)
-            //{
-            //    OracleCommand oraImage = oracon.CreateCommand();
-            //    oraImage.CommandText = "SELECT (SELECT Logo FROM Equipe WHERE NomEquipe=:NomEquipe1), (SELECT FROM Equipe WHERE NomEquipe=:NomEquipe2) FROM DUAL";
-            //    oraImage.Parameters.Add(new OracleParameter(":NomEquipe1", DGV_Matchs.SelectedRows[0].Cells[1].Value.ToString()));
-            //    oraImage.Parameters.Add(new OracleParameter(":NomEquipe2", DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString()));
-
-            //    OracleCommand oraJoueurs = oracon.CreateCommand();
-            //    oraJoueurs.CommandText = " SELECT * FROM JOUEUR INNER JOIN MATCH ON JOUEUR.nomequipe = MATCH.EQUIPEreceveur " +
-            //                             " WHERE EQUIPEReceveur='" + DGV_Matchs.SelectedRows[0].Cells[1].Value.ToString() + "' and Match.NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() + "  UNION " +
-            //                             " SELECT * FROM JOUEUR INNER JOIN MATCH ON JOUEUR.nomequipe = MATCH.EQUIPEVISITEUR" +
-            //                             "  WHERE EQUIPEVISITEUR= '" + DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString() + "' and Match.NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() + " ORDER BY 6 ";
-            //    OracleDataAdapter oraDataJoueurs = new OracleDataAdapter(oraJoueurs);
-            //    matchDataSet = new DataSet();
-            //    oraDataJoueurs.Fill(matchDataSet, "JoueursDGV");
-            //    DGV_Joueurs.DataSource = matchDataSet.Tables[0];
-
-
-            //    TB_EquipeHome.Text = DGV_Matchs.SelectedRows[0].Cells[5].Value.ToString();
-            //    TB_EquipeAway.Text = DGV_Matchs.SelectedRows[0].Cells[6].Value.ToString();
-            //    using (OracleDataReader oraReader = oraImage.ExecuteReader())
-            //    {
-            //        if (oraReader.Read())
-            //        {
-            //            OracleBlob oraBlob = oraReader.GetOracleBlob(0);
-            //            if (!oraBlob.IsNull)
-            //            {
-            //                using (MemoryStream ms = new MemoryStream())
-            //                {
-            //                    byte[] buffer = new byte[8 * 1024];
-            //                    int read = 0;
-            //                    while ((read = oraBlob.Read(buffer, 0, 8 * 1024)) > 0)
-            //                    {
-            //                        ms.Write(buffer, 0, read);
-            //                    }
-            //                    PB_EquipeHome.Image = Image.FromStream(ms);
-            //                }
-            //            }
-
-            //            oraBlob = oraReader.GetOracleBlob(1);
-            //            if (!oraBlob.IsNull)
-            //            {
-            //                using (MemoryStream ms = new MemoryStream())
-            //                {
-            //                    byte[] buffer = new byte[8 * 1024];
-            //                    int read = 0;
-            //                    while ((read = oraBlob.Read(buffer, 0, 8 * 1024)) > 0)
-            //                    {
-            //                        ms.Write(buffer, 0, read);
-            //                    }
-            //                    PB_EquipeAway.Image = Image.FromStream(ms);
-            //                }
-            //            }
-            //        }
-            //    }
-            //}
+                    oraAjoutStats.ExecuteNonQuery();
+                }
+                catch (OracleException ex)
+                {
+                    if (ex.Number == 1)
+                    {
+                        MessageBox.Show("Vous ne pouvez pas rajouter des stats de joueurs qui ont deja eu des stats pour le match en visionnement", "Erreur 00001", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                    }
+                }
+            }
         }
     }
 }

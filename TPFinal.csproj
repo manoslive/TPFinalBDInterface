@@ -143,6 +143,9 @@
     <EmbeddedResource Include="Form_Ajouter_Match.resx">
       <DependentUpon>Form_Ajouter_Match.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Ajouter_Stats.resx">
+      <DependentUpon>Form_Ajouter_Stats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Classement.resx">
       <DependentUpon>Form_Classement.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Matchs.resx">
       <DependentUpon>Form_Matchs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Statistiques.resx">
+      <DependentUpon>Form_Statistiques.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Top5.resx">
       <DependentUpon>Form_Top5.cs</DependentUpon>
