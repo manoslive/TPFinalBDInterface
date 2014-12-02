@@ -49,7 +49,7 @@ namespace TPFinal
             {
                 string sql = "insert into joueur" +
                              "(nomjoueur, prenomjoueur, datenaissance, numeromaillot, photo, positionjoueur, nomequipe)" +
-                             "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:Photo,:positionjoueur, 'Tunak')"; //:equipejoueur
+                             "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:Photo,:positionjoueur,:equipejoueur)"; //:equipejoueur
                 currval = true;
                 try
                 {
@@ -67,7 +67,7 @@ namespace TPFinal
                     OraParamPrenomjoueurs.Value = aJ.prenomJoueurs;
                     OraParamdatenaissance.Value = aJ.DDN;// 
                     OraParanumeromaillot.Value = aJ.maillot;
-                    OraParaequipejoueurs.Value = aJ.Equipe; ////// erreur contrainte equipe
+                    OraParaequipejoueurs.Value = aJ.Equipe; 
                     OraParpositionjoueur.Value = aJ.Position;
                     OraParaPhoto.Value = aJ.Photo;
 
