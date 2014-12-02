@@ -240,7 +240,7 @@ namespace TPFinal
                                          " SELECT J.NUMEROJOUEUR, NUMEROMAILLOT, J.NOMJOUEUR, POSITIONJOUEUR, NOMEQUIPE, F.NOMBREBUTS, F.NOMBREPASSES, NOMBREPOINTS FROM JOUEUR J INNER JOIN MATCH M ON J.NOMEQUIPE = M.EQUIPEVISITEUR" +
                                          " INNER JOIN FICHEJOUEUR F ON J.NUMEROJOUEUR = F.NUMEROJOUEUR" +
                                          " INNER JOIN STATSJOUEUR S ON S.NOMJOUEUR = J.NOMJOUEUR" +
-                                         " WHERE M.EQUIPEVISITEUR='" + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() + "' and M.NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() +
+                                         " WHERE M.EQUIPEVISITEUR='" + DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString() + "' and M.NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() +
                                          " ORDER BY 7 DESC";
                 OracleDataAdapter oraDataJoueurs = new OracleDataAdapter(oraJoueurs);
                 joueursDataSet = new DataSet();
