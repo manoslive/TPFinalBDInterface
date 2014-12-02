@@ -111,9 +111,9 @@ namespace TPFinal
 
         private void BTN_Top5_Click(object sender, EventArgs e)
         {
-            Form_Top5 Top5 = new Form_Top5(oracon, maBelleConnection);
-            Top5.Text = "Top 3";
-            Top5.ShowDialog();
+            Form_Top3 Top3 = new Form_Top3(oracon, maBelleConnection);
+            Top3.Text = "Top 3";
+            Top3.ShowDialog();
         }
 
         private void BTN_Classement_Click(object sender, EventArgs e)

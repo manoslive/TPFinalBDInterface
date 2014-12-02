@@ -1,6 +1,6 @@
 ﻿namespace TPFinal
 {
-    partial class Form_Top5
+    partial class Form_Top3
     {
         /// <summary>
         /// Required designer variable.

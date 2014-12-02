@@ -11,12 +11,12 @@ using Oracle.DataAccess.Client;
 
 namespace TPFinal
 {
-    public partial class Form_Top5 : Form
+    public partial class Form_Top3 : Form
     {
         private OracleConnection oracon = null;
         private MaConnection connection = null;
         private DataSet dataSetTop3 = new DataSet();
-        public Form_Top5(OracleConnection connectionoracle, MaConnection maBelleConnection)
+        public Form_Top3(OracleConnection connectionoracle, MaConnection maBelleConnection)
         {
             InitializeComponent();
             oracon = connectionoracle;

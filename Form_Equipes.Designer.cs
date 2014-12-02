@@ -105,7 +105,7 @@
             this.BTN_Top5.Name = "BTN_Top5";
             this.BTN_Top5.Size = new System.Drawing.Size(119, 40);
             this.BTN_Top5.TabIndex = 1;
-            this.BTN_Top5.Text = "Top 5";
+            this.BTN_Top5.Text = "Top 3";
             this.BTN_Top5.UseVisualStyleBackColor = true;
             this.BTN_Top5.Click += new System.EventHandler(this.BTN_Top5_Click);
             // 
