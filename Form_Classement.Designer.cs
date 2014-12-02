@@ -88,6 +88,7 @@
             this.Controls.Add(this.CB_Division);
             this.Controls.Add(this.BTN_Fermer);
             this.Controls.Add(this.DGV_Classement);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Classement";
             this.Text = "Form_Classement";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Classement_FormClosing);

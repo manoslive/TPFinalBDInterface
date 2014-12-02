@@ -175,6 +175,7 @@
             this.Controls.Add(this.BTN_Supprimer);
             this.Controls.Add(this.BTN_Classement);
             this.Controls.Add(this.DGV_Equipes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Equipes";
             this.Text = "Form_Equipe";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Equipes_FormClosing);

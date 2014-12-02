@@ -238,7 +238,7 @@ namespace TPFinal
 
             if (aj.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                string sql = "update joueur set nomjoueur=:NomJoueurs, prenomjoueur=:Prenomjoueurs, datanaissance=:datenaissance, numeromaillot=:numeromaillot, photo=:Photo, nomequipe=:equipejoueur, positionjoueur=:positionjoueur)" +
+                string sql = "update joueur set nomjoueur=:NomJoueurs, prenomjoueur=:Prenomjoueurs, datenaissance=:datenaissance, numeromaillot=:numeromaillot, photo=:Photo, positionjoueur=:positionjoueur, nomequipe=:equipejoueur)" +
              "where numerojoueur=:numerojoueurs)";
                 try
                 {

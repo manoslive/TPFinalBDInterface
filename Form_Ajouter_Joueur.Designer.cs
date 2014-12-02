@@ -55,7 +55,6 @@
             this.BTN_Fermer.TabIndex = 22;
             this.BTN_Fermer.Text = "Fermer";
             this.BTN_Fermer.UseVisualStyleBackColor = true;
-            this.BTN_Fermer.Click += new System.EventHandler(this.BTN_Fermer_Click);
             // 
             // CB_PosJoueur
             // 
@@ -184,7 +183,6 @@
             this.BTN_Ajouter.TabIndex = 22;
             this.BTN_Ajouter.Text = "Ajouter";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
-            this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click_1);
             // 
             // Form_Ajouter_Joueur
             // 
@@ -207,6 +205,7 @@
             this.Controls.Add(this.LB_EquipeJoueur);
             this.Controls.Add(this.LB_NomJoueur);
             this.Controls.Add(this.LB_NumeroMaillot);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Ajouter_Joueur";
             this.Text = "Form_Ajouter_Joueur";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ajouter_Joueur_FormClosing);
