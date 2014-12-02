@@ -215,12 +215,79 @@ namespace TPFinal
         private void Form_Matchs_Load(object sender, EventArgs e)
         {
             LoadDGVmatch();
-            LoadDGVstats();
-            TB_EquipeHome.Select();
+            //LoadDGVstats();
         }
 
         private void DGV_Matchs_SelectionChanged(object sender, EventArgs e)
         {
+            PB_EquipeHome.Image = null;
+            PB_EquipeAway.Image = null;
+
+
+            if (DGV_Matchs.SelectedRows.Count > 0)
+            {
+                OracleCommand oraImage = oracon.CreateCommand();
+                oraImage.CommandText = "SELECT (SELECT Logo FROM Equipe WHERE NomEquipe=:NomEquipe1), (SELECT Logo FROM Equipe WHERE NomEquipe=:NomEquipe2) FROM DUAL";
+                oraImage.Parameters.Add(new OracleParameter(":NomEquipe1", DGV_Matchs.SelectedRows[0].Cells[1].Value.ToString()));
+                oraImage.Parameters.Add(new OracleParameter(":NomEquipe2", DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString()));
+
+                OracleCommand oraJoueurs = oracon.CreateCommand();
+                oraJoueurs.CommandText = " SELECT NUMEROMAILLOT, J.NOMJOUEUR, POSITIONJOUEUR, NOMEQUIPE, F.NOMBREBUTS, F.NOMBREPASSES, NOMBREPOINTS FROM JOUEUR J INNER JOIN MATCH M ON J.NOMEQUIPE = M.EQUIPERECEVEUR " +
+                                         " INNER JOIN FICHEJOUEUR F ON J.NUMEROJOUEUR = F.NUMEROJOUEUR" +
+                                         " INNER JOIN STATSJOUEUR S ON S.NOMJOUEUR = J.NOMJOUEUR" +
+                                         " WHERE M.EQUIPERECEVEUR='" + DGV_Matchs.SelectedRows[0].Cells[1].Value.ToString() + "' and M.NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() + "  UNION " +
+
+                                         " SELECT NUMEROMAILLOT, J.NOMJOUEUR, POSITIONJOUEUR, NOMEQUIPE, F.NOMBREBUTS, F.NOMBREPASSES, NOMBREPOINTS FROM JOUEUR J INNER JOIN MATCH M ON J.NOMEQUIPE = M.EQUIPEVISITEUR" +
+                                         " INNER JOIN FICHEJOUEUR F ON J.NUMEROJOUEUR = F.NUMEROJOUEUR" +
+                                         " INNER JOIN STATSJOUEUR S ON S.NOMJOUEUR = J.NOMJOUEUR" +
+                                         " WHERE M.EQUIPEVISITEUR='" + DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString() + "' and M.NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() +
+                                         " ORDER BY 7 DESC";
+                OracleDataAdapter oraDataJoueurs = new OracleDataAdapter(oraJoueurs);
+                joueursDataSet = new DataSet();
+                oraDataJoueurs.Fill(joueursDataSet, "JoueursDGV");
+                DGV_Joueurs.DataSource = joueursDataSet.Tables[0];
+
+
+                LB_NbButsHome.Text = DGV_Matchs.SelectedRows[0].Cells[5].Value.ToString();
+                LB_NbButsAway.Text = DGV_Matchs.SelectedRows[0].Cells[6].Value.ToString();
+                TB_Receveur.Text = DGV_Matchs.SelectedRows[0].Cells[1].Value.ToString();
+                TB_Visiteur.Text = DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString();
+                using (OracleDataReader oraReader = oraImage.ExecuteReader())
+                {
+                    if (oraReader.Read())
+                    {
+                        OracleBlob oraBlob = oraReader.GetOracleBlob(0);
+                        if (!oraBlob.IsNull)
+                        {
+                            using (MemoryStream ms = new MemoryStream())
+                            {
+                                byte[] buffer = new byte[8 * 1024];
+                                int read = 0;
+                                while ((read = oraBlob.Read(buffer, 0, 8 * 1024)) > 0)
+                                {
+                                    ms.Write(buffer, 0, read);
+                                }
+                                PB_EquipeHome.Image = Image.FromStream(ms);
+                            }
+                        }
+
+                        oraBlob = oraReader.GetOracleBlob(1);
+                        if (!oraBlob.IsNull)
+                        {
+                            using (MemoryStream ms = new MemoryStream())
+                            {
+                                byte[] buffer = new byte[8 * 1024];
+                                int read = 0;
+                                while ((read = oraBlob.Read(buffer, 0, 8 * 1024)) > 0)
+                                {
+                                    ms.Write(buffer, 0, read);
+                                }
+                                PB_EquipeAway.Image = Image.FromStream(ms);
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void Form_Matchs_FormClosed(object sender, FormClosedEventArgs e)
@@ -239,10 +306,15 @@ namespace TPFinal
 
         private void BTN_Stats_Click(object sender, EventArgs e)
         {
+            FillStats();
+        }
+
+        private void FillStats()
+        {
             Form_Statistiques Stats = new Form_Statistiques(oracon, connection);
             this.Hide();
             Stats.callBackForm = this;
-            Stats.numeroJoueurs = DGV_Joueurs.SelectedRows[0].Cells[1].Value.ToString();
+            Stats.numeroJoueurs = DGV_Joueurs.SelectedRows[0].Cells[2].Value.ToString();
             Stats.ShowDialog();
         }
 
@@ -295,6 +367,14 @@ namespace TPFinal
                         MessageBox.Show(ex.Message.ToString());
                     }
                 }
+            }
+        }
+
+        private void DGV_Joueurs_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                FillStats();
             }
         }
     }

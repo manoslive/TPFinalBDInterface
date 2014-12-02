@@ -127,10 +127,13 @@
   <data name="Hockey_croise" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hockey_croise.BMP;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="canada_hockey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\canada_hockey.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Star" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="canada_hockey" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\canada_hockey.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hockey-face-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hockey-face-off.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -30,8 +30,6 @@
         {
             this.LB_EquipeHome = new System.Windows.Forms.Label();
             this.LB_EquipeAway = new System.Windows.Forms.Label();
-            this.TB_EquipeHome = new System.Windows.Forms.TextBox();
-            this.TB_EquipeAway = new System.Windows.Forms.TextBox();
             this.BTN_AjoutRencontre = new System.Windows.Forms.Button();
             this.BTN_ModifierMatch = new System.Windows.Forms.Button();
             this.BTN_Calendrier = new System.Windows.Forms.Button();
@@ -40,10 +38,18 @@
             this.BTN_Fermer = new System.Windows.Forms.Button();
             this.DGV_Matchs = new System.Windows.Forms.DataGridView();
             this.DGV_Joueurs = new System.Windows.Forms.DataGridView();
+            this.PB_Faceoff = new System.Windows.Forms.PictureBox();
             this.PB_EquipeHome = new System.Windows.Forms.PictureBox();
             this.PB_EquipeAway = new System.Windows.Forms.PictureBox();
+            this.LB_ScoreAway = new System.Windows.Forms.Label();
+            this.LB_ScoreHome = new System.Windows.Forms.Label();
+            this.LB_NbButsHome = new System.Windows.Forms.Label();
+            this.LB_NbButsAway = new System.Windows.Forms.Label();
+            this.TB_Receveur = new System.Windows.Forms.TextBox();
+            this.TB_Visiteur = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Faceoff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).BeginInit();
             this.SuspendLayout();
@@ -51,34 +57,22 @@
             // LB_EquipeHome
             // 
             this.LB_EquipeHome.AutoSize = true;
-            this.LB_EquipeHome.Location = new System.Drawing.Point(12, 9);
+            this.LB_EquipeHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_EquipeHome.Location = new System.Drawing.Point(254, 12);
             this.LB_EquipeHome.Name = "LB_EquipeHome";
-            this.LB_EquipeHome.Size = new System.Drawing.Size(127, 20);
+            this.LB_EquipeHome.Size = new System.Drawing.Size(169, 25);
             this.LB_EquipeHome.TabIndex = 0;
-            this.LB_EquipeHome.Text = "Équipe qui reçoit";
+            this.LB_EquipeHome.Text = "Équipe receveur";
             // 
             // LB_EquipeAway
             // 
             this.LB_EquipeAway.AutoSize = true;
-            this.LB_EquipeAway.Location = new System.Drawing.Point(224, 9);
+            this.LB_EquipeAway.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_EquipeAway.Location = new System.Drawing.Point(753, 12);
             this.LB_EquipeAway.Name = "LB_EquipeAway";
-            this.LB_EquipeAway.Size = new System.Drawing.Size(103, 20);
+            this.LB_EquipeAway.Size = new System.Drawing.Size(154, 25);
             this.LB_EquipeAway.TabIndex = 0;
-            this.LB_EquipeAway.Text = "Équipe reçue";
-            // 
-            // TB_EquipeHome
-            // 
-            this.TB_EquipeHome.Location = new System.Drawing.Point(29, 203);
-            this.TB_EquipeHome.Name = "TB_EquipeHome";
-            this.TB_EquipeHome.Size = new System.Drawing.Size(100, 26);
-            this.TB_EquipeHome.TabIndex = 2;
-            // 
-            // TB_EquipeAway
-            // 
-            this.TB_EquipeAway.Location = new System.Drawing.Point(227, 203);
-            this.TB_EquipeAway.Name = "TB_EquipeAway";
-            this.TB_EquipeAway.Size = new System.Drawing.Size(101, 26);
-            this.TB_EquipeAway.TabIndex = 2;
+            this.LB_EquipeAway.Text = "Équipe visiteur";
             // 
             // BTN_AjoutRencontre
             // 
@@ -168,28 +162,108 @@
             this.DGV_Joueurs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Joueurs.Size = new System.Drawing.Size(1144, 156);
             this.DGV_Joueurs.TabIndex = 5;
+            this.DGV_Joueurs.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Joueurs_CellMouseDoubleClick);
+            // 
+            // PB_Faceoff
+            // 
+            this.PB_Faceoff.Image = global::TPFinal.Properties.Resources.hockey_face_off;
+            this.PB_Faceoff.Location = new System.Drawing.Point(450, 12);
+            this.PB_Faceoff.Name = "PB_Faceoff";
+            this.PB_Faceoff.Size = new System.Drawing.Size(297, 186);
+            this.PB_Faceoff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Faceoff.TabIndex = 6;
+            this.PB_Faceoff.TabStop = false;
             // 
             // PB_EquipeHome
             // 
-            this.PB_EquipeHome.Location = new System.Drawing.Point(29, 67);
+            this.PB_EquipeHome.Location = new System.Drawing.Point(12, 12);
             this.PB_EquipeHome.Name = "PB_EquipeHome";
-            this.PB_EquipeHome.Size = new System.Drawing.Size(100, 108);
+            this.PB_EquipeHome.Size = new System.Drawing.Size(224, 206);
+            this.PB_EquipeHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_EquipeHome.TabIndex = 1;
             this.PB_EquipeHome.TabStop = false;
             // 
             // PB_EquipeAway
             // 
-            this.PB_EquipeAway.Location = new System.Drawing.Point(228, 67);
+            this.PB_EquipeAway.Location = new System.Drawing.Point(932, 12);
             this.PB_EquipeAway.Name = "PB_EquipeAway";
-            this.PB_EquipeAway.Size = new System.Drawing.Size(100, 108);
+            this.PB_EquipeAway.Size = new System.Drawing.Size(224, 206);
+            this.PB_EquipeAway.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_EquipeAway.TabIndex = 1;
             this.PB_EquipeAway.TabStop = false;
+            // 
+            // LB_ScoreAway
+            // 
+            this.LB_ScoreAway.AutoSize = true;
+            this.LB_ScoreAway.Location = new System.Drawing.Point(795, 114);
+            this.LB_ScoreAway.Name = "LB_ScoreAway";
+            this.LB_ScoreAway.Size = new System.Drawing.Size(84, 20);
+            this.LB_ScoreAway.TabIndex = 7;
+            this.LB_ScoreAway.Text = "Score final";
+            // 
+            // LB_ScoreHome
+            // 
+            this.LB_ScoreHome.AutoSize = true;
+            this.LB_ScoreHome.Location = new System.Drawing.Point(298, 114);
+            this.LB_ScoreHome.Name = "LB_ScoreHome";
+            this.LB_ScoreHome.Size = new System.Drawing.Size(84, 20);
+            this.LB_ScoreHome.TabIndex = 7;
+            this.LB_ScoreHome.Text = "Score final";
+            // 
+            // LB_NbButsHome
+            // 
+            this.LB_NbButsHome.AutoSize = true;
+            this.LB_NbButsHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_NbButsHome.Location = new System.Drawing.Point(321, 148);
+            this.LB_NbButsHome.Name = "LB_NbButsHome";
+            this.LB_NbButsHome.Size = new System.Drawing.Size(36, 37);
+            this.LB_NbButsHome.TabIndex = 8;
+            this.LB_NbButsHome.Text = "#";
+            // 
+            // LB_NbButsAway
+            // 
+            this.LB_NbButsAway.AutoSize = true;
+            this.LB_NbButsAway.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_NbButsAway.Location = new System.Drawing.Point(826, 148);
+            this.LB_NbButsAway.Name = "LB_NbButsAway";
+            this.LB_NbButsAway.Size = new System.Drawing.Size(36, 37);
+            this.LB_NbButsAway.TabIndex = 8;
+            this.LB_NbButsAway.Text = "#";
+            // 
+            // TB_Receveur
+            // 
+            this.TB_Receveur.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TB_Receveur.Location = new System.Drawing.Point(258, 56);
+            this.TB_Receveur.Name = "TB_Receveur";
+            this.TB_Receveur.ReadOnly = true;
+            this.TB_Receveur.Size = new System.Drawing.Size(165, 19);
+            this.TB_Receveur.TabIndex = 9;
+            this.TB_Receveur.Text = "Home";
+            this.TB_Receveur.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TB_Visiteur
+            // 
+            this.TB_Visiteur.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TB_Visiteur.Location = new System.Drawing.Point(753, 56);
+            this.TB_Visiteur.Name = "TB_Visiteur";
+            this.TB_Visiteur.ReadOnly = true;
+            this.TB_Visiteur.Size = new System.Drawing.Size(165, 19);
+            this.TB_Visiteur.TabIndex = 9;
+            this.TB_Visiteur.Text = "Away";
+            this.TB_Visiteur.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form_Matchs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1168, 647);
+            this.Controls.Add(this.TB_Visiteur);
+            this.Controls.Add(this.TB_Receveur);
+            this.Controls.Add(this.LB_NbButsAway);
+            this.Controls.Add(this.LB_NbButsHome);
+            this.Controls.Add(this.LB_ScoreHome);
+            this.Controls.Add(this.LB_ScoreAway);
+            this.Controls.Add(this.PB_Faceoff);
             this.Controls.Add(this.DGV_Joueurs);
             this.Controls.Add(this.DGV_Matchs);
             this.Controls.Add(this.BTN_Stats);
@@ -198,8 +272,6 @@
             this.Controls.Add(this.BTN_Fermer);
             this.Controls.Add(this.BTN_AjoutStats);
             this.Controls.Add(this.BTN_AjoutRencontre);
-            this.Controls.Add(this.TB_EquipeAway);
-            this.Controls.Add(this.TB_EquipeHome);
             this.Controls.Add(this.PB_EquipeHome);
             this.Controls.Add(this.PB_EquipeAway);
             this.Controls.Add(this.LB_EquipeAway);
@@ -211,6 +283,7 @@
             this.Load += new System.EventHandler(this.Form_Matchs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Faceoff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).EndInit();
             this.ResumeLayout(false);
@@ -224,8 +297,6 @@
         private System.Windows.Forms.Label LB_EquipeAway;
         private System.Windows.Forms.PictureBox PB_EquipeAway;
         private System.Windows.Forms.PictureBox PB_EquipeHome;
-        private System.Windows.Forms.TextBox TB_EquipeHome;
-        private System.Windows.Forms.TextBox TB_EquipeAway;
         private System.Windows.Forms.Button BTN_AjoutRencontre;
         private System.Windows.Forms.Button BTN_ModifierMatch;
         private System.Windows.Forms.Button BTN_Calendrier;
@@ -234,6 +305,13 @@
         private System.Windows.Forms.Button BTN_Fermer;
         private System.Windows.Forms.DataGridView DGV_Matchs;
         private System.Windows.Forms.DataGridView DGV_Joueurs;
+        private System.Windows.Forms.PictureBox PB_Faceoff;
+        private System.Windows.Forms.Label LB_ScoreAway;
+        private System.Windows.Forms.Label LB_ScoreHome;
+        private System.Windows.Forms.Label LB_NbButsHome;
+        private System.Windows.Forms.Label LB_NbButsAway;
+        private System.Windows.Forms.TextBox TB_Receveur;
+        private System.Windows.Forms.TextBox TB_Visiteur;
 
     }
 }

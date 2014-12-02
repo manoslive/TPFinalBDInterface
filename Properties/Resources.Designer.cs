@@ -83,6 +83,16 @@ namespace TPFinal.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hockey_face_off {
+            get {
+                object obj = ResourceManager.GetObject("hockey-face-off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap no_picture {
             get {
                 object obj = ResourceManager.GetObject("no_picture", resourceCulture);
