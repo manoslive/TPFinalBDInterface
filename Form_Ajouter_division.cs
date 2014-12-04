@@ -11,16 +11,14 @@ using System.Windows.Forms;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
 
-
-
 namespace TPFinal
 {
-    public partial class Form_Ajouter_division : Form
+    public partial class Form_Ajouter_Division : Form
     {
         private OracleConnection oracon = null;
         private MaConnection connection = null;
         public Form callBackForm = null;
-        public Form_Ajouter_division(OracleConnection connect, MaConnection maBelleConnection)
+        public Form_Ajouter_Division(OracleConnection connect, MaConnection maBelleConnection)
         {
             InitializeComponent();
             oracon = connect;

@@ -1,6 +1,6 @@
 ﻿namespace TPFinal
 {
-    partial class Form_Ajouter_division
+    partial class Form_Ajouter_Division
     {
         /// <summary>
         /// Required designer variable.
