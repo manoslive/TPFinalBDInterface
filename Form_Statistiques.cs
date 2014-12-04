@@ -91,33 +91,33 @@ namespace TPFinal
         }
         private void UpdateLinkTB()
         {
-            UnbindTB();
-            TB_Url.DataBindings.Add("Text", dataSetJoueur, "Joueur.Photo");
-            TB_NumJoueur.DataBindings.Add("Text", dataSetJoueur, "Joueur.NumeroJoueur");
-            TB_NomJoueur.DataBindings.Add("Text", dataSetJoueur, "Joueur.NomJoueur");
-            TB_PrenomJoueur.DataBindings.Add("Text", dataSetJoueur, "Joueur.PrenomJoueur");
-            DTP_DateNaissance.DataBindings.Add("Text", dataSetJoueur, "Joueur.DateNaissance");
-            TB_NumMaillot.DataBindings.Add("Text", dataSetJoueur, "Joueur.NumeroMaillot");
-            CB_EquipeJoueur.DataBindings.Add("SelectedItem", dataSetJoueur, "Joueur.nomequipe");
-            CB_PosJoueur.DataBindings.Add("SelectedItem", dataSetJoueur, "Joueur.PositionJoueur");
+            //UnbindTB();
+            //TB_Url.DataBindings.Add("Text", dataSetJoueur, "Joueur.Photo");
+            //TB_NumJoueur.DataBindings.Add("Text", dataSetJoueur, "Joueur.NumeroJoueur");
+            //TB_NomJoueur.DataBindings.Add("Text", dataSetJoueur, "Joueur.NomJoueur");
+            //TB_PrenomJoueur.DataBindings.Add("Text", dataSetJoueur, "Joueur.PrenomJoueur");
+            //DTP_DateNaissance.DataBindings.Add("Text", dataSetJoueur, "Joueur.DateNaissance");
+            //TB_NumMaillot.DataBindings.Add("Text", dataSetJoueur, "Joueur.NumeroMaillot");
+            //CB_EquipeJoueur.DataBindings.Add("SelectedItem", dataSetJoueur, "Joueur.nomequipe");
+            //CB_PosJoueur.DataBindings.Add("SelectedItem", dataSetJoueur, "Joueur.PositionJoueur");
         }
         private void UnbindTB()
         {
-            TB_Url.DataBindings.Clear();
-            TB_NumJoueur.DataBindings.Clear();
-            TB_NumJoueur.Clear();
-            TB_NomJoueur.DataBindings.Clear();
-            TB_NomJoueur.Clear();
-            TB_PrenomJoueur.DataBindings.Clear();
-            TB_PrenomJoueur.Clear();
-            DTP_DateNaissance.DataBindings.Clear();
-            DTP_DateNaissance.Value = DateTime.Now;
-            TB_NumMaillot.DataBindings.Clear();
-            TB_NumMaillot.Clear();
-            CB_EquipeJoueur.DataBindings.Clear();
-            CB_EquipeJoueur.ResetText();
-            CB_PosJoueur.DataBindings.Clear();
-            CB_PosJoueur.ResetText();
+            //TB_Url.DataBindings.Clear();
+            //TB_NumJoueur.DataBindings.Clear();
+            //TB_NumJoueur.Clear();
+            //TB_NomJoueur.DataBindings.Clear();
+            //TB_NomJoueur.Clear();
+            //TB_PrenomJoueur.DataBindings.Clear();
+            //TB_PrenomJoueur.Clear();
+            //DTP_DateNaissance.DataBindings.Clear();
+            //DTP_DateNaissance.Value = DateTime.Now;
+            //TB_NumMaillot.DataBindings.Clear();
+            //TB_NumMaillot.Clear();
+            //CB_EquipeJoueur.DataBindings.Clear();
+            //CB_EquipeJoueur.ResetText();
+            //CB_PosJoueur.DataBindings.Clear();
+            //CB_PosJoueur.ResetText();
         }
         private void updateControls()
         {
