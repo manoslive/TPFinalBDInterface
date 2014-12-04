@@ -27,9 +27,17 @@ namespace TPFinal
                 string chaineConnection = "Data Source = " + Dsource + ";User Id =" + User + "; Password= " + Mdp;
                 connection.ConnectionString = chaineConnection;
                 connection.Open();
-                if (MessageBox.Show(connection.State.ToString()) == DialogResult.OK)
+                if(connection.State == ConnectionState.Open)
                 {
-                    resultat = true;
+                    if (MessageBox.Show("Vous êtes maintenant connecté!" + "\n" + "Bienvenue dans un monde rempli d'intrigues!", "État de connection à la BD") == DialogResult.OK)
+                    {
+                        resultat = true;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("ERREUUUUR","Erreur",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    resultat = false;
                 }
 
             }
