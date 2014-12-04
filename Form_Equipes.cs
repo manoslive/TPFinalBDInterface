@@ -142,7 +142,50 @@ namespace TPFinal
 
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
+            Form_Ajouter_Equipe aEquipe = new Form_Ajouter_Equipe(oracon, maBelleConnection);
+            aEquipe.Text = "Ajouter une équipe";
+            if (aEquipe.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string sql = "insert into Equipe (NomEquipe,DateIntro,Logo,NomDivision,Ville)" +
+                    " VALUES(:NomEquipe,:DateIntroLigue,:LogoEquipe,:DivisionEquipe,:VilleEquipe)";
+                try
+                {
 
+                    OracleCommand oraAjout = new OracleCommand(sql, oracon);
+
+                    OracleParameter OraParaNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParamDateIntroLigue = new OracleParameter(":DateIntroLigue", OracleDbType.Date);
+                    OracleParameter OraParamLogoEquipe = new OracleParameter(":LogoEquipe", OracleDbType.Blob);
+                    OracleParameter OraParaDivEquipe = new OracleParameter(":DivisionEquipe", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaVilleEquipe = new OracleParameter(":VilleEquipe", OracleDbType.Varchar2, 40);
+
+                    OraParaNomEquipe.Value = aEquipe.nomEquipe;
+                    OraParamDateIntroLigue.Value = DateTime.Parse(aEquipe.dateIntroLigue);
+                    OraParamLogoEquipe.Value = null;
+                    OraParaDivEquipe.Value = aEquipe.divisionEquipe;
+                    OraParaVilleEquipe.Value = aEquipe.villeEquipe;
+
+                    if (aEquipe.image != null)
+                    {
+                        OraParamLogoEquipe.Value = aEquipe.image;
+                    }
+
+                    oraAjout.Parameters.Add(OraParaNomEquipe);
+                    oraAjout.Parameters.Add(OraParamDateIntroLigue);
+                    oraAjout.Parameters.Add(OraParamLogoEquipe);
+                    oraAjout.Parameters.Add(OraParaDivEquipe);
+                    oraAjout.Parameters.Add(OraParaVilleEquipe);
+
+                    oraAjout.ExecuteNonQuery();
+
+                    LoadDGV();
+                }
+
+                catch (OracleException ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }       
         }
 
         private void BTN_Ok_Click(object sender, EventArgs e)
