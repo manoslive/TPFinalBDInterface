@@ -53,5 +53,25 @@ namespace TPFinal
             PB_Top2.SizeMode = PictureBoxSizeMode.StretchImage;
             PB_Top3.SizeMode = PictureBoxSizeMode.StretchImage;
         }
+
+        private void FB_Fermer_MouseEnter(object sender, EventArgs e)
+        {
+            PB_Fermer_Gif.Visible = true;
+        }
+        private void PB_Fermer_Gif_MouseDown(object sender, MouseEventArgs e)
+        {
+            PB_Fermer_Gif.Visible = false;
+            FB_Fermer.BackgroundImage = Properties.Resources.ICON_Fermer_Click;
+        }
+
+        private void PB_Fermer_Gif_MouseLeave(object sender, EventArgs e)
+        {
+            PB_Fermer_Gif.Visible = false;
+        }
+
+        private void PB_Fermer_Gif_MouseUp(object sender, MouseEventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+        }
     }
 }
