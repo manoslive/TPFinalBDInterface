@@ -21,13 +21,21 @@ namespace TPFinal
 
         public bool Connect(string User, string Mdp, OracleConnection connection)
         {
-            string chaineConnection = "Data Source = " + Dsource + ";User Id =" + User + "; Password= " + Mdp;
             bool resultat = false;
-            connection.ConnectionString = chaineConnection;
-            connection.Open();
-            if (MessageBox.Show(connection.State.ToString()) == DialogResult.OK)
+            try
             {
-                resultat = true;
+                string chaineConnection = "Data Source = " + Dsource + ";User Id =" + User + "; Password= " + Mdp;
+                connection.ConnectionString = chaineConnection;
+                connection.Open();
+                if (MessageBox.Show(connection.State.ToString()) == DialogResult.OK)
+                {
+                    resultat = true;
+                }
+
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
             }
             return resultat;
         }

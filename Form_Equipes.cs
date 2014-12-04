@@ -27,15 +27,24 @@ namespace TPFinal
 
         private void Form_Equipe_Load(object sender, EventArgs e)
         {
+
             // On appelle la form de connection
             Form_Connection connection = new Form_Connection(oracon, maBelleConnection);
             connection.Text = "Connection";
             connection.ShowDialog();
-            // On rempli le DGV
-            LoadDGV();
-            this.Text = "Équipes"; // Set le nom de la form
-            PB_Equipe.SizeMode = PictureBoxSizeMode.StretchImage; // Met le picturebox en mode "stretch"
-            LoadCBDivision();
+            if (oracon.State == ConnectionState.Open)
+            {
+                // On rempli le DGV
+                LoadDGV();
+                this.Text = "Équipes"; // Set le nom de la form
+                PB_Equipe.SizeMode = PictureBoxSizeMode.StretchImage; // Met le picturebox en mode "stretch"
+                LoadCBDivision();
+            }
+            else
+            {
+                MessageBox.Show("Vous n'avez pas de OracleConnection active", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
         }
 
         private void LoadCBDivision()
@@ -55,32 +64,40 @@ namespace TPFinal
 
         private void LoadDGV()
         {
-            string divisionDGV = null;
-            DGV_Equipes.AllowUserToResizeColumns = false; // Empêche le resize des colonnes
-            DGV_Equipes.AllowUserToResizeRows = false; // Empêche le resize des rangées
-            DGV_Equipes.AllowUserToAddRows = false; // Enlève la ligne vide à la fin du DGV
-            dataSetEquipe.Clear(); // Vide le dataset afin de ne pas avoir de doublons
-            int lastIndex = -1;
-            if (DGV_Equipes.SelectedRows.Count > 0)
-                lastIndex = DGV_Equipes.SelectedRows[0].Index;
-            OracleCommand oraSelect = oracon.CreateCommand();
-            OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
-            
-            divisionDGV = CB_Division.Text;
-            if (divisionDGV != "Est" && divisionDGV != "Ouest")
-                divisionDGV = "Est' or e.nomdivision='Ouest'";
-            else
-                divisionDGV += "'";
-            oraSelect.CommandText = "SELECT NomEquipe, DateIntro as DateIntroLigue, d.NOMDIVISION, Ville FROM Equipe E "+ 
-                                    "inner join Division D on D.NomDivision = E.NOMDIVISION "+
-                                    "WHERE e.nomDivision = '" + divisionDGV;
-            oraAdapter.Fill(dataSetEquipe, "tableFormEquipe");
-            DGV_Equipes.DataSource = dataSetEquipe.Tables[0];
-            SetDGVLargeurColonne();
-            if (lastIndex > -1 && DGV_Equipes.Rows.Count > 0)
-                DGV_Equipes.Rows[Math.Min(lastIndex, DGV_Equipes.Rows.Count - 1)].Selected = true;
+            try
+            {
+                string divisionDGV = null;
+                DGV_Equipes.AllowUserToResizeColumns = false; // Empêche le resize des colonnes
+                DGV_Equipes.AllowUserToResizeRows = false; // Empêche le resize des rangées
+                DGV_Equipes.AllowUserToAddRows = false; // Enlève la ligne vide à la fin du DGV
+                dataSetEquipe.Clear(); // Vide le dataset afin de ne pas avoir de doublons
+                int lastIndex = -1;
+                if (DGV_Equipes.SelectedRows.Count > 0)
+                    lastIndex = DGV_Equipes.SelectedRows[0].Index;
+                OracleCommand oraSelect = oracon.CreateCommand();
+                OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
 
-            updateControls();
+                divisionDGV = CB_Division.Text;
+                if (divisionDGV != "Est" && divisionDGV != "Ouest")
+                    divisionDGV = "Est' or e.nomdivision='Ouest'";
+                else
+                    divisionDGV += "'";
+                oraSelect.CommandText = "SELECT NomEquipe, DateIntro as DateIntroLigue, d.NOMDIVISION, Ville FROM Equipe E " +
+                                        "inner join Division D on D.NomDivision = E.NOMDIVISION " +
+                                        "WHERE e.nomDivision = '" + divisionDGV;
+
+                oraAdapter.Fill(dataSetEquipe, "tableFormEquipe");
+                DGV_Equipes.DataSource = dataSetEquipe.Tables[0];
+                SetDGVLargeurColonne();
+                if (lastIndex > -1 && DGV_Equipes.Rows.Count > 0)
+                    DGV_Equipes.Rows[Math.Min(lastIndex, DGV_Equipes.Rows.Count - 1)].Selected = true;
+
+                updateControls();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
 
         private void SetDGVLargeurColonne()
@@ -228,7 +245,7 @@ namespace TPFinal
 
         private void BTN_Supprimer_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK);
+            if (MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) ;
             {
                 try
                 {
@@ -253,7 +270,7 @@ namespace TPFinal
 
         private void CallFormJoueur()
         {
-            Form_Joueurs joueur = new Form_Joueurs(oracon,maBelleConnection, DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString());
+            Form_Joueurs joueur = new Form_Joueurs(oracon, maBelleConnection, DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString());
             joueur.Text = "Détail du joueur";
             this.Hide();
             joueur.callBackForm = this;
@@ -288,6 +305,16 @@ namespace TPFinal
         private void CB_Division_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadDGV();
+        }
+
+        private void BTN_Divisions_Click(object sender, EventArgs e)
+        {
+            Form_Divisions div = new Form_Divisions(oracon, maBelleConnection);
+            div.Text = "Divisions";
+            this.Hide();
+            div.callBackForm = this;
+            div.ShowDialog();
+
         }
     }
 }

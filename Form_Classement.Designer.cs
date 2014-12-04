@@ -72,7 +72,7 @@
             // 
             this.CB_Division.FormattingEnabled = true;
             this.CB_Division.Items.AddRange(new object[] {
-            "Est / Ouest"});
+            "Toutes"});
             this.CB_Division.Location = new System.Drawing.Point(329, 408);
             this.CB_Division.Name = "CB_Division";
             this.CB_Division.Size = new System.Drawing.Size(152, 28);

@@ -27,6 +27,10 @@ namespace TPFinal
         }
         private void LoadDGV()
         {
+
+            DGV_Divisions.AllowUserToResizeColumns = false; // Empêche le resize des colonnes
+            DGV_Divisions.AllowUserToResizeRows = false; // Empêche le resize des rangées
+            DGV_Divisions.AllowUserToAddRows = false; // Enlève la ligne vide à la fin du DGV
             int lastIndex = -1;
             if (DGV_Divisions.SelectedRows.Count > 0) lastIndex = DGV_Divisions.SelectedRows[0].Index;
 
@@ -71,6 +75,7 @@ namespace TPFinal
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
             Form_Ajouter_Division aDiv = new Form_Ajouter_Division(oracon, connection);
+            aDiv.Text = "Ajouter une division";
             if (aDiv.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 string sqlAjout = "insert into Division (NomDivision,DateCreation)" +
@@ -99,13 +104,14 @@ namespace TPFinal
             }
         }
 
-
         private void BTN_Modifier_Click(object sender, EventArgs e)
         {
-            Form_Ajouter_Division Modifier = new Form_Ajouter_Division(oracon, connection);
-            Modifier.nomDivision = DGV_Divisions.SelectedRows[0].Cells[0].Value.ToString();
-            Modifier.dateCreation = DGV_Divisions.SelectedRows[0].Cells[1].Value.ToString();
-            if (Modifier.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            Form_Ajouter_Division modifDiv = new Form_Ajouter_Division(oracon, connection);
+            modifDiv.BTN_Ajouter.Text = "Modifier";
+            modifDiv.nomDivision = DGV_Divisions.SelectedRows[0].Cells[0].Value.ToString();
+            modifDiv.dateCreation = DGV_Divisions.SelectedRows[0].Cells[1].Value.ToString();
+
+            if (modifDiv.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 try
                 {
@@ -118,8 +124,8 @@ namespace TPFinal
                     OracleParameter paramDateCreation = new OracleParameter(":DateCreation", OracleDbType.Date);
                     OracleParameter paramNomDivision2 = new OracleParameter(":NomDivision2", OracleDbType.Varchar2, 40);
 
-                    paramNomDivision.Value = Modifier.nomDivision;
-                    paramDateCreation.Value = DateTime.Parse(Modifier.dateCreation);
+                    paramNomDivision.Value = modifDiv.nomDivision;
+                    paramDateCreation.Value = DateTime.Parse(modifDiv.dateCreation);
                     paramNomDivision2.Value = DGV_Divisions.SelectedRows[0].Cells[0].Value.ToString();
 
 
@@ -141,7 +147,6 @@ namespace TPFinal
                 }
             }
         }
-
 
         private void BTN_Supprimer_Click(object sender, EventArgs e)
         {
@@ -166,6 +171,12 @@ namespace TPFinal
                     }
                 }
             }
+        }
+
+        private void Form_Divisions_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (callBackForm != null)
+                callBackForm.Show();
         }
     }
 }

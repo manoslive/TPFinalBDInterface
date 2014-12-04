@@ -46,5 +46,10 @@ namespace TPFinal
                 DTP_DateCreation.Value = DateTime.Parse(value);
             }
         }
+
+        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

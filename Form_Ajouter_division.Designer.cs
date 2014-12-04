@@ -38,6 +38,7 @@
             // 
             // BTN_Cancel
             // 
+            this.BTN_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BTN_Cancel.Location = new System.Drawing.Point(310, 115);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(117, 34);
@@ -47,12 +48,14 @@
             // 
             // BTN_Ajouter
             // 
+            this.BTN_Ajouter.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BTN_Ajouter.Location = new System.Drawing.Point(187, 115);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(117, 34);
             this.BTN_Ajouter.TabIndex = 0;
             this.BTN_Ajouter.Text = "Ajouter";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
+            this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
             // LB_DateCreation
             // 
@@ -86,7 +89,7 @@
             this.DTP_DateCreation.Size = new System.Drawing.Size(258, 26);
             this.DTP_DateCreation.TabIndex = 3;
             // 
-            // Form_Ajouter_division
+            // Form_Ajouter_Division
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -97,7 +100,7 @@
             this.Controls.Add(this.LB_DateCreation);
             this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.BTN_Cancel);
-            this.Name = "Form_Ajouter_division";
+            this.Name = "Form_Ajouter_Division";
             this.Text = "Form_Ajouter_division";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -107,7 +110,7 @@
         #endregion
 
         private System.Windows.Forms.Button BTN_Cancel;
-        private System.Windows.Forms.Button BTN_Ajouter;
+        public System.Windows.Forms.Button BTN_Ajouter;
         private System.Windows.Forms.Label LB_DateCreation;
         private System.Windows.Forms.Label LB_NomDivision;
         private System.Windows.Forms.TextBox TB_NomDivision;

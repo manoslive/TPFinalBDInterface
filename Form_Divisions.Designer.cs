@@ -38,6 +38,8 @@
             // 
             // DGV_Divisions
             // 
+            this.DGV_Divisions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGV_Divisions.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_Divisions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Divisions.Location = new System.Drawing.Point(12, 43);
             this.DGV_Divisions.MultiSelect = false;
@@ -47,15 +49,15 @@
             this.DGV_Divisions.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGV_Divisions.RowTemplate.Height = 28;
             this.DGV_Divisions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Divisions.Size = new System.Drawing.Size(523, 237);
+            this.DGV_Divisions.Size = new System.Drawing.Size(330, 194);
             this.DGV_Divisions.TabIndex = 6;
             this.DGV_Divisions.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Divisions_CellMouseDoubleClick);
             // 
             // BTN_Ajouter
             // 
-            this.BTN_Ajouter.Location = new System.Drawing.Point(558, 43);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(355, 43);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
-            this.BTN_Ajouter.Size = new System.Drawing.Size(135, 39);
+            this.BTN_Ajouter.Size = new System.Drawing.Size(135, 37);
             this.BTN_Ajouter.TabIndex = 7;
             this.BTN_Ajouter.Text = "Ajouter";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
@@ -63,9 +65,9 @@
             // 
             // BTN_Modifier
             // 
-            this.BTN_Modifier.Location = new System.Drawing.Point(558, 97);
+            this.BTN_Modifier.Location = new System.Drawing.Point(355, 86);
             this.BTN_Modifier.Name = "BTN_Modifier";
-            this.BTN_Modifier.Size = new System.Drawing.Size(135, 39);
+            this.BTN_Modifier.Size = new System.Drawing.Size(135, 37);
             this.BTN_Modifier.TabIndex = 7;
             this.BTN_Modifier.Text = "Modifier";
             this.BTN_Modifier.UseVisualStyleBackColor = true;
@@ -73,9 +75,9 @@
             // 
             // BTN_Supprimer
             // 
-            this.BTN_Supprimer.Location = new System.Drawing.Point(558, 151);
+            this.BTN_Supprimer.Location = new System.Drawing.Point(355, 129);
             this.BTN_Supprimer.Name = "BTN_Supprimer";
-            this.BTN_Supprimer.Size = new System.Drawing.Size(135, 39);
+            this.BTN_Supprimer.Size = new System.Drawing.Size(135, 37);
             this.BTN_Supprimer.TabIndex = 7;
             this.BTN_Supprimer.Text = "Supprimer";
             this.BTN_Supprimer.UseVisualStyleBackColor = true;
@@ -84,7 +86,7 @@
             // BTN_Fermer
             // 
             this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Fermer.Location = new System.Drawing.Point(558, 241);
+            this.BTN_Fermer.Location = new System.Drawing.Point(355, 198);
             this.BTN_Fermer.Name = "BTN_Fermer";
             this.BTN_Fermer.Size = new System.Drawing.Size(135, 39);
             this.BTN_Fermer.TabIndex = 7;
@@ -95,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 294);
+            this.ClientSize = new System.Drawing.Size(502, 249);
             this.Controls.Add(this.BTN_Fermer);
             this.Controls.Add(this.BTN_Supprimer);
             this.Controls.Add(this.BTN_Modifier);
@@ -104,6 +106,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Divisions";
             this.Text = "Form_Divisions";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Divisions_FormClosed);
             this.Load += new System.EventHandler(this.Form_Divisions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Divisions)).EndInit();
             this.ResumeLayout(false);
