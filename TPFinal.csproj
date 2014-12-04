@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FlashButton">
+      <HintPath>..\Dév. Interface\TP2-PasswordKeeper\FlashButton.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.DataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="Oracle.ManagedDataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
     <Reference Include="Oracle.Web, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
@@ -216,6 +219,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hockey-face-off.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Matchs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Classement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Top3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Top3_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Top3_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Classement_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Classement_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Equipe_Ajouter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Equipe_Ajouter_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Equipe_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Equipe_Ajouter_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Equipe_Modifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Equipe_Modifier_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Equipe_Modifier_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Equipe_Supprimer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Equipe_Supprimer_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Equipe_Supprimer_Over.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
