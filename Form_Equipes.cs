@@ -99,13 +99,13 @@ namespace TPFinal
         {
             if (DGV_Equipes.RowCount > 0)
             {
-                BTN_Modifier.Enabled = true;
-                BTN_Supprimer.Enabled = true;
+                FB_ModifierEquipe.Enabled = true;
+                FB_SupprimerEquipe.Enabled = true;
             }
             else
             {
-                BTN_Modifier.Enabled = false;
-                BTN_Supprimer.Enabled = false;
+                FB_ModifierEquipe.Enabled = false;
+                FB_SupprimerEquipe.Enabled = false;
             }
         }
 
@@ -125,50 +125,7 @@ namespace TPFinal
 
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
-            Form_Ajouter_Equipe Ajouter = new Form_Ajouter_Equipe(oracon, maBelleConnection);
-            Ajouter.Text = "Ajout d'équipe";
-            if (Ajouter.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                string sql = "insert into Equipe(NomEquipe,DateIntro,Logo,NomDivision,Ville)" + // Rajout de LogoEquipe dans la commande ...incomming crashs bitches !
-                    " VALUES(:NomEquipe,:DateIntroLigue,:LogoEquipe,:DivisionEquipe,:VilleEquipe)";
-                try
-                {
 
-                    OracleCommand oraAjout = new OracleCommand(sql, oracon);
-
-                    OracleParameter OraParaNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParamDateIntro = new OracleParameter(":DateIntroLigue", OracleDbType.Date);
-                    OracleParameter OraParamLogoEquipe = new OracleParameter(":LogoEquipe", OracleDbType.Blob);
-                    OracleParameter OraParaDivEquipe = new OracleParameter(":DivisionEquipe", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParaVilleEquipe = new OracleParameter(":VilleEquipe", OracleDbType.Varchar2, 40);
-
-                    OraParaNomEquipe.Value = Ajouter.nomEquipe;
-                    OraParamDateIntro.Value = DateTime.Parse(Ajouter.dateIntroLigue);
-                    OraParamLogoEquipe.Value = null;
-                    OraParaDivEquipe.Value = Ajouter.divisionEquipe;
-                    OraParaVilleEquipe.Value = Ajouter.villeEquipe;
-
-                    if (Ajouter.image != null)
-                    {
-                        OraParamLogoEquipe.Value = Ajouter.image;
-                    }
-
-                    oraAjout.Parameters.Add(OraParaNomEquipe);
-                    oraAjout.Parameters.Add(OraParamDateIntro);
-                    oraAjout.Parameters.Add(OraParamLogoEquipe);
-                    oraAjout.Parameters.Add(OraParaDivEquipe);
-                    oraAjout.Parameters.Add(OraParaVilleEquipe);
-
-                    oraAjout.ExecuteNonQuery();
-
-                    LoadDGV();
-                }
-
-                catch (OracleException ex)
-                {
-                    MessageBox.Show(ex.Message.ToString());
-                }
-            }
         }
 
         private void BTN_Ok_Click(object sender, EventArgs e)

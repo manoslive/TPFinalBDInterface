@@ -32,14 +32,12 @@
             this.LB_Top1 = new System.Windows.Forms.Label();
             this.LB_Top2 = new System.Windows.Forms.Label();
             this.LB_Top3 = new System.Windows.Forms.Label();
-            this.PB_Star = new System.Windows.Forms.PictureBox();
+            this.BTN_Fermer = new System.Windows.Forms.Button();
             this.PB_Top2 = new System.Windows.Forms.PictureBox();
             this.PB_Top3 = new System.Windows.Forms.PictureBox();
             this.PB_Top1 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BTN_Fermer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Top3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Star)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top1)).BeginInit();
@@ -82,16 +80,16 @@
             this.LB_Top3.TabIndex = 7;
             this.LB_Top3.Text = "label3";
             // 
-            // PB_Star
+            // BTN_Fermer
             // 
-            this.PB_Star.BackColor = System.Drawing.Color.Transparent;
-            this.PB_Star.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PB_Star.Image = global::TPFinal.Properties.Resources.Star;
-            this.PB_Star.Location = new System.Drawing.Point(171, 191);
-            this.PB_Star.Name = "PB_Star";
-            this.PB_Star.Size = new System.Drawing.Size(84, 73);
-            this.PB_Star.TabIndex = 8;
-            this.PB_Star.TabStop = false;
+            this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BTN_Fermer.Location = new System.Drawing.Point(181, 272);
+            this.BTN_Fermer.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_Fermer.Name = "BTN_Fermer";
+            this.BTN_Fermer.Size = new System.Drawing.Size(63, 22);
+            this.BTN_Fermer.TabIndex = 9;
+            this.BTN_Fermer.Text = "Fermer";
+            this.BTN_Fermer.UseVisualStyleBackColor = true;
             // 
             // PB_Top2
             // 
@@ -131,24 +129,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // BTN_Fermer
-            // 
-            this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Fermer.Location = new System.Drawing.Point(181, 272);
-            this.BTN_Fermer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BTN_Fermer.Name = "BTN_Fermer";
-            this.BTN_Fermer.Size = new System.Drawing.Size(63, 22);
-            this.BTN_Fermer.TabIndex = 9;
-            this.BTN_Fermer.Text = "Fermer";
-            this.BTN_Fermer.UseVisualStyleBackColor = true;
-            // 
-            // Form_Top5
+            // Form_Top3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(426, 302);
             this.Controls.Add(this.BTN_Fermer);
-            this.Controls.Add(this.PB_Star);
             this.Controls.Add(this.LB_Top3);
             this.Controls.Add(this.LB_Top2);
             this.Controls.Add(this.LB_Top1);
@@ -158,11 +144,10 @@
             this.Controls.Add(this.PB_Top1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Form_Top5";
+            this.Name = "Form_Top3";
             this.Text = "Form_Top5";
             this.Load += new System.EventHandler(this.Form_Top5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Top3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Star)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top1)).EndInit();
@@ -182,7 +167,6 @@
         private System.Windows.Forms.Label LB_Top1;
         private System.Windows.Forms.Label LB_Top2;
         private System.Windows.Forms.Label LB_Top3;
-        private System.Windows.Forms.PictureBox PB_Star;
         private System.Windows.Forms.Button BTN_Fermer;
     }
 }
