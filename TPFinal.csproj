@@ -47,11 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Ajouter_division.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Ajouter_division.Designer.cs">
+      <DependentUpon>Form_Ajouter_division.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Ajouter_Equipe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Ajouter_Equipe.Designer.cs">
       <DependentUpon>Form_Ajouter_Equipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Divisions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Divisions.Designer.cs">
+      <DependentUpon>Form_Divisions.cs</DependentUpon>
     </Compile>
     <Compile Include="MaConnection.cs" />
     <Compile Include="Form_Ajouter_Joueur.cs">
@@ -122,6 +134,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Ajouter_division.resx">
+      <DependentUpon>Form_Ajouter_division.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Ajouter_Equipe.resx">
       <DependentUpon>Form_Ajouter_Equipe.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Connection.resx">
       <DependentUpon>Form_Connection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Divisions.resx">
+      <DependentUpon>Form_Divisions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Equipes.resx">
       <DependentUpon>Form_Equipes.cs</DependentUpon>
