@@ -92,7 +92,7 @@
             // PB_Fermer_Gif
             // 
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
-            this.PB_Fermer_Gif.Location = new System.Drawing.Point(366, 248);
+            this.PB_Fermer_Gif.Location = new System.Drawing.Point(366, 250);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
             this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 8;
