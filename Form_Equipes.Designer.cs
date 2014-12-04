@@ -114,7 +114,7 @@
             // 
             this.PB_Fermer_Gif.BackColor = System.Drawing.Color.Transparent;
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
-            this.PB_Fermer_Gif.Location = new System.Drawing.Point(445, 177);
+            this.PB_Fermer_Gif.Location = new System.Drawing.Point(465, 177);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
             this.PB_Fermer_Gif.Size = new System.Drawing.Size(41, 41);
             this.PB_Fermer_Gif.TabIndex = 12;
