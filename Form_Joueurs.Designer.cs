@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Joueurs));
             this.LB_NumJoueur = new System.Windows.Forms.Label();
             this.LB_NomJoueur = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@
             this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
             this.FB_Fermer = new FlashButton.FlashButton();
             this.PB_Joueur = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Joueur)).BeginInit();
             this.SuspendLayout();
@@ -230,6 +232,7 @@
             this.FB_Precedent.Name = "FB_Precedent";
             this.FB_Precedent.Size = new System.Drawing.Size(40, 40);
             this.FB_Precedent.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.FB_Precedent, "Précédent");
             this.FB_Precedent.Click += new System.EventHandler(this.BTN_Precedent_Click);
             // 
             // FB_Suivant
@@ -245,6 +248,7 @@
             this.FB_Suivant.Name = "FB_Suivant";
             this.FB_Suivant.Size = new System.Drawing.Size(40, 40);
             this.FB_Suivant.TabIndex = 19;
+            this.toolTip1.SetToolTip(this.FB_Suivant, "Suivant");
             this.FB_Suivant.Click += new System.EventHandler(this.BTN_Suivant_Click);
             // 
             // FB_Fin
@@ -260,6 +264,7 @@
             this.FB_Fin.Name = "FB_Fin";
             this.FB_Fin.Size = new System.Drawing.Size(40, 40);
             this.FB_Fin.TabIndex = 18;
+            this.toolTip1.SetToolTip(this.FB_Fin, "Fin");
             this.FB_Fin.Click += new System.EventHandler(this.BTN_Fin_Click);
             // 
             // FB_Debut
@@ -275,6 +280,7 @@
             this.FB_Debut.Name = "FB_Debut";
             this.FB_Debut.Size = new System.Drawing.Size(40, 40);
             this.FB_Debut.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.FB_Debut, "Début");
             this.FB_Debut.Click += new System.EventHandler(this.BTN_Debut_Click);
             // 
             // FB_SupprimerJoueur
@@ -291,6 +297,7 @@
             this.FB_SupprimerJoueur.Name = "FB_SupprimerJoueur";
             this.FB_SupprimerJoueur.Size = new System.Drawing.Size(46, 46);
             this.FB_SupprimerJoueur.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.FB_SupprimerJoueur, "Supprimer un joueur");
             this.FB_SupprimerJoueur.Click += new System.EventHandler(this.BTN_Effacer_Click);
             // 
             // FB_ModifierJoueur
@@ -307,6 +314,7 @@
             this.FB_ModifierJoueur.Name = "FB_ModifierJoueur";
             this.FB_ModifierJoueur.Size = new System.Drawing.Size(46, 46);
             this.FB_ModifierJoueur.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.FB_ModifierJoueur, "Modifier un joueur");
             this.FB_ModifierJoueur.Click += new System.EventHandler(this.BTN_Modifier_Click);
             // 
             // FB_AjouterJoueur
@@ -323,6 +331,7 @@
             this.FB_AjouterJoueur.Name = "FB_AjouterJoueur";
             this.FB_AjouterJoueur.Size = new System.Drawing.Size(46, 46);
             this.FB_AjouterJoueur.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.FB_AjouterJoueur, "Ajouter un joueur");
             this.FB_AjouterJoueur.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
             // PB_Fermer_Gif
@@ -333,6 +342,7 @@
             this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 13;
             this.PB_Fermer_Gif.TabStop = false;
+            this.toolTip1.SetToolTip(this.PB_Fermer_Gif, "Fermer");
             this.PB_Fermer_Gif.Visible = false;
             this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
             this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
@@ -437,5 +447,6 @@
         private FlashButton.FlashButton FB_Fin;
         private FlashButton.FlashButton FB_Suivant;
         private FlashButton.FlashButton FB_Precedent;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
