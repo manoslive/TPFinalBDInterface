@@ -54,13 +54,13 @@ namespace TPFinal
         {
             if (DGV_Divisions.RowCount > 0)
             {
-                BTN_Modifier.Enabled = true;
-                BTN_Supprimer.Enabled = true;
+                FB_ModifierDivision.Enabled = true;
+                FB_SupprimerDivision.Enabled = true;
             }
             else
             {
-                BTN_Modifier.Enabled = false;
-                BTN_Supprimer.Enabled = false;
+                FB_ModifierDivision.Enabled = false;
+                FB_SupprimerDivision.Enabled = false;
             }
         }
 
@@ -106,71 +106,12 @@ namespace TPFinal
 
         private void BTN_Modifier_Click(object sender, EventArgs e)
         {
-            Form_Ajouter_Division modifDiv = new Form_Ajouter_Division(oracon, connection);
-            modifDiv.BTN_Ajouter.Text = "Modifier";
-            modifDiv.nomDivision = DGV_Divisions.SelectedRows[0].Cells[0].Value.ToString();
-            modifDiv.dateCreation = DGV_Divisions.SelectedRows[0].Cells[1].Value.ToString();
 
-            if (modifDiv.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                try
-                {
-                    string sqlModif = "Update Division set NomDivision =:NomDivision, DateCreation =:DateCreation " +
-                                      "where NomDivision =:NomDivision2";
-
-                    OracleCommand oraUpdate = new OracleCommand(sqlModif, oracon);
-
-                    OracleParameter paramNomDivision = new OracleParameter(":NomDivision", OracleDbType.Varchar2, 40);
-                    OracleParameter paramDateCreation = new OracleParameter(":DateCreation", OracleDbType.Date);
-                    OracleParameter paramNomDivision2 = new OracleParameter(":NomDivision2", OracleDbType.Varchar2, 40);
-
-                    paramNomDivision.Value = modifDiv.nomDivision;
-                    paramDateCreation.Value = DateTime.Parse(modifDiv.dateCreation);
-                    paramNomDivision2.Value = DGV_Divisions.SelectedRows[0].Cells[0].Value.ToString();
-
-
-                    oraUpdate.Parameters.Add(paramNomDivision);
-                    oraUpdate.Parameters.Add(paramDateCreation);
-                    oraUpdate.Parameters.Add(paramNomDivision2);
-
-                    oraUpdate.ExecuteNonQuery();
-
-                    LoadDGV();
-                }
-
-                catch (OracleException ex)
-                {
-                    if (ex.Number == 2292)
-                    {
-                        MessageBox.Show("Le nom de la division ne peut etre modifié si elle contient des équipes.", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
         }
 
         private void BTN_Supprimer_Click(object sender, EventArgs e)
         {
-            if( MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
-            {
-                try
-                {
-                    OracleParameter paramNomDivision = new OracleParameter(":NomDivision", OracleDbType.Varchar2, 40);
-                    paramNomDivision.Value = DGV_Divisions.SelectedRows[0].Cells[0].Value.ToString();
-                    string sqlDelete = "Delete from Division Where NomDivision =:paramNomDivision";
-                    OracleCommand oraDelete = new OracleCommand(sqlDelete, oracon);
 
-                    oraDelete.Parameters.Add(paramNomDivision);
-                    oraDelete.ExecuteNonQuery();
-                    LoadDGV();
-                }
-                catch (OracleException ex)
-                {
-                    if (ex.Number == 2292)
-                    {
-                        MessageBox.Show("La division ne doit pas contenir d'équipe.", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
         }
 
         private void Form_Divisions_FormClosed(object sender, FormClosedEventArgs e)

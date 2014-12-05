@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Divisions));
             this.DGV_Divisions = new System.Windows.Forms.DataGridView();
-            this.BTN_Ajouter = new System.Windows.Forms.Button();
-            this.BTN_Modifier = new System.Windows.Forms.Button();
-            this.BTN_Supprimer = new System.Windows.Forms.Button();
             this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
             this.FB_Fermer = new FlashButton.FlashButton();
+            this.FB_SupprimerDivision = new FlashButton.FlashButton();
+            this.FB_ModifierDivision = new FlashButton.FlashButton();
+            this.FB_AjouterDivision = new FlashButton.FlashButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Divisions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             this.SuspendLayout();
@@ -56,39 +59,6 @@
             this.DGV_Divisions.TabIndex = 6;
             this.DGV_Divisions.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Divisions_CellMouseDoubleClick);
             // 
-            // BTN_Ajouter
-            // 
-            this.BTN_Ajouter.Location = new System.Drawing.Point(237, 28);
-            this.BTN_Ajouter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BTN_Ajouter.Name = "BTN_Ajouter";
-            this.BTN_Ajouter.Size = new System.Drawing.Size(90, 24);
-            this.BTN_Ajouter.TabIndex = 7;
-            this.BTN_Ajouter.Text = "Ajouter";
-            this.BTN_Ajouter.UseVisualStyleBackColor = true;
-            this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
-            // 
-            // BTN_Modifier
-            // 
-            this.BTN_Modifier.Location = new System.Drawing.Point(237, 56);
-            this.BTN_Modifier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BTN_Modifier.Name = "BTN_Modifier";
-            this.BTN_Modifier.Size = new System.Drawing.Size(90, 24);
-            this.BTN_Modifier.TabIndex = 7;
-            this.BTN_Modifier.Text = "Modifier";
-            this.BTN_Modifier.UseVisualStyleBackColor = true;
-            this.BTN_Modifier.Click += new System.EventHandler(this.BTN_Modifier_Click);
-            // 
-            // BTN_Supprimer
-            // 
-            this.BTN_Supprimer.Location = new System.Drawing.Point(237, 84);
-            this.BTN_Supprimer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BTN_Supprimer.Name = "BTN_Supprimer";
-            this.BTN_Supprimer.Size = new System.Drawing.Size(90, 24);
-            this.BTN_Supprimer.TabIndex = 7;
-            this.BTN_Supprimer.Text = "Supprimer";
-            this.BTN_Supprimer.UseVisualStyleBackColor = true;
-            this.BTN_Supprimer.Click += new System.EventHandler(this.BTN_Supprimer_Click);
-            // 
             // PB_Fermer_Gif
             // 
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
@@ -97,6 +67,7 @@
             this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 15;
             this.PB_Fermer_Gif.TabStop = false;
+            this.toolTip1.SetToolTip(this.PB_Fermer_Gif, "Fermer");
             this.PB_Fermer_Gif.Visible = false;
             this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
             this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
@@ -117,16 +88,67 @@
             this.FB_Fermer.TabIndex = 14;
             this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Fermer_MouseEnter);
             // 
+            // FB_SupprimerDivision
+            // 
+            this.FB_SupprimerDivision.BackColor = System.Drawing.Color.Transparent;
+            this.FB_SupprimerDivision.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
+            this.FB_SupprimerDivision.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_SupprimerDivision.ImageClick = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer_Click;
+            this.FB_SupprimerDivision.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
+            this.FB_SupprimerDivision.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
+            this.FB_SupprimerDivision.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer_Over;
+            this.FB_SupprimerDivision.Location = new System.Drawing.Point(260, 64);
+            this.FB_SupprimerDivision.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_SupprimerDivision.Name = "FB_SupprimerDivision";
+            this.FB_SupprimerDivision.Size = new System.Drawing.Size(46, 46);
+            this.FB_SupprimerDivision.TabIndex = 18;
+            this.toolTip1.SetToolTip(this.FB_SupprimerDivision, "Supprimer une division");
+            this.FB_SupprimerDivision.Click += new System.EventHandler(this.BTN_Supprimer_Click);
+            // 
+            // FB_ModifierDivision
+            // 
+            this.FB_ModifierDivision.BackColor = System.Drawing.Color.Transparent;
+            this.FB_ModifierDivision.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_ModifierDivision.BackgroundImage")));
+            this.FB_ModifierDivision.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_ModifierDivision.ImageClick = ((System.Drawing.Image)(resources.GetObject("FB_ModifierDivision.ImageClick")));
+            this.FB_ModifierDivision.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_ModifierDivision.ImageDisable")));
+            this.FB_ModifierDivision.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_ModifierDivision.ImageNeutral")));
+            this.FB_ModifierDivision.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_ModifierDivision.ImageOver")));
+            this.FB_ModifierDivision.Location = new System.Drawing.Point(287, 14);
+            this.FB_ModifierDivision.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_ModifierDivision.Name = "FB_ModifierDivision";
+            this.FB_ModifierDivision.Size = new System.Drawing.Size(46, 46);
+            this.FB_ModifierDivision.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.FB_ModifierDivision, "Modifier une division");
+            this.FB_ModifierDivision.Click += new System.EventHandler(this.BTN_Modifier_Click);
+            // 
+            // FB_AjouterDivision
+            // 
+            this.FB_AjouterDivision.BackColor = System.Drawing.Color.Transparent;
+            this.FB_AjouterDivision.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_AjouterDivision.BackgroundImage")));
+            this.FB_AjouterDivision.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_AjouterDivision.ImageClick = ((System.Drawing.Image)(resources.GetObject("FB_AjouterDivision.ImageClick")));
+            this.FB_AjouterDivision.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_AjouterDivision.ImageDisable")));
+            this.FB_AjouterDivision.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_AjouterDivision.ImageNeutral")));
+            this.FB_AjouterDivision.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_AjouterDivision.ImageOver")));
+            this.FB_AjouterDivision.Location = new System.Drawing.Point(233, 14);
+            this.FB_AjouterDivision.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_AjouterDivision.Name = "FB_AjouterDivision";
+            this.FB_AjouterDivision.Size = new System.Drawing.Size(46, 46);
+            this.FB_AjouterDivision.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.FB_AjouterDivision, "Ajouter une division");
+            this.FB_AjouterDivision.Click += new System.EventHandler(this.BTN_Ajouter_Click);
+            // 
             // Form_Divisions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 162);
+            this.Controls.Add(this.FB_SupprimerDivision);
+            this.Controls.Add(this.FB_ModifierDivision);
+            this.Controls.Add(this.FB_AjouterDivision);
             this.Controls.Add(this.PB_Fermer_Gif);
             this.Controls.Add(this.FB_Fermer);
-            this.Controls.Add(this.BTN_Supprimer);
-            this.Controls.Add(this.BTN_Modifier);
-            this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.DGV_Divisions);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -143,10 +165,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DGV_Divisions;
-        private System.Windows.Forms.Button BTN_Ajouter;
-        private System.Windows.Forms.Button BTN_Modifier;
-        private System.Windows.Forms.Button BTN_Supprimer;
         private System.Windows.Forms.PictureBox PB_Fermer_Gif;
         private FlashButton.FlashButton FB_Fermer;
+        private FlashButton.FlashButton FB_SupprimerDivision;
+        private FlashButton.FlashButton FB_ModifierDivision;
+        private FlashButton.FlashButton FB_AjouterDivision;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
