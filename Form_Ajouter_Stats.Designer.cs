@@ -31,8 +31,6 @@
             this.TB_TempsPunition = new System.Windows.Forms.TextBox();
             this.TB_NbPasses = new System.Windows.Forms.TextBox();
             this.TB_NbButs = new System.Windows.Forms.TextBox();
-            this.TB_NumeroMatch = new System.Windows.Forms.TextBox();
-            this.CB_NumJoueur = new System.Windows.Forms.ComboBox();
             this.BTN_Cancel = new System.Windows.Forms.Button();
             this.LB_TempsPunition = new System.Windows.Forms.Label();
             this.LB_NbPasses = new System.Windows.Forms.Label();
@@ -40,6 +38,8 @@
             this.LB_NumJoueur = new System.Windows.Forms.Label();
             this.LB_NumMatch = new System.Windows.Forms.Label();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
+            this.CB_NumeroMatch = new System.Windows.Forms.ComboBox();
+            this.CB_NumeroJoueur = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // TB_TempsPunition
@@ -68,24 +68,6 @@
             this.TB_NbButs.Size = new System.Drawing.Size(180, 26);
             this.TB_NbButs.TabIndex = 15;
             this.TB_NbButs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidationChamps);
-            // 
-            // TB_NumeroMatch
-            // 
-            this.TB_NumeroMatch.Location = new System.Drawing.Point(159, 27);
-            this.TB_NumeroMatch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TB_NumeroMatch.Name = "TB_NumeroMatch";
-            this.TB_NumeroMatch.ReadOnly = true;
-            this.TB_NumeroMatch.Size = new System.Drawing.Size(180, 26);
-            this.TB_NumeroMatch.TabIndex = 16;
-            // 
-            // CB_NumJoueur
-            // 
-            this.CB_NumJoueur.FormattingEnabled = true;
-            this.CB_NumJoueur.Location = new System.Drawing.Point(159, 87);
-            this.CB_NumJoueur.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CB_NumJoueur.Name = "CB_NumJoueur";
-            this.CB_NumJoueur.Size = new System.Drawing.Size(180, 28);
-            this.CB_NumJoueur.TabIndex = 12;
             // 
             // BTN_Cancel
             // 
@@ -160,16 +142,32 @@
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
             this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
+            // CB_NumeroMatch
+            // 
+            this.CB_NumeroMatch.FormattingEnabled = true;
+            this.CB_NumeroMatch.Location = new System.Drawing.Point(159, 24);
+            this.CB_NumeroMatch.Name = "CB_NumeroMatch";
+            this.CB_NumeroMatch.Size = new System.Drawing.Size(180, 28);
+            this.CB_NumeroMatch.TabIndex = 18;
+            // 
+            // CB_NumeroJoueur
+            // 
+            this.CB_NumeroJoueur.FormattingEnabled = true;
+            this.CB_NumeroJoueur.Location = new System.Drawing.Point(159, 89);
+            this.CB_NumeroJoueur.Name = "CB_NumeroJoueur";
+            this.CB_NumeroJoueur.Size = new System.Drawing.Size(180, 28);
+            this.CB_NumeroJoueur.TabIndex = 18;
+            // 
             // Form_Ajouter_Stats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(375, 404);
+            this.Controls.Add(this.CB_NumeroJoueur);
+            this.Controls.Add(this.CB_NumeroMatch);
             this.Controls.Add(this.TB_TempsPunition);
             this.Controls.Add(this.TB_NbPasses);
             this.Controls.Add(this.TB_NbButs);
-            this.Controls.Add(this.TB_NumeroMatch);
-            this.Controls.Add(this.CB_NumJoueur);
             this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.LB_TempsPunition);
             this.Controls.Add(this.LB_NbPasses);
@@ -192,8 +190,6 @@
         private System.Windows.Forms.TextBox TB_TempsPunition;
         private System.Windows.Forms.TextBox TB_NbPasses;
         private System.Windows.Forms.TextBox TB_NbButs;
-        private System.Windows.Forms.TextBox TB_NumeroMatch;
-        private System.Windows.Forms.ComboBox CB_NumJoueur;
         private System.Windows.Forms.Button BTN_Cancel;
         private System.Windows.Forms.Label LB_TempsPunition;
         private System.Windows.Forms.Label LB_NbPasses;
@@ -201,5 +197,7 @@
         private System.Windows.Forms.Label LB_NumJoueur;
         private System.Windows.Forms.Label LB_NumMatch;
         public System.Windows.Forms.Button BTN_Ajouter;
+        private System.Windows.Forms.ComboBox CB_NumeroMatch;
+        private System.Windows.Forms.ComboBox CB_NumeroJoueur;
     }
 }

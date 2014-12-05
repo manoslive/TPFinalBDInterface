@@ -30,22 +30,22 @@ namespace TPFinal
         {
             get
             {
-                return CB_NumJoueur.Text;
+                return CB_NumeroJoueur.Text;
             }
             set
             {
-                CB_NumJoueur.Text = value;
+                CB_NumeroJoueur.Text = value;
             }
         }
         public string numMatch
         {
             get
             {
-                return TB_NumeroMatch.Text;
+                return CB_NumeroMatch.Text;
             }
             set
             {
-                TB_NumeroMatch.Text = value;
+                CB_NumeroMatch.Text = value;
             }
         }
         public string nbButs
@@ -98,23 +98,24 @@ namespace TPFinal
 
         private void Form_Ajouter_Stats_Load(object sender, EventArgs e)
         {
+            RemplirCBMatch();
+        }
+        private void RemplirCBJoueur()
+        {
             try
             {
                 OracleCommand oraSelect = oracon.CreateCommand();
-                oraSelect.CommandText = "SELECT NomJoueur FROM FicheJoueur where NomEquipe = :equipeHome or EquipeJoueur = :equipeVisiteur";
-                OracleParameter OraParaEquipeHome = new OracleParameter(":equipeHome", OracleDbType.Varchar2, 40);
-                OracleParameter OraParaEquipeVisiteur = new OracleParameter(":equipeVisiteur", OracleDbType.Varchar2, 40);
+                oraSelect.CommandText = "SELECT NumeroJoueur FROM FicheJoueur where exists(SELECT NumeroMatch FROM FicheJoueur)";
+                OracleParameter OraParaNumJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Varchar2, 40);
 
-                OraParaEquipeHome.Value = equipeHome;
-                OraParaEquipeVisiteur.Value = equipeVisiteur;
-                oraSelect.Parameters.Add(OraParaEquipeHome);
-                oraSelect.Parameters.Add(OraParaEquipeVisiteur);
+                OraParaNumJoueur.Value = numJoueur;
+                oraSelect.Parameters.Add(OraParaNumJoueur);
 
                 using (OracleDataReader oraReader = oraSelect.ExecuteReader())
                 {
                     while (oraReader.Read())
                     {
-                        CB_NumJoueur.Items.Add(oraReader.GetInt32(0));
+                        CB_NumeroJoueur.Items.Add(oraReader.GetInt32(0));
                     }
                 }
 
@@ -124,7 +125,31 @@ namespace TPFinal
                 MessageBox.Show(ex.Message.ToString());
             }
         }
+        private void RemplirCBMatch()
+        {
+            try
+            {
+                OracleCommand oraSelect = oracon.CreateCommand();
+                oraSelect.CommandText = "SELECT NumeroMatch FROM FicheJoueur where exists(SELECT NumeroMatch FROM FicheJoueur)";
+                OracleParameter OraParaNumJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Varchar2, 40);
 
+                OraParaNumJoueur.Value = numJoueur;
+                oraSelect.Parameters.Add(OraParaNumJoueur);
+
+                using (OracleDataReader oraReader = oraSelect.ExecuteReader())
+                {
+                    while (oraReader.Read())
+                    {
+                        CB_NumeroJoueur.Items.Add(oraReader.GetInt32(0));
+                    }
+                }
+
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
 

@@ -309,11 +309,6 @@ namespace TPFinal
             cal.ShowDialog();
         }
 
-        private void BTN_Stats_Click(object sender, EventArgs e)
-        {
-            FillStats();
-        }
-
         private void FillStats()
         {
             Form_Statistiques Stats = new Form_Statistiques(oracon, connection, DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString());
@@ -383,6 +378,12 @@ namespace TPFinal
                 FillStats();
             }
             // Ajouter ici le lien vers Form_Statistique
+            Form_Statistiques stats = new Form_Statistiques(oracon, connection, DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString());
+            this.Hide();
+            stats.Text = "Statistiques";
+            stats.callBackForm = this;
+            stats.numeroJoueurs = DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString();
+            stats.ShowDialog();
         }
         private void FB_Fermer_MouseEnter(object sender, EventArgs e)
         {
