@@ -231,7 +231,7 @@ namespace TPFinal
             aj.Equipe = CB_EquipeJoueur.SelectedItem.ToString();
             aj.Position = CB_PosJoueur.SelectedItem.ToString();
             aj.Location = this.Location;
-            aj.BTN_Fermer.Text = "Modifier";
+            aj.BTN_Ajouter.Text = "Modifier";
             this.Hide();
 
             if (aj.ShowDialog() == System.Windows.Forms.DialogResult.OK)

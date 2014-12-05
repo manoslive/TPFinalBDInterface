@@ -49,11 +49,12 @@
             // BTN_Fermer
             // 
             this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Fermer.Location = new System.Drawing.Point(386, 445);
+            this.BTN_Fermer.Location = new System.Drawing.Point(257, 289);
+            this.BTN_Fermer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BTN_Fermer.Name = "BTN_Fermer";
-            this.BTN_Fermer.Size = new System.Drawing.Size(109, 37);
+            this.BTN_Fermer.Size = new System.Drawing.Size(73, 24);
             this.BTN_Fermer.TabIndex = 22;
-            this.BTN_Fermer.Text = "Fermer";
+            this.BTN_Fermer.Text = "Annuler";
             this.BTN_Fermer.UseVisualStyleBackColor = true;
             // 
             // CB_PosJoueur
@@ -63,132 +64,147 @@
             "Avant",
             "Defenseur",
             "Gardien"});
-            this.CB_PosJoueur.Location = new System.Drawing.Point(238, 327);
+            this.CB_PosJoueur.Location = new System.Drawing.Point(159, 213);
+            this.CB_PosJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CB_PosJoueur.Name = "CB_PosJoueur";
-            this.CB_PosJoueur.Size = new System.Drawing.Size(227, 28);
+            this.CB_PosJoueur.Size = new System.Drawing.Size(153, 21);
             this.CB_PosJoueur.TabIndex = 18;
             // 
             // CB_EquipeJoueur
             // 
             this.CB_EquipeJoueur.FormattingEnabled = true;
-            this.CB_EquipeJoueur.Location = new System.Drawing.Point(238, 267);
+            this.CB_EquipeJoueur.Location = new System.Drawing.Point(159, 174);
+            this.CB_EquipeJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CB_EquipeJoueur.Name = "CB_EquipeJoueur";
-            this.CB_EquipeJoueur.Size = new System.Drawing.Size(227, 28);
+            this.CB_EquipeJoueur.Size = new System.Drawing.Size(153, 21);
             this.CB_EquipeJoueur.TabIndex = 17;
             // 
             // DTP_DateNaissance
             // 
-            this.DTP_DateNaissance.Location = new System.Drawing.Point(238, 145);
+            this.DTP_DateNaissance.Location = new System.Drawing.Point(159, 94);
+            this.DTP_DateNaissance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DTP_DateNaissance.Name = "DTP_DateNaissance";
-            this.DTP_DateNaissance.Size = new System.Drawing.Size(227, 26);
+            this.DTP_DateNaissance.Size = new System.Drawing.Size(153, 20);
             this.DTP_DateNaissance.TabIndex = 16;
             // 
             // TB_NumMaillot
             // 
-            this.TB_NumMaillot.Location = new System.Drawing.Point(238, 207);
+            this.TB_NumMaillot.Location = new System.Drawing.Point(159, 135);
+            this.TB_NumMaillot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TB_NumMaillot.Name = "TB_NumMaillot";
-            this.TB_NumMaillot.Size = new System.Drawing.Size(227, 26);
+            this.TB_NumMaillot.Size = new System.Drawing.Size(153, 20);
             this.TB_NumMaillot.TabIndex = 15;
             // 
             // TB_PrenomJoueur
             // 
-            this.TB_PrenomJoueur.Location = new System.Drawing.Point(238, 87);
+            this.TB_PrenomJoueur.Location = new System.Drawing.Point(159, 57);
+            this.TB_PrenomJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TB_PrenomJoueur.Name = "TB_PrenomJoueur";
-            this.TB_PrenomJoueur.Size = new System.Drawing.Size(227, 26);
+            this.TB_PrenomJoueur.Size = new System.Drawing.Size(153, 20);
             this.TB_PrenomJoueur.TabIndex = 14;
             // 
             // TB_NomJoueur
             // 
-            this.TB_NomJoueur.Location = new System.Drawing.Point(238, 27);
+            this.TB_NomJoueur.Location = new System.Drawing.Point(159, 18);
+            this.TB_NomJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TB_NomJoueur.Name = "TB_NomJoueur";
-            this.TB_NomJoueur.Size = new System.Drawing.Size(227, 26);
+            this.TB_NomJoueur.Size = new System.Drawing.Size(153, 20);
             this.TB_NomJoueur.TabIndex = 13;
             // 
             // LB_DateNaissance
             // 
             this.LB_DateNaissance.AutoSize = true;
-            this.LB_DateNaissance.Location = new System.Drawing.Point(34, 150);
+            this.LB_DateNaissance.Location = new System.Drawing.Point(23, 97);
+            this.LB_DateNaissance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_DateNaissance.Name = "LB_DateNaissance";
-            this.LB_DateNaissance.Size = new System.Drawing.Size(142, 20);
+            this.LB_DateNaissance.Size = new System.Drawing.Size(96, 13);
             this.LB_DateNaissance.TabIndex = 10;
             this.LB_DateNaissance.Text = "Date de naissance";
             // 
             // LB_PositionJoueur
             // 
             this.LB_PositionJoueur.AutoSize = true;
-            this.LB_PositionJoueur.Location = new System.Drawing.Point(34, 330);
+            this.LB_PositionJoueur.Location = new System.Drawing.Point(23, 214);
+            this.LB_PositionJoueur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_PositionJoueur.Name = "LB_PositionJoueur";
-            this.LB_PositionJoueur.Size = new System.Drawing.Size(135, 20);
+            this.LB_PositionJoueur.Size = new System.Drawing.Size(91, 13);
             this.LB_PositionJoueur.TabIndex = 9;
             this.LB_PositionJoueur.Text = "Position du joueur";
             // 
             // LB_PrenomJoueur
             // 
             this.LB_PrenomJoueur.AutoSize = true;
-            this.LB_PrenomJoueur.Location = new System.Drawing.Point(34, 90);
+            this.LB_PrenomJoueur.Location = new System.Drawing.Point(23, 58);
+            this.LB_PrenomJoueur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_PrenomJoueur.Name = "LB_PrenomJoueur";
-            this.LB_PrenomJoueur.Size = new System.Drawing.Size(134, 20);
+            this.LB_PrenomJoueur.Size = new System.Drawing.Size(90, 13);
             this.LB_PrenomJoueur.TabIndex = 8;
             this.LB_PrenomJoueur.Text = "Prénom du joueur";
             // 
             // LB_EquipeJoueur
             // 
             this.LB_EquipeJoueur.AutoSize = true;
-            this.LB_EquipeJoueur.Location = new System.Drawing.Point(34, 270);
+            this.LB_EquipeJoueur.Location = new System.Drawing.Point(23, 175);
+            this.LB_EquipeJoueur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_EquipeJoueur.Name = "LB_EquipeJoueur";
-            this.LB_EquipeJoueur.Size = new System.Drawing.Size(129, 20);
+            this.LB_EquipeJoueur.Size = new System.Drawing.Size(87, 13);
             this.LB_EquipeJoueur.TabIndex = 7;
             this.LB_EquipeJoueur.Text = "Équipe du joueur";
             // 
             // LB_NomJoueur
             // 
             this.LB_NomJoueur.AutoSize = true;
-            this.LB_NomJoueur.Location = new System.Drawing.Point(34, 30);
+            this.LB_NomJoueur.Location = new System.Drawing.Point(23, 19);
+            this.LB_NomJoueur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_NomJoueur.Name = "LB_NomJoueur";
-            this.LB_NomJoueur.Size = new System.Drawing.Size(112, 20);
+            this.LB_NomJoueur.Size = new System.Drawing.Size(76, 13);
             this.LB_NomJoueur.TabIndex = 6;
             this.LB_NomJoueur.Text = "Nom du joueur";
             // 
             // LB_NumeroMaillot
             // 
             this.LB_NumeroMaillot.AutoSize = true;
-            this.LB_NumeroMaillot.Location = new System.Drawing.Point(34, 210);
+            this.LB_NumeroMaillot.Location = new System.Drawing.Point(23, 136);
+            this.LB_NumeroMaillot.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_NumeroMaillot.Name = "LB_NumeroMaillot";
-            this.LB_NumeroMaillot.Size = new System.Drawing.Size(136, 20);
+            this.LB_NumeroMaillot.Size = new System.Drawing.Size(91, 13);
             this.LB_NumeroMaillot.TabIndex = 11;
             this.LB_NumeroMaillot.Text = "Numéro du maillot";
             // 
             // TB_Url
             // 
-            this.TB_Url.Location = new System.Drawing.Point(238, 385);
+            this.TB_Url.Location = new System.Drawing.Point(159, 250);
+            this.TB_Url.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TB_Url.Name = "TB_Url";
-            this.TB_Url.Size = new System.Drawing.Size(227, 26);
+            this.TB_Url.Size = new System.Drawing.Size(153, 20);
             this.TB_Url.TabIndex = 24;
             // 
             // LB_Url
             // 
             this.LB_Url.AutoSize = true;
-            this.LB_Url.Location = new System.Drawing.Point(34, 388);
+            this.LB_Url.Location = new System.Drawing.Point(23, 252);
+            this.LB_Url.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Url.Name = "LB_Url";
-            this.LB_Url.Size = new System.Drawing.Size(137, 20);
+            this.LB_Url.Size = new System.Drawing.Size(92, 13);
             this.LB_Url.TabIndex = 23;
             this.LB_Url.Text = "URL image joueur";
             // 
             // BTN_Ajouter
             // 
             this.BTN_Ajouter.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_Ajouter.Location = new System.Drawing.Point(259, 445);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(173, 289);
+            this.BTN_Ajouter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
-            this.BTN_Ajouter.Size = new System.Drawing.Size(109, 37);
+            this.BTN_Ajouter.Size = new System.Drawing.Size(73, 24);
             this.BTN_Ajouter.TabIndex = 22;
             this.BTN_Ajouter.Text = "Ajouter";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
             // 
             // Form_Ajouter_Joueur
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 497);
+            this.ClientSize = new System.Drawing.Size(338, 323);
             this.Controls.Add(this.TB_Url);
             this.Controls.Add(this.LB_Url);
             this.Controls.Add(this.BTN_Ajouter);
@@ -206,6 +222,7 @@
             this.Controls.Add(this.LB_NomJoueur);
             this.Controls.Add(this.LB_NumeroMaillot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form_Ajouter_Joueur";
             this.Text = "Form_Ajouter_Joueur";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ajouter_Joueur_FormClosing);
