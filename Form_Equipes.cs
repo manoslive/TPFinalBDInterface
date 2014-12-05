@@ -288,7 +288,7 @@ namespace TPFinal
 
         private void BTN_Supprimer_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) ;
+            if (MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) 
             {
                 try
                 {
