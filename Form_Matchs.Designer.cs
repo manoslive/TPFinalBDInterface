@@ -47,6 +47,7 @@
             this.TB_Visiteur = new System.Windows.Forms.TextBox();
             this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
             this.FB_Fermer = new FlashButton.FlashButton();
+            this.BTN_AjoutStats = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Faceoff)).BeginInit();
@@ -264,6 +265,16 @@
             this.FB_Fermer.TabIndex = 10;
             this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Fermer_MouseEnter);
             // 
+            // BTN_AjoutStats
+            // 
+            this.BTN_AjoutStats.Location = new System.Drawing.Point(12, 598);
+            this.BTN_AjoutStats.Name = "BTN_AjoutStats";
+            this.BTN_AjoutStats.Size = new System.Drawing.Size(164, 32);
+            this.BTN_AjoutStats.TabIndex = 4;
+            this.BTN_AjoutStats.Text = "Ajouter stats";
+            this.BTN_AjoutStats.UseVisualStyleBackColor = true;
+            this.BTN_AjoutStats.Click += new System.EventHandler(this.BTN_AjoutRencontre_Click);
+            // 
             // Form_Matchs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -283,6 +294,7 @@
             this.Controls.Add(this.BTN_Calendrier);
             this.Controls.Add(this.BTN_ModifierMatch);
             this.Controls.Add(this.BTN_Fermer);
+            this.Controls.Add(this.BTN_AjoutStats);
             this.Controls.Add(this.BTN_AjoutRencontre);
             this.Controls.Add(this.PB_EquipeHome);
             this.Controls.Add(this.PB_EquipeAway);
@@ -325,6 +337,7 @@
         private System.Windows.Forms.TextBox TB_Visiteur;
         private System.Windows.Forms.PictureBox PB_Fermer_Gif;
         private FlashButton.FlashButton FB_Fermer;
+        private System.Windows.Forms.Button BTN_AjoutStats;
 
     }
 }

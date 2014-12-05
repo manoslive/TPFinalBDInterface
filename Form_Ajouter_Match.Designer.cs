@@ -30,10 +30,6 @@
         {
             this.CB_EquipeHome = new System.Windows.Forms.ComboBox();
             this.CB_EquipeAway = new System.Windows.Forms.ComboBox();
-            this.LB_PointageAway = new System.Windows.Forms.Label();
-            this.LB_PointageHome = new System.Windows.Forms.Label();
-            this.TB_ScoreAway = new System.Windows.Forms.TextBox();
-            this.TB_ScoreHome = new System.Windows.Forms.TextBox();
             this.BTN_Cancel = new System.Windows.Forms.Button();
             this.TB_Lieu = new System.Windows.Forms.TextBox();
             this.TB_NumeroMatch = new System.Windows.Forms.TextBox();
@@ -64,54 +60,10 @@
             this.CB_EquipeAway.Size = new System.Drawing.Size(196, 28);
             this.CB_EquipeAway.TabIndex = 21;
             // 
-            // LB_PointageAway
-            // 
-            this.LB_PointageAway.AutoSize = true;
-            this.LB_PointageAway.Location = new System.Drawing.Point(25, 331);
-            this.LB_PointageAway.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LB_PointageAway.Name = "LB_PointageAway";
-            this.LB_PointageAway.Size = new System.Drawing.Size(125, 20);
-            this.LB_PointageAway.TabIndex = 28;
-            this.LB_PointageAway.Text = "Pointage visiteur";
-            this.LB_PointageAway.Visible = false;
-            // 
-            // LB_PointageHome
-            // 
-            this.LB_PointageHome.AutoSize = true;
-            this.LB_PointageHome.Location = new System.Drawing.Point(25, 272);
-            this.LB_PointageHome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LB_PointageHome.Name = "LB_PointageHome";
-            this.LB_PointageHome.Size = new System.Drawing.Size(133, 20);
-            this.LB_PointageHome.TabIndex = 26;
-            this.LB_PointageHome.Text = "Pointage domicile";
-            this.LB_PointageHome.Visible = false;
-            // 
-            // TB_ScoreAway
-            // 
-            this.TB_ScoreAway.Location = new System.Drawing.Point(174, 328);
-            this.TB_ScoreAway.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TB_ScoreAway.MaxLength = 40;
-            this.TB_ScoreAway.Name = "TB_ScoreAway";
-            this.TB_ScoreAway.Size = new System.Drawing.Size(196, 26);
-            this.TB_ScoreAway.TabIndex = 29;
-            this.TB_ScoreAway.Visible = false;
-            this.TB_ScoreAway.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VerifScoreValide);
-            // 
-            // TB_ScoreHome
-            // 
-            this.TB_ScoreHome.Location = new System.Drawing.Point(174, 269);
-            this.TB_ScoreHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TB_ScoreHome.MaxLength = 40;
-            this.TB_ScoreHome.Name = "TB_ScoreHome";
-            this.TB_ScoreHome.Size = new System.Drawing.Size(196, 26);
-            this.TB_ScoreHome.TabIndex = 27;
-            this.TB_ScoreHome.Visible = false;
-            this.TB_ScoreHome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VerifScoreValide);
-            // 
             // BTN_Cancel
             // 
             this.BTN_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Cancel.Location = new System.Drawing.Point(291, 385);
+            this.BTN_Cancel.Location = new System.Drawing.Point(291, 254);
             this.BTN_Cancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(112, 35);
@@ -198,7 +150,7 @@
             // BTN_Ajouter
             // 
             this.BTN_Ajouter.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_Ajouter.Location = new System.Drawing.Point(157, 385);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(157, 254);
             this.BTN_Ajouter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(112, 35);
@@ -210,13 +162,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 438);
+            this.ClientSize = new System.Drawing.Size(416, 299);
             this.Controls.Add(this.CB_EquipeHome);
             this.Controls.Add(this.CB_EquipeAway);
-            this.Controls.Add(this.LB_PointageAway);
-            this.Controls.Add(this.LB_PointageHome);
-            this.Controls.Add(this.TB_ScoreAway);
-            this.Controls.Add(this.TB_ScoreHome);
             this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.TB_Lieu);
             this.Controls.Add(this.TB_NumeroMatch);
@@ -241,10 +189,6 @@
 
         private System.Windows.Forms.ComboBox CB_EquipeHome;
         private System.Windows.Forms.ComboBox CB_EquipeAway;
-        private System.Windows.Forms.Label LB_PointageAway;
-        private System.Windows.Forms.Label LB_PointageHome;
-        private System.Windows.Forms.TextBox TB_ScoreAway;
-        private System.Windows.Forms.TextBox TB_ScoreHome;
         private System.Windows.Forms.Button BTN_Cancel;
         private System.Windows.Forms.TextBox TB_Lieu;
         private System.Windows.Forms.TextBox TB_NumeroMatch;

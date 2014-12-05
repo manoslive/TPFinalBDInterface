@@ -327,20 +327,18 @@ namespace TPFinal
                 }
             }
         }
-
-        private void DGV_Joueurs_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void AjouterStats()
         {
-            //if (e.RowIndex > -1)
-            //{
-            //    FillStats();
-            //}
-            // Ajouter ici le lien vers Form_Statistique
             Form_Statistiques stats = new Form_Statistiques(oracon, connection, DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString());
             this.Hide();
             stats.Text = "Statistiques";
             stats.callBackForm = this;
             stats.numeroJoueurs = DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString();
             stats.ShowDialog();
+        }
+        private void DGV_Joueurs_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            AjouterStats();
         }
         private void FB_Fermer_MouseEnter(object sender, EventArgs e)
         {

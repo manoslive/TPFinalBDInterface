@@ -42,8 +42,7 @@ namespace TPFinal
             }
             else
                 MessageBox.Show("Vous devez avoir 3 joueurs avec des statistiques " +
-                                "pour pouvoir afficher un top3", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);    
-            
+                                "pour pouvoir afficher un top3", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void RemplirTop3Labels()
