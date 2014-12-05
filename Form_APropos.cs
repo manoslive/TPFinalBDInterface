@@ -17,5 +17,25 @@ namespace TPFinal
         {
             InitializeComponent();
         }
+
+        private void PB_Manu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PB_Shaun_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

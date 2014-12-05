@@ -88,29 +88,29 @@ namespace TPFinal
                 TB_Lieu.Text = value;
             }
         }
-        public string scoreHome
-        {
-            get
-            {
-                return TB_ScoreHome.Text;
-            }
-            set
-            {
-                TB_ScoreHome.Text = value;
-            }
-        }
-        public string scoreVisiteur
-        {
-            get
-            {
-                return TB_ScoreAway.Text;
-            }
-            set
-            {
-                TB_ScoreAway.Text = value;
+        //public string scoreHome
+        //{
+        //    get
+        //    {
+        //        return TB_ScoreHome.Text;
+        //    }
+        //    set
+        //    {
+        //        TB_ScoreHome.Text = value;
+        //    }
+        //}
+        //public string scoreVisiteur
+        //{
+        //    get
+        //    {
+        //        return TB_ScoreAway.Text;
+        //    }
+        //    set
+        //    {
+        //        TB_ScoreAway.Text = value;
 
-            }
-        }
+        //    }
+        //}
 
         private void VerifScoreValide(object sender, KeyPressEventArgs e)
         {

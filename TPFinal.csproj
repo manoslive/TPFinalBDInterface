@@ -164,6 +164,9 @@
     <EmbeddedResource Include="Form_Ajouter_Stats.resx">
       <DependentUpon>Form_Ajouter_Stats.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_APropos.resx">
+      <DependentUpon>Form_APropos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Calendrier_Matchs.resx">
       <DependentUpon>Form_Calendrier_Matchs.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,6 +345,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ModifierPolice_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shaun tête.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shaun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\joueur hockey lego.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
