@@ -51,7 +51,8 @@ namespace TPFinal
         {
             OracleCommand oraSelect = oracon.CreateCommand();
             //oraSelect.CommandText = "Select * From Statistiques where NumeroJoueur = :NumeroJoueur";
-            oraSelect.CommandText = "Select * From Statistiques"; // Problème ici avec le binding context
+            oraSelect.CommandText = "Select * From Statistiques " +
+                                    "order by NumeroJoueur"; // Problème ici avec le binding context
             oraSelect.Parameters.Add(new OracleParameter(":NumeroJoueur", numeroJoueur));
             using (OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect))
             {
@@ -98,27 +99,7 @@ namespace TPFinal
             TB_TempsPunition.DataBindings.Clear();
             TB_TempsPunition.Clear();
         }
-        //private void updateControls()
-        //{
-        //    if (TB_NumJoueur.Text == "")
-        //    {
-        //        FB_ModifierStat.Enabled = false;
-        //        FB_Debut.Enabled = false;
-        //        FB_Fin.Enabled = false;
-        //        FB_Precedent.Enabled = false;
-        //        FB_Suivant.Enabled = false;
-        //        FB_SupprimerStat.Enabled = false;
-        //    }
-        //    else
-        //    {
-        //        FB_ModifierStat.Enabled = true;
-        //        FB_Debut.Enabled = true;
-        //        FB_Fin.Enabled = true;
-        //        FB_Precedent.Enabled = true;
-        //        FB_Suivant.Enabled = true;
-        //        FB_SupprimerStat.Enabled = true;
-        //    }
-        //}
+
         private void Form_Statistiques_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (callBackForm != null)
@@ -142,7 +123,7 @@ namespace TPFinal
 
         private void BTN_Suivant_Click(object sender, EventArgs e)
         {
-            this.BindingContext[statsDataSet, "Stats.NumeroJoueur"].Position++;
+            this.BindingContext[statsDataSet, "Stats"].Position++;
         }
 
         private void BTN_Ajouter_Click(object sender, EventArgs e)
@@ -151,19 +132,12 @@ namespace TPFinal
             aJ.callBackForm = this;
             aJ.Text = "Ajout de stats";
             aJ.Location = this.Location;
-            //aJ.numMatch = TB_NumMatch.Text;
-            //aJ.numJoueur = TB_NumJoueur.Text;
             this.Hide(); // Cache la fenêtre actuelle
-
-            //if (!currval)
-            //    commandeSQL = "SELECT MAX(numjoueur) from joueur ";
-            //else
-            //    commandeSQL = "SELECT Seq_num_joueur.currval from dual";
 
             if (aJ.ShowDialog() == DialogResult.OK)
             {
                 string sql = "insert into FicheJoueur" +
-                             "(NumeroMatch, NumeroJoueur, NombreButs, NombrePasses, TempsPunition)" +
+                             "(NumeroMatch, NumeroJoueur, NombreButs, NombrePasses, TempsPunition) " +
                              "Values(:NumeroMatch, :NumeroJoueur, :NombreButs, :NombrePasses, :TempsPunition)";
                 currval = true;
                 try
@@ -188,6 +162,12 @@ namespace TPFinal
                     oraAjout.Parameters.Add(OraParaNombrePasses);
                     oraAjout.Parameters.Add(OraParaTempsPunition);
 
+                    // Ajouter les buts au total
+                    string sqlButs = "insert into Match" +
+                                     "(NumeroMatch, NumeroJoueur, NombreButs, NombrePasses, TempsPunition)" +
+                                     "Values(:NumeroMatch, :NumeroJoueur, :NombreButs, :NombrePasses, :TempsPunition)";
+                    OracleCommand oraTotalButs = new OracleCommand(sqlButs, oracon);
+                    oraTotalButs.Parameters.Add(OraParamNombreButs);
 
                     oraAjout.ExecuteNonQuery();
                     RemplirFormulaire();
@@ -198,7 +178,7 @@ namespace TPFinal
                         MessageBox.Show("Le joueur ne doit pas avoir de statistique dans les matchs", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     /* if(ex.Number == 00984)
                          MessageBox.Show("Erreur dans la syntaxe de la commande SQL", "Erreur 00984", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                     */
+                    */
                     else
                         MessageBox.Show(ex.Message.ToString());
                 }

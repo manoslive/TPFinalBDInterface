@@ -98,14 +98,55 @@ namespace TPFinal
 
         private void Form_Ajouter_Stats_Load(object sender, EventArgs e)
         {
-            RemplirCBMatch();
+            //RemplirCBMatch();
+            //if (CB_NumeroMatch.Items.Count == 0)
+                RemplirCBMatchPremiereFois();
         }
-        private void RemplirCBJoueur()
+        private void RemplirCBMatchPremiereFois()
         {
             try
             {
                 OracleCommand oraSelect = oracon.CreateCommand();
-                oraSelect.CommandText = "SELECT NumeroJoueur FROM FicheJoueur where exists(SELECT NumeroMatch FROM FicheJoueur)";
+                oraSelect.CommandText = "SELECT NumeroMatch FROM Match " +
+                                        "group by NumeroMatch";
+                OracleParameter OraParaNumJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Varchar2, 40);
+
+                OraParaNumJoueur.Value = numJoueur;
+                oraSelect.Parameters.Add(OraParaNumJoueur);
+
+                using (OracleDataReader oraReader = oraSelect.ExecuteReader())
+                {
+                    while (oraReader.Read())
+                    {
+                        CB_NumeroMatch.Items.Add(oraReader.GetInt32(0));
+                    }
+                }
+                if (CB_NumeroMatch.Items.Count != 0)
+                {
+                    CB_NumeroMatch.SelectedIndex = 0;
+                    RemplirCBJoueur();
+                }
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+        private void RemplirCBJoueur()
+        {
+            if (CB_NumeroJoueur.Items.Count != 0)
+                CB_NumeroJoueur.Items.Clear();
+            try
+            {
+                string numMatch = CB_NumeroMatch.Text;
+                OracleCommand oraSelect = oracon.CreateCommand();
+                oraSelect.CommandText = "SELECT NumeroJoueur FROM Match M " +
+                                        "inner join joueur j on m.equipereceveur=j.nomequipe " +
+                                        "WHERE NumeroMatch=" + numMatch + " UNION " +
+                                        "SELECT NumeroJoueur FROM Match M " +
+                                        "inner join joueur j on m.equipevisiteur=j.nomequipe " +
+                                        "WHERE NumeroMatch=" + numMatch +
+                                        " group by NumeroJoueur";
                 OracleParameter OraParaNumJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Varchar2, 40);
 
                 OraParaNumJoueur.Value = numJoueur;
@@ -118,7 +159,8 @@ namespace TPFinal
                         CB_NumeroJoueur.Items.Add(oraReader.GetInt32(0));
                     }
                 }
-
+                if (CB_NumeroJoueur.Items.Count != 0)
+                    CB_NumeroJoueur.SelectedIndex = 0;
             }
             catch (OracleException ex)
             {
@@ -130,7 +172,8 @@ namespace TPFinal
             try
             {
                 OracleCommand oraSelect = oracon.CreateCommand();
-                oraSelect.CommandText = "SELECT NumeroMatch FROM FicheJoueur where exists(SELECT NumeroMatch FROM FicheJoueur)";
+                oraSelect.CommandText = "SELECT NumeroMatch FROM FicheJoueur " +
+                                        "group by NumeroMatch";
                 OracleParameter OraParaNumJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Varchar2, 40);
 
                 OraParaNumJoueur.Value = numJoueur;
@@ -140,10 +183,14 @@ namespace TPFinal
                 {
                     while (oraReader.Read())
                     {
-                        CB_NumeroJoueur.Items.Add(oraReader.GetInt32(0));
+                        CB_NumeroMatch.Items.Add(oraReader.GetInt32(0));
                     }
                 }
-
+                if (CB_NumeroMatch.Items.Count != 0)
+                {
+                    CB_NumeroMatch.SelectedIndex = 0;
+                    RemplirCBJoueur();
+                }
             }
             catch (OracleException ex)
             {
@@ -153,6 +200,11 @@ namespace TPFinal
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CB_NumeroMatch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RemplirCBJoueur();
         }
     }
 }

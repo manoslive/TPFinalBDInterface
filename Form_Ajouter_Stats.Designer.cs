@@ -149,6 +149,7 @@
             this.CB_NumeroMatch.Name = "CB_NumeroMatch";
             this.CB_NumeroMatch.Size = new System.Drawing.Size(180, 28);
             this.CB_NumeroMatch.TabIndex = 18;
+            this.CB_NumeroMatch.SelectedIndexChanged += new System.EventHandler(this.CB_NumeroMatch_SelectedIndexChanged);
             // 
             // CB_NumeroJoueur
             // 

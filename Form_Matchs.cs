@@ -20,7 +20,6 @@ namespace TPFinal
         public Form callBackForm = null;
         public DataSet matchDataSet = null;
         public DataSet joueursDataSet = null;
-        private bool Currval = false;
         public Form_Matchs(OracleConnection connect, MaConnection maBelleConnection)
         {
             InitializeComponent();
@@ -34,40 +33,15 @@ namespace TPFinal
             ajm.Text = "Ajout de match";
             ajm.callBackForm = this;
             this.Hide();
-            ajm.ShowDialog();
             string sqlAjout = null;
 
-            if (!Currval)
-            {
-                sqlAjout = "Select MAX(NumeroMatch) from Match ";
-            }
-            else
-            {
-                sqlAjout = "Select Seqmatch.currval from dual ";
-            }
             OracleCommand oraCMD = new OracleCommand(sqlAjout, oracon);
             oraCMD.CommandType = CommandType.Text;
-
-            try
-            {
-                OracleDataReader oraRead = oraCMD.ExecuteReader();
-                while (oraRead.Read())
-                {
-                    ajm.numeroMatch = (oraRead.GetInt32(0) + 1).ToString();
-
-                }
-                oraRead.Close();
-            }
-
-            catch (OracleException ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
             if (ajm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                Currval = true;
-                string sqlMatchAjout = "insert into Match (EquipeReceveur,EquipeVisiteur,DateRecontre,LieuRencontre,ScoreFinalReceveur,ScoreFinalVisiteur)" +
-                    " VALUES(:EquipeHome,:EquipeVisiteur,:DateRencontre,:Lieu,:ScoreHome,:ScoreVisiteur)";
+                //Currval = true;
+                string sqlMatchAjout = "insert into Match (EquipeReceveur,EquipeVisiteur,DateRecontre,LieuRencontre)" +
+                    " VALUES(:EquipeHome,:EquipeVisiteur,:DateRencontre,:Lieu)";
 
                 try
                 {
@@ -78,22 +52,22 @@ namespace TPFinal
                     OracleParameter OraParaEquipeVisiteur = new OracleParameter(":EquipeVisiteur", OracleDbType.Varchar2, 40);
                     OracleParameter OraParaDateRencontre = new OracleParameter(":DateRencontre", OracleDbType.Date);
                     OracleParameter OraParaLieu = new OracleParameter(":Lieu", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParaScoreHome = new OracleParameter(":ScoreHome", OracleDbType.Int32);
-                    OracleParameter OraParaScoreVisiteur = new OracleParameter(":ScoreVisiteur", OracleDbType.Int32);
+                    //OracleParameter OraParaScoreHome = new OracleParameter(":ScoreHome", OracleDbType.Int32);
+                    //OracleParameter OraParaScoreVisiteur = new OracleParameter(":ScoreVisiteur", OracleDbType.Int32);
 
                     OraParaEquipeHome.Value = ajm.equipeHome;
                     OraParaEquipeVisiteur.Value = ajm.equipeVisiteur;
                     OraParaDateRencontre.Value = DateTime.Parse(ajm.dateRencontre);
                     OraParaLieu.Value = ajm.lieuRencontre;
-                    OraParaScoreHome.Value = ajm.scoreHome;
-                    OraParaScoreVisiteur.Value = ajm.scoreVisiteur;
+                    //OraParaScoreHome.Value = ajm.scoreHome;
+                    //OraParaScoreVisiteur.Value = ajm.scoreVisiteur;
 
                     oraMatchAjout.Parameters.Add(OraParaEquipeHome);
                     oraMatchAjout.Parameters.Add(OraParaEquipeVisiteur);
                     oraMatchAjout.Parameters.Add(OraParaDateRencontre);
                     oraMatchAjout.Parameters.Add(OraParaLieu);
-                    oraMatchAjout.Parameters.Add(OraParaScoreHome);
-                    oraMatchAjout.Parameters.Add(OraParaScoreVisiteur);
+                    //oraMatchAjout.Parameters.Add(OraParaScoreHome);
+                    //oraMatchAjout.Parameters.Add(OraParaScoreVisiteur);
 
                     oraMatchAjout.ExecuteNonQuery();
 
@@ -105,27 +79,6 @@ namespace TPFinal
                 }
             }
         }
-
-        private void LoadDGVstats()
-        {
-            DGV_Joueurs.AllowUserToResizeColumns = false; // Empêche le resize des colonnes
-            DGV_Joueurs.AllowUserToResizeRows = false; // Empêche le resize des rangées
-            DGV_Joueurs.AllowUserToAddRows = false; // Enlève la ligne vide à la fin du DGV
-            int lastIndex = -1;
-            if (DGV_Joueurs.SelectedRows.Count > 0) lastIndex = DGV_Joueurs.SelectedRows[0].Index;
-
-            OracleCommand oraSelect = oracon.CreateCommand();
-            //oraSelect.CommandText = "SELECT NumeroMatch, nomjoueur, nombrebuts, nombrepasses, tempspunition FROM FicheJoueur" +
-            //                        "inner join joueur on FicheJoueur.numerojoueur = joueur.numerojoueur";
-            oraSelect.CommandText = "SELECT * from FicheJoueur";
-            OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
-            joueursDataSet = new DataSet();
-            oraAdapter.Fill(joueursDataSet, "StatsJoueurs");
-            DGV_Joueurs.DataSource = joueursDataSet.Tables[0];
-
-            if (lastIndex > -1 && DGV_Joueurs.Rows.Count > 0) DGV_Joueurs.Rows[Math.Min(lastIndex, DGV_Joueurs.Rows.Count - 1)].Selected = true;
-        }
-
         private void LoadDGVmatch()
         {
             DGV_Matchs.AllowUserToResizeColumns = false; // Empêche le resize des colonnes
@@ -135,8 +88,11 @@ namespace TPFinal
             if (DGV_Matchs.SelectedRows.Count > 0) lastIndex = DGV_Matchs.SelectedRows[0].Index;
 
             OracleCommand oraSelect = oracon.CreateCommand();
-            oraSelect.CommandText = "SELECT * FROM Match";
-            OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
+            oraSelect.CommandText = "SELECT NumeroMatch, EquipeReceveur, EquipeVisiteur, DateRecontre, LieuRencontre, sum(select nombrebuts from fichejoueur) as ScoreFinalReceveur, ScoreFinalVisiteur FROM Match M" +
+                                    "inner join FicheJoueur F on F.NumeroMatch=M.NumeroMatch" +
+                                    "inner join Equipe E on E.NomEquipe=M.EquipeReceveur " +
+                                    "order by NumeroMatch";
+            OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect); 
             matchDataSet = new DataSet();
             oraAdapter.Fill(matchDataSet);
             DGV_Matchs.DataSource = matchDataSet.Tables[0];
@@ -154,7 +110,6 @@ namespace TPFinal
             DataGridViewColumn ville = DGV_Matchs.Columns[3];
             ville.Width = 85;
         }
-
         private void BTN_ModifierMatch_Click(object sender, EventArgs e)
         {
             Form_Ajouter_Match Modifier = new Form_Ajouter_Match(oracon, connection);
@@ -211,12 +166,10 @@ namespace TPFinal
                 }
             }
         }
-
         private void Form_Matchs_Load(object sender, EventArgs e)
         {
             LoadDGVmatch();
         }
-
         private void DGV_Matchs_SelectionChanged(object sender, EventArgs e)
         {
             PB_EquipeHome.Image = null;
@@ -230,28 +183,7 @@ namespace TPFinal
                 oraImage.Parameters.Add(new OracleParameter(":NomEquipe1", DGV_Matchs.SelectedRows[0].Cells[1].Value.ToString()));
                 oraImage.Parameters.Add(new OracleParameter(":NomEquipe2", DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString()));
 
-                OracleCommand oraJoueurs = oracon.CreateCommand();
-                //oraJoueurs.CommandText = " SELECT J.NUMEROJOUEUR, NUMEROMAILLOT, J.NOMJOUEUR, POSITIONJOUEUR, NOMEQUIPE, F.NOMBREBUTS, F.NOMBREPASSES, NOMBREPOINTS FROM JOUEUR J INNER JOIN MATCH M ON J.NOMEQUIPE = M.EQUIPERECEVEUR " +
-                //                         " INNER JOIN FICHEJOUEUR F ON J.NUMEROJOUEUR = F.NUMEROJOUEUR" +
-                //                         " INNER JOIN STATSJOUEUR S ON S.NOMJOUEUR = J.NOMJOUEUR" +
-                //                         " WHERE M.EQUIPERECEVEUR='" + DGV_Matchs.SelectedRows[0].Cells[1].Value.ToString() + "' and M.NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() + "  UNION " +
-
-                //                         " SELECT J.NUMEROJOUEUR, NUMEROMAILLOT, J.NOMJOUEUR, POSITIONJOUEUR, NOMEQUIPE, F.NOMBREBUTS, F.NOMBREPASSES, NOMBREPOINTS FROM JOUEUR J INNER JOIN MATCH M ON J.NOMEQUIPE = M.EQUIPEVISITEUR" +
-                //                         " INNER JOIN FICHEJOUEUR F ON J.NUMEROJOUEUR = F.NUMEROJOUEUR" +
-                //                         " INNER JOIN STATSJOUEUR S ON S.NOMJOUEUR = J.NOMJOUEUR" +
-                //                         " WHERE M.EQUIPEVISITEUR='" + DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString() + "' and M.NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() +
-                //                         " ORDER BY 7 DESC";
-                oraJoueurs.CommandText = "SELECT NUMEROJOUEUR, NUMEROMAILLOT, NOMJOUEUR, POSITIONJOUEUR, NOMEQUIPE, NOMBREBUTS, NOMBREPASSES, NOMBREPOINTS FROM JOUEURRECEVEUR " + 
-                                         "WHERE EQUIPERECEVEUR='" + DGV_Matchs.SelectedRows[0].Cells[1].Value.ToString() + "' and NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() + " UNION " +
-                                         "SELECT NUMEROJOUEUR, NUMEROMAILLOT, NOMJOUEUR, POSITIONJOUEUR, NOMEQUIPE, NOMBREBUTS, NOMBREPASSES, NOMBREPOINTS FROM JOUEURVISITEUR " +
-                                         "WHERE EQUIPEVISITEUR='" + DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString() + "' and NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() +
-                                         " ORDER BY 7 DESC";
-
-                OracleDataAdapter oraDataJoueurs = new OracleDataAdapter(oraJoueurs);
-                joueursDataSet = new DataSet();
-                oraDataJoueurs.Fill(joueursDataSet, "JoueursDGV");
-                DGV_Joueurs.DataSource = joueursDataSet.Tables[0];
-
+                FillStats();
 
                 LB_NbButsHome.Text = DGV_Matchs.SelectedRows[0].Cells[5].Value.ToString();
                 LB_NbButsAway.Text = DGV_Matchs.SelectedRows[0].Cells[6].Value.ToString();
@@ -294,7 +226,6 @@ namespace TPFinal
                 }
             }
         }
-
         private void Form_Matchs_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (callBackForm != null)
@@ -311,9 +242,23 @@ namespace TPFinal
 
         private void FillStats()
         {
-            Form_Statistiques Stats = new Form_Statistiques(oracon, connection, DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString());
-            this.Hide();
-            Stats.callBackForm = this;
+            //Form_Statistiques Stats = new Form_Statistiques(oracon, connection, DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString());
+            //this.Hide();
+            //Stats.callBackForm = this;
+            DGV_Joueurs.AllowUserToResizeColumns = false; // Empêche le resize des colonnes
+            DGV_Joueurs.AllowUserToResizeRows = false; // Empêche le resize des rangées
+            DGV_Joueurs.AllowUserToAddRows = false; // Enlève la ligne vide à la fin du DGV
+            OracleCommand oraJoueurs = oracon.CreateCommand();
+            oraJoueurs.CommandText = "SELECT NUMEROJOUEUR, NUMEROMAILLOT, NOMJOUEUR, POSITIONJOUEUR, NOMEQUIPE, NOMBREBUTS, NOMBREPASSES, NOMBREPOINTS FROM JOUEURRECEVEUR " +
+                                     "WHERE EQUIPERECEVEUR='" + DGV_Matchs.SelectedRows[0].Cells[1].Value.ToString() + "' and NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() + " UNION " +
+                                     "SELECT NUMEROJOUEUR, NUMEROMAILLOT, NOMJOUEUR, POSITIONJOUEUR, NOMEQUIPE, NOMBREBUTS, NOMBREPASSES, NOMBREPOINTS FROM JOUEURVISITEUR " +
+                                     "WHERE EQUIPEVISITEUR='" + DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString() + "' and NumeroMatch = " + DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString() +
+                                     " ORDER BY 7 DESC";
+
+            OracleDataAdapter oraDataJoueurs = new OracleDataAdapter(oraJoueurs);
+            joueursDataSet = new DataSet();
+            oraDataJoueurs.Fill(joueursDataSet, "JoueursDGV");
+            DGV_Joueurs.DataSource = joueursDataSet.Tables[0];
             //MessageBox.Show(DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString());
             //Stats.numeroJoueurs = DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString();
             //Stats.ShowDialog();
@@ -373,10 +318,10 @@ namespace TPFinal
 
         private void DGV_Joueurs_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.RowIndex > -1)
-            {
-                FillStats();
-            }
+            //if (e.RowIndex > -1)
+            //{
+            //    FillStats();
+            //}
             // Ajouter ici le lien vers Form_Statistique
             Form_Statistiques stats = new Form_Statistiques(oracon, connection, DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString());
             this.Hide();

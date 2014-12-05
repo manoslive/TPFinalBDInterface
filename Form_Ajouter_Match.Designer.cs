@@ -43,7 +43,7 @@
             this.LB_EquipeAway = new System.Windows.Forms.Label();
             this.LB_EquipeHome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.BTN_Ok = new System.Windows.Forms.Button();
+            this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CB_EquipeHome
@@ -73,6 +73,7 @@
             this.LB_PointageAway.Size = new System.Drawing.Size(125, 20);
             this.LB_PointageAway.TabIndex = 28;
             this.LB_PointageAway.Text = "Pointage visiteur";
+            this.LB_PointageAway.Visible = false;
             // 
             // LB_PointageHome
             // 
@@ -83,6 +84,7 @@
             this.LB_PointageHome.Size = new System.Drawing.Size(133, 20);
             this.LB_PointageHome.TabIndex = 26;
             this.LB_PointageHome.Text = "Pointage domicile";
+            this.LB_PointageHome.Visible = false;
             // 
             // TB_ScoreAway
             // 
@@ -92,6 +94,7 @@
             this.TB_ScoreAway.Name = "TB_ScoreAway";
             this.TB_ScoreAway.Size = new System.Drawing.Size(196, 26);
             this.TB_ScoreAway.TabIndex = 29;
+            this.TB_ScoreAway.Visible = false;
             this.TB_ScoreAway.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VerifScoreValide);
             // 
             // TB_ScoreHome
@@ -102,6 +105,7 @@
             this.TB_ScoreHome.Name = "TB_ScoreHome";
             this.TB_ScoreHome.Size = new System.Drawing.Size(196, 26);
             this.TB_ScoreHome.TabIndex = 27;
+            this.TB_ScoreHome.Visible = false;
             this.TB_ScoreHome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VerifScoreValide);
             // 
             // BTN_Cancel
@@ -191,16 +195,16 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Numero du Match";
             // 
-            // BTN_Ok
+            // BTN_Ajouter
             // 
-            this.BTN_Ok.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_Ok.Location = new System.Drawing.Point(157, 385);
-            this.BTN_Ok.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BTN_Ok.Name = "BTN_Ok";
-            this.BTN_Ok.Size = new System.Drawing.Size(112, 35);
-            this.BTN_Ok.TabIndex = 30;
-            this.BTN_Ok.Text = "Ok";
-            this.BTN_Ok.UseVisualStyleBackColor = true;
+            this.BTN_Ajouter.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BTN_Ajouter.Location = new System.Drawing.Point(157, 385);
+            this.BTN_Ajouter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BTN_Ajouter.Name = "BTN_Ajouter";
+            this.BTN_Ajouter.Size = new System.Drawing.Size(112, 35);
+            this.BTN_Ajouter.TabIndex = 30;
+            this.BTN_Ajouter.Text = "Ajouter";
+            this.BTN_Ajouter.UseVisualStyleBackColor = true;
             // 
             // Form_Ajouter_Match
             // 
@@ -222,7 +226,7 @@
             this.Controls.Add(this.LB_EquipeAway);
             this.Controls.Add(this.LB_EquipeHome);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BTN_Ok);
+            this.Controls.Add(this.BTN_Ajouter);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Ajouter_Match";
             this.Text = "Form_Ajouter_Match";
@@ -250,6 +254,6 @@
         private System.Windows.Forms.Label LB_EquipeAway;
         private System.Windows.Forms.Label LB_EquipeHome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BTN_Ok;
+        private System.Windows.Forms.Button BTN_Ajouter;
     }
 }
