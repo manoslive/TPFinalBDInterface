@@ -34,7 +34,7 @@ namespace TPFinal
 
         private void BTN_Ajouter_Click(object sender, EventArgs e) // Ouvre la form d'ajout de joueur
         {
-            Form_Ajouter_Joueur aJ = new Form_Ajouter_Joueur(oracon, connection);
+                        Form_Ajouter_Joueur aJ = new Form_Ajouter_Joueur(oracon, connection);
             aJ.callBackForm = this;
             aJ.Text = "Ajout de joueur";
             aJ.Location = this.Location;
@@ -67,7 +67,7 @@ namespace TPFinal
                     OraParamPrenomjoueurs.Value = aJ.prenomJoueurs;
                     OraParamdatenaissance.Value = aJ.DDN;// 
                     OraParanumeromaillot.Value = aJ.maillot;
-                    OraParaequipejoueurs.Value = aJ.Equipe;
+                    OraParaequipejoueurs.Value = aJ.Equipe; 
                     OraParpositionjoueur.Value = aJ.Position;
                     OraParaPhoto.Value = aJ.Photo;
 
@@ -78,7 +78,7 @@ namespace TPFinal
                     oraAjout.Parameters.Add(OraParaPhoto);
                     oraAjout.Parameters.Add(OraParaequipejoueurs);
                     oraAjout.Parameters.Add(OraParpositionjoueur);
-
+                    
 
                     oraAjout.ExecuteNonQuery();
                     RemplirFormulaire();
@@ -87,9 +87,9 @@ namespace TPFinal
                 {
                     if (ex.Number == 2292)
                         MessageBox.Show("Le joueur ne doit pas avoir de statistique dans les matchs", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    /* if(ex.Number == 00984)
-                         MessageBox.Show("Erreur dans la syntaxe de la commande SQL", "Erreur 00984", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                     */
+                   /* if(ex.Number == 00984)
+                        MessageBox.Show("Erreur dans la syntaxe de la commande SQL", "Erreur 00984", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    */
                     else
                         MessageBox.Show(ex.Message.ToString());
                 }
