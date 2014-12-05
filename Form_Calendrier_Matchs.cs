@@ -66,5 +66,23 @@ namespace TPFinal
             Date = Calendrier_Match.SelectionRange.Start;
             LoadDGV();
         }
+        private void FB_Fermer_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+        private void PB_Fermer_Gif_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void PB_Fermer_Gif_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PB_Fermer_Gif_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

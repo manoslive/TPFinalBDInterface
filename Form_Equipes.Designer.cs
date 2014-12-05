@@ -36,6 +36,7 @@
             this.LB_Division = new System.Windows.Forms.Label();
             this.toolTip_Equipe = new System.Windows.Forms.ToolTip(this.components);
             this.BTN_Divisions = new System.Windows.Forms.Button();
+            this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
             this.FB_Fermer = new FlashButton.FlashButton();
             this.FB_SupprimerEquipe = new FlashButton.FlashButton();
             this.FB_ModifierEquipe = new FlashButton.FlashButton();
@@ -43,10 +44,9 @@
             this.FB_Classement = new FlashButton.FlashButton();
             this.FB_Top3 = new FlashButton.FlashButton();
             this.PB_Equipe = new System.Windows.Forms.PictureBox();
-            this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).BeginInit();
             this.SuspendLayout();
             // 
             // DGV_Equipes
@@ -110,6 +110,21 @@
             this.BTN_Divisions.UseVisualStyleBackColor = true;
             this.BTN_Divisions.Click += new System.EventHandler(this.BTN_Divisions_Click);
             // 
+            // PB_Fermer_Gif
+            // 
+            this.PB_Fermer_Gif.BackColor = System.Drawing.Color.Transparent;
+            this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
+            this.PB_Fermer_Gif.Location = new System.Drawing.Point(465, 177);
+            this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(41, 41);
+            this.PB_Fermer_Gif.TabIndex = 12;
+            this.PB_Fermer_Gif.TabStop = false;
+            this.toolTip_Equipe.SetToolTip(this.PB_Fermer_Gif, "Fermer");
+            this.PB_Fermer_Gif.Visible = false;
+            this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
+            this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
+            this.PB_Fermer_Gif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseUp);
+            // 
             // FB_Fermer
             // 
             this.FB_Fermer.BackColor = System.Drawing.Color.Transparent;
@@ -122,7 +137,7 @@
             this.FB_Fermer.Location = new System.Drawing.Point(465, 177);
             this.FB_Fermer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Fermer.Name = "FB_Fermer";
-            this.FB_Fermer.Size = new System.Drawing.Size(40, 40);
+            this.FB_Fermer.Size = new System.Drawing.Size(41, 41);
             this.FB_Fermer.TabIndex = 11;
             this.toolTip_Equipe.SetToolTip(this.FB_Fermer, "Supprimer une équipe");
             this.FB_Fermer.Click += new System.EventHandler(this.BTN_Ok_Click);
@@ -140,7 +155,7 @@
             this.FB_SupprimerEquipe.Location = new System.Drawing.Point(465, 129);
             this.FB_SupprimerEquipe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_SupprimerEquipe.Name = "FB_SupprimerEquipe";
-            this.FB_SupprimerEquipe.Size = new System.Drawing.Size(40, 40);
+            this.FB_SupprimerEquipe.Size = new System.Drawing.Size(46, 46);
             this.FB_SupprimerEquipe.TabIndex = 9;
             this.toolTip_Equipe.SetToolTip(this.FB_SupprimerEquipe, "Supprimer une équipe");
             this.FB_SupprimerEquipe.Click += new System.EventHandler(this.BTN_Supprimer_Click);
@@ -157,7 +172,7 @@
             this.FB_ModifierEquipe.Location = new System.Drawing.Point(486, 90);
             this.FB_ModifierEquipe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_ModifierEquipe.Name = "FB_ModifierEquipe";
-            this.FB_ModifierEquipe.Size = new System.Drawing.Size(40, 40);
+            this.FB_ModifierEquipe.Size = new System.Drawing.Size(46, 46);
             this.FB_ModifierEquipe.TabIndex = 8;
             this.toolTip_Equipe.SetToolTip(this.FB_ModifierEquipe, "Modifier une équipe");
             this.FB_ModifierEquipe.Click += new System.EventHandler(this.BTN_Modifier_Click);
@@ -174,7 +189,7 @@
             this.FB_AjouterEquipe.Location = new System.Drawing.Point(440, 90);
             this.FB_AjouterEquipe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_AjouterEquipe.Name = "FB_AjouterEquipe";
-            this.FB_AjouterEquipe.Size = new System.Drawing.Size(40, 40);
+            this.FB_AjouterEquipe.Size = new System.Drawing.Size(46, 46);
             this.FB_AjouterEquipe.TabIndex = 7;
             this.toolTip_Equipe.SetToolTip(this.FB_AjouterEquipe, "Ajouter une équipe");
             this.FB_AjouterEquipe.Click += new System.EventHandler(this.BTN_Ajouter_Click);
@@ -224,21 +239,6 @@
             this.PB_Equipe.TabIndex = 2;
             this.PB_Equipe.TabStop = false;
             // 
-            // PB_Fermer_Gif
-            // 
-            this.PB_Fermer_Gif.BackColor = System.Drawing.Color.Transparent;
-            this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
-            this.PB_Fermer_Gif.Location = new System.Drawing.Point(465, 177);
-            this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
-            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
-            this.PB_Fermer_Gif.TabIndex = 12;
-            this.PB_Fermer_Gif.TabStop = false;
-            this.toolTip_Equipe.SetToolTip(this.PB_Fermer_Gif, "Fermer");
-            this.PB_Fermer_Gif.Visible = false;
-            this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
-            this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
-            this.PB_Fermer_Gif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseUp);
-            // 
             // Form_Equipes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,8 +265,8 @@
             this.Load += new System.EventHandler(this.Form_Equipe_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Equipes_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

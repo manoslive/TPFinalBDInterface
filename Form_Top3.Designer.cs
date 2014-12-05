@@ -32,16 +32,18 @@
             this.LB_Top1 = new System.Windows.Forms.Label();
             this.LB_Top2 = new System.Windows.Forms.Label();
             this.LB_Top3 = new System.Windows.Forms.Label();
-            this.BTN_Fermer = new System.Windows.Forms.Button();
             this.PB_Top2 = new System.Windows.Forms.PictureBox();
             this.PB_Top3 = new System.Windows.Forms.PictureBox();
             this.PB_Top1 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
+            this.FB_Fermer = new FlashButton.FlashButton();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Top3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             this.SuspendLayout();
             // 
             // DGV_Top3
@@ -79,17 +81,6 @@
             this.LB_Top3.Size = new System.Drawing.Size(35, 13);
             this.LB_Top3.TabIndex = 7;
             this.LB_Top3.Text = "label3";
-            // 
-            // BTN_Fermer
-            // 
-            this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Fermer.Location = new System.Drawing.Point(181, 272);
-            this.BTN_Fermer.Margin = new System.Windows.Forms.Padding(2);
-            this.BTN_Fermer.Name = "BTN_Fermer";
-            this.BTN_Fermer.Size = new System.Drawing.Size(63, 22);
-            this.BTN_Fermer.TabIndex = 9;
-            this.BTN_Fermer.Text = "Fermer";
-            this.BTN_Fermer.UseVisualStyleBackColor = true;
             // 
             // PB_Top2
             // 
@@ -129,12 +120,40 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // PB_Fermer_Gif
+            // 
+            this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
+            this.PB_Fermer_Gif.Location = new System.Drawing.Point(193, 270);
+            this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
+            this.PB_Fermer_Gif.TabIndex = 11;
+            this.PB_Fermer_Gif.TabStop = false;
+            this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
+            this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
+            this.PB_Fermer_Gif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseUp);
+            // 
+            // FB_Fermer
+            // 
+            this.FB_Fermer.BackColor = System.Drawing.Color.Transparent;
+            this.FB_Fermer.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Fermer;
+            this.FB_Fermer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_Fermer.ImageClick = global::TPFinal.Properties.Resources.ICON_Fermer_Click;
+            this.FB_Fermer.ImageDisable = global::TPFinal.Properties.Resources.ICON_Fermer;
+            this.FB_Fermer.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fermer;
+            this.FB_Fermer.ImageOver = null;
+            this.FB_Fermer.Location = new System.Drawing.Point(193, 272);
+            this.FB_Fermer.Name = "FB_Fermer";
+            this.FB_Fermer.Size = new System.Drawing.Size(40, 40);
+            this.FB_Fermer.TabIndex = 10;
+            this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Fermer_MouseEnter);
+            // 
             // Form_Top3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 302);
-            this.Controls.Add(this.BTN_Fermer);
+            this.ClientSize = new System.Drawing.Size(426, 314);
+            this.Controls.Add(this.PB_Fermer_Gif);
+            this.Controls.Add(this.FB_Fermer);
             this.Controls.Add(this.LB_Top3);
             this.Controls.Add(this.LB_Top2);
             this.Controls.Add(this.LB_Top1);
@@ -152,6 +171,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,6 +187,7 @@
         private System.Windows.Forms.Label LB_Top1;
         private System.Windows.Forms.Label LB_Top2;
         private System.Windows.Forms.Label LB_Top3;
-        private System.Windows.Forms.Button BTN_Fermer;
+        private System.Windows.Forms.PictureBox PB_Fermer_Gif;
+        private FlashButton.FlashButton FB_Fermer;
     }
 }
