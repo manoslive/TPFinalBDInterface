@@ -108,7 +108,8 @@ namespace TPFinal
             {
                 OracleCommand oraSelect = oracon.CreateCommand();
                 oraSelect.CommandText = "SELECT NumeroMatch FROM Match " +
-                                        "group by NumeroMatch";
+                                        "group by NumeroMatch " + 
+                                        "where NumeroJoueur=:NumeroJoueur";
                 OracleParameter OraParaNumJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Varchar2, 40);
 
                 OraParaNumJoueur.Value = numJoueur;

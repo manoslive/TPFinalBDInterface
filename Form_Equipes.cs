@@ -88,13 +88,19 @@ namespace TPFinal
                 OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
 
                 divisionDGV = CB_Division.Text;
-                if (divisionDGV != "Est" && divisionDGV != "Ouest")
-                    divisionDGV = "Est' or e.nomdivision='Ouest'";
+                if (divisionDGV == "Toutes")
+                {
+                    oraSelect.CommandText = "SELECT NomEquipe, DateIntro as DateIntroLigue, d.NOMDIVISION, Ville FROM Equipe E " +
+                        "inner join Division D on D.NomDivision = E.NOMDIVISION ";
+                }
                 else
+                {
                     divisionDGV += "'";
-                oraSelect.CommandText = "SELECT NomEquipe, DateIntro as DateIntroLigue, d.NOMDIVISION, Ville FROM Equipe E " +
+                    oraSelect.CommandText = "SELECT NomEquipe, DateIntro as DateIntroLigue, d.NOMDIVISION, Ville FROM Equipe E " +
                                         "inner join Division D on D.NomDivision = E.NOMDIVISION " +
                                         "WHERE e.nomDivision = '" + divisionDGV;
+                }
+
 
                 oraAdapter.Fill(dataSetEquipe, "tableFormEquipe");
                 DGV_Equipes.DataSource = dataSetEquipe.Tables[0];
@@ -368,7 +374,7 @@ namespace TPFinal
             this.Hide();
             div.callBackForm = this;
             div.ShowDialog();
-
+            LoadDGV();
         }
 
         private void FB_Fermer_MouseEnter(object sender, EventArgs e)
@@ -390,6 +396,15 @@ namespace TPFinal
         private void PB_Fermer_Gif_MouseUp(object sender, MouseEventArgs e)
         {
             BTN_Ok_Click(sender, e);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form_APropos propos = new Form_APropos();
+            propos.Text = "À Propos";
+            this.Hide();
+            propos.callBackForm = this;
+            propos.ShowDialog();
         }
     }
 }

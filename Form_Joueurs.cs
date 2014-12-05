@@ -44,26 +44,29 @@ namespace TPFinal
         }
         private void BTN_Ajouter_Click(object sender, EventArgs e) // Ouvre la form d'ajout de joueur
         {
-                        Form_Ajouter_Joueur aJ = new Form_Ajouter_Joueur(oracon, connection);
+            Form_Ajouter_Joueur aJ = new Form_Ajouter_Joueur(oracon, connection);
             aJ.callBackForm = this;
             aJ.Text = "Ajout de joueur";
             aJ.Location = this.Location;
             this.Hide(); // Cache la fenêtre actuelle
 
-            if (!currval)
-                commandeSQL = "SELECT MAX(numjoueur) from joueur ";
-            else
-                commandeSQL = "SELECT Seq_num_joueur.currval from dual";
+            //if (!currval)
+            //    commandeSQL = "SELECT MAX(numjoueur) from joueur ";
+            //else
+            //    commandeSQL = "SELECT Seq_num_joueur.currval from dual";
 
             if (aJ.ShowDialog() == DialogResult.OK)
             {
-                string sql = "insert into joueur" +
-                             "(nomjoueur, prenomjoueur, datenaissance, numeromaillot, photo, positionjoueur, nomequipe)" +
+                string sql = "insert into joueur " +
+                             "(nomjoueur, prenomjoueur, datenaissance, numeromaillot, photo, positionjoueur, nomequipe) " +
                              "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:Photo,:positionjoueur,:equipejoueur)"; //:equipejoueur
+                string test = "insert into joueur " +
+                             "(nomjoueur, prenomjoueur, datenaissance, numeromaillot, photo, positionjoueur, nomequipe) " +
+                             " Values (:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:Photo,:positionjoueur,'Tunak')";
                 currval = true;
                 try
                 {
-                    OracleCommand oraAjout = new OracleCommand(sql, oracon);
+                    OracleCommand oraAjout = new OracleCommand(test, oracon);
 
                     OracleParameter OraParaNomjoueurs = new OracleParameter(":Nomjoueurs", OracleDbType.Varchar2, 40);
                     OracleParameter OraParamPrenomjoueurs = new OracleParameter(":Prenomjoueurs", OracleDbType.Varchar2, 40);
@@ -75,9 +78,9 @@ namespace TPFinal
 
                     OraParaNomjoueurs.Value = aJ.nomJoueurs;
                     OraParamPrenomjoueurs.Value = aJ.prenomJoueurs;
-                    OraParamdatenaissance.Value = aJ.DDN;// 
+                    OraParamdatenaissance.Value = aJ.DDN;
                     OraParanumeromaillot.Value = aJ.maillot;
-                    OraParaequipejoueurs.Value = aJ.Equipe; 
+                    OraParaequipejoueurs.Value = aJ.Equipe;
                     OraParpositionjoueur.Value = aJ.Position;
                     OraParaPhoto.Value = aJ.Photo;
 
@@ -85,10 +88,9 @@ namespace TPFinal
                     oraAjout.Parameters.Add(OraParamPrenomjoueurs);
                     oraAjout.Parameters.Add(OraParamdatenaissance);
                     oraAjout.Parameters.Add(OraParanumeromaillot);
-                    oraAjout.Parameters.Add(OraParaPhoto);
                     oraAjout.Parameters.Add(OraParaequipejoueurs);
                     oraAjout.Parameters.Add(OraParpositionjoueur);
-                    
+                    oraAjout.Parameters.Add(OraParaPhoto);
 
                     oraAjout.ExecuteNonQuery();
                     RemplirFormulaire();
@@ -97,9 +99,9 @@ namespace TPFinal
                 {
                     if (ex.Number == 2292)
                         MessageBox.Show("Le joueur ne doit pas avoir de statistique dans les matchs", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                   /* if(ex.Number == 00984)
-                        MessageBox.Show("Erreur dans la syntaxe de la commande SQL", "Erreur 00984", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    */
+                    /* if(ex.Number == 00984)
+                         MessageBox.Show("Erreur dans la syntaxe de la commande SQL", "Erreur 00984", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                     */
                     else
                         MessageBox.Show(ex.Message.ToString());
                 }
@@ -238,6 +240,7 @@ namespace TPFinal
             aj.prenomJoueurs = TB_PrenomJoueur.Text;
             aj.DDN = DTP_DateNaissance.Value; //.ToString()
             aj.maillot = TB_NumMaillot.Text;
+            aj.Photo = TB_Url.Text;
             aj.Equipe = CB_EquipeJoueur.SelectedItem.ToString();
             aj.Position = CB_PosJoueur.SelectedItem.ToString();
             aj.Location = this.Location;

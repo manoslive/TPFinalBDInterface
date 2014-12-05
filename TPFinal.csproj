@@ -62,6 +62,12 @@
     <Compile Include="Form_Ajouter_Equipe.Designer.cs">
       <DependentUpon>Form_Ajouter_Equipe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_APropos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_APropos.Designer.cs">
+      <DependentUpon>Form_APropos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Divisions.cs">
       <SubType>Form</SubType>
     </Compile>
