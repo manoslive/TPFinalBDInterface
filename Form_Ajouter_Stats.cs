@@ -26,26 +26,26 @@ namespace TPFinal
             oracon = connect;
             connection = maBelleConnection;
         }
-        public string numJoueurs
+        public string numJoueur
         {
             get
             {
-                return CB_NumJoueurs.Text;
+                return CB_NumJoueur.Text;
             }
             set
             {
-                CB_NumJoueurs.Text = value;
+                CB_NumJoueur.Text = value;
             }
         }
         public string numMatch
         {
             get
             {
-                return TB_NumMatch.Text;
+                return TB_NumeroMatch.Text;
             }
             set
             {
-                TB_NumMatch.Text = value;
+                TB_NumeroMatch.Text = value;
             }
         }
         public string nbButs
@@ -101,7 +101,7 @@ namespace TPFinal
             try
             {
                 OracleCommand oraSelect = oracon.CreateCommand();
-                oraSelect.CommandText = "SELECT NumeroJoueur FROM Joueur where NomEquipe = :equipeHome or EquipeJoueur = :equipeVisiteur";
+                oraSelect.CommandText = "SELECT NomJoueur FROM FicheJoueur where NomEquipe = :equipeHome or EquipeJoueur = :equipeVisiteur";
                 OracleParameter OraParaEquipeHome = new OracleParameter(":equipeHome", OracleDbType.Varchar2, 40);
                 OracleParameter OraParaEquipeVisiteur = new OracleParameter(":equipeVisiteur", OracleDbType.Varchar2, 40);
 
@@ -114,7 +114,7 @@ namespace TPFinal
                 {
                     while (oraReader.Read())
                     {
-                        CB_NumJoueurs.Items.Add(oraReader.GetInt32(0));
+                        CB_NumJoueur.Items.Add(oraReader.GetInt32(0));
                     }
                 }
 
@@ -123,6 +123,11 @@ namespace TPFinal
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+        }
+
+        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

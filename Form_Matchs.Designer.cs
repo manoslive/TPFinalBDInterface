@@ -33,8 +33,7 @@
             this.BTN_AjoutRencontre = new System.Windows.Forms.Button();
             this.BTN_ModifierMatch = new System.Windows.Forms.Button();
             this.BTN_Calendrier = new System.Windows.Forms.Button();
-            this.BTN_Stats = new System.Windows.Forms.Button();
-            this.BTN_AjoutStats = new System.Windows.Forms.Button();
+            this.BTN_Fermer = new System.Windows.Forms.Button();
             this.DGV_Matchs = new System.Windows.Forms.DataGridView();
             this.DGV_Joueurs = new System.Windows.Forms.DataGridView();
             this.PB_Faceoff = new System.Windows.Forms.PictureBox();
@@ -111,27 +110,15 @@
             this.BTN_Calendrier.UseVisualStyleBackColor = true;
             this.BTN_Calendrier.Click += new System.EventHandler(this.BTN_Calendrier_Click);
             // 
-            // BTN_Stats
+            // BTN_Fermer
             // 
-            this.BTN_Stats.Location = new System.Drawing.Point(152, 392);
-            this.BTN_Stats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BTN_Stats.Name = "BTN_Stats";
-            this.BTN_Stats.Size = new System.Drawing.Size(109, 21);
-            this.BTN_Stats.TabIndex = 4;
-            this.BTN_Stats.Text = "Stats";
-            this.BTN_Stats.UseVisualStyleBackColor = true;
-            this.BTN_Stats.Click += new System.EventHandler(this.BTN_Stats_Click);
-            // 
-            // BTN_AjoutStats
-            // 
-            this.BTN_AjoutStats.Location = new System.Drawing.Point(8, 392);
-            this.BTN_AjoutStats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BTN_AjoutStats.Name = "BTN_AjoutStats";
-            this.BTN_AjoutStats.Size = new System.Drawing.Size(109, 21);
-            this.BTN_AjoutStats.TabIndex = 4;
-            this.BTN_AjoutStats.Text = "Ajouter stats";
-            this.BTN_AjoutStats.UseVisualStyleBackColor = true;
-            this.BTN_AjoutStats.Click += new System.EventHandler(this.BTN_AjoutStats_Click);
+            this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BTN_Fermer.Location = new System.Drawing.Point(992, 603);
+            this.BTN_Fermer.Name = "BTN_Fermer";
+            this.BTN_Fermer.Size = new System.Drawing.Size(164, 32);
+            this.BTN_Fermer.TabIndex = 4;
+            this.BTN_Fermer.Text = "Fermer";
+            this.BTN_Fermer.UseVisualStyleBackColor = true;
             // 
             // DGV_Matchs
             // 
@@ -305,10 +292,9 @@
             this.Controls.Add(this.PB_Faceoff);
             this.Controls.Add(this.DGV_Joueurs);
             this.Controls.Add(this.DGV_Matchs);
-            this.Controls.Add(this.BTN_Stats);
             this.Controls.Add(this.BTN_Calendrier);
             this.Controls.Add(this.BTN_ModifierMatch);
-            this.Controls.Add(this.BTN_AjoutStats);
+            this.Controls.Add(this.BTN_Fermer);
             this.Controls.Add(this.BTN_AjoutRencontre);
             this.Controls.Add(this.PB_EquipeHome);
             this.Controls.Add(this.PB_EquipeAway);
@@ -340,8 +326,7 @@
         private System.Windows.Forms.Button BTN_AjoutRencontre;
         private System.Windows.Forms.Button BTN_ModifierMatch;
         private System.Windows.Forms.Button BTN_Calendrier;
-        private System.Windows.Forms.Button BTN_Stats;
-        private System.Windows.Forms.Button BTN_AjoutStats;
+        private System.Windows.Forms.Button BTN_Fermer;
         private System.Windows.Forms.DataGridView DGV_Matchs;
         private System.Windows.Forms.DataGridView DGV_Joueurs;
         private System.Windows.Forms.PictureBox PB_Faceoff;
