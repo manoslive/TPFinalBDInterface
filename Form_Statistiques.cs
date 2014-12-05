@@ -127,21 +127,21 @@ namespace TPFinal
         {
             if (TB_NumJoueur.Text == "")
             {
-                BTN_Modifier.Enabled = false;
-                BTN_Debut.Enabled = false;
-                BTN_Fin.Enabled = false;
-                BTN_Precedent.Enabled = false;
-                BTN_Suivant.Enabled = false;
-                BTN_Effacer.Enabled = false;
+                FB_ModifierStat.Enabled = false;
+                FB_Debut.Enabled = false;
+                FB_Fin.Enabled = false;
+                FB_Precedent.Enabled = false;
+                FB_Suivant.Enabled = false;
+                FB_SupprimerStat.Enabled = false;
             }
             else
             {
-                BTN_Modifier.Enabled = true;
-                BTN_Debut.Enabled = true;
-                BTN_Fin.Enabled = true;
-                BTN_Precedent.Enabled = true;
-                BTN_Suivant.Enabled = true;
-                BTN_Effacer.Enabled = true;
+                FB_ModifierStat.Enabled = true;
+                FB_Debut.Enabled = true;
+                FB_Fin.Enabled = true;
+                FB_Precedent.Enabled = true;
+                FB_Suivant.Enabled = true;
+                FB_SupprimerStat.Enabled = true;
             }
         }
         private void LoadEquipes()
