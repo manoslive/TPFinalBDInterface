@@ -53,7 +53,7 @@
             // 
             this.DGV_Equipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Equipes.Location = new System.Drawing.Point(8, 8);
-            this.DGV_Equipes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGV_Equipes.Margin = new System.Windows.Forms.Padding(2);
             this.DGV_Equipes.MultiSelect = false;
             this.DGV_Equipes.Name = "DGV_Equipes";
             this.DGV_Equipes.ReadOnly = true;
@@ -69,7 +69,7 @@
             // BTN_Matchs
             // 
             this.BTN_Matchs.Location = new System.Drawing.Point(8, 187);
-            this.BTN_Matchs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTN_Matchs.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_Matchs.Name = "BTN_Matchs";
             this.BTN_Matchs.Size = new System.Drawing.Size(79, 26);
             this.BTN_Matchs.TabIndex = 1;
@@ -83,7 +83,7 @@
             this.CB_Division.Items.AddRange(new object[] {
             "Toutes"});
             this.CB_Division.Location = new System.Drawing.Point(307, 192);
-            this.CB_Division.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CB_Division.Margin = new System.Windows.Forms.Padding(2);
             this.CB_Division.Name = "CB_Division";
             this.CB_Division.Size = new System.Drawing.Size(103, 21);
             this.CB_Division.TabIndex = 3;
@@ -102,7 +102,7 @@
             // BTN_Divisions
             // 
             this.BTN_Divisions.Location = new System.Drawing.Point(109, 188);
-            this.BTN_Divisions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTN_Divisions.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_Divisions.Name = "BTN_Divisions";
             this.BTN_Divisions.Size = new System.Drawing.Size(77, 25);
             this.BTN_Divisions.TabIndex = 10;
@@ -116,7 +116,7 @@
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
             this.PB_Fermer_Gif.Location = new System.Drawing.Point(465, 177);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
-            this.PB_Fermer_Gif.Size = new System.Drawing.Size(41, 41);
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(46, 41);
             this.PB_Fermer_Gif.TabIndex = 12;
             this.PB_Fermer_Gif.TabStop = false;
             this.toolTip_Equipe.SetToolTip(this.PB_Fermer_Gif, "Fermer");
@@ -137,7 +137,7 @@
             this.FB_Fermer.Location = new System.Drawing.Point(465, 177);
             this.FB_Fermer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Fermer.Name = "FB_Fermer";
-            this.FB_Fermer.Size = new System.Drawing.Size(41, 41);
+            this.FB_Fermer.Size = new System.Drawing.Size(46, 41);
             this.FB_Fermer.TabIndex = 11;
             this.toolTip_Equipe.SetToolTip(this.FB_Fermer, "Supprimer une équipe");
             this.FB_Fermer.Click += new System.EventHandler(this.BTN_Ok_Click);
@@ -258,7 +258,7 @@
             this.Controls.Add(this.BTN_Matchs);
             this.Controls.Add(this.DGV_Equipes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Equipes";
             this.Text = "Form_Equipe";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Equipes_FormClosing);
