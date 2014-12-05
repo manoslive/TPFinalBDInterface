@@ -32,11 +32,18 @@ namespace TPFinal
             this.Size = Properties.Settings.Default.Form_Top3Size;
             this.Location = Properties.Settings.Default.Form_Top3Location;
         }
-        private void Form_Top5_Load(object sender, EventArgs e)
+        private void Form_Top3_Load(object sender, EventArgs e)
         {
             LoadSettings();
-            RemplirTop3Labels();
-            RemplirTop3Photos();
+            if (DGV_Top3.Rows.Count >= 3)
+            {
+                RemplirTop3Labels();
+                RemplirTop3Photos();
+            }
+            else
+                MessageBox.Show("Vous devez avoir 3 joueurs avec des statistiques " +
+                                "pour pouvoir afficher un top3", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);    
+            
         }
 
         private void RemplirTop3Labels()
@@ -48,16 +55,27 @@ namespace TPFinal
             oraAdapter.Fill(dataSetTop3, "tableFormTop3");
             DGV_Top3.DataSource = dataSetTop3.Tables[0];
 
-            LB_Top1.Text = DGV_Top3.Rows[0].Cells[0].Value.ToString();
-            LB_Top2.Text = DGV_Top3.Rows[1].Cells[0].Value.ToString();
-            LB_Top3.Text = DGV_Top3.Rows[2].Cells[0].Value.ToString();
+
+
+            if (DGV_Top3.Rows.Count >= 3)
+            {
+                LB_Top1.Text = DGV_Top3.Rows[0].Cells[0].Value.ToString();
+                LB_Top2.Text = DGV_Top3.Rows[1].Cells[0].Value.ToString();
+                LB_Top3.Text = DGV_Top3.Rows[2].Cells[0].Value.ToString();
+                LB_Top1.Visible = true;
+                LB_Top2.Visible = true;
+                LB_Top3.Visible = true;
+            }
         }
 
         private void RemplirTop3Photos()
         {
-            PB_Top1.ImageLocation = DGV_Top3.Rows[0].Cells[1].Value.ToString();
-            PB_Top2.ImageLocation = DGV_Top3.Rows[1].Cells[1].Value.ToString();
-            PB_Top3.ImageLocation = DGV_Top3.Rows[2].Cells[1].Value.ToString();
+            if (DGV_Top3.Rows.Count >= 3)
+            {
+                PB_Top1.ImageLocation = DGV_Top3.Rows[0].Cells[1].Value.ToString();
+                PB_Top2.ImageLocation = DGV_Top3.Rows[1].Cells[1].Value.ToString();
+                PB_Top3.ImageLocation = DGV_Top3.Rows[2].Cells[1].Value.ToString();
+            }
 
             PB_Top1.SizeMode = PictureBoxSizeMode.StretchImage;
             PB_Top2.SizeMode = PictureBoxSizeMode.StretchImage;
