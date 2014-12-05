@@ -31,8 +31,8 @@
             this.DGV_Classement = new System.Windows.Forms.DataGridView();
             this.LB_Division = new System.Windows.Forms.Label();
             this.CB_Division = new System.Windows.Forms.ComboBox();
-            this.FB_Fermer = new FlashButton.FlashButton();
             this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
+            this.FB_Fermer = new FlashButton.FlashButton();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Classement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             this.SuspendLayout();
@@ -41,7 +41,7 @@
             // 
             this.DGV_Classement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Classement.Location = new System.Drawing.Point(15, 16);
-            this.DGV_Classement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGV_Classement.Margin = new System.Windows.Forms.Padding(2);
             this.DGV_Classement.MultiSelect = false;
             this.DGV_Classement.Name = "DGV_Classement";
             this.DGV_Classement.ReadOnly = true;
@@ -68,11 +68,24 @@
             this.CB_Division.Items.AddRange(new object[] {
             "Toutes"});
             this.CB_Division.Location = new System.Drawing.Point(219, 265);
-            this.CB_Division.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CB_Division.Margin = new System.Windows.Forms.Padding(2);
             this.CB_Division.Name = "CB_Division";
             this.CB_Division.Size = new System.Drawing.Size(103, 21);
             this.CB_Division.TabIndex = 5;
             this.CB_Division.SelectedIndexChanged += new System.EventHandler(this.CB_Division_SelectedIndexChanged);
+            // 
+            // PB_Fermer_Gif
+            // 
+            this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
+            this.PB_Fermer_Gif.Location = new System.Drawing.Point(366, 250);
+            this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
+            this.PB_Fermer_Gif.TabIndex = 8;
+            this.PB_Fermer_Gif.TabStop = false;
+            this.PB_Fermer_Gif.Visible = false;
+            this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
+            this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
+            this.PB_Fermer_Gif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseUp);
             // 
             // FB_Fermer
             // 
@@ -89,18 +102,6 @@
             this.FB_Fermer.TabIndex = 7;
             this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Fermer_MouseEnter);
             // 
-            // PB_Fermer_Gif
-            // 
-            this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
-            this.PB_Fermer_Gif.Location = new System.Drawing.Point(366, 250);
-            this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
-            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
-            this.PB_Fermer_Gif.TabIndex = 8;
-            this.PB_Fermer_Gif.TabStop = false;
-            this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
-            this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
-            this.PB_Fermer_Gif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseUp);
-            // 
             // Form_Classement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,7 +113,7 @@
             this.Controls.Add(this.CB_Division);
             this.Controls.Add(this.DGV_Classement);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Classement";
             this.Text = "Form_Classement";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Classement_FormClosing);

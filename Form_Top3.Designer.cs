@@ -32,18 +32,18 @@
             this.LB_Top1 = new System.Windows.Forms.Label();
             this.LB_Top2 = new System.Windows.Forms.Label();
             this.LB_Top3 = new System.Windows.Forms.Label();
+            this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
+            this.FB_Fermer = new FlashButton.FlashButton();
             this.PB_Top2 = new System.Windows.Forms.PictureBox();
             this.PB_Top3 = new System.Windows.Forms.PictureBox();
             this.PB_Top1 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
-            this.FB_Fermer = new FlashButton.FlashButton();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Top3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             this.SuspendLayout();
             // 
             // DGV_Top3
@@ -81,6 +81,34 @@
             this.LB_Top3.Size = new System.Drawing.Size(35, 13);
             this.LB_Top3.TabIndex = 7;
             this.LB_Top3.Text = "label3";
+            // 
+            // PB_Fermer_Gif
+            // 
+            this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
+            this.PB_Fermer_Gif.Location = new System.Drawing.Point(193, 270);
+            this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
+            this.PB_Fermer_Gif.TabIndex = 11;
+            this.PB_Fermer_Gif.TabStop = false;
+            this.PB_Fermer_Gif.Visible = false;
+            this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
+            this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
+            this.PB_Fermer_Gif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseUp);
+            // 
+            // FB_Fermer
+            // 
+            this.FB_Fermer.BackColor = System.Drawing.Color.Transparent;
+            this.FB_Fermer.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Fermer;
+            this.FB_Fermer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_Fermer.ImageClick = global::TPFinal.Properties.Resources.ICON_Fermer_Click;
+            this.FB_Fermer.ImageDisable = global::TPFinal.Properties.Resources.ICON_Fermer;
+            this.FB_Fermer.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fermer;
+            this.FB_Fermer.ImageOver = null;
+            this.FB_Fermer.Location = new System.Drawing.Point(193, 272);
+            this.FB_Fermer.Name = "FB_Fermer";
+            this.FB_Fermer.Size = new System.Drawing.Size(40, 40);
+            this.FB_Fermer.TabIndex = 10;
+            this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Fermer_MouseEnter);
             // 
             // PB_Top2
             // 
@@ -120,33 +148,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // PB_Fermer_Gif
-            // 
-            this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
-            this.PB_Fermer_Gif.Location = new System.Drawing.Point(193, 270);
-            this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
-            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
-            this.PB_Fermer_Gif.TabIndex = 11;
-            this.PB_Fermer_Gif.TabStop = false;
-            this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
-            this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
-            this.PB_Fermer_Gif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseUp);
-            // 
-            // FB_Fermer
-            // 
-            this.FB_Fermer.BackColor = System.Drawing.Color.Transparent;
-            this.FB_Fermer.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Fermer;
-            this.FB_Fermer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.FB_Fermer.ImageClick = global::TPFinal.Properties.Resources.ICON_Fermer_Click;
-            this.FB_Fermer.ImageDisable = global::TPFinal.Properties.Resources.ICON_Fermer;
-            this.FB_Fermer.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fermer;
-            this.FB_Fermer.ImageOver = null;
-            this.FB_Fermer.Location = new System.Drawing.Point(193, 272);
-            this.FB_Fermer.Name = "FB_Fermer";
-            this.FB_Fermer.Size = new System.Drawing.Size(40, 40);
-            this.FB_Fermer.TabIndex = 10;
-            this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Fermer_MouseEnter);
-            // 
             // Form_Top3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,11 +168,11 @@
             this.Text = "Form_Top5";
             this.Load += new System.EventHandler(this.Form_Top5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Top3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Top1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

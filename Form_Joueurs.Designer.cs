@@ -45,6 +45,9 @@
             this.CB_PosJoueur = new System.Windows.Forms.ComboBox();
             this.TB_Url = new System.Windows.Forms.TextBox();
             this.LB_Url = new System.Windows.Forms.Label();
+            this.FB_Precedent = new FlashButton.FlashButton();
+            this.FB_Suivant = new FlashButton.FlashButton();
+            this.FB_Fin = new FlashButton.FlashButton();
             this.FB_Debut = new FlashButton.FlashButton();
             this.FB_SupprimerJoueur = new FlashButton.FlashButton();
             this.FB_ModifierJoueur = new FlashButton.FlashButton();
@@ -52,9 +55,6 @@
             this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
             this.FB_Fermer = new FlashButton.FlashButton();
             this.PB_Joueur = new System.Windows.Forms.PictureBox();
-            this.FB_Fin = new FlashButton.FlashButton();
-            this.FB_Suivant = new FlashButton.FlashButton();
-            this.FB_Precedent = new FlashButton.FlashButton();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Joueur)).BeginInit();
             this.SuspendLayout();
@@ -217,6 +217,51 @@
             this.LB_Url.TabIndex = 0;
             this.LB_Url.Text = "URL image joueur";
             // 
+            // FB_Precedent
+            // 
+            this.FB_Precedent.BackColor = System.Drawing.Color.Transparent;
+            this.FB_Precedent.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Precedent;
+            this.FB_Precedent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_Precedent.ImageClick = global::TPFinal.Properties.Resources.ICON_Precedent_Click;
+            this.FB_Precedent.ImageDisable = global::TPFinal.Properties.Resources.ICON_Puck;
+            this.FB_Precedent.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Precedent;
+            this.FB_Precedent.ImageOver = global::TPFinal.Properties.Resources.ICON_Precedent_Over;
+            this.FB_Precedent.Location = new System.Drawing.Point(136, 318);
+            this.FB_Precedent.Name = "FB_Precedent";
+            this.FB_Precedent.Size = new System.Drawing.Size(40, 40);
+            this.FB_Precedent.TabIndex = 20;
+            this.FB_Precedent.Click += new System.EventHandler(this.BTN_Precedent_Click);
+            // 
+            // FB_Suivant
+            // 
+            this.FB_Suivant.BackColor = System.Drawing.Color.Transparent;
+            this.FB_Suivant.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Suivant;
+            this.FB_Suivant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_Suivant.ImageClick = global::TPFinal.Properties.Resources.ICON_Suivant_Click;
+            this.FB_Suivant.ImageDisable = global::TPFinal.Properties.Resources.ICON_Puck;
+            this.FB_Suivant.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Suivant;
+            this.FB_Suivant.ImageOver = global::TPFinal.Properties.Resources.ICON_Suivant_Over;
+            this.FB_Suivant.Location = new System.Drawing.Point(200, 318);
+            this.FB_Suivant.Name = "FB_Suivant";
+            this.FB_Suivant.Size = new System.Drawing.Size(40, 40);
+            this.FB_Suivant.TabIndex = 19;
+            this.FB_Suivant.Click += new System.EventHandler(this.BTN_Suivant_Click);
+            // 
+            // FB_Fin
+            // 
+            this.FB_Fin.BackColor = System.Drawing.Color.Transparent;
+            this.FB_Fin.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Fin;
+            this.FB_Fin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_Fin.ImageClick = global::TPFinal.Properties.Resources.ICON_Fin_Click;
+            this.FB_Fin.ImageDisable = global::TPFinal.Properties.Resources.ICON_Puck;
+            this.FB_Fin.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fin;
+            this.FB_Fin.ImageOver = global::TPFinal.Properties.Resources.ICON_Fin_Over;
+            this.FB_Fin.Location = new System.Drawing.Point(246, 318);
+            this.FB_Fin.Name = "FB_Fin";
+            this.FB_Fin.Size = new System.Drawing.Size(40, 40);
+            this.FB_Fin.TabIndex = 18;
+            this.FB_Fin.Click += new System.EventHandler(this.BTN_Fin_Click);
+            // 
             // FB_Debut
             // 
             this.FB_Debut.BackColor = System.Drawing.Color.Transparent;
@@ -288,6 +333,7 @@
             this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 13;
             this.PB_Fermer_Gif.TabStop = false;
+            this.PB_Fermer_Gif.Visible = false;
             this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
             this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
             this.PB_Fermer_Gif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseUp);
@@ -317,51 +363,6 @@
             this.PB_Joueur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Joueur.TabIndex = 5;
             this.PB_Joueur.TabStop = false;
-            // 
-            // FB_Fin
-            // 
-            this.FB_Fin.BackColor = System.Drawing.Color.Transparent;
-            this.FB_Fin.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Fin;
-            this.FB_Fin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.FB_Fin.ImageClick = global::TPFinal.Properties.Resources.ICON_Fin_Click;
-            this.FB_Fin.ImageDisable = global::TPFinal.Properties.Resources.ICON_Puck;
-            this.FB_Fin.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fin;
-            this.FB_Fin.ImageOver = global::TPFinal.Properties.Resources.ICON_Fin_Over;
-            this.FB_Fin.Location = new System.Drawing.Point(246, 318);
-            this.FB_Fin.Name = "FB_Fin";
-            this.FB_Fin.Size = new System.Drawing.Size(40, 40);
-            this.FB_Fin.TabIndex = 18;
-            this.FB_Fin.Click += new System.EventHandler(this.BTN_Fin_Click);
-            // 
-            // FB_Suivant
-            // 
-            this.FB_Suivant.BackColor = System.Drawing.Color.Transparent;
-            this.FB_Suivant.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Suivant;
-            this.FB_Suivant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.FB_Suivant.ImageClick = global::TPFinal.Properties.Resources.ICON_Suivant_Click;
-            this.FB_Suivant.ImageDisable = global::TPFinal.Properties.Resources.ICON_Puck;
-            this.FB_Suivant.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Suivant;
-            this.FB_Suivant.ImageOver = global::TPFinal.Properties.Resources.ICON_Suivant_Over;
-            this.FB_Suivant.Location = new System.Drawing.Point(200, 318);
-            this.FB_Suivant.Name = "FB_Suivant";
-            this.FB_Suivant.Size = new System.Drawing.Size(40, 40);
-            this.FB_Suivant.TabIndex = 19;
-            this.FB_Suivant.Click += new System.EventHandler(this.BTN_Suivant_Click);
-            // 
-            // FB_Precedent
-            // 
-            this.FB_Precedent.BackColor = System.Drawing.Color.Transparent;
-            this.FB_Precedent.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Precedent;
-            this.FB_Precedent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.FB_Precedent.ImageClick = global::TPFinal.Properties.Resources.ICON_Precedent_Click;
-            this.FB_Precedent.ImageDisable = global::TPFinal.Properties.Resources.ICON_Puck;
-            this.FB_Precedent.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Precedent;
-            this.FB_Precedent.ImageOver = global::TPFinal.Properties.Resources.ICON_Precedent_Over;
-            this.FB_Precedent.Location = new System.Drawing.Point(136, 318);
-            this.FB_Precedent.Name = "FB_Precedent";
-            this.FB_Precedent.Size = new System.Drawing.Size(40, 40);
-            this.FB_Precedent.TabIndex = 20;
-            this.FB_Precedent.Click += new System.EventHandler(this.BTN_Precedent_Click);
             // 
             // Form_Joueurs
             // 
