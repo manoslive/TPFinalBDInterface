@@ -316,12 +316,12 @@ namespace TPFinal
 
         private void FillStats()
         {
-            Form_Statistiques Stats = new Form_Statistiques(oracon, connection);
+            Form_Statistiques Stats = new Form_Statistiques(oracon, connection, DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString());
             this.Hide();
             Stats.callBackForm = this;
-            MessageBox.Show(DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString());
-            Stats.numeroJoueurs = DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString();
-            Stats.ShowDialog();
+            //MessageBox.Show(DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString());
+            //Stats.numeroJoueurs = DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString();
+            //Stats.ShowDialog();
         }
 
         private void BTN_AjoutStats_Click(object sender, EventArgs e)
@@ -347,7 +347,7 @@ namespace TPFinal
                     OracleParameter OraParaNbPasses = new OracleParameter(":NBPASSES", OracleDbType.Int32);
                     OracleParameter OraParaTempsPunition = new OracleParameter(":TEMPSPUNITION", OracleDbType.Int32);
 
-                    OraParaNumJoueurs.Value = AjoutStats.numJoueurs;
+                    OraParaNumJoueurs.Value = AjoutStats.numJoueur;
                     OraParaNumMatch.Value = AjoutStats.numMatch;
                     OraParaNBButs.Value = AjoutStats.nbButs;
                     OraParaNbPasses.Value = AjoutStats.nbPasses;
@@ -382,6 +382,7 @@ namespace TPFinal
             {
                 FillStats();
             }
+            // Ajouter ici le lien vers Form_Statistique
         }
     }
 }
