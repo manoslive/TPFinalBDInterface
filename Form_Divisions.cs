@@ -45,9 +45,19 @@ namespace TPFinal
             if (lastIndex > -1 && DGV_Divisions.Rows.Count > 0) DGV_Divisions.Rows[Math.Min(lastIndex, DGV_Divisions.Rows.Count - 1)].Selected = true;
             MiseAJourControles();
         }
-
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.Form_DivisionsSize = this.Size;
+            Properties.Settings.Default.Form_DivisionsLocation = this.Location;
+        }
+        private void LoadSettings()
+        {
+            this.Size = Properties.Settings.Default.Form_DivisionsSize;
+            this.Location = Properties.Settings.Default.Form_DivisionsLocation;
+        }
         private void Form_Divisions_Load(object sender, EventArgs e)
         {
+            LoadSettings();
             LoadDGV();
         }
         private void MiseAJourControles()
@@ -173,6 +183,7 @@ namespace TPFinal
 
         private void Form_Divisions_FormClosed(object sender, FormClosedEventArgs e)
         {
+            SaveSettings();
             if (callBackForm != null)
                 callBackForm.Show();
         }

@@ -30,7 +30,16 @@ namespace TPFinal
             connection = maBelleConnection;
             numeroJoueur = numeroJoueurEnCours;
         }
-
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.Form_StatsSize = this.Size;
+            Properties.Settings.Default.Form_StatsLocation = this.Location;
+        }
+        private void LoadSettings()
+        {
+            this.Size = Properties.Settings.Default.Form_StatsSize;
+            this.Location = Properties.Settings.Default.Form_StatsLocation;
+        }
         public string numeroJoueurs
         {
             get
@@ -45,6 +54,7 @@ namespace TPFinal
 
         private void Form_Statistiques_Load(object sender, EventArgs e)
         {
+            LoadSettings();
             RemplirFormulaire();
         }
         private void RemplirFormulaire()
@@ -102,6 +112,7 @@ namespace TPFinal
 
         private void Form_Statistiques_FormClosing(object sender, FormClosingEventArgs e)
         {
+            SaveSettings();
             if (callBackForm != null)
                 callBackForm.Show();
         }

@@ -26,7 +26,16 @@ namespace TPFinal
             oracon = connect;
             connection = maBelleConnection;
         }
-
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.Form_MatchsSize = this.Size;
+            Properties.Settings.Default.Form_MatchsLocation = this.Location;
+        }
+        private void LoadSettings()
+        {
+            this.Size = Properties.Settings.Default.Form_MatchsSize;
+            this.Location = Properties.Settings.Default.Form_MatchsLocation;
+        }
         private void BTN_AjoutRencontre_Click(object sender, EventArgs e)
         {
             Form_Ajouter_Match ajm = new Form_Ajouter_Match(oracon, connection);
@@ -168,6 +177,7 @@ namespace TPFinal
         }
         private void Form_Matchs_Load(object sender, EventArgs e)
         {
+            LoadSettings();
             LoadDGVmatch();
         }
         private void DGV_Matchs_SelectionChanged(object sender, EventArgs e)
@@ -228,6 +238,7 @@ namespace TPFinal
         }
         private void Form_Matchs_FormClosed(object sender, FormClosedEventArgs e)
         {
+            SaveSettings();
             if (callBackForm != null)
                 callBackForm.Show();
         }

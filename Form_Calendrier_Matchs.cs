@@ -26,14 +26,25 @@ namespace TPFinal
             oracon = connect;
             connection = maBelleConnection;
         }
-
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.Form_CalendrierSize = this.Size;
+            Properties.Settings.Default.Form_CalendrierLocation = this.Location;
+        }
+        private void LoadSettings()
+        {
+            this.Size = Properties.Settings.Default.Form_CalendrierSize;
+            this.Location = Properties.Settings.Default.Form_CalendrierLocation;
+        }
         private void Form_Calendrier_Matchs_Load(object sender, EventArgs e)
         {
+            LoadSettings();
             LoadDGV();
         }
 
         private void Form_Calendrier_Matchs_FormClosing(object sender, FormClosingEventArgs e)
         {
+            SaveSettings();
             if (callBackForm != null)
                 callBackForm.Show();
         }

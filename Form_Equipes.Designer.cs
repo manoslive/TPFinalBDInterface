@@ -35,7 +35,6 @@
             this.CB_Division = new System.Windows.Forms.ComboBox();
             this.LB_Division = new System.Windows.Forms.Label();
             this.toolTip_Equipe = new System.Windows.Forms.ToolTip(this.components);
-            this.BTN_Divisions = new System.Windows.Forms.Button();
             this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
             this.FB_Fermer = new FlashButton.FlashButton();
             this.FB_SupprimerEquipe = new FlashButton.FlashButton();
@@ -43,6 +42,7 @@
             this.FB_AjouterEquipe = new FlashButton.FlashButton();
             this.FB_Classement = new FlashButton.FlashButton();
             this.FB_Top3 = new FlashButton.FlashButton();
+            this.BTN_Divisions = new System.Windows.Forms.Button();
             this.PB_Equipe = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
@@ -98,17 +98,6 @@
             this.LB_Division.Size = new System.Drawing.Size(44, 13);
             this.LB_Division.TabIndex = 4;
             this.LB_Division.Text = "Division";
-            // 
-            // BTN_Divisions
-            // 
-            this.BTN_Divisions.Location = new System.Drawing.Point(109, 188);
-            this.BTN_Divisions.Margin = new System.Windows.Forms.Padding(2);
-            this.BTN_Divisions.Name = "BTN_Divisions";
-            this.BTN_Divisions.Size = new System.Drawing.Size(77, 25);
-            this.BTN_Divisions.TabIndex = 10;
-            this.BTN_Divisions.Text = "Divisions";
-            this.BTN_Divisions.UseVisualStyleBackColor = true;
-            this.BTN_Divisions.Click += new System.EventHandler(this.BTN_Divisions_Click);
             // 
             // PB_Fermer_Gif
             // 
@@ -228,6 +217,17 @@
             this.toolTip_Equipe.SetToolTip(this.FB_Top3, "Top 3");
             this.FB_Top3.Click += new System.EventHandler(this.BTN_Top5_Click);
             // 
+            // BTN_Divisions
+            // 
+            this.BTN_Divisions.Location = new System.Drawing.Point(109, 188);
+            this.BTN_Divisions.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_Divisions.Name = "BTN_Divisions";
+            this.BTN_Divisions.Size = new System.Drawing.Size(77, 25);
+            this.BTN_Divisions.TabIndex = 10;
+            this.BTN_Divisions.Text = "Divisions";
+            this.BTN_Divisions.UseVisualStyleBackColor = true;
+            this.BTN_Divisions.Click += new System.EventHandler(this.BTN_Divisions_Click);
+            // 
             // PB_Equipe
             // 
             this.PB_Equipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -257,6 +257,7 @@
             this.Controls.Add(this.PB_Equipe);
             this.Controls.Add(this.BTN_Matchs);
             this.Controls.Add(this.DGV_Equipes);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Equipes";

@@ -24,10 +24,20 @@ namespace TPFinal
         {
             InitializeComponent();
         }
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.Form_EquipeSize = this.Size;
+            Properties.Settings.Default.Form_EquipeLocation = this.Location;
+        }
+        private void LoadSettings()
+        {
+            this.Size = Properties.Settings.Default.Form_EquipeSize;
+            this.Location = Properties.Settings.Default.Form_EquipeLocation;
+        }
 
         private void Form_Equipe_Load(object sender, EventArgs e)
         {
-
+            LoadSettings();
             // On appelle la form de connection
             Form_Connection connection = new Form_Connection(oracon, maBelleConnection);
             connection.Text = "Connection";
@@ -328,6 +338,7 @@ namespace TPFinal
 
         private void Form_Equipes_FormClosing(object sender, FormClosingEventArgs e)
         {
+            SaveSettings();
             if (callBackForm != null)
                 callBackForm.Show();
         }

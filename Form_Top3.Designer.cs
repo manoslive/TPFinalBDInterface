@@ -166,6 +166,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Top3";
             this.Text = "Form_Top5";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Top3_FormClosing);
             this.Load += new System.EventHandler(this.Form_Top5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Top3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();

@@ -1,7 +1,54 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TPFinal.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Form_EquipeSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">567, 262</Value>
+    </Setting>
+    <Setting Name="Form_EquipeLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="Form_JoueursSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">479, 400</Value>
+    </Setting>
+    <Setting Name="Form_JoueursLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="Form_MatchsSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">795, 471</Value>
+    </Setting>
+    <Setting Name="Form_MatchsLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="Form_DivisionsSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">351, 201</Value>
+    </Setting>
+    <Setting Name="Form_DivisionsLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="Form_StatsSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">399, 421</Value>
+    </Setting>
+    <Setting Name="Form_StatsLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="Form_Top3Size" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">442, 353</Value>
+    </Setting>
+    <Setting Name="Form_Top3Location" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="Form_ClassementSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">435, 330</Value>
+    </Setting>
+    <Setting Name="Form_ClassementLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="Form_CalendrierSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">699, 416</Value>
+    </Setting>
+    <Setting Name="Form_CalendrierLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

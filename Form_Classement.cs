@@ -24,6 +24,16 @@ namespace TPFinal
             oracon = laConnection;
             connection = maBelleConnection;
         }
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.Form_ClassementSize = this.Size;
+            Properties.Settings.Default.Form_ClassementLocation = this.Location;
+        }
+        private void LoadSettings()
+        {
+            this.Size = Properties.Settings.Default.Form_ClassementSize;
+            this.Location = Properties.Settings.Default.Form_ClassementLocation;
+        }
         private void LoadDGV()
         {
             string divisions = null;
@@ -54,6 +64,7 @@ namespace TPFinal
 
         private void Form_Classement_Load(object sender, EventArgs e)
         {
+            LoadSettings();
             LoadDGV();
             LoadCBDivision();
         }
@@ -81,6 +92,7 @@ namespace TPFinal
 
         private void Form_Classement_FormClosing(object sender, FormClosingEventArgs e)
         {
+            SaveSettings();
             LoadDGV();
         }
 

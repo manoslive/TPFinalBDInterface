@@ -22,9 +22,19 @@ namespace TPFinal
             oracon = connectionoracle;
             connection = maBelleConnection;
         }
-
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.Form_Top3Size = this.Size;
+            Properties.Settings.Default.Form_Top3Location = this.Location;
+        }
+        private void LoadSettings()
+        {
+            this.Size = Properties.Settings.Default.Form_Top3Size;
+            this.Location = Properties.Settings.Default.Form_Top3Location;
+        }
         private void Form_Top5_Load(object sender, EventArgs e)
         {
+            LoadSettings();
             RemplirTop3Labels();
             RemplirTop3Photos();
         }
@@ -72,6 +82,11 @@ namespace TPFinal
         private void PB_Fermer_Gif_MouseUp(object sender, MouseEventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+        }
+
+        private void Form_Top3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
         }
     }
 }

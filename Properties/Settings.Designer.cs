@@ -8,22 +8,210 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TPFinal.Properties
-{
-
-
+namespace TPFinal.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("567, 262")]
+        public global::System.Drawing.Size Form_EquipeSize {
+            get {
+                return ((global::System.Drawing.Size)(this["Form_EquipeSize"]));
+            }
+            set {
+                this["Form_EquipeSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point Form_EquipeLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["Form_EquipeLocation"]));
+            }
+            set {
+                this["Form_EquipeLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("479, 400")]
+        public global::System.Drawing.Size Form_JoueursSize {
+            get {
+                return ((global::System.Drawing.Size)(this["Form_JoueursSize"]));
+            }
+            set {
+                this["Form_JoueursSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point Form_JoueursLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["Form_JoueursLocation"]));
+            }
+            set {
+                this["Form_JoueursLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("795, 471")]
+        public global::System.Drawing.Size Form_MatchsSize {
+            get {
+                return ((global::System.Drawing.Size)(this["Form_MatchsSize"]));
+            }
+            set {
+                this["Form_MatchsSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point Form_MatchsLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["Form_MatchsLocation"]));
+            }
+            set {
+                this["Form_MatchsLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("351, 201")]
+        public global::System.Drawing.Size Form_DivisionsSize {
+            get {
+                return ((global::System.Drawing.Size)(this["Form_DivisionsSize"]));
+            }
+            set {
+                this["Form_DivisionsSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point Form_DivisionsLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["Form_DivisionsLocation"]));
+            }
+            set {
+                this["Form_DivisionsLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("399, 421")]
+        public global::System.Drawing.Size Form_StatsSize {
+            get {
+                return ((global::System.Drawing.Size)(this["Form_StatsSize"]));
+            }
+            set {
+                this["Form_StatsSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point Form_StatsLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["Form_StatsLocation"]));
+            }
+            set {
+                this["Form_StatsLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("442, 353")]
+        public global::System.Drawing.Size Form_Top3Size {
+            get {
+                return ((global::System.Drawing.Size)(this["Form_Top3Size"]));
+            }
+            set {
+                this["Form_Top3Size"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point Form_Top3Location {
+            get {
+                return ((global::System.Drawing.Point)(this["Form_Top3Location"]));
+            }
+            set {
+                this["Form_Top3Location"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("435, 330")]
+        public global::System.Drawing.Size Form_ClassementSize {
+            get {
+                return ((global::System.Drawing.Size)(this["Form_ClassementSize"]));
+            }
+            set {
+                this["Form_ClassementSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point Form_ClassementLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["Form_ClassementLocation"]));
+            }
+            set {
+                this["Form_ClassementLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("699, 416")]
+        public global::System.Drawing.Size Form_CalendrierSize {
+            get {
+                return ((global::System.Drawing.Size)(this["Form_CalendrierSize"]));
+            }
+            set {
+                this["Form_CalendrierSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point Form_CalendrierLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["Form_CalendrierLocation"]));
+            }
+            set {
+                this["Form_CalendrierLocation"] = value;
             }
         }
     }

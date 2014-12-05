@@ -32,6 +32,16 @@ namespace TPFinal
             commandeSQL = null;
         }
 
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.Form_JoueursSize = this.Size;
+            Properties.Settings.Default.Form_JoueursLocation = this.Location;
+        }
+        private void LoadSettings()
+        {
+            this.Size = Properties.Settings.Default.Form_JoueursSize;
+            this.Location = Properties.Settings.Default.Form_JoueursLocation;
+        }
         private void BTN_Ajouter_Click(object sender, EventArgs e) // Ouvre la form d'ajout de joueur
         {
                         Form_Ajouter_Joueur aJ = new Form_Ajouter_Joueur(oracon, connection);
@@ -282,6 +292,7 @@ namespace TPFinal
 
         private void Form_Joueurs_Load(object sender, EventArgs e)
         {
+            LoadSettings();
             OracleCommand oraSelect = oracon.CreateCommand();
             oraSelect.CommandText = "SELECT NomEquipe FROM Equipe";
             using (OracleDataReader oraReader = oraSelect.ExecuteReader())
@@ -306,6 +317,7 @@ namespace TPFinal
 
         private void Form_Joueurs_FormClosed(object sender, FormClosedEventArgs e)
         {
+            SaveSettings();
             if (callBackForm != null)
                 callBackForm.Show();
         }
