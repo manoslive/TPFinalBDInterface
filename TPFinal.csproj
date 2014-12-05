@@ -68,6 +68,12 @@
     <Compile Include="Form_Divisions.Designer.cs">
       <DependentUpon>Form_Divisions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Preferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Preferences.Designer.cs">
+      <DependentUpon>Form_Preferences.cs</DependentUpon>
+    </Compile>
     <Compile Include="MaConnection.cs" />
     <Compile Include="Form_Ajouter_Joueur.cs">
       <SubType>Form</SubType>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Matchs.resx">
       <DependentUpon>Form_Matchs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Preferences.resx">
+      <DependentUpon>Form_Preferences.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Statistiques.resx">
       <DependentUpon>Form_Statistiques.cs</DependentUpon>
