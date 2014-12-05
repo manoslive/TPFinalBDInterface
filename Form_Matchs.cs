@@ -97,10 +97,11 @@ namespace TPFinal
             if (DGV_Matchs.SelectedRows.Count > 0) lastIndex = DGV_Matchs.SelectedRows[0].Index;
 
             OracleCommand oraSelect = oracon.CreateCommand();
-            oraSelect.CommandText = "SELECT NumeroMatch, EquipeReceveur, EquipeVisiteur, DateRecontre, LieuRencontre, sum(select nombrebuts from fichejoueur) as ScoreFinalReceveur, ScoreFinalVisiteur FROM Match M" +
-                                    "inner join FicheJoueur F on F.NumeroMatch=M.NumeroMatch" +
-                                    "inner join Equipe E on E.NomEquipe=M.EquipeReceveur " +
-                                    "order by NumeroMatch";
+            //oraSelect.CommandText = "SELECT NumeroMatch, EquipeReceveur, EquipeVisiteur, DateRecontre, LieuRencontre, sum(select nombrebuts from fichejoueur) as ScoreFinalReceveur, ScoreFinalVisiteur FROM Match M" +
+            //                        "inner join FicheJoueur F on F.NumeroMatch=M.NumeroMatch" +
+            //                        "inner join Equipe E on E.NomEquipe=M.EquipeReceveur " +
+            //                        "order by NumeroMatch";
+            oraSelect.CommandText = "SELECT * FROM Match";
             OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect); 
             matchDataSet = new DataSet();
             oraAdapter.Fill(matchDataSet);
@@ -128,13 +129,13 @@ namespace TPFinal
             Modifier.equipeVisiteur = DGV_Matchs.SelectedRows[0].Cells[2].Value.ToString();
             Modifier.dateRencontre = DGV_Matchs.SelectedRows[0].Cells[3].Value.ToString();
             Modifier.lieuRencontre = DGV_Matchs.SelectedRows[0].Cells[4].Value.ToString();
-            Modifier.scoreHome = DGV_Matchs.SelectedRows[0].Cells[5].Value.ToString();
-            Modifier.scoreVisiteur = DGV_Matchs.SelectedRows[0].Cells[6].Value.ToString();
+            //Modifier.scoreHome = DGV_Matchs.SelectedRows[0].Cells[5].Value.ToString();
+            //Modifier.scoreVisiteur = DGV_Matchs.SelectedRows[0].Cells[6].Value.ToString();
 
             if (Modifier.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 string sqlModif = "Update Match set EquipeReceveur =:EquipeHome, EquipeVisiteur =:EquipeVisiteur, DateRecontre =:DateRencontre, " +
-                    "LieuRencontre =:Lieu, ScoreFinalReceveur =:ScoreHome, ScoreFinalVisiteur =:ScoreVisiteur where NumeroMatch =:NumeroMatch";
+                    "LieuRencontre =:Lieu where NumeroMatch =:NumeroMatch";
 
                 try
                 {
@@ -154,15 +155,15 @@ namespace TPFinal
                     OraParaDateRencontre.Value = DateTime.Parse(Modifier.dateRencontre);
                     OraParaLieu.Value = Modifier.lieuRencontre;
                     OraParaNumMatch.Value = Modifier.numeroMatch;
-                    OraParaScoreHome.Value = int.Parse(Modifier.scoreHome);
-                    OraParaScoreVisiteur.Value = int.Parse(Modifier.scoreVisiteur);
+                    //OraParaScoreHome.Value = int.Parse(Modifier.scoreHome);
+                    //OraParaScoreVisiteur.Value = int.Parse(Modifier.scoreVisiteur);
 
                     oraMatchModif.Parameters.Add(OraParaEquipeHome);
                     oraMatchModif.Parameters.Add(OraParaEquipeVisiteur);
                     oraMatchModif.Parameters.Add(OraParaDateRencontre);
                     oraMatchModif.Parameters.Add(OraParaLieu);
-                    oraMatchModif.Parameters.Add(OraParaScoreHome);
-                    oraMatchModif.Parameters.Add(OraParaScoreVisiteur);
+                    //oraMatchModif.Parameters.Add(OraParaScoreHome);
+                    //oraMatchModif.Parameters.Add(OraParaScoreVisiteur);
                     oraMatchModif.Parameters.Add(OraParaNumMatch);
 
                     oraMatchModif.ExecuteNonQuery();

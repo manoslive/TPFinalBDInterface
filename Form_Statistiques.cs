@@ -174,11 +174,11 @@ namespace TPFinal
                     oraAjout.Parameters.Add(OraParaTempsPunition);
 
                     // Ajouter les buts au total
-                    string sqlButs = "insert into Match" +
-                                     "(NumeroMatch, NumeroJoueur, NombreButs, NombrePasses, TempsPunition)" +
-                                     "Values(:NumeroMatch, :NumeroJoueur, :NombreButs, :NombrePasses, :TempsPunition)";
-                    OracleCommand oraTotalButs = new OracleCommand(sqlButs, oracon);
-                    oraTotalButs.Parameters.Add(OraParamNombreButs);
+                    //string sqlButs = "insert into Match" +
+                    //                 "(NumeroMatch, NumeroJoueur, NombreButs, NombrePasses, TempsPunition)" +
+                    //                 "Values(:NumeroMatch, :NumeroJoueur, :NombreButs, :NombrePasses, :TempsPunition)";
+                    //OracleCommand oraTotalButs = new OracleCommand(sqlButs, oracon);
+                    //oraTotalButs.Parameters.Add(OraParamNombreButs);
 
                     oraAjout.ExecuteNonQuery();
                     RemplirFormulaire();
