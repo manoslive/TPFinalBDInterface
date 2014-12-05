@@ -34,66 +34,7 @@ namespace TPFinal
 
         private void BTN_Ajouter_Click(object sender, EventArgs e) // Ouvre la form d'ajout de joueur
         {
-            Form_Ajouter_Joueur aJ = new Form_Ajouter_Joueur(oracon, connection);
-            aJ.callBackForm = this;
-            aJ.Text = "Ajout de joueur";
-            aJ.Location = this.Location;
-            this.Hide(); // Cache la fenêtre actuelle
 
-            if (!currval)
-                commandeSQL = "SELECT MAX(numjoueur) from joueur ";
-            else
-                commandeSQL = "SELECT Seq_num_joueur.currval from dual";
-
-            if (aJ.ShowDialog() == DialogResult.OK)
-            {
-                string sql = "insert into joueur" +
-                             "(nomjoueur, prenomjoueur, datenaissance, numeromaillot, photo, positionjoueur, nomequipe)" +
-                             "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:Photo,:positionjoueur,:equipejoueur)"; //:equipejoueur
-                currval = true;
-                try
-                {
-                    OracleCommand oraAjout = new OracleCommand(sql, oracon);
-
-                    OracleParameter OraParaNomjoueurs = new OracleParameter(":Nomjoueurs", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParamPrenomjoueurs = new OracleParameter(":Prenomjoueurs", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParamdatenaissance = new OracleParameter(":datenaissance", OracleDbType.Date);
-                    OracleParameter OraParanumeromaillot = new OracleParameter(":numeromaillot", OracleDbType.Int32);
-                    OracleParameter OraParaequipejoueurs = new OracleParameter(":equipejoueur", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParpositionjoueur = new OracleParameter(":positionjoueur", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParaPhoto = new OracleParameter(":Photo", OracleDbType.Varchar2, 1500);
-
-                    OraParaNomjoueurs.Value = aJ.nomJoueurs;
-                    OraParamPrenomjoueurs.Value = aJ.prenomJoueurs;
-                    OraParamdatenaissance.Value = aJ.DDN;// 
-                    OraParanumeromaillot.Value = aJ.maillot;
-                    OraParaequipejoueurs.Value = aJ.Equipe; 
-                    OraParpositionjoueur.Value = aJ.Position;
-                    OraParaPhoto.Value = aJ.Photo;
-
-                    oraAjout.Parameters.Add(OraParaNomjoueurs);
-                    oraAjout.Parameters.Add(OraParamPrenomjoueurs);
-                    oraAjout.Parameters.Add(OraParamdatenaissance);
-                    oraAjout.Parameters.Add(OraParanumeromaillot);
-                    oraAjout.Parameters.Add(OraParaPhoto);
-                    oraAjout.Parameters.Add(OraParaequipejoueurs);
-                    oraAjout.Parameters.Add(OraParpositionjoueur);
-                    
-
-                    oraAjout.ExecuteNonQuery();
-                    RemplirFormulaire();
-                }
-                catch (OracleException ex) // Erreur "child exists"
-                {
-                    if (ex.Number == 2292)
-                        MessageBox.Show("Le joueur ne doit pas avoir de statistique dans les matchs", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                   /* if(ex.Number == 00984)
-                        MessageBox.Show("Erreur dans la syntaxe de la commande SQL", "Erreur 00984", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    */
-                    else
-                        MessageBox.Show(ex.Message.ToString());
-                }
-            }
         }
 
         private void RemplirFormulaire()
@@ -150,52 +91,42 @@ namespace TPFinal
         {
             if (TB_NumJoueur.Text == "")
             {
-                BTN_Modifier.Enabled = false;
-                BTN_Debut.Enabled = false;
-                BTN_Fin.Enabled = false;
-                BTN_Precedent.Enabled = false;
-                BTN_Suivant.Enabled = false;
-                BTN_Effacer.Enabled = false;
+                FB_ModifierJoueur.Enabled = false;
+                FB_Debut.Enabled = false;
+                FB_Fin.Enabled = false;
+                FB_Precedent.Enabled = false;
+                FB_Suivant.Enabled = false;
+                FB_SupprimerJoueur.Enabled = false;
             }
             else
             {
-                BTN_Modifier.Enabled = true;
-                BTN_Debut.Enabled = true;
-                BTN_Fin.Enabled = true;
-                BTN_Precedent.Enabled = true;
-                BTN_Suivant.Enabled = true;
-                BTN_Effacer.Enabled = true;
+                FB_ModifierJoueur.Enabled = true;
+                FB_Debut.Enabled = true;
+                FB_Fin.Enabled = true;
+                FB_Precedent.Enabled = true;
+                FB_Suivant.Enabled = true;
+                FB_SupprimerJoueur.Enabled = true;
             }
         }
 
         private void BTN_Debut_Click(object sender, EventArgs e)
         {
-            this.BindingContext[dataSetJoueur, "Joueur"].Position = 0;
-            if (TB_Url.Text != "")
-                PB_Joueur.ImageLocation = TB_Url.Text;
+
         }
 
         private void BTN_Fin_Click(object sender, EventArgs e)
         {
-            this.BindingContext[dataSetJoueur, "Joueur"].Position = this.BindingContext[dataSetJoueur, "Joueur"].Count - 1;
-            if (TB_Url.Text != "")
-                PB_Joueur.ImageLocation = TB_Url.Text;
-        }
 
-        private void BTN_Precedent_Click(object sender, EventArgs e)
-        {
-            this.BindingContext[dataSetJoueur, "Joueur"].Position--;
-            if (TB_Url.Text != "")
-                PB_Joueur.ImageLocation = TB_Url.Text;
         }
 
         private void BTN_Suivant_Click(object sender, EventArgs e)
         {
-            this.BindingContext[dataSetJoueur, "Joueur"].Position++;
-            if (TB_Url.Text != "")
-                PB_Joueur.ImageLocation = TB_Url.Text;
-        }
 
+        }
+        private void BTN_Precedent_Click(object sender, EventArgs e)
+        {
+
+        }
         private void BTN_Effacer_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
@@ -223,63 +154,7 @@ namespace TPFinal
 
         private void BTN_Modifier_Click(object sender, EventArgs e)
         {
-            Form_Ajouter_Joueur aj = new Form_Ajouter_Joueur(oracon, connection);
-            aj.callBackForm = this;
-            aj.Text = "Modification du joueur";
-            aj.nomJoueurs = TB_NomJoueur.Text;
-            aj.prenomJoueurs = TB_PrenomJoueur.Text;
-            aj.DDN = DTP_DateNaissance.Value; //.ToString()
-            aj.maillot = TB_NumMaillot.Text;
-            aj.Equipe = CB_EquipeJoueur.SelectedItem.ToString();
-            aj.Position = CB_PosJoueur.SelectedItem.ToString();
-            aj.Location = this.Location;
-            aj.BTN_Fermer.Text = "Modifier";
-            this.Hide();
 
-            if (aj.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                string sql = "update joueur set nomjoueur=:NomJoueurs, prenomjoueur=:Prenomjoueurs, datenaissance=:datenaissance, numeromaillot=:numeromaillot, photo=:Photo, positionjoueur=:positionjoueur, nomequipe=:equipejoueur)" +
-             "where numerojoueur=:numerojoueurs)";
-                try
-                {
-
-                    OracleCommand oraAjout = new OracleCommand(sql, oracon);
-
-                    OracleParameter OraParaNomjoueurs = new OracleParameter(":Nomjoueurs", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParamPrenomjoueurs = new OracleParameter(":Prenomjoueur", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParamdatenaissance = new OracleParameter(":datenaissance", OracleDbType.Date);
-                    OracleParameter OraParanumeromaillot = new OracleParameter(":numeromaillot", OracleDbType.Int32);
-                    OracleParameter OraParaequipejoueurs = new OracleParameter(":equipejoueur", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParpositionjoueur = new OracleParameter(":positionjoueur", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParnumerojoueurs = new OracleParameter(":numerojoueurs", OracleDbType.Int32);
-                    OracleParameter OraParaPhoto = new OracleParameter(":Photo", OracleDbType.Varchar2, 100);
-
-                    OraParaNomjoueurs.Value = aj.nomJoueurs;
-                    OraParamPrenomjoueurs.Value = aj.prenomJoueurs;
-                    OraParamdatenaissance.Value = aj.DDN;
-                    OraParanumeromaillot.Value = aj.maillot;
-                    OraParaequipejoueurs.Value = aj.Equipe;
-                    OraParpositionjoueur.Value = aj.Position;
-                    OraParaPhoto.Value = aj.Photo;
-
-                    oraAjout.Parameters.Add(OraParaNomjoueurs);
-                    oraAjout.Parameters.Add(OraParamPrenomjoueurs);
-                    oraAjout.Parameters.Add(OraParamdatenaissance);
-                    oraAjout.Parameters.Add(OraParanumeromaillot);
-                    oraAjout.Parameters.Add(OraParaPhoto);
-                    oraAjout.Parameters.Add(OraParaequipejoueurs);
-                    oraAjout.Parameters.Add(OraParpositionjoueur);
-
-                    oraAjout.ExecuteNonQuery();
-
-                    RemplirFormulaire();
-                }
-                catch (OracleException ex)
-                {
-                    MessageBox.Show(ex.Message.ToString());
-                }
-
-            }
         }
 
         private void Form_Joueurs_Load(object sender, EventArgs e)
@@ -310,11 +185,6 @@ namespace TPFinal
         {
             if (callBackForm != null)
                 callBackForm.Show();
-        }
-
-        private void BTN_Fermer_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Form_Joueurs_KeyDown(object sender, KeyEventArgs e)

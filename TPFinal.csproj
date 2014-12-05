@@ -280,6 +280,45 @@
   <ItemGroup>
     <None Include="Resources\ICON_Fermer_Over.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Debut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Fin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Precedent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Suivant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Puck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Debut_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Debut_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Fin_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Fin_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Precedent_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Precedent_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Suivant_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Suivant_Over.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
