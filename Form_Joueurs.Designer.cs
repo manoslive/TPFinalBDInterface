@@ -385,7 +385,7 @@
             this.dernierToolStripMenuItem1,
             this.quitterToolStripMenuItem});
             this.CM_Joueur.Name = "CM_Stats";
-            this.CM_Joueur.Size = new System.Drawing.Size(199, 277);
+            this.CM_Joueur.Size = new System.Drawing.Size(168, 244);
             // 
             // ajouterToolStripMenuItem
             // 

@@ -141,22 +141,27 @@ namespace TPFinal
                 FB_SupprimerEquipe.Enabled = false;
             }
         }
-
-        private void BTN_Top5_Click(object sender, EventArgs e)
+        private void Top3()
         {
             Form_Top3 Top3 = new Form_Top3(oracon, maBelleConnection);
             Top3.Text = "Top 3";
             Top3.ShowDialog();
         }
-
-        private void BTN_Classement_Click(object sender, EventArgs e)
+        private void BTN_Top5_Click(object sender, EventArgs e)
+        {
+            Top3();
+        }
+        private void Classement()
         {
             Form_Classement classement = new Form_Classement(oracon, maBelleConnection);
             classement.Text = "Classement des équipes";
             classement.ShowDialog();
         }
-
-        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        private void BTN_Classement_Click(object sender, EventArgs e)
+        {
+            Classement();
+        }
+        private void Ajouter()
         {
             Form_Ajouter_Equipe aEquipe = new Form_Ajouter_Equipe(oracon, maBelleConnection);
             aEquipe.Text = "Ajouter une équipe";
@@ -201,7 +206,11 @@ namespace TPFinal
                 {
                     MessageBox.Show(ex.Message.ToString());
                 }
-            }       
+            }
+        }
+        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        {
+            Ajouter();
         }
 
         private void BTN_Ok_Click(object sender, EventArgs e)
@@ -242,8 +251,7 @@ namespace TPFinal
                 }
             }
         }
-
-        private void BTN_Modifier_Click(object sender, EventArgs e)
+        private void Modifier()
         {
             Form_Ajouter_Equipe Modifier = new Form_Ajouter_Equipe(oracon, maBelleConnection);
             Modifier.Text = "Modification équipe";
@@ -301,10 +309,13 @@ namespace TPFinal
 
             }
         }
-
-        private void BTN_Supprimer_Click(object sender, EventArgs e)
+        private void BTN_Modifier_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) 
+            Modifier();
+        }
+        private void Supprimer()
+        {
+            if (MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 try
                 {
@@ -325,6 +336,10 @@ namespace TPFinal
                     }
                 }
             }
+        }
+        private void BTN_Supprimer_Click(object sender, EventArgs e)
+        {
+            Supprimer();
         }
 
         private void CallFormJoueur()
@@ -351,35 +366,23 @@ namespace TPFinal
 
         private void Form_Equipes_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                CallFormJoueur();
-                MessageBox.Show("Enter pressed");
-            }
-            if (e.KeyCode == Keys.Q)
-                MessageBox.Show("Voici les touches ayant un racourci \n" +
-                                "F1- Aide \n" + 
-                                "Enter- Page joueur \n" + 
-                                "Ctrl+Q- Quitter \n" +
-                                "Ctrl+ - \n" +
-                                "Ctrl+ - \n" +
-                                "Ctrl+ - \n" +  
-                                "Ctrl+ - \n", "Aide", MessageBoxButtons.OK , MessageBoxIcon.Information);
         }
-
-        private void BTN_Matchs_Click(object sender, EventArgs e)
+        private void Match()
         {
             Form_Matchs match = new Form_Matchs(oracon, maBelleConnection);
             match.Text = "Matchs";
             match.ShowDialog();
+        }
+        private void BTN_Matchs_Click(object sender, EventArgs e)
+        {
+            Match();
         }
 
         private void CB_Division_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadDGV();
         }
-
-        private void BTN_Divisions_Click(object sender, EventArgs e)
+        private void Division()
         {
             Form_Divisions div = new Form_Divisions(oracon, maBelleConnection);
             div.Text = "Divisions";
@@ -387,6 +390,10 @@ namespace TPFinal
             div.callBackForm = this;
             div.ShowDialog();
             LoadDGV();
+        }
+        private void BTN_Divisions_Click(object sender, EventArgs e)
+        {
+            Division();
         }
 
         private void FB_Fermer_MouseEnter(object sender, EventArgs e)
@@ -462,6 +469,43 @@ namespace TPFinal
         private void quitterToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             BTN_Ok_Click(sender, e);
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.Q))
+            {
+                this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                this.Close();
+            }
+            if (keyData == (Keys.Control | Keys.A))
+                Ajouter();
+            if (keyData == (Keys.Control | Keys.M))
+                Modifier();
+            if (keyData == (Keys.Control | Keys.S))
+                Supprimer();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.D))
+                Division();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.M))
+                Match();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.C))
+                Classement();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.J))
+                CallFormJoueur();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.T))
+                Top3();
+            if (keyData == Keys.F1)
+                MessageBox.Show("Voici les touches ayant un racourci \n" +
+                                "F1- Aide \n" +
+                                "Ctrl+Q- Quitter \n" +
+                                "Ctrl+A - Ajouter une équipe \n" +
+                                "Ctrl+M - Modifier l'équipe sélectionnée\n" +
+                                "Ctrl+S - Supprimer l'équipe sélectionnée\n" +
+                                "Ctrl+Shift+D - Page division\n" +
+                                "Ctrl+Shift+M - Page match\n" +
+                                "Ctrl+Shift+C - Page classement\n" +
+                                "Ctrl+Shift+T - Page top3" +
+                                "Ctrl+Shift+J - Page joueur", "Aide", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return true;
         }
     }
 }

@@ -42,7 +42,7 @@ namespace TPFinal
             this.Size = Properties.Settings.Default.Form_JoueursSize;
             this.Location = Properties.Settings.Default.Form_JoueursLocation;
         }
-        private void BTN_Ajouter_Click(object sender, EventArgs e) // Ouvre la form d'ajout de joueur
+        private void Ajouter()
         {
             Form_Ajouter_Joueur aJ = new Form_Ajouter_Joueur(oracon, connection);
             aJ.callBackForm = this;
@@ -106,6 +106,10 @@ namespace TPFinal
                         MessageBox.Show(ex.Message.ToString());
                 }
             }
+        }
+        private void BTN_Ajouter_Click(object sender, EventArgs e) // Ouvre la form d'ajout de joueur
+        {
+            Ajouter();
         }
 
         private void RemplirFormulaire()
@@ -182,31 +186,46 @@ namespace TPFinal
 
         private void BTN_Debut_Click(object sender, EventArgs e)
         {
-            this.BindingContext[dataSetJoueur, "Joueur"].Position = 0;
-            if (TB_Url.Text != "")
-                PB_Joueur.ImageLocation = TB_Url.Text;
+            Debut();
         }
 
         private void BTN_Fin_Click(object sender, EventArgs e)
         {
-            this.BindingContext[dataSetJoueur, "Joueur"].Position = this.BindingContext[dataSetJoueur, "Joueur"].Count - 1;
-            if (TB_Url.Text != "")
-                PB_Joueur.ImageLocation = TB_Url.Text;
+            Fin();
         }
-
-        private void BTN_Suivant_Click(object sender, EventArgs e)
+        private void Suivant()
         {
             this.BindingContext[dataSetJoueur, "Joueur"].Position++;
             if (TB_Url.Text != "")
                 PB_Joueur.ImageLocation = TB_Url.Text;
         }
-        private void BTN_Precedent_Click(object sender, EventArgs e)
+        private void Precedent()
         {
             this.BindingContext[dataSetJoueur, "Joueur"].Position--;
             if (TB_Url.Text != "")
                 PB_Joueur.ImageLocation = TB_Url.Text;
         }
-        private void BTN_Effacer_Click(object sender, EventArgs e)
+        private void Debut()
+        {
+            this.BindingContext[dataSetJoueur, "Joueur"].Position = 0;
+            if (TB_Url.Text != "")
+                PB_Joueur.ImageLocation = TB_Url.Text;
+        }
+        private void Fin()
+        {
+            this.BindingContext[dataSetJoueur, "Joueur"].Position = this.BindingContext[dataSetJoueur, "Joueur"].Count - 1;
+            if (TB_Url.Text != "")
+                PB_Joueur.ImageLocation = TB_Url.Text;
+        }
+        private void BTN_Suivant_Click(object sender, EventArgs e)
+        {
+            Suivant();
+        }
+        private void BTN_Precedent_Click(object sender, EventArgs e)
+        {
+            Precedent();
+        }
+        private void Supprimer()
         {
             if (MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
@@ -228,10 +247,12 @@ namespace TPFinal
                         MessageBox.Show(ex.Message.ToString());
                 }
             }
-
         }
-
-        private void BTN_Modifier_Click(object sender, EventArgs e)
+        private void BTN_Effacer_Click(object sender, EventArgs e)
+        {
+            Supprimer();
+        }
+        private void Modifier()
         {
             Form_Ajouter_Joueur aj = new Form_Ajouter_Joueur(oracon, connection);
             aj.callBackForm = this;
@@ -291,6 +312,10 @@ namespace TPFinal
                 }
 
             }
+        }
+        private void BTN_Modifier_Click(object sender, EventArgs e)
+        {
+            Modifier();
         }
 
         private void Form_Joueurs_Load(object sender, EventArgs e)
@@ -391,6 +416,40 @@ namespace TPFinal
         {
             this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Close();
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.Q))
+            {
+                this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                this.Close();
+            }
+            if (keyData == (Keys.Control | Keys.A))
+                Ajouter();
+            if (keyData == (Keys.Control | Keys.M))
+                Modifier();
+            if (keyData == (Keys.Control | Keys.S))
+                Supprimer();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.S))
+                Suivant();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.P))
+                Precedent();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.D))
+                Debut();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.F))
+                Fin();
+            if (keyData == Keys.F1)
+                MessageBox.Show("Voici les touches ayant un racourci \n" +
+                                "F1- Aide \n" +
+                                "Ctrl+Q- Quitter \n" +
+                                "Ctrl+A - Ajouter un joueur \n" +
+                                "Ctrl+M - Modifier le joueur sélectionné\n" +
+                                "Ctrl+S - Supprimer le joueur sélectionné\n" +
+                                "Ctrl+Shift+S - Joueur suivant\n" +
+                                "Ctrl+Shift+P - Joueur précédent\n" +
+                                "Ctrl+Shift+D - Début de la liste des joueurs\n" +
+                                "Ctrl+Shift+F - Fin de la liste des joueurs", "Aide", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return true;
         }
     }
 }

@@ -116,28 +116,23 @@ namespace TPFinal
             if (callBackForm != null)
                 callBackForm.Show();
         }
-
-        private void BTN_Debut_Click(object sender, EventArgs e)
+        private void Debut()
         {
             this.BindingContext[statsDataSet, "Stats"].Position = 0;
         }
-
-        private void BTN_Fin_Click(object sender, EventArgs e)
+        private void Fin()
         {
             this.BindingContext[statsDataSet, "Stats"].Position = this.BindingContext[statsDataSet, "Stats"].Count - 1;
         }
-
-        private void BTN_Precedent_Click(object sender, EventArgs e)
-        {
-            this.BindingContext[statsDataSet, "Stats"].Position--;
-        }
-
-        private void BTN_Suivant_Click(object sender, EventArgs e)
+        private void Suivant()
         {
             this.BindingContext[statsDataSet, "Stats"].Position++;
         }
-
-        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        private void Precedent()
+        {
+            this.BindingContext[statsDataSet, "Stats"].Position--;
+        }
+        private void Ajouter()
         {
             Form_Ajouter_Stats aJ = new Form_Ajouter_Stats(oracon, connection);
             aJ.callBackForm = this;
@@ -195,8 +190,7 @@ namespace TPFinal
                 }
             }
         }
-
-        private void BTN_Modifier_Click(object sender, EventArgs e)
+        private void Modifier()
         {
             Form_Ajouter_Stats ajs = new Form_Ajouter_Stats(oracon, connection);
             ajs.callBackForm = this;
@@ -248,8 +242,7 @@ namespace TPFinal
 
             }
         }
-
-        private void BTN_Effacer_Click(object sender, EventArgs e)
+        private void Supprimer()
         {
             if (MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
@@ -271,6 +264,40 @@ namespace TPFinal
                         MessageBox.Show(ex.Message.ToString());
                 }
             }
+        }
+        private void BTN_Debut_Click(object sender, EventArgs e)
+        {
+            Debut();
+        }
+
+        private void BTN_Fin_Click(object sender, EventArgs e)
+        {
+            Fin();
+        }
+
+        private void BTN_Precedent_Click(object sender, EventArgs e)
+        {
+            Precedent();
+        }
+
+        private void BTN_Suivant_Click(object sender, EventArgs e)
+        {
+            Suivant();
+        }
+
+        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        {
+            Ajouter();
+        }
+
+        private void BTN_Modifier_Click(object sender, EventArgs e)
+        {
+            Modifier();
+        }
+
+        private void BTN_Effacer_Click(object sender, EventArgs e)
+        {
+            Supprimer();
         }
         private void FB_Fermer_MouseEnter(object sender, EventArgs e)
         {
@@ -332,6 +359,40 @@ namespace TPFinal
         {
             this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Close();
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.Q))
+            {
+                this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                this.Close();
+            }
+            if (keyData == (Keys.Control | Keys.A))
+                Ajouter();
+            if (keyData == (Keys.Control | Keys.M))
+                Modifier();
+            if (keyData == (Keys.Control | Keys.S))
+                Supprimer();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.S))
+                Suivant();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.P))
+                Precedent();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.D))
+                Debut();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.F))
+                Fin();
+            if (keyData == Keys.F1)
+                MessageBox.Show("Voici les touches ayant un racourci \n" +
+                                "F1- Aide \n" +
+                                "Ctrl+Q- Quitter \n" +
+                                "Ctrl+A - Ajouter une fiche statistique \n" +
+                                "Ctrl+M - Modifier la fiche sélectionnée\n" +
+                                "Ctrl+S - Supprimer la fiche sélectionnée\n" +
+                                "Ctrl+Shift+S - Fiche suivant\n" +
+                                "Ctrl+Shift+P - Fiche précédent\n" +
+                                "Ctrl+Shift+D - Début de la fiche des joueurs\n" +
+                                "Ctrl+Shift+F - Fin de la fiche des joueurs", "Aide", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return true;
         }
     }
 }

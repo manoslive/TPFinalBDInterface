@@ -36,7 +36,7 @@ namespace TPFinal
             this.Size = Properties.Settings.Default.Form_MatchsSize;
             this.Location = Properties.Settings.Default.Form_MatchsLocation;
         }
-        private void BTN_AjoutRencontre_Click(object sender, EventArgs e)
+        private void Ajouter()
         {
             Form_Ajouter_Match ajm = new Form_Ajouter_Match(oracon, connection);
             ajm.Text = "Ajout de match";
@@ -88,6 +88,10 @@ namespace TPFinal
                 }
             }
         }
+        private void BTN_AjoutRencontre_Click(object sender, EventArgs e)
+        {
+            Ajouter();
+        }
         private void LoadDGVmatch()
         {
             DGV_Matchs.AllowUserToResizeColumns = false; // Empêche le resize des colonnes
@@ -120,7 +124,7 @@ namespace TPFinal
             DataGridViewColumn ville = DGV_Matchs.Columns[3];
             ville.Width = 85;
         }
-        private void BTN_ModifierMatch_Click(object sender, EventArgs e)
+        private void Modifier()
         {
             Form_Ajouter_Match Modifier = new Form_Ajouter_Match(oracon, connection);
             Modifier.Text = "Modification";
@@ -175,6 +179,10 @@ namespace TPFinal
                     MessageBox.Show(ex.Message.ToString());
                 }
             }
+        }
+        private void BTN_ModifierMatch_Click(object sender, EventArgs e)
+        {
+            Modifier();
         }
         private void Form_Matchs_Load(object sender, EventArgs e)
         {
@@ -243,13 +251,16 @@ namespace TPFinal
             if (callBackForm != null)
                 callBackForm.Show();
         }
-
-        private void BTN_Calendrier_Click(object sender, EventArgs e)
+        private void Calendrier()
         {
             Form_Calendrier_Matchs cal = new Form_Calendrier_Matchs(oracon, connection);
             this.Hide();
             cal.callBackForm = this;
             cal.ShowDialog();
+        }
+        private void BTN_Calendrier_Click(object sender, EventArgs e)
+        {
+            Calendrier();
         }
 
         private void FillStats()
@@ -384,6 +395,31 @@ namespace TPFinal
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.Q))
+            {
+                this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                this.Close();
+            }
+            if (keyData == (Keys.Control | Keys.A))
+                Ajouter();
+            if (keyData == (Keys.Control | Keys.M))
+                Modifier();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.C))
+                Calendrier();
+            if (keyData == (Keys.Control | Keys.Shift | Keys.S))
+                AjouterStats();
+            if (keyData == Keys.F1)
+                MessageBox.Show("Voici les touches ayant un racourci \n" +
+                                "F1- Aide \n" +
+                                "Ctrl+Q- Quitter \n" +
+                                "Ctrl+A - Ajouter un match \n" +
+                                "Ctrl+M - Modifier le match sélectionné\n" +
+                                "Ctrl+Shift+S - Page statistique\n" +
+                                "Ctrl+Shift+C - Page calendrier\n", "Aide", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return true;
         }
     }
 }
