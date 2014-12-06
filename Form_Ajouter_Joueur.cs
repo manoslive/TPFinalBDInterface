@@ -9,7 +9,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
-
+using System.Text.RegularExpressions;
 
 namespace TPFinal
 {
@@ -131,6 +131,69 @@ namespace TPFinal
                 }
                 oraReader.Close();
             }
+        }
+        private bool VerifChamps()
+        {
+            bool estCorrect = false;
+            if (TB_NomJoueur.Text != "" && TB_NumMaillot.Text != "" && TB_PrenomJoueur.Text != "" && TB_Url.Text != "" && CB_EquipeJoueur.Text != "" && CB_PosJoueur.Text != "")
+            {
+                BTN_Ajouter.Enabled = true;
+                estCorrect = true;
+            }
+            else
+                BTN_Ajouter.Enabled = false;
+
+
+            return estCorrect;
+        }
+        private void DTP_DateNaissance_ValueChanged(object sender, EventArgs e)
+        {
+            if (DTP_DateNaissance.Value > DateTime.Now)
+            {
+                MessageBox.Show("Vous devez entrer une date égale ou antérieure à aujourd'hui!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DTP_DateNaissance.Value = DateTime.Now;
+            }
+        }
+
+        private void TB_NumMaillot_TextChanged(object sender, EventArgs e)
+        {
+            VerifChamps();
+            if(!Regex.IsMatch(TB_NumMaillot.Text, @"^[0-9]+$"))
+                TB_NumMaillot.Text = "";
+        }
+
+        private void TB_PrenomJoueur_TextChanged(object sender, EventArgs e)
+        {
+            VerifChamps();
+            if (!Regex.IsMatch(TB_PrenomJoueur.Text, @"^[a-zA-Z]+$"))
+                TB_PrenomJoueur.Text = "";
+        }
+
+        private void TB_NomJoueur_TextChanged(object sender, EventArgs e)
+        {
+            VerifChamps();
+            if (!Regex.IsMatch(TB_NomJoueur.Text, @"^[a-zA-Z]+$"))
+                TB_NomJoueur.Text = "";
+        }
+
+        private void CB_EquipeJoueur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VerifChamps();
+        }
+
+        private void CB_PosJoueur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VerifChamps();
+        }
+
+        private void TB_Url_TextChanged(object sender, EventArgs e)
+        {
+            VerifChamps();
+        }
+
+        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        {
+            DialogResult = System.Windows.Forms.DialogResult.OK;
         }
     }
 }
