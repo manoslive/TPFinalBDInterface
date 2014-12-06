@@ -9,6 +9,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
+using System.Text.RegularExpressions;
 
 namespace TPFinal
 {
@@ -45,7 +46,8 @@ namespace TPFinal
             set
             {
                 image_ = value;
-                if (image_ != null) {
+                if (image_ != null)
+                {
                     using (MemoryStream ms = new MemoryStream(image_))
                     {
                         PB_Equipe.Image = Image.FromStream(ms);
@@ -115,6 +117,49 @@ namespace TPFinal
                 image = File.ReadAllBytes(imageEquipe.FileName);
                 PB_Equipe.Image = Image.FromFile(imageEquipe.FileName);
             }
+        }
+        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        {
+            if (!Regex.IsMatch(TB_NomEquipe.Text, @"^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("Le nom de l'équipe doit être seulement composé de lettres et ne doit pas être vide!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TB_NomEquipe.Text = "";
+            }
+
+            if (!Regex.IsMatch(TB_Ville.Text, @"^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("Le nom de la ville doit être seulement composé de lettres et ne doit pas être vide!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TB_Ville.Text = "";
+            }
+            if (DTP_Creation.Value > DateTime.Now)
+            {
+                MessageBox.Show("Vous devez entrer une date égale ou antérieure à aujourd'hui!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DTP_Creation.Value = DateTime.Now;
+            }
+
+            if (Regex.IsMatch(TB_NomEquipe.Text, @"^[a-zA-Z]+$") && Regex.IsMatch(TB_Ville.Text, @"^[a-zA-Z]+$") && (DTP_Creation.Value <= DateTime.Now) && CB_Division.Text != "")
+                DialogResult = System.Windows.Forms.DialogResult.OK;
+        }
+        private void CheckCasesVides()
+        {
+            if (TB_Ville.Text != "" && TB_NomEquipe.Text != "" && CB_Division.Text != "")
+                BTN_Ajouter.Enabled = true;
+            else
+                BTN_Ajouter.Enabled = false;
+        }
+        private void TB_Ville_TextChanged(object sender, EventArgs e)
+        {
+            CheckCasesVides();
+        }
+
+        private void CB_Division_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckCasesVides();
+        }
+
+        private void TB_NomEquipe_TextChanged(object sender, EventArgs e)
+        {
+            CheckCasesVides();
         }
 
     }

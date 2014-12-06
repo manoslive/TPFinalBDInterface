@@ -48,7 +48,7 @@
             // 
             // BTN_Ajouter
             // 
-            this.BTN_Ajouter.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BTN_Ajouter.Enabled = false;
             this.BTN_Ajouter.Location = new System.Drawing.Point(187, 115);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(117, 34);
@@ -88,6 +88,7 @@
             this.DTP_DateCreation.Name = "DTP_DateCreation";
             this.DTP_DateCreation.Size = new System.Drawing.Size(258, 26);
             this.DTP_DateCreation.TabIndex = 3;
+            this.DTP_DateCreation.ValueChanged += new System.EventHandler(this.DTP_DateCreation_ValueChanged);
             // 
             // Form_Ajouter_Division
             // 

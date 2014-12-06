@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
+using System.Text.RegularExpressions;
 
 namespace TPFinal
 {
@@ -49,7 +50,22 @@ namespace TPFinal
 
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
+            if (Regex.IsMatch(TB_NomDivision.Text, @"^[a-zA-Z]+$"))
+                DialogResult = System.Windows.Forms.DialogResult.OK;
+            else
+            {
+                MessageBox.Show("Le nom de la division doit être seulement composé de lettres et ne doit pas être vide!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TB_NomDivision.Text = "";
+            }
+        }
 
+        private void DTP_DateCreation_ValueChanged(object sender, EventArgs e)
+        {
+            if (DTP_DateCreation.Value > DateTime.Now)
+            {
+                MessageBox.Show("Vous devez entrer une date égale ou antérieure à aujourd'hui!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DTP_DateCreation.Value = DateTime.Now;
+            }
         }
     }
 }

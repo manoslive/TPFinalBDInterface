@@ -36,7 +36,7 @@
             this.DTP_Creation = new System.Windows.Forms.DateTimePicker();
             this.CB_Division = new System.Windows.Forms.ComboBox();
             this.TB_Ville = new System.Windows.Forms.TextBox();
-            this.BTN_Ok = new System.Windows.Forms.Button();
+            this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.BTN_Cancel = new System.Windows.Forms.Button();
             this.BTN_ChargerImage = new System.Windows.Forms.Button();
             this.PB_Equipe = new System.Windows.Forms.PictureBox();
@@ -85,6 +85,7 @@
             this.TB_NomEquipe.Name = "TB_NomEquipe";
             this.TB_NomEquipe.Size = new System.Drawing.Size(200, 26);
             this.TB_NomEquipe.TabIndex = 1;
+            this.TB_NomEquipe.TextChanged += new System.EventHandler(this.TB_NomEquipe_TextChanged);
             // 
             // DTP_Creation
             // 
@@ -95,11 +96,15 @@
             // 
             // CB_Division
             // 
+            this.CB_Division.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CB_Division.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CB_Division.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_Division.FormattingEnabled = true;
             this.CB_Division.Location = new System.Drawing.Point(16, 252);
             this.CB_Division.Name = "CB_Division";
             this.CB_Division.Size = new System.Drawing.Size(200, 28);
             this.CB_Division.TabIndex = 3;
+            this.CB_Division.SelectedIndexChanged += new System.EventHandler(this.CB_Division_SelectedIndexChanged);
             // 
             // TB_Ville
             // 
@@ -107,21 +112,23 @@
             this.TB_Ville.Name = "TB_Ville";
             this.TB_Ville.Size = new System.Drawing.Size(200, 26);
             this.TB_Ville.TabIndex = 4;
+            this.TB_Ville.TextChanged += new System.EventHandler(this.TB_Ville_TextChanged);
             // 
-            // BTN_Ok
+            // BTN_Ajouter
             // 
-            this.BTN_Ok.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_Ok.Location = new System.Drawing.Point(383, 442);
-            this.BTN_Ok.Name = "BTN_Ok";
-            this.BTN_Ok.Size = new System.Drawing.Size(102, 33);
-            this.BTN_Ok.TabIndex = 5;
-            this.BTN_Ok.Text = "Ok";
-            this.BTN_Ok.UseVisualStyleBackColor = true;
+            this.BTN_Ajouter.Enabled = false;
+            this.BTN_Ajouter.Location = new System.Drawing.Point(265, 442);
+            this.BTN_Ajouter.Name = "BTN_Ajouter";
+            this.BTN_Ajouter.Size = new System.Drawing.Size(102, 33);
+            this.BTN_Ajouter.TabIndex = 5;
+            this.BTN_Ajouter.Text = "Ajouter";
+            this.BTN_Ajouter.UseVisualStyleBackColor = true;
+            this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
             // BTN_Cancel
             // 
             this.BTN_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Cancel.Location = new System.Drawing.Point(261, 442);
+            this.BTN_Cancel.Location = new System.Drawing.Point(383, 442);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(102, 33);
             this.BTN_Cancel.TabIndex = 5;
@@ -154,7 +161,7 @@
             this.Controls.Add(this.BTN_ChargerImage);
             this.Controls.Add(this.PB_Equipe);
             this.Controls.Add(this.BTN_Cancel);
-            this.Controls.Add(this.BTN_Ok);
+            this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.TB_Ville);
             this.Controls.Add(this.CB_Division);
             this.Controls.Add(this.DTP_Creation);
@@ -183,7 +190,7 @@
         private System.Windows.Forms.DateTimePicker DTP_Creation;
         private System.Windows.Forms.ComboBox CB_Division;
         private System.Windows.Forms.TextBox TB_Ville;
-        private System.Windows.Forms.Button BTN_Ok;
+        private System.Windows.Forms.Button BTN_Ajouter;
         private System.Windows.Forms.Button BTN_Cancel;
         private System.Windows.Forms.PictureBox PB_Equipe;
         private System.Windows.Forms.Button BTN_ChargerImage;
