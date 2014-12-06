@@ -67,5 +67,10 @@ namespace TPFinal
                 DTP_DateCreation.Value = DateTime.Now;
             }
         }
+
+        private void Form_Ajouter_Division_Load(object sender, EventArgs e)
+        {
+            TB_NomDivision.Select();
+        }
     }
 }

@@ -52,7 +52,7 @@
             this.BTN_Fermer.Location = new System.Drawing.Point(386, 445);
             this.BTN_Fermer.Name = "BTN_Fermer";
             this.BTN_Fermer.Size = new System.Drawing.Size(110, 37);
-            this.BTN_Fermer.TabIndex = 22;
+            this.BTN_Fermer.TabIndex = 8;
             this.BTN_Fermer.Text = "Annuler";
             this.BTN_Fermer.UseVisualStyleBackColor = true;
             // 
@@ -69,7 +69,7 @@
             this.CB_PosJoueur.Location = new System.Drawing.Point(238, 328);
             this.CB_PosJoueur.Name = "CB_PosJoueur";
             this.CB_PosJoueur.Size = new System.Drawing.Size(228, 28);
-            this.CB_PosJoueur.TabIndex = 18;
+            this.CB_PosJoueur.TabIndex = 5;
             this.CB_PosJoueur.SelectedIndexChanged += new System.EventHandler(this.CB_PosJoueur_SelectedIndexChanged);
             // 
             // CB_EquipeJoueur
@@ -81,7 +81,7 @@
             this.CB_EquipeJoueur.Location = new System.Drawing.Point(238, 268);
             this.CB_EquipeJoueur.Name = "CB_EquipeJoueur";
             this.CB_EquipeJoueur.Size = new System.Drawing.Size(228, 28);
-            this.CB_EquipeJoueur.TabIndex = 17;
+            this.CB_EquipeJoueur.TabIndex = 4;
             this.CB_EquipeJoueur.SelectedIndexChanged += new System.EventHandler(this.CB_EquipeJoueur_SelectedIndexChanged);
             // 
             // DTP_DateNaissance
@@ -89,7 +89,7 @@
             this.DTP_DateNaissance.Location = new System.Drawing.Point(238, 145);
             this.DTP_DateNaissance.Name = "DTP_DateNaissance";
             this.DTP_DateNaissance.Size = new System.Drawing.Size(228, 26);
-            this.DTP_DateNaissance.TabIndex = 16;
+            this.DTP_DateNaissance.TabIndex = 2;
             this.DTP_DateNaissance.ValueChanged += new System.EventHandler(this.DTP_DateNaissance_ValueChanged);
             // 
             // TB_NumMaillot
@@ -98,7 +98,7 @@
             this.TB_NumMaillot.MaxLength = 2;
             this.TB_NumMaillot.Name = "TB_NumMaillot";
             this.TB_NumMaillot.Size = new System.Drawing.Size(228, 26);
-            this.TB_NumMaillot.TabIndex = 15;
+            this.TB_NumMaillot.TabIndex = 3;
             this.TB_NumMaillot.TextChanged += new System.EventHandler(this.TB_NumMaillot_TextChanged);
             // 
             // TB_PrenomJoueur
@@ -106,7 +106,7 @@
             this.TB_PrenomJoueur.Location = new System.Drawing.Point(238, 88);
             this.TB_PrenomJoueur.Name = "TB_PrenomJoueur";
             this.TB_PrenomJoueur.Size = new System.Drawing.Size(228, 26);
-            this.TB_PrenomJoueur.TabIndex = 14;
+            this.TB_PrenomJoueur.TabIndex = 1;
             this.TB_PrenomJoueur.TextChanged += new System.EventHandler(this.TB_PrenomJoueur_TextChanged);
             // 
             // TB_NomJoueur
@@ -114,7 +114,7 @@
             this.TB_NomJoueur.Location = new System.Drawing.Point(238, 28);
             this.TB_NomJoueur.Name = "TB_NomJoueur";
             this.TB_NomJoueur.Size = new System.Drawing.Size(228, 26);
-            this.TB_NomJoueur.TabIndex = 13;
+            this.TB_NomJoueur.TabIndex = 0;
             this.TB_NomJoueur.TextChanged += new System.EventHandler(this.TB_NomJoueur_TextChanged);
             // 
             // LB_DateNaissance
@@ -176,7 +176,7 @@
             this.TB_Url.Location = new System.Drawing.Point(238, 385);
             this.TB_Url.Name = "TB_Url";
             this.TB_Url.Size = new System.Drawing.Size(228, 26);
-            this.TB_Url.TabIndex = 24;
+            this.TB_Url.TabIndex = 6;
             this.TB_Url.TextChanged += new System.EventHandler(this.TB_Url_TextChanged);
             // 
             // LB_Url
@@ -195,7 +195,7 @@
             this.BTN_Ajouter.Location = new System.Drawing.Point(260, 445);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(110, 37);
-            this.BTN_Ajouter.TabIndex = 22;
+            this.BTN_Ajouter.TabIndex = 7;
             this.BTN_Ajouter.Text = "Ajouter";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
             this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);

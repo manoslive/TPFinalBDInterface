@@ -74,7 +74,7 @@
             this.CB_Division.Location = new System.Drawing.Point(336, 437);
             this.CB_Division.Name = "CB_Division";
             this.CB_Division.Size = new System.Drawing.Size(152, 28);
-            this.CB_Division.TabIndex = 5;
+            this.CB_Division.TabIndex = 0;
             this.CB_Division.SelectedIndexChanged += new System.EventHandler(this.CB_Division_SelectedIndexChanged);
             // 
             // PB_Fermer_Gif
@@ -130,7 +130,7 @@
             // quitterToolStripMenuItem1
             // 
             this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
-            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
+            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(139, 30);
             this.quitterToolStripMenuItem1.Text = "Quitter";
             this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
             // 

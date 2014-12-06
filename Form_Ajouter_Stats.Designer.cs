@@ -48,7 +48,7 @@
             this.TB_TempsPunition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TB_TempsPunition.Name = "TB_TempsPunition";
             this.TB_TempsPunition.Size = new System.Drawing.Size(180, 26);
-            this.TB_TempsPunition.TabIndex = 13;
+            this.TB_TempsPunition.TabIndex = 4;
             this.TB_TempsPunition.TextChanged += new System.EventHandler(this.TB_TempsPunition_TextChanged);
             this.TB_TempsPunition.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidationChamps);
             // 
@@ -58,7 +58,7 @@
             this.TB_NbPasses.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TB_NbPasses.Name = "TB_NbPasses";
             this.TB_NbPasses.Size = new System.Drawing.Size(180, 26);
-            this.TB_NbPasses.TabIndex = 14;
+            this.TB_NbPasses.TabIndex = 3;
             this.TB_NbPasses.TextChanged += new System.EventHandler(this.TB_NbPasses_TextChanged);
             this.TB_NbPasses.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidationChamps);
             // 
@@ -68,7 +68,7 @@
             this.TB_NbButs.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TB_NbButs.Name = "TB_NbButs";
             this.TB_NbButs.Size = new System.Drawing.Size(180, 26);
-            this.TB_NbButs.TabIndex = 15;
+            this.TB_NbButs.TabIndex = 2;
             this.TB_NbButs.TextChanged += new System.EventHandler(this.TB_NbButs_TextChanged);
             this.TB_NbButs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidationChamps);
             // 
@@ -79,7 +79,7 @@
             this.BTN_Cancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(112, 35);
-            this.BTN_Cancel.TabIndex = 11;
+            this.BTN_Cancel.TabIndex = 5;
             this.BTN_Cancel.Text = "Cancel";
             this.BTN_Cancel.UseVisualStyleBackColor = true;
             // 
@@ -152,7 +152,7 @@
             this.CB_NumeroMatch.Location = new System.Drawing.Point(159, 24);
             this.CB_NumeroMatch.Name = "CB_NumeroMatch";
             this.CB_NumeroMatch.Size = new System.Drawing.Size(180, 28);
-            this.CB_NumeroMatch.TabIndex = 18;
+            this.CB_NumeroMatch.TabIndex = 0;
             this.CB_NumeroMatch.SelectedIndexChanged += new System.EventHandler(this.CB_NumeroMatch_SelectedIndexChanged);
             // 
             // CB_NumeroJoueur
@@ -161,7 +161,7 @@
             this.CB_NumeroJoueur.Location = new System.Drawing.Point(159, 89);
             this.CB_NumeroJoueur.Name = "CB_NumeroJoueur";
             this.CB_NumeroJoueur.Size = new System.Drawing.Size(180, 28);
-            this.CB_NumeroJoueur.TabIndex = 18;
+            this.CB_NumeroJoueur.TabIndex = 1;
             this.CB_NumeroJoueur.SelectedIndexChanged += new System.EventHandler(this.CB_NumeroJoueur_SelectedIndexChanged);
             // 
             // Form_Ajouter_Stats

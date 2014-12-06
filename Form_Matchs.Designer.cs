@@ -36,6 +36,12 @@
             this.BTN_Calendrier = new System.Windows.Forms.Button();
             this.BTN_Fermer = new System.Windows.Forms.Button();
             this.DGV_Matchs = new System.Windows.Forms.DataGridView();
+            this.CM_Match = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ajouterMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calendrierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DGV_Joueurs = new System.Windows.Forms.DataGridView();
             this.LB_ScoreAway = new System.Windows.Forms.Label();
             this.LB_ScoreHome = new System.Windows.Forms.Label();
@@ -49,30 +55,24 @@
             this.PB_Faceoff = new System.Windows.Forms.PictureBox();
             this.PB_EquipeHome = new System.Windows.Forms.PictureBox();
             this.PB_EquipeAway = new System.Windows.Forms.PictureBox();
-            this.CM_Match = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ajouterMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calendrierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MS_Equipe = new System.Windows.Forms.MenuStrip();
             this.fonctionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.matchsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calendrierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statistiqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.calendrierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).BeginInit();
+            this.CM_Match.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Faceoff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).BeginInit();
-            this.CM_Match.SuspendLayout();
             this.MS_Equipe.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,7 +101,7 @@
             this.BTN_AjoutRencontre.Location = new System.Drawing.Point(12, 426);
             this.BTN_AjoutRencontre.Name = "BTN_AjoutRencontre";
             this.BTN_AjoutRencontre.Size = new System.Drawing.Size(164, 32);
-            this.BTN_AjoutRencontre.TabIndex = 4;
+            this.BTN_AjoutRencontre.TabIndex = 0;
             this.BTN_AjoutRencontre.Text = "Ajouter match";
             this.BTN_AjoutRencontre.UseVisualStyleBackColor = true;
             this.BTN_AjoutRencontre.Click += new System.EventHandler(this.BTN_AjoutRencontre_Click);
@@ -111,7 +111,7 @@
             this.BTN_ModifierMatch.Location = new System.Drawing.Point(182, 426);
             this.BTN_ModifierMatch.Name = "BTN_ModifierMatch";
             this.BTN_ModifierMatch.Size = new System.Drawing.Size(164, 32);
-            this.BTN_ModifierMatch.TabIndex = 4;
+            this.BTN_ModifierMatch.TabIndex = 1;
             this.BTN_ModifierMatch.Text = "Modifier Match";
             this.BTN_ModifierMatch.UseVisualStyleBackColor = true;
             this.BTN_ModifierMatch.Click += new System.EventHandler(this.BTN_ModifierMatch_Click);
@@ -121,7 +121,7 @@
             this.BTN_Calendrier.Location = new System.Drawing.Point(681, 426);
             this.BTN_Calendrier.Name = "BTN_Calendrier";
             this.BTN_Calendrier.Size = new System.Drawing.Size(164, 32);
-            this.BTN_Calendrier.TabIndex = 4;
+            this.BTN_Calendrier.TabIndex = 2;
             this.BTN_Calendrier.Text = "Calendrier";
             this.BTN_Calendrier.UseVisualStyleBackColor = true;
             this.BTN_Calendrier.Click += new System.EventHandler(this.BTN_Calendrier_Click);
@@ -152,6 +152,52 @@
             this.DGV_Matchs.Size = new System.Drawing.Size(1144, 155);
             this.DGV_Matchs.TabIndex = 5;
             this.DGV_Matchs.SelectionChanged += new System.EventHandler(this.DGV_Matchs_SelectionChanged);
+            // 
+            // CM_Match
+            // 
+            this.CM_Match.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterMatchToolStripMenuItem,
+            this.modifierMatchToolStripMenuItem,
+            this.ajouterStatsToolStripMenuItem,
+            this.calendrierToolStripMenuItem,
+            this.quitterToolStripMenuItem});
+            this.CM_Match.Name = "CM_Match";
+            this.CM_Match.Size = new System.Drawing.Size(206, 154);
+            // 
+            // ajouterMatchToolStripMenuItem
+            // 
+            this.ajouterMatchToolStripMenuItem.Name = "ajouterMatchToolStripMenuItem";
+            this.ajouterMatchToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.ajouterMatchToolStripMenuItem.Text = "Ajouter match";
+            this.ajouterMatchToolStripMenuItem.Click += new System.EventHandler(this.ajouterMatchToolStripMenuItem_Click);
+            // 
+            // modifierMatchToolStripMenuItem
+            // 
+            this.modifierMatchToolStripMenuItem.Name = "modifierMatchToolStripMenuItem";
+            this.modifierMatchToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.modifierMatchToolStripMenuItem.Text = "Modifier match";
+            this.modifierMatchToolStripMenuItem.Click += new System.EventHandler(this.modifierMatchToolStripMenuItem_Click);
+            // 
+            // ajouterStatsToolStripMenuItem
+            // 
+            this.ajouterStatsToolStripMenuItem.Name = "ajouterStatsToolStripMenuItem";
+            this.ajouterStatsToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.ajouterStatsToolStripMenuItem.Text = "Ajouter stats";
+            this.ajouterStatsToolStripMenuItem.Click += new System.EventHandler(this.ajouterStatsToolStripMenuItem_Click);
+            // 
+            // calendrierToolStripMenuItem
+            // 
+            this.calendrierToolStripMenuItem.Name = "calendrierToolStripMenuItem";
+            this.calendrierToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.calendrierToolStripMenuItem.Text = "Calendrier";
+            this.calendrierToolStripMenuItem.Click += new System.EventHandler(this.calendrierToolStripMenuItem_Click);
+            // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.quitterToolStripMenuItem.Text = "Quitter";
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // DGV_Joueurs
             // 
@@ -234,7 +280,7 @@
             this.BTN_AjoutStats.Location = new System.Drawing.Point(12, 627);
             this.BTN_AjoutStats.Name = "BTN_AjoutStats";
             this.BTN_AjoutStats.Size = new System.Drawing.Size(164, 32);
-            this.BTN_AjoutStats.TabIndex = 4;
+            this.BTN_AjoutStats.TabIndex = 3;
             this.BTN_AjoutStats.Text = "Ajouter stats";
             this.BTN_AjoutStats.UseVisualStyleBackColor = true;
             this.BTN_AjoutStats.Click += new System.EventHandler(this.BTN_AjoutRencontre_Click);
@@ -297,52 +343,6 @@
             this.PB_EquipeAway.TabIndex = 1;
             this.PB_EquipeAway.TabStop = false;
             // 
-            // CM_Match
-            // 
-            this.CM_Match.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajouterMatchToolStripMenuItem,
-            this.modifierMatchToolStripMenuItem,
-            this.ajouterStatsToolStripMenuItem,
-            this.calendrierToolStripMenuItem,
-            this.quitterToolStripMenuItem});
-            this.CM_Match.Name = "CM_Match";
-            this.CM_Match.Size = new System.Drawing.Size(206, 154);
-            // 
-            // ajouterMatchToolStripMenuItem
-            // 
-            this.ajouterMatchToolStripMenuItem.Name = "ajouterMatchToolStripMenuItem";
-            this.ajouterMatchToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
-            this.ajouterMatchToolStripMenuItem.Text = "Ajouter match";
-            this.ajouterMatchToolStripMenuItem.Click += new System.EventHandler(this.ajouterMatchToolStripMenuItem_Click);
-            // 
-            // modifierMatchToolStripMenuItem
-            // 
-            this.modifierMatchToolStripMenuItem.Name = "modifierMatchToolStripMenuItem";
-            this.modifierMatchToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
-            this.modifierMatchToolStripMenuItem.Text = "Modifier match";
-            this.modifierMatchToolStripMenuItem.Click += new System.EventHandler(this.modifierMatchToolStripMenuItem_Click);
-            // 
-            // ajouterStatsToolStripMenuItem
-            // 
-            this.ajouterStatsToolStripMenuItem.Name = "ajouterStatsToolStripMenuItem";
-            this.ajouterStatsToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
-            this.ajouterStatsToolStripMenuItem.Text = "Ajouter stats";
-            this.ajouterStatsToolStripMenuItem.Click += new System.EventHandler(this.ajouterStatsToolStripMenuItem_Click);
-            // 
-            // calendrierToolStripMenuItem
-            // 
-            this.calendrierToolStripMenuItem.Name = "calendrierToolStripMenuItem";
-            this.calendrierToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
-            this.calendrierToolStripMenuItem.Text = "Calendrier";
-            this.calendrierToolStripMenuItem.Click += new System.EventHandler(this.calendrierToolStripMenuItem_Click);
-            // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
-            this.quitterToolStripMenuItem.Text = "Quitter";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
-            // 
             // MS_Equipe
             // 
             this.MS_Equipe.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -366,6 +366,58 @@
             this.fonctionsToolStripMenuItem.Size = new System.Drawing.Size(113, 29);
             this.fonctionsToolStripMenuItem.Text = "Fonctions...";
             // 
+            // matchsToolStripMenuItem
+            // 
+            this.matchsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterToolStripMenuItem,
+            this.modifierToolStripMenuItem});
+            this.matchsToolStripMenuItem.Name = "matchsToolStripMenuItem";
+            this.matchsToolStripMenuItem.Size = new System.Drawing.Size(187, 30);
+            this.matchsToolStripMenuItem.Text = "Matchs...";
+            // 
+            // ajouterToolStripMenuItem
+            // 
+            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(151, 30);
+            this.ajouterToolStripMenuItem.Text = "Ajouter";
+            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
+            // 
+            // modifierToolStripMenuItem
+            // 
+            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(151, 30);
+            this.modifierToolStripMenuItem.Text = "Modifier";
+            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
+            // 
+            // statistiqueToolStripMenuItem
+            // 
+            this.statistiqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterToolStripMenuItem1});
+            this.statistiqueToolStripMenuItem.Name = "statistiqueToolStripMenuItem";
+            this.statistiqueToolStripMenuItem.Size = new System.Drawing.Size(187, 30);
+            this.statistiqueToolStripMenuItem.Text = "Statistiques...";
+            // 
+            // ajouterToolStripMenuItem1
+            // 
+            this.ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
+            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(142, 30);
+            this.ajouterToolStripMenuItem1.Text = "Ajouter";
+            this.ajouterToolStripMenuItem1.Click += new System.EventHandler(this.ajouterToolStripMenuItem1_Click);
+            // 
+            // calendrierToolStripMenuItem1
+            // 
+            this.calendrierToolStripMenuItem1.Name = "calendrierToolStripMenuItem1";
+            this.calendrierToolStripMenuItem1.Size = new System.Drawing.Size(187, 30);
+            this.calendrierToolStripMenuItem1.Text = "Calendrier";
+            this.calendrierToolStripMenuItem1.Click += new System.EventHandler(this.calendrierToolStripMenuItem1_Click);
+            // 
+            // quitterToolStripMenuItem1
+            // 
+            this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
+            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(187, 30);
+            this.quitterToolStripMenuItem1.Text = "Quitter";
+            this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
+            // 
             // paramètresToolStripMenuItem
             // 
             this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
@@ -378,58 +430,6 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 29);
             this.toolStripMenuItem1.Text = "?";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // matchsToolStripMenuItem
-            // 
-            this.matchsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajouterToolStripMenuItem,
-            this.modifierToolStripMenuItem});
-            this.matchsToolStripMenuItem.Name = "matchsToolStripMenuItem";
-            this.matchsToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
-            this.matchsToolStripMenuItem.Text = "Matchs...";
-            // 
-            // ajouterToolStripMenuItem
-            // 
-            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
-            this.ajouterToolStripMenuItem.Text = "Ajouter";
-            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
-            // 
-            // modifierToolStripMenuItem
-            // 
-            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
-            this.modifierToolStripMenuItem.Text = "Modifier";
-            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
-            // 
-            // calendrierToolStripMenuItem1
-            // 
-            this.calendrierToolStripMenuItem1.Name = "calendrierToolStripMenuItem1";
-            this.calendrierToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
-            this.calendrierToolStripMenuItem1.Text = "Calendrier";
-            this.calendrierToolStripMenuItem1.Click += new System.EventHandler(this.calendrierToolStripMenuItem1_Click);
-            // 
-            // statistiqueToolStripMenuItem
-            // 
-            this.statistiqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajouterToolStripMenuItem1});
-            this.statistiqueToolStripMenuItem.Name = "statistiqueToolStripMenuItem";
-            this.statistiqueToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
-            this.statistiqueToolStripMenuItem.Text = "Statistiques...";
-            // 
-            // quitterToolStripMenuItem1
-            // 
-            this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
-            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
-            this.quitterToolStripMenuItem1.Text = "Quitter";
-            this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
-            // 
-            // ajouterToolStripMenuItem1
-            // 
-            this.ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
-            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
-            this.ajouterToolStripMenuItem1.Text = "Ajouter";
-            this.ajouterToolStripMenuItem1.Click += new System.EventHandler(this.ajouterToolStripMenuItem1_Click);
             // 
             // Form_Matchs
             // 
@@ -464,12 +464,12 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Matchs_FormClosed);
             this.Load += new System.EventHandler(this.Form_Matchs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).EndInit();
+            this.CM_Match.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Faceoff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).EndInit();
-            this.CM_Match.ResumeLayout(false);
             this.MS_Equipe.ResumeLayout(false);
             this.MS_Equipe.PerformLayout();
             this.ResumeLayout(false);

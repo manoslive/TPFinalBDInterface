@@ -42,7 +42,7 @@
             this.BTN_Cancel.Location = new System.Drawing.Point(310, 115);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(117, 34);
-            this.BTN_Cancel.TabIndex = 0;
+            this.BTN_Cancel.TabIndex = 3;
             this.BTN_Cancel.Text = "Cancel";
             this.BTN_Cancel.UseVisualStyleBackColor = true;
             // 
@@ -52,7 +52,7 @@
             this.BTN_Ajouter.Location = new System.Drawing.Point(187, 115);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(117, 34);
-            this.BTN_Ajouter.TabIndex = 0;
+            this.BTN_Ajouter.TabIndex = 2;
             this.BTN_Ajouter.Text = "Ajouter";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
             this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
@@ -80,14 +80,14 @@
             this.TB_NomDivision.Location = new System.Drawing.Point(153, 21);
             this.TB_NomDivision.Name = "TB_NomDivision";
             this.TB_NomDivision.Size = new System.Drawing.Size(258, 26);
-            this.TB_NomDivision.TabIndex = 2;
+            this.TB_NomDivision.TabIndex = 0;
             // 
             // DTP_DateCreation
             // 
             this.DTP_DateCreation.Location = new System.Drawing.Point(153, 70);
             this.DTP_DateCreation.Name = "DTP_DateCreation";
             this.DTP_DateCreation.Size = new System.Drawing.Size(258, 26);
-            this.DTP_DateCreation.TabIndex = 3;
+            this.DTP_DateCreation.TabIndex = 1;
             this.DTP_DateCreation.ValueChanged += new System.EventHandler(this.DTP_DateCreation_ValueChanged);
             // 
             // Form_Ajouter_Division
@@ -103,6 +103,7 @@
             this.Controls.Add(this.BTN_Cancel);
             this.Name = "Form_Ajouter_Division";
             this.Text = "Form_Ajouter_division";
+            this.Load += new System.EventHandler(this.Form_Ajouter_Division_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

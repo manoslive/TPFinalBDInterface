@@ -58,7 +58,7 @@
             this.TB_Username.Location = new System.Drawing.Point(182, 31);
             this.TB_Username.Name = "TB_Username";
             this.TB_Username.Size = new System.Drawing.Size(189, 26);
-            this.TB_Username.TabIndex = 1;
+            this.TB_Username.TabIndex = 0;
             this.TB_Username.Text = "Cooperch";
             // 
             // TB_Password

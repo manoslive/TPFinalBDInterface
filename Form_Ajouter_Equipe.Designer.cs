@@ -84,7 +84,7 @@
             this.TB_NomEquipe.Location = new System.Drawing.Point(16, 56);
             this.TB_NomEquipe.Name = "TB_NomEquipe";
             this.TB_NomEquipe.Size = new System.Drawing.Size(200, 26);
-            this.TB_NomEquipe.TabIndex = 1;
+            this.TB_NomEquipe.TabIndex = 0;
             this.TB_NomEquipe.TextChanged += new System.EventHandler(this.TB_NomEquipe_TextChanged);
             // 
             // DTP_Creation
@@ -92,7 +92,7 @@
             this.DTP_Creation.Location = new System.Drawing.Point(16, 155);
             this.DTP_Creation.Name = "DTP_Creation";
             this.DTP_Creation.Size = new System.Drawing.Size(200, 26);
-            this.DTP_Creation.TabIndex = 2;
+            this.DTP_Creation.TabIndex = 1;
             // 
             // CB_Division
             // 
@@ -103,7 +103,7 @@
             this.CB_Division.Location = new System.Drawing.Point(16, 252);
             this.CB_Division.Name = "CB_Division";
             this.CB_Division.Size = new System.Drawing.Size(200, 28);
-            this.CB_Division.TabIndex = 3;
+            this.CB_Division.TabIndex = 2;
             this.CB_Division.SelectedIndexChanged += new System.EventHandler(this.CB_Division_SelectedIndexChanged);
             // 
             // TB_Ville
@@ -111,7 +111,7 @@
             this.TB_Ville.Location = new System.Drawing.Point(16, 352);
             this.TB_Ville.Name = "TB_Ville";
             this.TB_Ville.Size = new System.Drawing.Size(200, 26);
-            this.TB_Ville.TabIndex = 4;
+            this.TB_Ville.TabIndex = 3;
             this.TB_Ville.TextChanged += new System.EventHandler(this.TB_Ville_TextChanged);
             // 
             // BTN_Ajouter
@@ -131,7 +131,7 @@
             this.BTN_Cancel.Location = new System.Drawing.Point(383, 442);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(102, 33);
-            this.BTN_Cancel.TabIndex = 5;
+            this.BTN_Cancel.TabIndex = 6;
             this.BTN_Cancel.Text = "Cancel";
             this.BTN_Cancel.UseVisualStyleBackColor = true;
             // 
@@ -140,7 +140,7 @@
             this.BTN_ChargerImage.Location = new System.Drawing.Point(289, 214);
             this.BTN_ChargerImage.Name = "BTN_ChargerImage";
             this.BTN_ChargerImage.Size = new System.Drawing.Size(183, 39);
-            this.BTN_ChargerImage.TabIndex = 7;
+            this.BTN_ChargerImage.TabIndex = 4;
             this.BTN_ChargerImage.Text = "Charger image";
             this.BTN_ChargerImage.UseVisualStyleBackColor = true;
             this.BTN_ChargerImage.Click += new System.EventHandler(this.BTN_ChargerImage_Click);

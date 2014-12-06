@@ -56,7 +56,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.57068F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.42932F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
             this.tableLayoutPanel1.Controls.Add(this.PB_Manu, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.PB_Shaun, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.PB_Lego, 1, 0);
@@ -83,7 +83,7 @@
             // PB_Shaun
             // 
             this.PB_Shaun.Image = global::TPFinal.Properties.Resources.shaun;
-            this.PB_Shaun.Location = new System.Drawing.Point(384, 3);
+            this.PB_Shaun.Location = new System.Drawing.Point(383, 3);
             this.PB_Shaun.Name = "PB_Shaun";
             this.PB_Shaun.Size = new System.Drawing.Size(184, 185);
             this.PB_Shaun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -97,7 +97,7 @@
             this.PB_Lego.Image = global::TPFinal.Properties.Resources.joueur_hockey_lego;
             this.PB_Lego.Location = new System.Drawing.Point(199, 3);
             this.PB_Lego.Name = "PB_Lego";
-            this.PB_Lego.Size = new System.Drawing.Size(179, 185);
+            this.PB_Lego.Size = new System.Drawing.Size(178, 185);
             this.PB_Lego.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Lego.TabIndex = 1;
             this.PB_Lego.TabStop = false;
@@ -124,6 +124,7 @@
             this.Name = "Form_APropos";
             this.Text = "Form_APropos";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_APropos_FormClosed);
+            this.Load += new System.EventHandler(this.Form_APropos_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Manu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Shaun)).EndInit();

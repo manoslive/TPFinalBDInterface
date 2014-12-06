@@ -64,6 +64,7 @@ namespace TPFinal
 
         private void Form_Classement_Load(object sender, EventArgs e)
         {
+            CB_Division.Select();
             LoadSettings();
             LoadDGV();
             LoadCBDivision();

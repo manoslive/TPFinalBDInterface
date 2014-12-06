@@ -141,6 +141,7 @@
             this.TB_NumJoueur.ReadOnly = true;
             this.TB_NumJoueur.Size = new System.Drawing.Size(228, 26);
             this.TB_NumJoueur.TabIndex = 1;
+            this.TB_NumJoueur.TabStop = false;
             // 
             // TB_NomJoueur
             // 
@@ -149,6 +150,7 @@
             this.TB_NomJoueur.ReadOnly = true;
             this.TB_NomJoueur.Size = new System.Drawing.Size(228, 26);
             this.TB_NomJoueur.TabIndex = 1;
+            this.TB_NomJoueur.TabStop = false;
             // 
             // TB_PrenomJoueur
             // 
@@ -157,6 +159,7 @@
             this.TB_PrenomJoueur.ReadOnly = true;
             this.TB_PrenomJoueur.Size = new System.Drawing.Size(228, 26);
             this.TB_PrenomJoueur.TabIndex = 1;
+            this.TB_PrenomJoueur.TabStop = false;
             // 
             // TB_NumMaillot
             // 
@@ -165,6 +168,7 @@
             this.TB_NumMaillot.ReadOnly = true;
             this.TB_NumMaillot.Size = new System.Drawing.Size(228, 26);
             this.TB_NumMaillot.TabIndex = 1;
+            this.TB_NumMaillot.TabStop = false;
             // 
             // DTP_DateNaissance
             // 
@@ -173,6 +177,7 @@
             this.DTP_DateNaissance.Name = "DTP_DateNaissance";
             this.DTP_DateNaissance.Size = new System.Drawing.Size(228, 26);
             this.DTP_DateNaissance.TabIndex = 2;
+            this.DTP_DateNaissance.TabStop = false;
             // 
             // CB_EquipeJoueur
             // 
@@ -182,6 +187,7 @@
             this.CB_EquipeJoueur.Name = "CB_EquipeJoueur";
             this.CB_EquipeJoueur.Size = new System.Drawing.Size(228, 28);
             this.CB_EquipeJoueur.TabIndex = 3;
+            this.CB_EquipeJoueur.TabStop = false;
             // 
             // CB_PosJoueur
             // 
@@ -195,6 +201,7 @@
             this.CB_PosJoueur.Name = "CB_PosJoueur";
             this.CB_PosJoueur.Size = new System.Drawing.Size(228, 28);
             this.CB_PosJoueur.TabIndex = 3;
+            this.CB_PosJoueur.TabStop = false;
             // 
             // TB_Url
             // 
@@ -203,6 +210,7 @@
             this.TB_Url.ReadOnly = true;
             this.TB_Url.Size = new System.Drawing.Size(228, 26);
             this.TB_Url.TabIndex = 1;
+            this.TB_Url.TabStop = false;
             // 
             // LB_Url
             // 
@@ -226,7 +234,7 @@
             this.FB_Precedent.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Precedent.Name = "FB_Precedent";
             this.FB_Precedent.Size = new System.Drawing.Size(60, 62);
-            this.FB_Precedent.TabIndex = 20;
+            this.FB_Precedent.TabIndex = 4;
             this.toolTip1.SetToolTip(this.FB_Precedent, "Précédent");
             this.FB_Precedent.Click += new System.EventHandler(this.BTN_Precedent_Click);
             // 
@@ -243,7 +251,7 @@
             this.FB_Suivant.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Suivant.Name = "FB_Suivant";
             this.FB_Suivant.Size = new System.Drawing.Size(60, 62);
-            this.FB_Suivant.TabIndex = 19;
+            this.FB_Suivant.TabIndex = 5;
             this.toolTip1.SetToolTip(this.FB_Suivant, "Suivant");
             this.FB_Suivant.Click += new System.EventHandler(this.BTN_Suivant_Click);
             // 
@@ -260,7 +268,7 @@
             this.FB_Fin.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Fin.Name = "FB_Fin";
             this.FB_Fin.Size = new System.Drawing.Size(60, 62);
-            this.FB_Fin.TabIndex = 18;
+            this.FB_Fin.TabIndex = 6;
             this.toolTip1.SetToolTip(this.FB_Fin, "Fin");
             this.FB_Fin.Click += new System.EventHandler(this.BTN_Fin_Click);
             // 
@@ -277,7 +285,7 @@
             this.FB_Debut.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Debut.Name = "FB_Debut";
             this.FB_Debut.Size = new System.Drawing.Size(60, 62);
-            this.FB_Debut.TabIndex = 17;
+            this.FB_Debut.TabIndex = 3;
             this.toolTip1.SetToolTip(this.FB_Debut, "Début");
             this.FB_Debut.Click += new System.EventHandler(this.BTN_Debut_Click);
             // 
@@ -294,7 +302,7 @@
             this.FB_SupprimerJoueur.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_SupprimerJoueur.Name = "FB_SupprimerJoueur";
             this.FB_SupprimerJoueur.Size = new System.Drawing.Size(69, 71);
-            this.FB_SupprimerJoueur.TabIndex = 16;
+            this.FB_SupprimerJoueur.TabIndex = 2;
             this.toolTip1.SetToolTip(this.FB_SupprimerJoueur, "Supprimer un joueur");
             this.FB_SupprimerJoueur.Click += new System.EventHandler(this.BTN_Effacer_Click);
             // 
@@ -311,7 +319,7 @@
             this.FB_ModifierJoueur.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_ModifierJoueur.Name = "FB_ModifierJoueur";
             this.FB_ModifierJoueur.Size = new System.Drawing.Size(69, 71);
-            this.FB_ModifierJoueur.TabIndex = 15;
+            this.FB_ModifierJoueur.TabIndex = 1;
             this.toolTip1.SetToolTip(this.FB_ModifierJoueur, "Modifier un joueur");
             this.FB_ModifierJoueur.Click += new System.EventHandler(this.BTN_Modifier_Click);
             // 
@@ -328,7 +336,7 @@
             this.FB_AjouterJoueur.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_AjouterJoueur.Name = "FB_AjouterJoueur";
             this.FB_AjouterJoueur.Size = new System.Drawing.Size(69, 71);
-            this.FB_AjouterJoueur.TabIndex = 14;
+            this.FB_AjouterJoueur.TabIndex = 0;
             this.toolTip1.SetToolTip(this.FB_AjouterJoueur, "Ajouter un joueur");
             this.FB_AjouterJoueur.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
@@ -390,56 +398,56 @@
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.modifierToolStripMenuItem.Text = "Modifier";
             this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
             // 
             // supprimerToolStripMenuItem
             // 
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // premierToolStripMenuItem
             // 
             this.premierToolStripMenuItem.Name = "premierToolStripMenuItem";
-            this.premierToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.premierToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.premierToolStripMenuItem.Text = "Suivant";
             this.premierToolStripMenuItem.Click += new System.EventHandler(this.premierToolStripMenuItem_Click);
             // 
             // dernierToolStripMenuItem
             // 
             this.dernierToolStripMenuItem.Name = "dernierToolStripMenuItem";
-            this.dernierToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.dernierToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.dernierToolStripMenuItem.Text = "Précédent";
             this.dernierToolStripMenuItem.Click += new System.EventHandler(this.dernierToolStripMenuItem_Click);
             // 
             // premierToolStripMenuItem1
             // 
             this.premierToolStripMenuItem1.Name = "premierToolStripMenuItem1";
-            this.premierToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
+            this.premierToolStripMenuItem1.Size = new System.Drawing.Size(167, 30);
             this.premierToolStripMenuItem1.Text = "Premier";
             this.premierToolStripMenuItem1.Click += new System.EventHandler(this.premierToolStripMenuItem1_Click);
             // 
             // dernierToolStripMenuItem1
             // 
             this.dernierToolStripMenuItem1.Name = "dernierToolStripMenuItem1";
-            this.dernierToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
+            this.dernierToolStripMenuItem1.Size = new System.Drawing.Size(167, 30);
             this.dernierToolStripMenuItem1.Text = "Dernier";
             this.dernierToolStripMenuItem1.Click += new System.EventHandler(this.dernierToolStripMenuItem1_Click);
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 

@@ -95,9 +95,8 @@ namespace TPFinal
 
         private void Form_Ajouter_Stats_Load(object sender, EventArgs e)
         {
-            //RemplirCBMatch();
-            //if (CB_NumeroMatch.Items.Count == 0)
-                RemplirCBMatchPremiereFois();
+            CB_NumeroMatch.Select();
+            RemplirCBMatchPremiereFois();
         }
         private void RemplirCBMatchPremiereFois()
         {
@@ -105,7 +104,7 @@ namespace TPFinal
             {
                 OracleCommand oraSelect = oracon.CreateCommand();
                 oraSelect.CommandText = "SELECT NumeroMatch FROM Match " +
-                                        "group by NumeroMatch " + 
+                                        "group by NumeroMatch " +
                                         "where NumeroJoueur=:NumeroJoueur";
                 OracleParameter OraParaNumJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Varchar2, 40);
 

@@ -43,5 +43,10 @@ namespace TPFinal
             if (callBackForm != null)
                 callBackForm.Show();
         }
+
+        private void Form_APropos_Load(object sender, EventArgs e)
+        {
+            BTN_Fermer.Select();
+        }
     }
 }

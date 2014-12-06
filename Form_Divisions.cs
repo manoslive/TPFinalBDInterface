@@ -57,6 +57,7 @@ namespace TPFinal
         }
         private void Form_Divisions_Load(object sender, EventArgs e)
         {
+            FB_AjouterDivision.Select();
             LoadSettings();
             LoadDGV();
         }

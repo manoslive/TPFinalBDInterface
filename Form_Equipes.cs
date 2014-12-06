@@ -37,6 +37,7 @@ namespace TPFinal
 
         private void Form_Equipe_Load(object sender, EventArgs e)
         {
+            FB_AjouterEquipe.Select();
             LoadSettings();
             // On appelle la form de connection
             Form_Connection connection = new Form_Connection(oracon, maBelleConnection);

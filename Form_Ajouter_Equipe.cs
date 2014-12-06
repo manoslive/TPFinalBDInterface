@@ -25,6 +25,7 @@ namespace TPFinal
         }
         private void FormEquipe_Ajouter_Load(object sender, EventArgs e)
         {
+            TB_NomEquipe.Select();
             OracleCommand oraSelect = oracon.CreateCommand();
             oraSelect.CommandText = "SELECT NomDivision FROM Division";
             using (OracleDataReader oraReader = oraSelect.ExecuteReader())

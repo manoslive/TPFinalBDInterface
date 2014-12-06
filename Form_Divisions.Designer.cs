@@ -130,7 +130,7 @@
             this.FB_SupprimerDivision.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_SupprimerDivision.Name = "FB_SupprimerDivision";
             this.FB_SupprimerDivision.Size = new System.Drawing.Size(69, 71);
-            this.FB_SupprimerDivision.TabIndex = 18;
+            this.FB_SupprimerDivision.TabIndex = 2;
             this.toolTip1.SetToolTip(this.FB_SupprimerDivision, "Supprimer une division");
             this.FB_SupprimerDivision.Click += new System.EventHandler(this.BTN_Supprimer_Click);
             // 
@@ -147,7 +147,7 @@
             this.FB_ModifierDivision.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_ModifierDivision.Name = "FB_ModifierDivision";
             this.FB_ModifierDivision.Size = new System.Drawing.Size(69, 71);
-            this.FB_ModifierDivision.TabIndex = 17;
+            this.FB_ModifierDivision.TabIndex = 1;
             this.toolTip1.SetToolTip(this.FB_ModifierDivision, "Modifier une division");
             this.FB_ModifierDivision.Click += new System.EventHandler(this.BTN_Modifier_Click);
             // 
@@ -164,7 +164,7 @@
             this.FB_AjouterDivision.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_AjouterDivision.Name = "FB_AjouterDivision";
             this.FB_AjouterDivision.Size = new System.Drawing.Size(69, 71);
-            this.FB_AjouterDivision.TabIndex = 16;
+            this.FB_AjouterDivision.TabIndex = 0;
             this.toolTip1.SetToolTip(this.FB_AjouterDivision, "Ajouter une division");
             this.FB_AjouterDivision.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 

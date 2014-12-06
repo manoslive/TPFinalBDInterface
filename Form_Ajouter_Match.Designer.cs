@@ -49,7 +49,7 @@
             this.CB_EquipeHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CB_EquipeHome.Name = "CB_EquipeHome";
             this.CB_EquipeHome.Size = new System.Drawing.Size(196, 28);
-            this.CB_EquipeHome.TabIndex = 19;
+            this.CB_EquipeHome.TabIndex = 0;
             this.CB_EquipeHome.SelectedIndexChanged += new System.EventHandler(this.CB_EquipeHome_SelectedIndexChanged);
             // 
             // CB_EquipeAway
@@ -59,7 +59,7 @@
             this.CB_EquipeAway.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CB_EquipeAway.Name = "CB_EquipeAway";
             this.CB_EquipeAway.Size = new System.Drawing.Size(196, 28);
-            this.CB_EquipeAway.TabIndex = 21;
+            this.CB_EquipeAway.TabIndex = 1;
             this.CB_EquipeAway.SelectedIndexChanged += new System.EventHandler(this.CB_EquipeAway_SelectedIndexChanged);
             // 
             // BTN_Cancel
@@ -69,7 +69,7 @@
             this.BTN_Cancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(112, 35);
-            this.BTN_Cancel.TabIndex = 31;
+            this.BTN_Cancel.TabIndex = 5;
             this.BTN_Cancel.Text = "Cancel";
             this.BTN_Cancel.UseVisualStyleBackColor = true;
             // 
@@ -80,7 +80,7 @@
             this.TB_Lieu.MaxLength = 40;
             this.TB_Lieu.Name = "TB_Lieu";
             this.TB_Lieu.Size = new System.Drawing.Size(196, 26);
-            this.TB_Lieu.TabIndex = 25;
+            this.TB_Lieu.TabIndex = 3;
             this.TB_Lieu.TextChanged += new System.EventHandler(this.TB_Lieu_TextChanged);
             // 
             // TB_NumeroMatch
@@ -118,7 +118,7 @@
             this.DTP_DateRencontre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DTP_DateRencontre.Name = "DTP_DateRencontre";
             this.DTP_DateRencontre.Size = new System.Drawing.Size(196, 26);
-            this.DTP_DateRencontre.TabIndex = 23;
+            this.DTP_DateRencontre.TabIndex = 2;
             this.DTP_DateRencontre.ValueChanged += new System.EventHandler(this.DTP_DateRencontre_ValueChanged);
             // 
             // LB_EquipeAway
@@ -158,7 +158,7 @@
             this.BTN_Ajouter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(112, 35);
-            this.BTN_Ajouter.TabIndex = 30;
+            this.BTN_Ajouter.TabIndex = 4;
             this.BTN_Ajouter.Text = "Ajouter";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
             this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);

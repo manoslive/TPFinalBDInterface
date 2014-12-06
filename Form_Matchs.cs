@@ -186,6 +186,7 @@ namespace TPFinal
         }
         private void Form_Matchs_Load(object sender, EventArgs e)
         {
+            BTN_AjoutRencontre.Select();
             LoadSettings();
             LoadDGVmatch();
         }

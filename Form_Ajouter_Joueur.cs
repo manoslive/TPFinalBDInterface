@@ -121,6 +121,7 @@ namespace TPFinal
 
         private void Form_Ajouter_Joueur_Load(object sender, EventArgs e)
         {
+            TB_NomJoueur.Select();
             OracleCommand oraSelect = oracon.CreateCommand();
             oraSelect.CommandText = "SELECT NomEquipe FROM Equipe";
             using (OracleDataReader oraReader = oraSelect.ExecuteReader())

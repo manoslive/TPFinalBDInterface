@@ -38,6 +38,7 @@ namespace TPFinal
         }
         private void Form_Calendrier_Matchs_Load(object sender, EventArgs e)
         {
+            PB_Fermer_Gif.Select();
             LoadSettings();
             LoadDGV();
         }
