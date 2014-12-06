@@ -81,8 +81,7 @@ namespace TPFinal
                 // Faire un lien avec la form équipe avec la division choisie
             }
         }
-
-        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        private void Ajouter()
         {
             Form_Ajouter_Division aDiv = new Form_Ajouter_Division(oracon, connection);
             aDiv.Text = "Ajouter une division";
@@ -113,8 +112,7 @@ namespace TPFinal
                 }
             }
         }
-
-        private void BTN_Modifier_Click(object sender, EventArgs e)
+        private void Modifier()
         {
             Form_Ajouter_Division Modifier = new Form_Ajouter_Division(oracon, connection);
             Modifier.nomDivision = DGV_Divisions.SelectedRows[0].Cells[0].Value.ToString();
@@ -155,10 +153,9 @@ namespace TPFinal
                 }
             }
         }
-
-        private void BTN_Supprimer_Click(object sender, EventArgs e)
+        private void Supprimer()
         {
-           if( MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK);
+            if( MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK);
             {
                 try
                 {
@@ -179,6 +176,20 @@ namespace TPFinal
                     }
                 }
             }
+        }
+        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        {
+            Ajouter();
+        }
+
+        private void BTN_Modifier_Click(object sender, EventArgs e)
+        {
+            Modifier();
+        }
+
+        private void BTN_Supprimer_Click(object sender, EventArgs e)
+        {
+            Supprimer();
         }
 
         private void Form_Divisions_FormClosed(object sender, FormClosedEventArgs e)
@@ -226,6 +237,33 @@ namespace TPFinal
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void Form_Divisions_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.Q))
+            {
+                this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                this.Close();
+            }
+            if (keyData == (Keys.Control | Keys.A))
+                Ajouter();
+            if (keyData == (Keys.Control | Keys.M))
+                Modifier();
+            if (keyData == (Keys.Control | Keys.S))
+                Supprimer();
+            if (keyData == Keys.F1)
+                MessageBox.Show("Voici les touches ayant un racourci \n" +
+                                "F1- Aide \n" +
+                                "Ctrl+Q- Quitter \n" +
+                                "Ctrl+A - Ajouter une division \n" +
+                                "Ctrl+M - Modifier la division sélectionnée\n" +
+                                "Ctrl+S - Supprimer la division sélectionnée\n", "Aide", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return true;
         }
     }
 }

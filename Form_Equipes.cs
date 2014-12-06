@@ -352,7 +352,19 @@ namespace TPFinal
         private void Form_Equipes_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
+            {
                 CallFormJoueur();
+                MessageBox.Show("Enter pressed");
+            }
+            if (e.KeyCode == Keys.Q)
+                MessageBox.Show("Voici les touches ayant un racourci \n" +
+                                "F1- Aide \n" + 
+                                "Enter- Page joueur \n" + 
+                                "Ctrl+Q- Quitter \n" +
+                                "Ctrl+ - \n" +
+                                "Ctrl+ - \n" +
+                                "Ctrl+ - \n" +  
+                                "Ctrl+ - \n", "Aide", MessageBoxButtons.OK , MessageBoxIcon.Information);
         }
 
         private void BTN_Matchs_Click(object sender, EventArgs e)
