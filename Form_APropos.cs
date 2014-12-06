@@ -37,5 +37,11 @@ namespace TPFinal
         {
 
         }
+
+        private void Form_APropos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (callBackForm != null)
+                callBackForm.Show();
+        }
     }
 }
