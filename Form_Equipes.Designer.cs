@@ -80,6 +80,8 @@
             // 
             // DGV_Equipes
             // 
+            this.DGV_Equipes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.DGV_Equipes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.DGV_Equipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Equipes.ContextMenuStrip = this.CM_EquipeDGV;
             this.DGV_Equipes.Location = new System.Drawing.Point(22, 43);
@@ -135,6 +137,7 @@
             // 
             // BTN_Matchs
             // 
+            this.BTN_Matchs.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BTN_Matchs.Location = new System.Drawing.Point(22, 319);
             this.BTN_Matchs.Name = "BTN_Matchs";
             this.BTN_Matchs.Size = new System.Drawing.Size(118, 40);
@@ -145,6 +148,7 @@
             // 
             // CB_Division
             // 
+            this.CB_Division.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.CB_Division.FormattingEnabled = true;
             this.CB_Division.Items.AddRange(new object[] {
             "Toutes"});
@@ -156,6 +160,7 @@
             // 
             // LB_Division
             // 
+            this.LB_Division.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.LB_Division.AutoSize = true;
             this.LB_Division.Location = new System.Drawing.Point(468, 303);
             this.LB_Division.Name = "LB_Division";
@@ -165,6 +170,7 @@
             // 
             // PB_Fermer_Gif
             // 
+            this.PB_Fermer_Gif.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PB_Fermer_Gif.BackColor = System.Drawing.Color.Transparent;
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
             this.PB_Fermer_Gif.Location = new System.Drawing.Point(708, 303);
@@ -181,6 +187,7 @@
             // 
             // FB_Fermer
             // 
+            this.FB_Fermer.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.FB_Fermer.BackColor = System.Drawing.Color.Transparent;
             this.FB_Fermer.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -199,6 +206,7 @@
             // 
             // FB_SupprimerEquipe
             // 
+            this.FB_SupprimerEquipe.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.FB_SupprimerEquipe.BackColor = System.Drawing.Color.Transparent;
             this.FB_SupprimerEquipe.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
             this.FB_SupprimerEquipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -216,6 +224,7 @@
             // 
             // FB_ModifierEquipe
             // 
+            this.FB_ModifierEquipe.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.FB_ModifierEquipe.BackColor = System.Drawing.Color.Transparent;
             this.FB_ModifierEquipe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_ModifierEquipe.BackgroundImage")));
             this.FB_ModifierEquipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -233,6 +242,7 @@
             // 
             // FB_AjouterEquipe
             // 
+            this.FB_AjouterEquipe.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.FB_AjouterEquipe.BackColor = System.Drawing.Color.Transparent;
             this.FB_AjouterEquipe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_AjouterEquipe.BackgroundImage")));
             this.FB_AjouterEquipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -250,6 +260,7 @@
             // 
             // FB_Classement
             // 
+            this.FB_Classement.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.FB_Classement.BackColor = System.Drawing.Color.Transparent;
             this.FB_Classement.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_Classement.BackgroundImage")));
             this.FB_Classement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -267,6 +278,7 @@
             // 
             // FB_Top3
             // 
+            this.FB_Top3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.FB_Top3.BackColor = System.Drawing.Color.Transparent;
             this.FB_Top3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_Top3.BackgroundImage")));
             this.FB_Top3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -284,6 +296,7 @@
             // 
             // BTN_Divisions
             // 
+            this.BTN_Divisions.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BTN_Divisions.Location = new System.Drawing.Point(174, 320);
             this.BTN_Divisions.Name = "BTN_Divisions";
             this.BTN_Divisions.Size = new System.Drawing.Size(116, 38);
@@ -399,6 +412,7 @@
             // 
             // PB_Equipe
             // 
+            this.PB_Equipe.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PB_Equipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PB_Equipe.ErrorImage = global::TPFinal.Properties.Resources.no_picture;
             this.PB_Equipe.Location = new System.Drawing.Point(672, 43);
@@ -481,8 +495,9 @@
             this.Controls.Add(this.DGV_Equipes);
             this.Controls.Add(this.MS_Equipe);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MainMenuStrip = this.MS_Equipe;
+            this.MinimumSize = new System.Drawing.Size(848, 429);
             this.Name = "Form_Equipes";
             this.Text = "Form_Equipe";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Equipes_FormClosing);
