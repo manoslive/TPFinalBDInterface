@@ -507,5 +507,51 @@ namespace TPFinal
                                 "Ctrl+Shift+J - Page joueur", "Aide", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return true;
         }
+
+        private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Ajouter();
+        }
+
+        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Modifier();
+        }
+
+        private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Supprimer();
+        }
+
+        private void matchToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Match();
+        }
+
+        private void divisionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Division();
+        }
+
+        private void classementToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Classement();
+        }
+
+        private void top3ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Top3();
+        }
+
+        private void joueursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CallFormJoueur();
+        }
+
+        private void quitterToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Close();
+        }
     }
 }

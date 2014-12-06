@@ -73,7 +73,7 @@ namespace TPFinal.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("795, 471")]
+        [global::System.Configuration.DefaultSettingValueAttribute("795, 490")]
         public global::System.Drawing.Size Form_MatchsSize {
             get {
                 return ((global::System.Drawing.Size)(this["Form_MatchsSize"]));
@@ -169,7 +169,7 @@ namespace TPFinal.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("435, 330")]
+        [global::System.Configuration.DefaultSettingValueAttribute("435, 350")]
         public global::System.Drawing.Size Form_ClassementSize {
             get {
                 return ((global::System.Drawing.Size)(this["Form_ClassementSize"]));

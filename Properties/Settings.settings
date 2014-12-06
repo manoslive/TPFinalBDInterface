@@ -15,7 +15,7 @@
       <Value Profile="(Default)">0, 0</Value>
     </Setting>
     <Setting Name="Form_MatchsSize" Type="System.Drawing.Size" Scope="User">
-      <Value Profile="(Default)">795, 471</Value>
+      <Value Profile="(Default)">795, 490</Value>
     </Setting>
     <Setting Name="Form_MatchsLocation" Type="System.Drawing.Point" Scope="User">
       <Value Profile="(Default)">0, 0</Value>
@@ -39,7 +39,7 @@
       <Value Profile="(Default)">0, 0</Value>
     </Setting>
     <Setting Name="Form_ClassementSize" Type="System.Drawing.Size" Scope="User">
-      <Value Profile="(Default)">435, 330</Value>
+      <Value Profile="(Default)">435, 350</Value>
     </Setting>
     <Setting Name="Form_ClassementLocation" Type="System.Drawing.Point" Scope="User">
       <Value Profile="(Default)">0, 0</Value>

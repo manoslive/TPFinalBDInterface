@@ -115,5 +115,19 @@ namespace TPFinal
         {
             DialogResult = DialogResult.Cancel;
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form_APropos propos = new Form_APropos();
+            propos.Text = "À Propos";
+            this.Hide();
+            propos.callBackForm = this;
+            propos.ShowDialog();
+        }
+
+        private void quitterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+        }
     }
 }

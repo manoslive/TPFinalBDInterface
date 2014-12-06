@@ -265,5 +265,14 @@ namespace TPFinal
                                 "Ctrl+S - Supprimer la division sélectionnée\n", "Aide", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return true;
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Form_APropos propos = new Form_APropos();
+            propos.Text = "À Propos";
+            this.Hide();
+            propos.callBackForm = this;
+            propos.ShowDialog();
+        }
     }
 }

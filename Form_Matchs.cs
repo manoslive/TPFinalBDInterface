@@ -421,5 +421,41 @@ namespace TPFinal
                                 "Ctrl+Shift+C - Page calendrier\n", "Aide", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return true;
         }
+
+        private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AjouterStats();
+        }
+
+        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ajouter();
+        }
+
+        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Modifier();
+        }
+
+        private void calendrierToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Calendrier();
+        }
+
+        private void quitterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Close();
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form_APropos propos = new Form_APropos();
+            propos.Text = "À Propos";
+            this.Hide();
+            propos.callBackForm = this;
+            propos.ShowDialog();
+        }
     }
 }

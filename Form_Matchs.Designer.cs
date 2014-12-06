@@ -55,6 +55,17 @@
             this.ajouterStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendrierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MS_Equipe = new System.Windows.Forms.MenuStrip();
+            this.fonctionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.matchsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calendrierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.statistiqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
@@ -62,13 +73,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).BeginInit();
             this.CM_Match.SuspendLayout();
+            this.MS_Equipe.SuspendLayout();
             this.SuspendLayout();
             // 
             // LB_EquipeHome
             // 
             this.LB_EquipeHome.AutoSize = true;
             this.LB_EquipeHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_EquipeHome.Location = new System.Drawing.Point(254, 12);
+            this.LB_EquipeHome.Location = new System.Drawing.Point(254, 41);
             this.LB_EquipeHome.Name = "LB_EquipeHome";
             this.LB_EquipeHome.Size = new System.Drawing.Size(169, 25);
             this.LB_EquipeHome.TabIndex = 0;
@@ -78,7 +90,7 @@
             // 
             this.LB_EquipeAway.AutoSize = true;
             this.LB_EquipeAway.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_EquipeAway.Location = new System.Drawing.Point(753, 12);
+            this.LB_EquipeAway.Location = new System.Drawing.Point(753, 41);
             this.LB_EquipeAway.Name = "LB_EquipeAway";
             this.LB_EquipeAway.Size = new System.Drawing.Size(154, 25);
             this.LB_EquipeAway.TabIndex = 0;
@@ -86,7 +98,7 @@
             // 
             // BTN_AjoutRencontre
             // 
-            this.BTN_AjoutRencontre.Location = new System.Drawing.Point(12, 397);
+            this.BTN_AjoutRencontre.Location = new System.Drawing.Point(12, 426);
             this.BTN_AjoutRencontre.Name = "BTN_AjoutRencontre";
             this.BTN_AjoutRencontre.Size = new System.Drawing.Size(164, 32);
             this.BTN_AjoutRencontre.TabIndex = 4;
@@ -96,7 +108,7 @@
             // 
             // BTN_ModifierMatch
             // 
-            this.BTN_ModifierMatch.Location = new System.Drawing.Point(182, 397);
+            this.BTN_ModifierMatch.Location = new System.Drawing.Point(182, 426);
             this.BTN_ModifierMatch.Name = "BTN_ModifierMatch";
             this.BTN_ModifierMatch.Size = new System.Drawing.Size(164, 32);
             this.BTN_ModifierMatch.TabIndex = 4;
@@ -106,7 +118,7 @@
             // 
             // BTN_Calendrier
             // 
-            this.BTN_Calendrier.Location = new System.Drawing.Point(681, 397);
+            this.BTN_Calendrier.Location = new System.Drawing.Point(681, 426);
             this.BTN_Calendrier.Name = "BTN_Calendrier";
             this.BTN_Calendrier.Size = new System.Drawing.Size(164, 32);
             this.BTN_Calendrier.TabIndex = 4;
@@ -129,7 +141,7 @@
             // 
             this.DGV_Matchs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Matchs.ContextMenuStrip = this.CM_Match;
-            this.DGV_Matchs.Location = new System.Drawing.Point(12, 235);
+            this.DGV_Matchs.Location = new System.Drawing.Point(12, 264);
             this.DGV_Matchs.MultiSelect = false;
             this.DGV_Matchs.Name = "DGV_Matchs";
             this.DGV_Matchs.ReadOnly = true;
@@ -145,7 +157,7 @@
             // 
             this.DGV_Joueurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Joueurs.ContextMenuStrip = this.CM_Match;
-            this.DGV_Joueurs.Location = new System.Drawing.Point(6, 437);
+            this.DGV_Joueurs.Location = new System.Drawing.Point(6, 466);
             this.DGV_Joueurs.MultiSelect = false;
             this.DGV_Joueurs.Name = "DGV_Joueurs";
             this.DGV_Joueurs.ReadOnly = true;
@@ -160,7 +172,7 @@
             // LB_ScoreAway
             // 
             this.LB_ScoreAway.AutoSize = true;
-            this.LB_ScoreAway.Location = new System.Drawing.Point(795, 114);
+            this.LB_ScoreAway.Location = new System.Drawing.Point(795, 143);
             this.LB_ScoreAway.Name = "LB_ScoreAway";
             this.LB_ScoreAway.Size = new System.Drawing.Size(84, 20);
             this.LB_ScoreAway.TabIndex = 7;
@@ -169,7 +181,7 @@
             // LB_ScoreHome
             // 
             this.LB_ScoreHome.AutoSize = true;
-            this.LB_ScoreHome.Location = new System.Drawing.Point(298, 114);
+            this.LB_ScoreHome.Location = new System.Drawing.Point(298, 143);
             this.LB_ScoreHome.Name = "LB_ScoreHome";
             this.LB_ScoreHome.Size = new System.Drawing.Size(84, 20);
             this.LB_ScoreHome.TabIndex = 7;
@@ -179,7 +191,7 @@
             // 
             this.LB_NbButsHome.AutoSize = true;
             this.LB_NbButsHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_NbButsHome.Location = new System.Drawing.Point(321, 148);
+            this.LB_NbButsHome.Location = new System.Drawing.Point(321, 177);
             this.LB_NbButsHome.Name = "LB_NbButsHome";
             this.LB_NbButsHome.Size = new System.Drawing.Size(36, 37);
             this.LB_NbButsHome.TabIndex = 8;
@@ -189,7 +201,7 @@
             // 
             this.LB_NbButsAway.AutoSize = true;
             this.LB_NbButsAway.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_NbButsAway.Location = new System.Drawing.Point(826, 148);
+            this.LB_NbButsAway.Location = new System.Drawing.Point(826, 177);
             this.LB_NbButsAway.Name = "LB_NbButsAway";
             this.LB_NbButsAway.Size = new System.Drawing.Size(36, 37);
             this.LB_NbButsAway.TabIndex = 8;
@@ -198,7 +210,7 @@
             // TB_Receveur
             // 
             this.TB_Receveur.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TB_Receveur.Location = new System.Drawing.Point(258, 55);
+            this.TB_Receveur.Location = new System.Drawing.Point(258, 84);
             this.TB_Receveur.Name = "TB_Receveur";
             this.TB_Receveur.ReadOnly = true;
             this.TB_Receveur.Size = new System.Drawing.Size(165, 19);
@@ -209,7 +221,7 @@
             // TB_Visiteur
             // 
             this.TB_Visiteur.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TB_Visiteur.Location = new System.Drawing.Point(753, 55);
+            this.TB_Visiteur.Location = new System.Drawing.Point(753, 84);
             this.TB_Visiteur.Name = "TB_Visiteur";
             this.TB_Visiteur.ReadOnly = true;
             this.TB_Visiteur.Size = new System.Drawing.Size(165, 19);
@@ -219,7 +231,7 @@
             // 
             // BTN_AjoutStats
             // 
-            this.BTN_AjoutStats.Location = new System.Drawing.Point(12, 598);
+            this.BTN_AjoutStats.Location = new System.Drawing.Point(12, 627);
             this.BTN_AjoutStats.Name = "BTN_AjoutStats";
             this.BTN_AjoutStats.Size = new System.Drawing.Size(164, 32);
             this.BTN_AjoutStats.TabIndex = 4;
@@ -230,7 +242,7 @@
             // PB_Fermer_Gif
             // 
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
-            this.PB_Fermer_Gif.Location = new System.Drawing.Point(1090, 598);
+            this.PB_Fermer_Gif.Location = new System.Drawing.Point(1090, 627);
             this.PB_Fermer_Gif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
             this.PB_Fermer_Gif.Size = new System.Drawing.Size(60, 62);
@@ -250,7 +262,7 @@
             this.FB_Fermer.ImageDisable = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.ImageOver = null;
-            this.FB_Fermer.Location = new System.Drawing.Point(1090, 594);
+            this.FB_Fermer.Location = new System.Drawing.Point(1090, 623);
             this.FB_Fermer.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Fermer.Name = "FB_Fermer";
             this.FB_Fermer.Size = new System.Drawing.Size(60, 62);
@@ -260,7 +272,7 @@
             // PB_Faceoff
             // 
             this.PB_Faceoff.Image = global::TPFinal.Properties.Resources.hockey_face_off;
-            this.PB_Faceoff.Location = new System.Drawing.Point(450, 12);
+            this.PB_Faceoff.Location = new System.Drawing.Point(450, 41);
             this.PB_Faceoff.Name = "PB_Faceoff";
             this.PB_Faceoff.Size = new System.Drawing.Size(297, 186);
             this.PB_Faceoff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -269,7 +281,7 @@
             // 
             // PB_EquipeHome
             // 
-            this.PB_EquipeHome.Location = new System.Drawing.Point(12, 12);
+            this.PB_EquipeHome.Location = new System.Drawing.Point(12, 41);
             this.PB_EquipeHome.Name = "PB_EquipeHome";
             this.PB_EquipeHome.Size = new System.Drawing.Size(224, 206);
             this.PB_EquipeHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -278,7 +290,7 @@
             // 
             // PB_EquipeAway
             // 
-            this.PB_EquipeAway.Location = new System.Drawing.Point(932, 12);
+            this.PB_EquipeAway.Location = new System.Drawing.Point(932, 41);
             this.PB_EquipeAway.Name = "PB_EquipeAway";
             this.PB_EquipeAway.Size = new System.Drawing.Size(224, 206);
             this.PB_EquipeAway.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -331,12 +343,101 @@
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
+            // MS_Equipe
+            // 
+            this.MS_Equipe.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fonctionsToolStripMenuItem,
+            this.paramètresToolStripMenuItem,
+            this.toolStripMenuItem1});
+            this.MS_Equipe.Location = new System.Drawing.Point(0, 0);
+            this.MS_Equipe.Name = "MS_Equipe";
+            this.MS_Equipe.Size = new System.Drawing.Size(1168, 33);
+            this.MS_Equipe.TabIndex = 14;
+            this.MS_Equipe.Text = "menuStrip1";
+            // 
+            // fonctionsToolStripMenuItem
+            // 
+            this.fonctionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.matchsToolStripMenuItem,
+            this.statistiqueToolStripMenuItem,
+            this.calendrierToolStripMenuItem1,
+            this.quitterToolStripMenuItem1});
+            this.fonctionsToolStripMenuItem.Name = "fonctionsToolStripMenuItem";
+            this.fonctionsToolStripMenuItem.Size = new System.Drawing.Size(113, 29);
+            this.fonctionsToolStripMenuItem.Text = "Fonctions...";
+            // 
+            // paramètresToolStripMenuItem
+            // 
+            this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
+            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(124, 29);
+            this.paramètresToolStripMenuItem.Text = "Paramètres...";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 29);
+            this.toolStripMenuItem1.Text = "?";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // matchsToolStripMenuItem
+            // 
+            this.matchsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterToolStripMenuItem,
+            this.modifierToolStripMenuItem});
+            this.matchsToolStripMenuItem.Name = "matchsToolStripMenuItem";
+            this.matchsToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.matchsToolStripMenuItem.Text = "Matchs...";
+            // 
+            // ajouterToolStripMenuItem
+            // 
+            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.ajouterToolStripMenuItem.Text = "Ajouter";
+            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
+            // 
+            // modifierToolStripMenuItem
+            // 
+            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.modifierToolStripMenuItem.Text = "Modifier";
+            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
+            // 
+            // calendrierToolStripMenuItem1
+            // 
+            this.calendrierToolStripMenuItem1.Name = "calendrierToolStripMenuItem1";
+            this.calendrierToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
+            this.calendrierToolStripMenuItem1.Text = "Calendrier";
+            this.calendrierToolStripMenuItem1.Click += new System.EventHandler(this.calendrierToolStripMenuItem1_Click);
+            // 
+            // statistiqueToolStripMenuItem
+            // 
+            this.statistiqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterToolStripMenuItem1});
+            this.statistiqueToolStripMenuItem.Name = "statistiqueToolStripMenuItem";
+            this.statistiqueToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.statistiqueToolStripMenuItem.Text = "Statistiques...";
+            // 
+            // quitterToolStripMenuItem1
+            // 
+            this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
+            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
+            this.quitterToolStripMenuItem1.Text = "Quitter";
+            this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
+            // 
+            // ajouterToolStripMenuItem1
+            // 
+            this.ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
+            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
+            this.ajouterToolStripMenuItem1.Text = "Ajouter";
+            this.ajouterToolStripMenuItem1.Click += new System.EventHandler(this.ajouterToolStripMenuItem1_Click);
+            // 
             // Form_Matchs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1168, 665);
+            this.ClientSize = new System.Drawing.Size(1168, 697);
             this.ContextMenuStrip = this.CM_Match;
+            this.Controls.Add(this.MS_Equipe);
             this.Controls.Add(this.PB_Fermer_Gif);
             this.Controls.Add(this.FB_Fermer);
             this.Controls.Add(this.TB_Visiteur);
@@ -369,6 +470,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).EndInit();
             this.CM_Match.ResumeLayout(false);
+            this.MS_Equipe.ResumeLayout(false);
+            this.MS_Equipe.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,6 +505,17 @@
         private System.Windows.Forms.ToolStripMenuItem ajouterStatsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calendrierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip MS_Equipe;
+        private System.Windows.Forms.ToolStripMenuItem fonctionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paramètresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem matchsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calendrierToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem statistiqueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem1;
 
     }
 }
