@@ -50,6 +50,7 @@
             this.CB_EquipeHome.Name = "CB_EquipeHome";
             this.CB_EquipeHome.Size = new System.Drawing.Size(196, 28);
             this.CB_EquipeHome.TabIndex = 19;
+            this.CB_EquipeHome.SelectedIndexChanged += new System.EventHandler(this.CB_EquipeHome_SelectedIndexChanged);
             // 
             // CB_EquipeAway
             // 
@@ -59,6 +60,7 @@
             this.CB_EquipeAway.Name = "CB_EquipeAway";
             this.CB_EquipeAway.Size = new System.Drawing.Size(196, 28);
             this.CB_EquipeAway.TabIndex = 21;
+            this.CB_EquipeAway.SelectedIndexChanged += new System.EventHandler(this.CB_EquipeAway_SelectedIndexChanged);
             // 
             // BTN_Cancel
             // 
@@ -79,6 +81,7 @@
             this.TB_Lieu.Name = "TB_Lieu";
             this.TB_Lieu.Size = new System.Drawing.Size(196, 26);
             this.TB_Lieu.TabIndex = 25;
+            this.TB_Lieu.TextChanged += new System.EventHandler(this.TB_Lieu_TextChanged);
             // 
             // TB_NumeroMatch
             // 
@@ -116,6 +119,7 @@
             this.DTP_DateRencontre.Name = "DTP_DateRencontre";
             this.DTP_DateRencontre.Size = new System.Drawing.Size(196, 26);
             this.DTP_DateRencontre.TabIndex = 23;
+            this.DTP_DateRencontre.ValueChanged += new System.EventHandler(this.DTP_DateRencontre_ValueChanged);
             // 
             // LB_EquipeAway
             // 
@@ -149,7 +153,7 @@
             // 
             // BTN_Ajouter
             // 
-            this.BTN_Ajouter.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BTN_Ajouter.Enabled = false;
             this.BTN_Ajouter.Location = new System.Drawing.Point(157, 254);
             this.BTN_Ajouter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
@@ -157,6 +161,7 @@
             this.BTN_Ajouter.TabIndex = 30;
             this.BTN_Ajouter.Text = "Ajouter";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
+            this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
             // Form_Ajouter_Match
             // 

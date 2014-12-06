@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
+using System.Text.RegularExpressions;
 
 namespace TPFinal
 {
@@ -84,10 +85,6 @@ namespace TPFinal
 
         private void ValidationChamps(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
         }
 
         private void Form_Ajouter_Stats_FormClosing(object sender, FormClosingEventArgs e)
@@ -202,10 +199,43 @@ namespace TPFinal
         {
 
         }
-
+        private void VerifCases()
+        {
+            if (CB_NumeroJoueur.Text != "" && CB_NumeroMatch.Text != "" && TB_NbButs.Text != "" && TB_NbPasses.Text != "" && TB_TempsPunition.Text != "")
+                BTN_Ajouter.Enabled = true;
+            else
+                BTN_Ajouter.Enabled = false;
+        }
         private void CB_NumeroMatch_SelectedIndexChanged(object sender, EventArgs e)
         {
             RemplirCBJoueur();
+        }
+
+        private void TB_TempsPunition_TextChanged(object sender, EventArgs e)
+        {
+            VerifCases();
+            if (!Regex.IsMatch(TB_TempsPunition.Text, @"^[0-9]+$"))
+                TB_TempsPunition.Text = "";
+
+        }
+
+        private void CB_NumeroJoueur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VerifCases();
+        }
+
+        private void TB_NbPasses_TextChanged(object sender, EventArgs e)
+        {
+            VerifCases();
+            if (!Regex.IsMatch(TB_NbPasses.Text, @"^[0-9]+$"))
+                TB_NbPasses.Text = "";
+        }
+
+        private void TB_NbButs_TextChanged(object sender, EventArgs e)
+        {
+            VerifCases();
+            if (!Regex.IsMatch(TB_NbButs.Text, @"^[0-9]+$"))
+                TB_NbButs.Text = "";
         }
     }
 }

@@ -49,6 +49,7 @@
             this.TB_TempsPunition.Name = "TB_TempsPunition";
             this.TB_TempsPunition.Size = new System.Drawing.Size(180, 26);
             this.TB_TempsPunition.TabIndex = 13;
+            this.TB_TempsPunition.TextChanged += new System.EventHandler(this.TB_TempsPunition_TextChanged);
             this.TB_TempsPunition.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidationChamps);
             // 
             // TB_NbPasses
@@ -58,6 +59,7 @@
             this.TB_NbPasses.Name = "TB_NbPasses";
             this.TB_NbPasses.Size = new System.Drawing.Size(180, 26);
             this.TB_NbPasses.TabIndex = 14;
+            this.TB_NbPasses.TextChanged += new System.EventHandler(this.TB_NbPasses_TextChanged);
             this.TB_NbPasses.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidationChamps);
             // 
             // TB_NbButs
@@ -67,6 +69,7 @@
             this.TB_NbButs.Name = "TB_NbButs";
             this.TB_NbButs.Size = new System.Drawing.Size(180, 26);
             this.TB_NbButs.TabIndex = 15;
+            this.TB_NbButs.TextChanged += new System.EventHandler(this.TB_NbButs_TextChanged);
             this.TB_NbButs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidationChamps);
             // 
             // BTN_Cancel
@@ -133,6 +136,7 @@
             // BTN_Ajouter
             // 
             this.BTN_Ajouter.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BTN_Ajouter.Enabled = false;
             this.BTN_Ajouter.Location = new System.Drawing.Point(121, 355);
             this.BTN_Ajouter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
@@ -158,6 +162,7 @@
             this.CB_NumeroJoueur.Name = "CB_NumeroJoueur";
             this.CB_NumeroJoueur.Size = new System.Drawing.Size(180, 28);
             this.CB_NumeroJoueur.TabIndex = 18;
+            this.CB_NumeroJoueur.SelectedIndexChanged += new System.EventHandler(this.CB_NumeroJoueur_SelectedIndexChanged);
             // 
             // Form_Ajouter_Stats
             // 

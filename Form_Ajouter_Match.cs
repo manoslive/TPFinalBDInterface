@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
+using System.Text.RegularExpressions;
 
 namespace TPFinal
 {
@@ -131,6 +132,41 @@ namespace TPFinal
                     CB_EquipeAway.Items.Add(items);
                 }
             }
+        }
+
+        private void TB_Lieu_TextChanged(object sender, EventArgs e)
+        {
+            VerifCases();
+            if (!Regex.IsMatch(TB_Lieu.Text, @"^[a-zA-Z]+$"))
+                TB_Lieu.Text = "";
+        }
+
+        private void DTP_DateRencontre_ValueChanged(object sender, EventArgs e)
+        {
+            if (DTP_DateRencontre.Value > DateTime.Now)
+                DTP_DateRencontre.Value = DateTime.Now;
+        }
+
+        private void VerifCases()
+        {
+            if (TB_Lieu.Text != "" && CB_EquipeAway.Text != "" && CB_EquipeHome.Text != "")
+                BTN_Ajouter.Enabled = true;
+            else
+                BTN_Ajouter.Enabled = false;
+        }
+        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        {
+            DialogResult = System.Windows.Forms.DialogResult.OK;
+        }
+
+        private void CB_EquipeAway_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VerifCases();
+        }
+
+        private void CB_EquipeHome_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VerifCases();
         }
     }
 }
