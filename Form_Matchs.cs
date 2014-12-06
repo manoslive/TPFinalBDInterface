@@ -340,11 +340,12 @@ namespace TPFinal
         }
         private void AjouterStats()
         {
+            // PROBLÈME ICI
             Form_Statistiques stats = new Form_Statistiques(oracon, connection, DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString());
             this.Hide();
             stats.Text = "Statistiques";
             stats.callBackForm = this;
-            stats. = DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString();
+            stats.numeroJoueurs = DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString();
             stats.ShowDialog();
         }
         private void DGV_Joueurs_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
