@@ -359,5 +359,31 @@ namespace TPFinal
         {
             DialogResult = DialogResult.Cancel;
         }
+
+        private void ajouterMatchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_AjoutRencontre_Click(sender, e);
+        }
+
+        private void modifierMatchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_ModifierMatch_Click(sender, e);
+        }
+
+        private void ajouterStatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AjouterStats();
+        }
+
+        private void calendrierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Calendrier_Click(sender, e);
+        }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
     }
 }

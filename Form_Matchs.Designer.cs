@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LB_EquipeHome = new System.Windows.Forms.Label();
             this.LB_EquipeAway = new System.Windows.Forms.Label();
             this.BTN_AjoutRencontre = new System.Windows.Forms.Button();
@@ -36,24 +37,31 @@
             this.BTN_Fermer = new System.Windows.Forms.Button();
             this.DGV_Matchs = new System.Windows.Forms.DataGridView();
             this.DGV_Joueurs = new System.Windows.Forms.DataGridView();
-            this.PB_Faceoff = new System.Windows.Forms.PictureBox();
-            this.PB_EquipeHome = new System.Windows.Forms.PictureBox();
-            this.PB_EquipeAway = new System.Windows.Forms.PictureBox();
             this.LB_ScoreAway = new System.Windows.Forms.Label();
             this.LB_ScoreHome = new System.Windows.Forms.Label();
             this.LB_NbButsHome = new System.Windows.Forms.Label();
             this.LB_NbButsAway = new System.Windows.Forms.Label();
             this.TB_Receveur = new System.Windows.Forms.TextBox();
             this.TB_Visiteur = new System.Windows.Forms.TextBox();
+            this.BTN_AjoutStats = new System.Windows.Forms.Button();
             this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
             this.FB_Fermer = new FlashButton.FlashButton();
-            this.BTN_AjoutStats = new System.Windows.Forms.Button();
+            this.PB_Faceoff = new System.Windows.Forms.PictureBox();
+            this.PB_EquipeHome = new System.Windows.Forms.PictureBox();
+            this.PB_EquipeAway = new System.Windows.Forms.PictureBox();
+            this.CM_Match = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ajouterMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calendrierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Faceoff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
+            this.CM_Match.SuspendLayout();
             this.SuspendLayout();
             // 
             // LB_EquipeHome
@@ -120,6 +128,7 @@
             // DGV_Matchs
             // 
             this.DGV_Matchs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Matchs.ContextMenuStrip = this.CM_Match;
             this.DGV_Matchs.Location = new System.Drawing.Point(12, 235);
             this.DGV_Matchs.MultiSelect = false;
             this.DGV_Matchs.Name = "DGV_Matchs";
@@ -135,7 +144,8 @@
             // DGV_Joueurs
             // 
             this.DGV_Joueurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Joueurs.Location = new System.Drawing.Point(12, 435);
+            this.DGV_Joueurs.ContextMenuStrip = this.CM_Match;
+            this.DGV_Joueurs.Location = new System.Drawing.Point(6, 437);
             this.DGV_Joueurs.MultiSelect = false;
             this.DGV_Joueurs.Name = "DGV_Joueurs";
             this.DGV_Joueurs.ReadOnly = true;
@@ -146,34 +156,6 @@
             this.DGV_Joueurs.Size = new System.Drawing.Size(1144, 155);
             this.DGV_Joueurs.TabIndex = 5;
             this.DGV_Joueurs.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Joueurs_CellMouseDoubleClick);
-            // 
-            // PB_Faceoff
-            // 
-            this.PB_Faceoff.Image = global::TPFinal.Properties.Resources.hockey_face_off;
-            this.PB_Faceoff.Location = new System.Drawing.Point(450, 12);
-            this.PB_Faceoff.Name = "PB_Faceoff";
-            this.PB_Faceoff.Size = new System.Drawing.Size(297, 186);
-            this.PB_Faceoff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Faceoff.TabIndex = 6;
-            this.PB_Faceoff.TabStop = false;
-            // 
-            // PB_EquipeHome
-            // 
-            this.PB_EquipeHome.Location = new System.Drawing.Point(12, 12);
-            this.PB_EquipeHome.Name = "PB_EquipeHome";
-            this.PB_EquipeHome.Size = new System.Drawing.Size(224, 206);
-            this.PB_EquipeHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_EquipeHome.TabIndex = 1;
-            this.PB_EquipeHome.TabStop = false;
-            // 
-            // PB_EquipeAway
-            // 
-            this.PB_EquipeAway.Location = new System.Drawing.Point(932, 12);
-            this.PB_EquipeAway.Name = "PB_EquipeAway";
-            this.PB_EquipeAway.Size = new System.Drawing.Size(224, 206);
-            this.PB_EquipeAway.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_EquipeAway.TabIndex = 1;
-            this.PB_EquipeAway.TabStop = false;
             // 
             // LB_ScoreAway
             // 
@@ -235,6 +217,16 @@
             this.TB_Visiteur.Text = "Away";
             this.TB_Visiteur.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // BTN_AjoutStats
+            // 
+            this.BTN_AjoutStats.Location = new System.Drawing.Point(12, 598);
+            this.BTN_AjoutStats.Name = "BTN_AjoutStats";
+            this.BTN_AjoutStats.Size = new System.Drawing.Size(164, 32);
+            this.BTN_AjoutStats.TabIndex = 4;
+            this.BTN_AjoutStats.Text = "Ajouter stats";
+            this.BTN_AjoutStats.UseVisualStyleBackColor = true;
+            this.BTN_AjoutStats.Click += new System.EventHandler(this.BTN_AjoutRencontre_Click);
+            // 
             // PB_Fermer_Gif
             // 
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
@@ -265,21 +257,86 @@
             this.FB_Fermer.TabIndex = 10;
             this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Fermer_MouseEnter);
             // 
-            // BTN_AjoutStats
+            // PB_Faceoff
             // 
-            this.BTN_AjoutStats.Location = new System.Drawing.Point(12, 598);
-            this.BTN_AjoutStats.Name = "BTN_AjoutStats";
-            this.BTN_AjoutStats.Size = new System.Drawing.Size(164, 32);
-            this.BTN_AjoutStats.TabIndex = 4;
-            this.BTN_AjoutStats.Text = "Ajouter stats";
-            this.BTN_AjoutStats.UseVisualStyleBackColor = true;
-            this.BTN_AjoutStats.Click += new System.EventHandler(this.BTN_AjoutRencontre_Click);
+            this.PB_Faceoff.Image = global::TPFinal.Properties.Resources.hockey_face_off;
+            this.PB_Faceoff.Location = new System.Drawing.Point(450, 12);
+            this.PB_Faceoff.Name = "PB_Faceoff";
+            this.PB_Faceoff.Size = new System.Drawing.Size(297, 186);
+            this.PB_Faceoff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Faceoff.TabIndex = 6;
+            this.PB_Faceoff.TabStop = false;
+            // 
+            // PB_EquipeHome
+            // 
+            this.PB_EquipeHome.Location = new System.Drawing.Point(12, 12);
+            this.PB_EquipeHome.Name = "PB_EquipeHome";
+            this.PB_EquipeHome.Size = new System.Drawing.Size(224, 206);
+            this.PB_EquipeHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_EquipeHome.TabIndex = 1;
+            this.PB_EquipeHome.TabStop = false;
+            // 
+            // PB_EquipeAway
+            // 
+            this.PB_EquipeAway.Location = new System.Drawing.Point(932, 12);
+            this.PB_EquipeAway.Name = "PB_EquipeAway";
+            this.PB_EquipeAway.Size = new System.Drawing.Size(224, 206);
+            this.PB_EquipeAway.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_EquipeAway.TabIndex = 1;
+            this.PB_EquipeAway.TabStop = false;
+            // 
+            // CM_Match
+            // 
+            this.CM_Match.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterMatchToolStripMenuItem,
+            this.modifierMatchToolStripMenuItem,
+            this.ajouterStatsToolStripMenuItem,
+            this.calendrierToolStripMenuItem,
+            this.quitterToolStripMenuItem});
+            this.CM_Match.Name = "CM_Match";
+            this.CM_Match.Size = new System.Drawing.Size(206, 154);
+            // 
+            // ajouterMatchToolStripMenuItem
+            // 
+            this.ajouterMatchToolStripMenuItem.Name = "ajouterMatchToolStripMenuItem";
+            this.ajouterMatchToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.ajouterMatchToolStripMenuItem.Text = "Ajouter match";
+            this.ajouterMatchToolStripMenuItem.Click += new System.EventHandler(this.ajouterMatchToolStripMenuItem_Click);
+            // 
+            // modifierMatchToolStripMenuItem
+            // 
+            this.modifierMatchToolStripMenuItem.Name = "modifierMatchToolStripMenuItem";
+            this.modifierMatchToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.modifierMatchToolStripMenuItem.Text = "Modifier match";
+            this.modifierMatchToolStripMenuItem.Click += new System.EventHandler(this.modifierMatchToolStripMenuItem_Click);
+            // 
+            // ajouterStatsToolStripMenuItem
+            // 
+            this.ajouterStatsToolStripMenuItem.Name = "ajouterStatsToolStripMenuItem";
+            this.ajouterStatsToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.ajouterStatsToolStripMenuItem.Text = "Ajouter stats";
+            this.ajouterStatsToolStripMenuItem.Click += new System.EventHandler(this.ajouterStatsToolStripMenuItem_Click);
+            // 
+            // calendrierToolStripMenuItem
+            // 
+            this.calendrierToolStripMenuItem.Name = "calendrierToolStripMenuItem";
+            this.calendrierToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.calendrierToolStripMenuItem.Text = "Calendrier";
+            this.calendrierToolStripMenuItem.Click += new System.EventHandler(this.calendrierToolStripMenuItem_Click);
+            // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.quitterToolStripMenuItem.Text = "Quitter";
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // Form_Matchs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1168, 665);
+            this.ContextMenuStrip = this.CM_Match;
             this.Controls.Add(this.PB_Fermer_Gif);
             this.Controls.Add(this.FB_Fermer);
             this.Controls.Add(this.TB_Visiteur);
@@ -307,10 +364,11 @@
             this.Load += new System.EventHandler(this.Form_Matchs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Faceoff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
+            this.CM_Match.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,6 +396,12 @@
         private System.Windows.Forms.PictureBox PB_Fermer_Gif;
         private FlashButton.FlashButton FB_Fermer;
         private System.Windows.Forms.Button BTN_AjoutStats;
+        private System.Windows.Forms.ContextMenuStrip CM_Match;
+        private System.Windows.Forms.ToolStripMenuItem ajouterMatchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifierMatchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterStatsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calendrierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
 
     }
 }

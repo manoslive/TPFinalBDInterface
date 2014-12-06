@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Equipes));
             this.DGV_Equipes = new System.Windows.Forms.DataGridView();
+            this.CM_EquipeDGV = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BTN_Matchs = new System.Windows.Forms.Button();
             this.CB_Division = new System.Windows.Forms.ComboBox();
             this.LB_Division = new System.Windows.Forms.Label();
@@ -43,20 +48,29 @@
             this.FB_Classement = new FlashButton.FlashButton();
             this.FB_Top3 = new FlashButton.FlashButton();
             this.BTN_Divisions = new System.Windows.Forms.Button();
-            this.PB_Equipe = new System.Windows.Forms.PictureBox();
             this.MS_Equipe = new System.Windows.Forms.MenuStrip();
             this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.PB_Equipe = new System.Windows.Forms.PictureBox();
+            this.CM_Equipe = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.matchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.divisionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.classementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.top3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).BeginInit();
+            this.CM_EquipeDGV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).BeginInit();
             this.MS_Equipe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).BeginInit();
+            this.CM_Equipe.SuspendLayout();
             this.SuspendLayout();
             // 
             // DGV_Equipes
             // 
             this.DGV_Equipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Equipes.ContextMenuStrip = this.CM_EquipeDGV;
             this.DGV_Equipes.Location = new System.Drawing.Point(22, 43);
             this.DGV_Equipes.MultiSelect = false;
             this.DGV_Equipes.Name = "DGV_Equipes";
@@ -69,6 +83,44 @@
             this.DGV_Equipes.TabIndex = 0;
             this.DGV_Equipes.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Equipes_CellMouseDoubleClick);
             this.DGV_Equipes.SelectionChanged += new System.EventHandler(this.DGV_Equipes_SelectionChanged);
+            // 
+            // CM_EquipeDGV
+            // 
+            this.CM_EquipeDGV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterToolStripMenuItem,
+            this.modifierMatchToolStripMenuItem,
+            this.supprimerMatchToolStripMenuItem,
+            this.quitterToolStripMenuItem});
+            this.CM_EquipeDGV.Name = "contextMenuStrip1";
+            this.CM_EquipeDGV.Size = new System.Drawing.Size(222, 124);
+            // 
+            // ajouterToolStripMenuItem
+            // 
+            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(221, 30);
+            this.ajouterToolStripMenuItem.Text = "Ajouter match";
+            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
+            // 
+            // modifierMatchToolStripMenuItem
+            // 
+            this.modifierMatchToolStripMenuItem.Name = "modifierMatchToolStripMenuItem";
+            this.modifierMatchToolStripMenuItem.Size = new System.Drawing.Size(221, 30);
+            this.modifierMatchToolStripMenuItem.Text = "Modifier match";
+            this.modifierMatchToolStripMenuItem.Click += new System.EventHandler(this.modifierMatchToolStripMenuItem_Click);
+            // 
+            // supprimerMatchToolStripMenuItem
+            // 
+            this.supprimerMatchToolStripMenuItem.Name = "supprimerMatchToolStripMenuItem";
+            this.supprimerMatchToolStripMenuItem.Size = new System.Drawing.Size(221, 30);
+            this.supprimerMatchToolStripMenuItem.Text = "Supprimer match";
+            this.supprimerMatchToolStripMenuItem.Click += new System.EventHandler(this.supprimerMatchToolStripMenuItem_Click);
+            // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(221, 30);
+            this.quitterToolStripMenuItem.Text = "Quitter";
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // BTN_Matchs
             // 
@@ -229,16 +281,6 @@
             this.BTN_Divisions.UseVisualStyleBackColor = true;
             this.BTN_Divisions.Click += new System.EventHandler(this.BTN_Divisions_Click);
             // 
-            // PB_Equipe
-            // 
-            this.PB_Equipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PB_Equipe.ErrorImage = global::TPFinal.Properties.Resources.no_picture;
-            this.PB_Equipe.Location = new System.Drawing.Point(672, 43);
-            this.PB_Equipe.Name = "PB_Equipe";
-            this.PB_Equipe.Size = new System.Drawing.Size(140, 118);
-            this.PB_Equipe.TabIndex = 2;
-            this.PB_Equipe.TabStop = false;
-            // 
             // MS_Equipe
             // 
             this.MS_Equipe.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -263,11 +305,68 @@
             this.toolStripMenuItem1.Text = "?";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
+            // PB_Equipe
+            // 
+            this.PB_Equipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Equipe.ErrorImage = global::TPFinal.Properties.Resources.no_picture;
+            this.PB_Equipe.Location = new System.Drawing.Point(672, 43);
+            this.PB_Equipe.Name = "PB_Equipe";
+            this.PB_Equipe.Size = new System.Drawing.Size(140, 118);
+            this.PB_Equipe.TabIndex = 2;
+            this.PB_Equipe.TabStop = false;
+            // 
+            // CM_Equipe
+            // 
+            this.CM_Equipe.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.matchToolStripMenuItem,
+            this.divisionToolStripMenuItem,
+            this.classementToolStripMenuItem,
+            this.top3ToolStripMenuItem,
+            this.quitterToolStripMenuItem1});
+            this.CM_Equipe.Name = "CM_Equipe";
+            this.CM_Equipe.Size = new System.Drawing.Size(199, 187);
+            // 
+            // matchToolStripMenuItem
+            // 
+            this.matchToolStripMenuItem.Name = "matchToolStripMenuItem";
+            this.matchToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.matchToolStripMenuItem.Text = "Match";
+            this.matchToolStripMenuItem.Click += new System.EventHandler(this.matchToolStripMenuItem_Click);
+            // 
+            // divisionToolStripMenuItem
+            // 
+            this.divisionToolStripMenuItem.Name = "divisionToolStripMenuItem";
+            this.divisionToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.divisionToolStripMenuItem.Text = "Division";
+            this.divisionToolStripMenuItem.Click += new System.EventHandler(this.divisionToolStripMenuItem_Click);
+            // 
+            // classementToolStripMenuItem
+            // 
+            this.classementToolStripMenuItem.Name = "classementToolStripMenuItem";
+            this.classementToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.classementToolStripMenuItem.Text = "Classement";
+            this.classementToolStripMenuItem.Click += new System.EventHandler(this.classementToolStripMenuItem_Click);
+            // 
+            // top3ToolStripMenuItem
+            // 
+            this.top3ToolStripMenuItem.Name = "top3ToolStripMenuItem";
+            this.top3ToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.top3ToolStripMenuItem.Text = "Top3";
+            this.top3ToolStripMenuItem.Click += new System.EventHandler(this.top3ToolStripMenuItem_Click);
+            // 
+            // quitterToolStripMenuItem1
+            // 
+            this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
+            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
+            this.quitterToolStripMenuItem1.Text = "Quitter";
+            this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
+            // 
             // Form_Equipes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 373);
+            this.ContextMenuStrip = this.CM_Equipe;
             this.Controls.Add(this.PB_Fermer_Gif);
             this.Controls.Add(this.FB_Fermer);
             this.Controls.Add(this.BTN_Divisions);
@@ -291,10 +390,12 @@
             this.Load += new System.EventHandler(this.Form_Equipe_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Equipes_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).EndInit();
+            this.CM_EquipeDGV.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).EndInit();
             this.MS_Equipe.ResumeLayout(false);
             this.MS_Equipe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).EndInit();
+            this.CM_Equipe.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,5 +421,16 @@
         private System.Windows.Forms.ToolStripMenuItem paramètresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ContextMenuStrip CM_EquipeDGV;
+        private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifierMatchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem supprimerMatchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip CM_Equipe;
+        private System.Windows.Forms.ToolStripMenuItem matchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem divisionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem classementToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem top3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem1;
     }
 }

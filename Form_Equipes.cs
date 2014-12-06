@@ -406,5 +406,50 @@ namespace TPFinal
             propos.callBackForm = this;
             propos.ShowDialog();
         }
+
+        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Ajouter_Click(sender, e);
+        }
+
+        private void modifierMatchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Modifier_Click(sender, e);
+        }
+
+        private void supprimerMatchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Supprimer_Click(sender, e);
+        }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Ok_Click(sender, e);
+        }
+
+        private void matchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Matchs_Click(sender, e);
+        }
+
+        private void divisionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Divisions_Click(sender, e);
+        }
+
+        private void classementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Classement_Click(sender, e);
+        }
+
+        private void top3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Top5_Click(sender, e);
+        }
+
+        private void quitterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            BTN_Ok_Click(sender, e);
+        }
     }
 }

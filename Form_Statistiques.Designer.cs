@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Statistiques));
             this.DGV_Stats = new System.Windows.Forms.DataGridView();
             this.LB_TempsPunition = new System.Windows.Forms.Label();
@@ -47,18 +48,28 @@
             this.TB_TempsPunition = new System.Windows.Forms.TextBox();
             this.LB_NumMatch = new System.Windows.Forms.Label();
             this.TB_NumMatch = new System.Windows.Forms.TextBox();
-            this.FB_SupprimerStat = new FlashButton.FlashButton();
-            this.FB_ModifierStat = new FlashButton.FlashButton();
-            this.FB_AjouterStat = new FlashButton.FlashButton();
+            this.TB_Equipe = new System.Windows.Forms.TextBox();
+            this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
+            this.FB_Fermer = new FlashButton.FlashButton();
             this.FB_Precedent = new FlashButton.FlashButton();
             this.FB_Suivant = new FlashButton.FlashButton();
             this.FB_Fin = new FlashButton.FlashButton();
             this.FB_Debut = new FlashButton.FlashButton();
-            this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
-            this.FB_Fermer = new FlashButton.FlashButton();
-            this.TB_Equipe = new System.Windows.Forms.TextBox();
+            this.FB_SupprimerStat = new FlashButton.FlashButton();
+            this.FB_ModifierStat = new FlashButton.FlashButton();
+            this.FB_AjouterStat = new FlashButton.FlashButton();
+            this.CM_Stats = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.premierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dernierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.premierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dernierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Stats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
+            this.CM_Stats.SuspendLayout();
             this.SuspendLayout();
             // 
             // DGV_Stats
@@ -231,53 +242,44 @@
             this.TB_NumMatch.Size = new System.Drawing.Size(170, 26);
             this.TB_NumMatch.TabIndex = 37;
             // 
-            // FB_SupprimerStat
+            // TB_Equipe
             // 
-            this.FB_SupprimerStat.BackColor = System.Drawing.Color.Transparent;
-            this.FB_SupprimerStat.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
-            this.FB_SupprimerStat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.FB_SupprimerStat.ImageClick = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer_Click;
-            this.FB_SupprimerStat.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
-            this.FB_SupprimerStat.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
-            this.FB_SupprimerStat.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer_Over;
-            this.FB_SupprimerStat.Location = new System.Drawing.Point(446, 208);
-            this.FB_SupprimerStat.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.FB_SupprimerStat.Name = "FB_SupprimerStat";
-            this.FB_SupprimerStat.Size = new System.Drawing.Size(69, 71);
-            this.FB_SupprimerStat.TabIndex = 40;
-            this.FB_SupprimerStat.Click += new System.EventHandler(this.BTN_Effacer_Click);
+            this.TB_Equipe.Location = new System.Drawing.Point(190, 242);
+            this.TB_Equipe.Name = "TB_Equipe";
+            this.TB_Equipe.ReadOnly = true;
+            this.TB_Equipe.Size = new System.Drawing.Size(170, 26);
+            this.TB_Equipe.TabIndex = 47;
             // 
-            // FB_ModifierStat
+            // PB_Fermer_Gif
             // 
-            this.FB_ModifierStat.BackColor = System.Drawing.Color.Transparent;
-            this.FB_ModifierStat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.BackgroundImage")));
-            this.FB_ModifierStat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.FB_ModifierStat.ImageClick = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageClick")));
-            this.FB_ModifierStat.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageDisable")));
-            this.FB_ModifierStat.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageNeutral")));
-            this.FB_ModifierStat.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageOver")));
-            this.FB_ModifierStat.Location = new System.Drawing.Point(446, 122);
-            this.FB_ModifierStat.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.FB_ModifierStat.Name = "FB_ModifierStat";
-            this.FB_ModifierStat.Size = new System.Drawing.Size(69, 71);
-            this.FB_ModifierStat.TabIndex = 39;
-            this.FB_ModifierStat.Click += new System.EventHandler(this.BTN_Modifier_Click);
+            this.PB_Fermer_Gif.BackColor = System.Drawing.Color.Transparent;
+            this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
+            this.PB_Fermer_Gif.Location = new System.Drawing.Point(446, 517);
+            this.PB_Fermer_Gif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(69, 63);
+            this.PB_Fermer_Gif.TabIndex = 46;
+            this.PB_Fermer_Gif.TabStop = false;
+            this.PB_Fermer_Gif.Visible = false;
+            this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
+            this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
+            this.PB_Fermer_Gif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseUp);
             // 
-            // FB_AjouterStat
+            // FB_Fermer
             // 
-            this.FB_AjouterStat.BackColor = System.Drawing.Color.Transparent;
-            this.FB_AjouterStat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.BackgroundImage")));
-            this.FB_AjouterStat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.FB_AjouterStat.ImageClick = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageClick")));
-            this.FB_AjouterStat.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageDisable")));
-            this.FB_AjouterStat.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageNeutral")));
-            this.FB_AjouterStat.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageOver")));
-            this.FB_AjouterStat.Location = new System.Drawing.Point(446, 35);
-            this.FB_AjouterStat.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.FB_AjouterStat.Name = "FB_AjouterStat";
-            this.FB_AjouterStat.Size = new System.Drawing.Size(69, 71);
-            this.FB_AjouterStat.TabIndex = 38;
-            this.FB_AjouterStat.Click += new System.EventHandler(this.BTN_Ajouter_Click);
+            this.FB_Fermer.BackColor = System.Drawing.Color.Transparent;
+            this.FB_Fermer.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Fermer;
+            this.FB_Fermer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_Fermer.ImageClick = global::TPFinal.Properties.Resources.ICON_Fermer_Click;
+            this.FB_Fermer.ImageDisable = global::TPFinal.Properties.Resources.ICON_Fermer;
+            this.FB_Fermer.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fermer;
+            this.FB_Fermer.ImageOver = null;
+            this.FB_Fermer.Location = new System.Drawing.Point(446, 517);
+            this.FB_Fermer.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.FB_Fermer.Name = "FB_Fermer";
+            this.FB_Fermer.Size = new System.Drawing.Size(69, 63);
+            this.FB_Fermer.TabIndex = 45;
+            this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Fermer_MouseEnter);
             // 
             // FB_Precedent
             // 
@@ -343,50 +345,130 @@
             this.FB_Debut.TabIndex = 41;
             this.FB_Debut.Click += new System.EventHandler(this.BTN_Debut_Click);
             // 
-            // PB_Fermer_Gif
+            // FB_SupprimerStat
             // 
-            this.PB_Fermer_Gif.BackColor = System.Drawing.Color.Transparent;
-            this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
-            this.PB_Fermer_Gif.Location = new System.Drawing.Point(446, 517);
-            this.PB_Fermer_Gif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
-            this.PB_Fermer_Gif.Size = new System.Drawing.Size(69, 63);
-            this.PB_Fermer_Gif.TabIndex = 46;
-            this.PB_Fermer_Gif.TabStop = false;
-            this.PB_Fermer_Gif.Visible = false;
-            this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
-            this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
-            this.PB_Fermer_Gif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseUp);
+            this.FB_SupprimerStat.BackColor = System.Drawing.Color.Transparent;
+            this.FB_SupprimerStat.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
+            this.FB_SupprimerStat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_SupprimerStat.ImageClick = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer_Click;
+            this.FB_SupprimerStat.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
+            this.FB_SupprimerStat.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
+            this.FB_SupprimerStat.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer_Over;
+            this.FB_SupprimerStat.Location = new System.Drawing.Point(446, 208);
+            this.FB_SupprimerStat.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.FB_SupprimerStat.Name = "FB_SupprimerStat";
+            this.FB_SupprimerStat.Size = new System.Drawing.Size(69, 71);
+            this.FB_SupprimerStat.TabIndex = 40;
+            this.FB_SupprimerStat.Click += new System.EventHandler(this.BTN_Effacer_Click);
             // 
-            // FB_Fermer
+            // FB_ModifierStat
             // 
-            this.FB_Fermer.BackColor = System.Drawing.Color.Transparent;
-            this.FB_Fermer.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Fermer;
-            this.FB_Fermer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.FB_Fermer.ImageClick = global::TPFinal.Properties.Resources.ICON_Fermer_Click;
-            this.FB_Fermer.ImageDisable = global::TPFinal.Properties.Resources.ICON_Fermer;
-            this.FB_Fermer.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fermer;
-            this.FB_Fermer.ImageOver = null;
-            this.FB_Fermer.Location = new System.Drawing.Point(446, 517);
-            this.FB_Fermer.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.FB_Fermer.Name = "FB_Fermer";
-            this.FB_Fermer.Size = new System.Drawing.Size(69, 63);
-            this.FB_Fermer.TabIndex = 45;
-            this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Fermer_MouseEnter);
+            this.FB_ModifierStat.BackColor = System.Drawing.Color.Transparent;
+            this.FB_ModifierStat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.BackgroundImage")));
+            this.FB_ModifierStat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_ModifierStat.ImageClick = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageClick")));
+            this.FB_ModifierStat.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageDisable")));
+            this.FB_ModifierStat.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageNeutral")));
+            this.FB_ModifierStat.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageOver")));
+            this.FB_ModifierStat.Location = new System.Drawing.Point(446, 122);
+            this.FB_ModifierStat.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.FB_ModifierStat.Name = "FB_ModifierStat";
+            this.FB_ModifierStat.Size = new System.Drawing.Size(69, 71);
+            this.FB_ModifierStat.TabIndex = 39;
+            this.FB_ModifierStat.Click += new System.EventHandler(this.BTN_Modifier_Click);
             // 
-            // TB_Equipe
+            // FB_AjouterStat
             // 
-            this.TB_Equipe.Location = new System.Drawing.Point(190, 242);
-            this.TB_Equipe.Name = "TB_Equipe";
-            this.TB_Equipe.ReadOnly = true;
-            this.TB_Equipe.Size = new System.Drawing.Size(170, 26);
-            this.TB_Equipe.TabIndex = 47;
+            this.FB_AjouterStat.BackColor = System.Drawing.Color.Transparent;
+            this.FB_AjouterStat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.BackgroundImage")));
+            this.FB_AjouterStat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_AjouterStat.ImageClick = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageClick")));
+            this.FB_AjouterStat.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageDisable")));
+            this.FB_AjouterStat.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageNeutral")));
+            this.FB_AjouterStat.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageOver")));
+            this.FB_AjouterStat.Location = new System.Drawing.Point(446, 35);
+            this.FB_AjouterStat.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.FB_AjouterStat.Name = "FB_AjouterStat";
+            this.FB_AjouterStat.Size = new System.Drawing.Size(69, 71);
+            this.FB_AjouterStat.TabIndex = 38;
+            this.FB_AjouterStat.Click += new System.EventHandler(this.BTN_Ajouter_Click);
+            // 
+            // CM_Stats
+            // 
+            this.CM_Stats.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterToolStripMenuItem,
+            this.modifierToolStripMenuItem,
+            this.supprimerToolStripMenuItem,
+            this.premierToolStripMenuItem,
+            this.dernierToolStripMenuItem,
+            this.premierToolStripMenuItem1,
+            this.dernierToolStripMenuItem1,
+            this.quitterToolStripMenuItem});
+            this.CM_Stats.Name = "CM_Stats";
+            this.CM_Stats.Size = new System.Drawing.Size(199, 277);
+            // 
+            // ajouterToolStripMenuItem
+            // 
+            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.ajouterToolStripMenuItem.Text = "Ajouter";
+            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
+            // 
+            // modifierToolStripMenuItem
+            // 
+            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.modifierToolStripMenuItem.Text = "Modifier";
+            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
+            // 
+            // supprimerToolStripMenuItem
+            // 
+            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.supprimerToolStripMenuItem.Text = "Supprimer";
+            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
+            // 
+            // premierToolStripMenuItem
+            // 
+            this.premierToolStripMenuItem.Name = "premierToolStripMenuItem";
+            this.premierToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.premierToolStripMenuItem.Text = "Suivant";
+            this.premierToolStripMenuItem.Click += new System.EventHandler(this.premierToolStripMenuItem_Click);
+            // 
+            // dernierToolStripMenuItem
+            // 
+            this.dernierToolStripMenuItem.Name = "dernierToolStripMenuItem";
+            this.dernierToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.dernierToolStripMenuItem.Text = "Précédent";
+            this.dernierToolStripMenuItem.Click += new System.EventHandler(this.dernierToolStripMenuItem_Click);
+            // 
+            // premierToolStripMenuItem1
+            // 
+            this.premierToolStripMenuItem1.Name = "premierToolStripMenuItem1";
+            this.premierToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
+            this.premierToolStripMenuItem1.Text = "Premier";
+            this.premierToolStripMenuItem1.Click += new System.EventHandler(this.premierToolStripMenuItem1_Click);
+            // 
+            // dernierToolStripMenuItem1
+            // 
+            this.dernierToolStripMenuItem1.Name = "dernierToolStripMenuItem1";
+            this.dernierToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
+            this.dernierToolStripMenuItem1.Text = "Dernier";
+            this.dernierToolStripMenuItem1.Click += new System.EventHandler(this.dernierToolStripMenuItem1_Click);
+            // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.quitterToolStripMenuItem.Text = "Quitter";
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // Form_Statistiques
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(574, 588);
+            this.ContextMenuStrip = this.CM_Stats;
             this.Controls.Add(this.TB_Equipe);
             this.Controls.Add(this.PB_Fermer_Gif);
             this.Controls.Add(this.FB_Fermer);
@@ -422,6 +504,7 @@
             this.Load += new System.EventHandler(this.Form_Statistiques_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Stats)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
+            this.CM_Stats.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -457,6 +540,15 @@
         private System.Windows.Forms.PictureBox PB_Fermer_Gif;
         private FlashButton.FlashButton FB_Fermer;
         private System.Windows.Forms.TextBox TB_Equipe;
+        private System.Windows.Forms.ContextMenuStrip CM_Stats;
+        private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem premierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dernierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem premierToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem dernierToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
 
     }
 }

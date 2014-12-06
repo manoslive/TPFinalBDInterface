@@ -292,5 +292,46 @@ namespace TPFinal
         {
             DialogResult = DialogResult.OK;
         }
+
+        private void premierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Suivant_Click(sender, e);
+        }
+
+        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Ajouter_Click(sender, e);
+        }
+
+        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Modifier_Click(sender, e);
+        }
+
+        private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Effacer_Click(sender, e);
+        }
+
+        private void dernierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BTN_Precedent_Click(sender, e);
+        }
+
+        private void premierToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            BTN_Debut_Click(sender, e);
+        }
+
+        private void dernierToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            BTN_Fin_Click(sender, e);
+        }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Close();
+        }
     }
 }
