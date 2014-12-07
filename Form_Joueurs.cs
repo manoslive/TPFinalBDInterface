@@ -55,34 +55,34 @@ namespace TPFinal
                              "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:Photo,:positionjoueur,:equipejoueur)"; //:equipejoueur
                 string test = "insert into joueur " +
                              "(nomjoueur, prenomjoueur, datenaissance, numeromaillot, photo, positionjoueur, nomequipe) " +
-                             " Values ('Jones','Tom','1999-01-01',99,:Photo,'Avant','" + aJ.equipeDuJoueur + "')";
+                             " Values (:Nomjoueurs,:Prenomjoueurs,:datenaissance,:NumeroMaillot,:Photo,:positionjoueur,'" + equipe + "')";
                 currval = true;
                 try
                 {
                     OracleCommand oraAjout = new OracleCommand(test, oracon);
 
-                    //OracleParameter OraParaNomjoueurs = new OracleParameter(":Nomjoueurs", OracleDbType.Varchar2, 40);
-                    //OracleParameter OraParamPrenomjoueurs = new OracleParameter(":Prenomjoueurs", OracleDbType.Varchar2, 40);
-                    //OracleParameter OraParamdatenaissance = new OracleParameter(":datenaissance", OracleDbType.Date);
-                    //OracleParameter OraParanumeromaillot = new OracleParameter(":numeromaillot", OracleDbType.Int32);
+                    OracleParameter OraParaNomjoueurs = new OracleParameter(":Nomjoueurs", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParamPrenomjoueurs = new OracleParameter(":Prenomjoueurs", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParamdatenaissance = new OracleParameter(":datenaissance", OracleDbType.Date);
+                    OracleParameter OraParanumeromaillot = new OracleParameter(":numeromaillot", OracleDbType.Int32);
                     //OracleParameter OraParaequipejoueurs = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
-                    //OracleParameter OraParpositionjoueur = new OracleParameter(":positionjoueur", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParpositionjoueur = new OracleParameter(":positionjoueur", OracleDbType.Varchar2, 40);
                     OracleParameter OraParaPhoto = new OracleParameter(":Photo", OracleDbType.Varchar2, 1500);
 
-                    //OraParaNomjoueurs.Value = aJ.nomJoueurs;
-                    //OraParamPrenomjoueurs.Value = aJ.prenomJoueurs;
-                    //OraParamdatenaissance.Value = aJ.DDN;
-                    //OraParanumeromaillot.Value = aJ.maillot;
+                    OraParaNomjoueurs.Value = aJ.nomJoueurs;
+                    OraParamPrenomjoueurs.Value = aJ.prenomJoueurs;
+                    OraParamdatenaissance.Value = aJ.DDN;
+                    OraParanumeromaillot.Value = aJ.maillot;
                     //OraParaequipejoueurs.Value = CB_EquipeJoueur.Text;
-                    //OraParpositionjoueur.Value = aJ.Position;
+                    OraParpositionjoueur.Value = aJ.Position;
                     OraParaPhoto.Value = aJ.Photo;
 
-                    //oraAjout.Parameters.Add(OraParaNomjoueurs);
-                    //oraAjout.Parameters.Add(OraParamPrenomjoueurs);
-                    //oraAjout.Parameters.Add(OraParamdatenaissance);
-                    //oraAjout.Parameters.Add(OraParanumeromaillot);
+                    oraAjout.Parameters.Add(OraParaNomjoueurs);
+                    oraAjout.Parameters.Add(OraParamPrenomjoueurs);
+                    oraAjout.Parameters.Add(OraParamdatenaissance);
+                    oraAjout.Parameters.Add(OraParanumeromaillot);
                     //oraAjout.Parameters.Add(OraParaequipejoueurs);
-                    //oraAjout.Parameters.Add(OraParpositionjoueur);
+                    oraAjout.Parameters.Add(OraParpositionjoueur);
                     oraAjout.Parameters.Add(OraParaPhoto);
 
                     oraAjout.ExecuteNonQuery();
