@@ -92,7 +92,7 @@
             this.DGV_Equipes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGV_Equipes.RowTemplate.Height = 28;
             this.DGV_Equipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Equipes.Size = new System.Drawing.Size(586, 248);
+            this.DGV_Equipes.Size = new System.Drawing.Size(639, 248);
             this.DGV_Equipes.TabIndex = 0;
             this.DGV_Equipes.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Equipes_CellMouseDoubleClick);
             this.DGV_Equipes.SelectionChanged += new System.EventHandler(this.DGV_Equipes_SelectionChanged);
@@ -152,7 +152,7 @@
             this.CB_Division.FormattingEnabled = true;
             this.CB_Division.Items.AddRange(new object[] {
             "Toutes"});
-            this.CB_Division.Location = new System.Drawing.Point(470, 326);
+            this.CB_Division.Location = new System.Drawing.Point(509, 326);
             this.CB_Division.Name = "CB_Division";
             this.CB_Division.Size = new System.Drawing.Size(152, 28);
             this.CB_Division.TabIndex = 7;
@@ -162,7 +162,7 @@
             // 
             this.LB_Division.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.LB_Division.AutoSize = true;
-            this.LB_Division.Location = new System.Drawing.Point(468, 303);
+            this.LB_Division.Location = new System.Drawing.Point(505, 303);
             this.LB_Division.Name = "LB_Division";
             this.LB_Division.Size = new System.Drawing.Size(63, 20);
             this.LB_Division.TabIndex = 4;
@@ -268,7 +268,7 @@
             this.FB_Classement.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_Classement.ImageDisable")));
             this.FB_Classement.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_Classement.ImageNeutral")));
             this.FB_Classement.ImageOver = global::TPFinal.Properties.Resources.ICON_Classement_Over;
-            this.FB_Classement.Location = new System.Drawing.Point(310, 303);
+            this.FB_Classement.Location = new System.Drawing.Point(328, 304);
             this.FB_Classement.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Classement.Name = "FB_Classement";
             this.FB_Classement.Size = new System.Drawing.Size(54, 55);
@@ -286,7 +286,7 @@
             this.FB_Top3.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_Top3.ImageDisable")));
             this.FB_Top3.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_Top3.ImageNeutral")));
             this.FB_Top3.ImageOver = global::TPFinal.Properties.Resources.ICON_Top3_Over;
-            this.FB_Top3.Location = new System.Drawing.Point(391, 303);
+            this.FB_Top3.Location = new System.Drawing.Point(417, 304);
             this.FB_Top3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Top3.Name = "FB_Top3";
             this.FB_Top3.Size = new System.Drawing.Size(54, 55);
