@@ -358,6 +358,24 @@
   <ItemGroup>
     <None Include="Resources\joueur hockey lego.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModifierCouleurPolice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModifierCouleurPolice_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModifierCouleurPolice_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModifierCouleurForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModifierCouleurForm_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModifierCouleurForm_Over.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
