@@ -20,7 +20,6 @@ namespace TPFinal
         public Form callBackForm = null;
         private string equipe { get; set; }
         private bool currval { get; set; }
-        private string commandeSQL { get; set; }
 
         public Form_Joueurs(OracleConnection connectionoracle, MaConnection maBelleConnection, string equipeEnCours)
         {
@@ -29,7 +28,6 @@ namespace TPFinal
             connection = maBelleConnection;
             equipe = equipeEnCours;
             currval = false;
-            commandeSQL = null;
         }
 
         private void SaveSettings()
@@ -44,16 +42,11 @@ namespace TPFinal
         }
         private void Ajouter()
         {
-            Form_Ajouter_Joueur aJ = new Form_Ajouter_Joueur(oracon, connection);
+            Form_Ajouter_Joueur aJ = new Form_Ajouter_Joueur(oracon, connection, equipe);
             aJ.callBackForm = this;
             aJ.Text = "Ajout de joueur";
             aJ.Location = this.Location;
             this.Hide(); // Cache la fenêtre actuelle
-
-            //if (!currval)
-            //    commandeSQL = "SELECT MAX(numjoueur) from joueur ";
-            //else
-            //    commandeSQL = "SELECT Seq_num_joueur.currval from dual";
 
             if (aJ.ShowDialog() == DialogResult.OK)
             {
@@ -62,34 +55,34 @@ namespace TPFinal
                              "Values(:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:Photo,:positionjoueur,:equipejoueur)"; //:equipejoueur
                 string test = "insert into joueur " +
                              "(nomjoueur, prenomjoueur, datenaissance, numeromaillot, photo, positionjoueur, nomequipe) " +
-                             " Values (:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:Photo,:positionjoueur,'Tunak')";
+                             " Values ('Jones','Tom','1999-01-01',99,:Photo,'Avant','" + aJ.equipeDuJoueur + "')";
                 currval = true;
                 try
                 {
                     OracleCommand oraAjout = new OracleCommand(test, oracon);
 
-                    OracleParameter OraParaNomjoueurs = new OracleParameter(":Nomjoueurs", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParamPrenomjoueurs = new OracleParameter(":Prenomjoueurs", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParamdatenaissance = new OracleParameter(":datenaissance", OracleDbType.Date);
-                    OracleParameter OraParanumeromaillot = new OracleParameter(":numeromaillot", OracleDbType.Int32);
-                    OracleParameter OraParaequipejoueurs = new OracleParameter(":equipejoueur", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParpositionjoueur = new OracleParameter(":positionjoueur", OracleDbType.Varchar2, 40);
+                    //OracleParameter OraParaNomjoueurs = new OracleParameter(":Nomjoueurs", OracleDbType.Varchar2, 40);
+                    //OracleParameter OraParamPrenomjoueurs = new OracleParameter(":Prenomjoueurs", OracleDbType.Varchar2, 40);
+                    //OracleParameter OraParamdatenaissance = new OracleParameter(":datenaissance", OracleDbType.Date);
+                    //OracleParameter OraParanumeromaillot = new OracleParameter(":numeromaillot", OracleDbType.Int32);
+                    //OracleParameter OraParaequipejoueurs = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
+                    //OracleParameter OraParpositionjoueur = new OracleParameter(":positionjoueur", OracleDbType.Varchar2, 40);
                     OracleParameter OraParaPhoto = new OracleParameter(":Photo", OracleDbType.Varchar2, 1500);
 
-                    OraParaNomjoueurs.Value = aJ.nomJoueurs;
-                    OraParamPrenomjoueurs.Value = aJ.prenomJoueurs;
-                    OraParamdatenaissance.Value = aJ.DDN;
-                    OraParanumeromaillot.Value = aJ.maillot;
-                    OraParaequipejoueurs.Value = aJ.Equipe;
-                    OraParpositionjoueur.Value = aJ.Position;
+                    //OraParaNomjoueurs.Value = aJ.nomJoueurs;
+                    //OraParamPrenomjoueurs.Value = aJ.prenomJoueurs;
+                    //OraParamdatenaissance.Value = aJ.DDN;
+                    //OraParanumeromaillot.Value = aJ.maillot;
+                    //OraParaequipejoueurs.Value = CB_EquipeJoueur.Text;
+                    //OraParpositionjoueur.Value = aJ.Position;
                     OraParaPhoto.Value = aJ.Photo;
 
-                    oraAjout.Parameters.Add(OraParaNomjoueurs);
-                    oraAjout.Parameters.Add(OraParamPrenomjoueurs);
-                    oraAjout.Parameters.Add(OraParamdatenaissance);
-                    oraAjout.Parameters.Add(OraParanumeromaillot);
-                    oraAjout.Parameters.Add(OraParaequipejoueurs);
-                    oraAjout.Parameters.Add(OraParpositionjoueur);
+                    //oraAjout.Parameters.Add(OraParaNomjoueurs);
+                    //oraAjout.Parameters.Add(OraParamPrenomjoueurs);
+                    //oraAjout.Parameters.Add(OraParamdatenaissance);
+                    //oraAjout.Parameters.Add(OraParanumeromaillot);
+                    //oraAjout.Parameters.Add(OraParaequipejoueurs);
+                    //oraAjout.Parameters.Add(OraParpositionjoueur);
                     oraAjout.Parameters.Add(OraParaPhoto);
 
                     oraAjout.ExecuteNonQuery();
@@ -254,7 +247,7 @@ namespace TPFinal
         }
         private void Modifier()
         {
-            Form_Ajouter_Joueur aj = new Form_Ajouter_Joueur(oracon, connection);
+            Form_Ajouter_Joueur aj = new Form_Ajouter_Joueur(oracon, connection, "");
             aj.callBackForm = this;
             aj.Text = "Modification du joueur";
             aj.nomJoueurs = TB_NomJoueur.Text;
@@ -321,6 +314,7 @@ namespace TPFinal
         private void Form_Joueurs_Load(object sender, EventArgs e)
         {
             LoadSettings();
+
             OracleCommand oraSelect = oracon.CreateCommand();
             oraSelect.CommandText = "SELECT NomEquipe FROM Equipe";
             using (OracleDataReader oraReader = oraSelect.ExecuteReader())

@@ -15,15 +15,18 @@ namespace TPFinal
 {
     public partial class Form_Ajouter_Joueur : Form
     {
+        public string equipeDuJoueur = null;
         private OracleConnection oracon = null;
         private MaConnection cConnection = null;
         private DataSet dataSetJoueur = new DataSet();
         public Form callBackForm = null;
-        public Form_Ajouter_Joueur(OracleConnection connection, MaConnection maBelleConnection)
+        public Form_Ajouter_Joueur(OracleConnection connection, MaConnection maBelleConnection, string equipeEnCours)
         {
             InitializeComponent();
             oracon = connection;
             cConnection = maBelleConnection;
+            equipeDuJoueur = equipeEnCours;
+            //Equipe = equipeEnCours;
         }
 
         public string nomJoueurs
@@ -121,16 +124,21 @@ namespace TPFinal
 
         private void Form_Ajouter_Joueur_Load(object sender, EventArgs e)
         {
+            CB_EquipeJoueur.Items.Add(equipeDuJoueur);
+            CB_EquipeJoueur.SelectedItem = 0;
             TB_NomJoueur.Select();
-            OracleCommand oraSelect = oracon.CreateCommand();
-            oraSelect.CommandText = "SELECT NomEquipe FROM Equipe";
-            using (OracleDataReader oraReader = oraSelect.ExecuteReader())
+            if (CB_EquipeJoueur.Items.Count == 0)
             {
-                while (oraReader.Read())
+                OracleCommand oraSelect = oracon.CreateCommand();
+                oraSelect.CommandText = "SELECT NomEquipe FROM Equipe";
+                using (OracleDataReader oraReader = oraSelect.ExecuteReader())
                 {
-                    CB_EquipeJoueur.Items.Add(oraReader.GetString(0));
+                    while (oraReader.Read())
+                    {
+                        CB_EquipeJoueur.Items.Add(oraReader.GetString(0));
+                    }
+                    oraReader.Close();
                 }
-                oraReader.Close();
             }
         }
         private bool VerifChamps()
@@ -159,7 +167,7 @@ namespace TPFinal
         private void TB_NumMaillot_TextChanged(object sender, EventArgs e)
         {
             VerifChamps();
-            if(!Regex.IsMatch(TB_NumMaillot.Text, @"^[0-9]+$"))
+            if (!Regex.IsMatch(TB_NumMaillot.Text, @"^[0-9]+$"))
                 TB_NumMaillot.Text = "";
         }
 
