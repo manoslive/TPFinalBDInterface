@@ -20,13 +20,14 @@ namespace TPFinal
         private MaConnection cConnection = null;
         private DataSet dataSetJoueur = new DataSet();
         public Form callBackForm = null;
-        public Form_Ajouter_Joueur(OracleConnection connection, MaConnection maBelleConnection, string equipeEnCours)
+        public Form_Ajouter_Joueur(OracleConnection connection, MaConnection maBelleConnection, string equipeEnCours, string numeroJoueurEnCours)
         {
             InitializeComponent();
             oracon = connection;
             cConnection = maBelleConnection;
             equipeDuJoueur = equipeEnCours;
-            //Equipe = equipeEnCours;
+            if (numeroJoueurEnCours != "")
+                numeroJoueur = numeroJoueurEnCours;
         }
 
         public string nomJoueurs
@@ -38,6 +39,17 @@ namespace TPFinal
             set
             {
                 TB_NomJoueur.Text = value;
+            }
+        }
+        public string numeroJoueur
+        {
+            get
+            {
+                return TB_NumeroJoueur.Text;
+            }
+            set
+            {
+                TB_NumeroJoueur.Text = value;
             }
         }
 
@@ -121,6 +133,19 @@ namespace TPFinal
                 callBackForm.Show();
             }
         }
+        private void LoadCBEquipes()
+        {
+            OracleCommand oraSelect = oracon.CreateCommand();
+            oraSelect.CommandText = "SELECT NomEquipe FROM Equipe";
+            using (OracleDataReader oraReader = oraSelect.ExecuteReader())
+            {
+                while (oraReader.Read())
+                {
+                    CB_EquipeJoueur.Items.Add(oraReader.GetString(0));
+                }
+                oraReader.Close();
+            }
+        }
 
         private void Form_Ajouter_Joueur_Load(object sender, EventArgs e)
         {
@@ -129,16 +154,7 @@ namespace TPFinal
             TB_NomJoueur.Select();
             if (CB_EquipeJoueur.Items.Count == 0)
             {
-                OracleCommand oraSelect = oracon.CreateCommand();
-                oraSelect.CommandText = "SELECT NomEquipe FROM Equipe";
-                using (OracleDataReader oraReader = oraSelect.ExecuteReader())
-                {
-                    while (oraReader.Read())
-                    {
-                        CB_EquipeJoueur.Items.Add(oraReader.GetString(0));
-                    }
-                    oraReader.Close();
-                }
+                LoadCBEquipes();
             }
         }
         private bool VerifChamps()
