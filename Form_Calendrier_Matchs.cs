@@ -30,11 +30,22 @@ namespace TPFinal
         {
             Properties.Settings.Default.Form_CalendrierSize = this.Size;
             Properties.Settings.Default.Form_CalendrierLocation = this.Location;
+            Properties.Settings.Default.Form_Calendrier_CouleurForm = this.BackColor;
+            Properties.Settings.Default.Form_Calendrier_Police = this.Font;
+            Properties.Settings.Default.Form_Calendrier_CouleurPolice = this.ForeColor;
+            Properties.Settings.Default.Form_Calendrier_DGVPolice = this.DGV_CalendierMatch.Font;
+            Properties.Settings.Default.Form_Calendrier_DGVCouleurPolice = this.DGV_CalendierMatch.ForeColor;
+            Properties.Settings.Default.Save();
         }
         private void LoadSettings()
         {
             this.Size = Properties.Settings.Default.Form_CalendrierSize;
             this.Location = Properties.Settings.Default.Form_CalendrierLocation;
+            this.BackColor = Properties.Settings.Default.Form_Calendrier_CouleurForm;
+            this.Font = Properties.Settings.Default.Form_Calendrier_Police;
+            this.ForeColor = Properties.Settings.Default.Form_Calendrier_CouleurPolice;
+            this.DGV_CalendierMatch.Font = Properties.Settings.Default.Form_Calendrier_DGVPolice;
+            this.DGV_CalendierMatch.ForeColor = Properties.Settings.Default.Form_Calendrier_DGVCouleurPolice;
         }
         private void Form_Calendrier_Matchs_Load(object sender, EventArgs e)
         {
@@ -112,6 +123,25 @@ namespace TPFinal
             this.Hide();
             propos.callBackForm = this;
             propos.ShowDialog();
+        }
+
+        private void paramètresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Preferences preferences = new Form_Preferences(true, Properties.Settings.Default.Form_Calendrier_Police, Properties.Settings.Default.Form_Calendrier_CouleurPolice, Properties.Settings.Default.Form_Calendrier_CouleurForm, Properties.Settings.Default.Form_Calendrier_DGVPolice, Properties.Settings.Default.Form_Calendrier_DGVCouleurPolice);
+            this.Enabled = false;
+            preferences.ShowDialog();
+            this.Enabled = true;
+            modificationPreferences();
+        }
+        private void modificationPreferences()
+        {
+            SaveSettings();
+            Properties.Settings.Default.Form_Calendrier_CouleurForm = Properties.Settings.Default.Preferences_CouleurForm;
+            Properties.Settings.Default.Form_Calendrier_Police = Properties.Settings.Default.Preferences_Police;
+            Properties.Settings.Default.Form_Calendrier_CouleurPolice = Properties.Settings.Default.Preferences_CouleurPolice;
+            Properties.Settings.Default.Form_Calendrier_DGVPolice = Properties.Settings.Default.Preferences_DGVPolice;
+            Properties.Settings.Default.Form_Calendrier_DGVCouleurPolice = Properties.Settings.Default.Preferences_DGVCouleurPolice;
+            LoadSettings();
         }
     }
 }

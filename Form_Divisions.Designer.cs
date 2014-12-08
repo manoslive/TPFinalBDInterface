@@ -67,7 +67,8 @@
             this.DGV_Divisions.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_Divisions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Divisions.ContextMenuStrip = this.CM_Divisions;
-            this.DGV_Divisions.Location = new System.Drawing.Point(12, 54);
+            this.DGV_Divisions.Location = new System.Drawing.Point(8, 35);
+            this.DGV_Divisions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DGV_Divisions.MultiSelect = false;
             this.DGV_Divisions.Name = "DGV_Divisions";
             this.DGV_Divisions.ReadOnly = true;
@@ -75,7 +76,7 @@
             this.DGV_Divisions.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGV_Divisions.RowTemplate.Height = 28;
             this.DGV_Divisions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Divisions.Size = new System.Drawing.Size(330, 194);
+            this.DGV_Divisions.Size = new System.Drawing.Size(220, 126);
             this.DGV_Divisions.TabIndex = 6;
             this.DGV_Divisions.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Divisions_CellMouseDoubleClick);
             // 
@@ -87,33 +88,33 @@
             this.supprimerToolStripMenuItem,
             this.quitterToolStripMenuItem});
             this.CM_Divisions.Name = "CM_Divisions";
-            this.CM_Divisions.Size = new System.Drawing.Size(168, 124);
+            this.CM_Divisions.Size = new System.Drawing.Size(130, 92);
             // 
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.modifierToolStripMenuItem.Text = "Modifier";
             this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
             // 
             // supprimerToolStripMenuItem
             // 
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -126,10 +127,10 @@
             this.FB_SupprimerDivision.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
             this.FB_SupprimerDivision.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
             this.FB_SupprimerDivision.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer_Over;
-            this.FB_SupprimerDivision.Location = new System.Drawing.Point(390, 109);
-            this.FB_SupprimerDivision.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.FB_SupprimerDivision.Location = new System.Drawing.Point(260, 71);
+            this.FB_SupprimerDivision.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_SupprimerDivision.Name = "FB_SupprimerDivision";
-            this.FB_SupprimerDivision.Size = new System.Drawing.Size(69, 71);
+            this.FB_SupprimerDivision.Size = new System.Drawing.Size(46, 46);
             this.FB_SupprimerDivision.TabIndex = 2;
             this.toolTip1.SetToolTip(this.FB_SupprimerDivision, "Supprimer une division");
             this.FB_SupprimerDivision.Click += new System.EventHandler(this.BTN_Supprimer_Click);
@@ -143,10 +144,10 @@
             this.FB_ModifierDivision.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_ModifierDivision.ImageDisable")));
             this.FB_ModifierDivision.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_ModifierDivision.ImageNeutral")));
             this.FB_ModifierDivision.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_ModifierDivision.ImageOver")));
-            this.FB_ModifierDivision.Location = new System.Drawing.Point(430, 33);
-            this.FB_ModifierDivision.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.FB_ModifierDivision.Location = new System.Drawing.Point(287, 21);
+            this.FB_ModifierDivision.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_ModifierDivision.Name = "FB_ModifierDivision";
-            this.FB_ModifierDivision.Size = new System.Drawing.Size(69, 71);
+            this.FB_ModifierDivision.Size = new System.Drawing.Size(46, 46);
             this.FB_ModifierDivision.TabIndex = 1;
             this.toolTip1.SetToolTip(this.FB_ModifierDivision, "Modifier une division");
             this.FB_ModifierDivision.Click += new System.EventHandler(this.BTN_Modifier_Click);
@@ -160,10 +161,10 @@
             this.FB_AjouterDivision.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_AjouterDivision.ImageDisable")));
             this.FB_AjouterDivision.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_AjouterDivision.ImageNeutral")));
             this.FB_AjouterDivision.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_AjouterDivision.ImageOver")));
-            this.FB_AjouterDivision.Location = new System.Drawing.Point(350, 33);
-            this.FB_AjouterDivision.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.FB_AjouterDivision.Location = new System.Drawing.Point(233, 21);
+            this.FB_AjouterDivision.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_AjouterDivision.Name = "FB_AjouterDivision";
-            this.FB_AjouterDivision.Size = new System.Drawing.Size(69, 71);
+            this.FB_AjouterDivision.Size = new System.Drawing.Size(46, 46);
             this.FB_AjouterDivision.TabIndex = 0;
             this.toolTip1.SetToolTip(this.FB_AjouterDivision, "Ajouter une division");
             this.FB_AjouterDivision.Click += new System.EventHandler(this.BTN_Ajouter_Click);
@@ -171,10 +172,9 @@
             // PB_Fermer_Gif
             // 
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
-            this.PB_Fermer_Gif.Location = new System.Drawing.Point(393, 186);
-            this.PB_Fermer_Gif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PB_Fermer_Gif.Location = new System.Drawing.Point(262, 121);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
-            this.PB_Fermer_Gif.Size = new System.Drawing.Size(60, 62);
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 15;
             this.PB_Fermer_Gif.TabStop = false;
             this.toolTip1.SetToolTip(this.PB_Fermer_Gif, "Fermer");
@@ -192,10 +192,10 @@
             this.FB_Fermer.ImageDisable = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.ImageOver = null;
-            this.FB_Fermer.Location = new System.Drawing.Point(393, 186);
-            this.FB_Fermer.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.FB_Fermer.Location = new System.Drawing.Point(262, 121);
+            this.FB_Fermer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Fermer.Name = "FB_Fermer";
-            this.FB_Fermer.Size = new System.Drawing.Size(60, 62);
+            this.FB_Fermer.Size = new System.Drawing.Size(40, 40);
             this.FB_Fermer.TabIndex = 14;
             this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Fermer_MouseEnter);
             // 
@@ -207,7 +207,8 @@
             this.toolStripMenuItem3});
             this.MS_Equipe.Location = new System.Drawing.Point(0, 0);
             this.MS_Equipe.Name = "MS_Equipe";
-            this.MS_Equipe.Size = new System.Drawing.Size(502, 33);
+            this.MS_Equipe.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.MS_Equipe.Size = new System.Drawing.Size(335, 24);
             this.MS_Equipe.TabIndex = 20;
             this.MS_Equipe.Text = "menuStrip1";
             // 
@@ -221,7 +222,7 @@
             this.top3ToolStripMenuItem1,
             this.joueursToolStripMenuItem});
             this.fonctionsToolStripMenuItem.Name = "fonctionsToolStripMenuItem";
-            this.fonctionsToolStripMenuItem.Size = new System.Drawing.Size(113, 29);
+            this.fonctionsToolStripMenuItem.Size = new System.Drawing.Size(80, 22);
             this.fonctionsToolStripMenuItem.Text = "Fonctions...";
             // 
             // équipesToolStripMenuItem
@@ -231,75 +232,76 @@
             this.toolStripMenuItem1,
             this.toolStripMenuItem2});
             this.équipesToolStripMenuItem.Name = "équipesToolStripMenuItem";
-            this.équipesToolStripMenuItem.Size = new System.Drawing.Size(174, 30);
+            this.équipesToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.équipesToolStripMenuItem.Text = "Équipes...";
             // 
             // ajouterToolStripMenuItem1
             // 
             this.ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
-            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(167, 30);
+            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
             this.ajouterToolStripMenuItem1.Text = "Ajouter";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(167, 30);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
             this.toolStripMenuItem1.Text = "Modifier";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(167, 30);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(129, 22);
             this.toolStripMenuItem2.Text = "Supprimer";
             // 
             // matchToolStripMenuItem1
             // 
             this.matchToolStripMenuItem1.Name = "matchToolStripMenuItem1";
-            this.matchToolStripMenuItem1.Size = new System.Drawing.Size(174, 30);
+            this.matchToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.matchToolStripMenuItem1.Text = "Matchs";
             // 
             // divisionsToolStripMenuItem
             // 
             this.divisionsToolStripMenuItem.Name = "divisionsToolStripMenuItem";
-            this.divisionsToolStripMenuItem.Size = new System.Drawing.Size(174, 30);
+            this.divisionsToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.divisionsToolStripMenuItem.Text = "Divisions";
             // 
             // classementToolStripMenuItem1
             // 
             this.classementToolStripMenuItem1.Name = "classementToolStripMenuItem1";
-            this.classementToolStripMenuItem1.Size = new System.Drawing.Size(174, 30);
+            this.classementToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.classementToolStripMenuItem1.Text = "Classement";
             // 
             // top3ToolStripMenuItem1
             // 
             this.top3ToolStripMenuItem1.Name = "top3ToolStripMenuItem1";
-            this.top3ToolStripMenuItem1.Size = new System.Drawing.Size(174, 30);
+            this.top3ToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.top3ToolStripMenuItem1.Text = "Top3";
             // 
             // joueursToolStripMenuItem
             // 
             this.joueursToolStripMenuItem.Name = "joueursToolStripMenuItem";
-            this.joueursToolStripMenuItem.Size = new System.Drawing.Size(174, 30);
+            this.joueursToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.joueursToolStripMenuItem.Text = "Joueurs";
             // 
             // paramètresToolStripMenuItem
             // 
             this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
-            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(124, 29);
+            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(87, 22);
             this.paramètresToolStripMenuItem.Text = "Paramètres...";
+            this.paramètresToolStripMenuItem.Click += new System.EventHandler(this.paramètresToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(32, 29);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(24, 22);
             this.toolStripMenuItem3.Text = "?";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // Form_Divisions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 259);
+            this.ClientSize = new System.Drawing.Size(335, 168);
             this.ContextMenuStrip = this.CM_Divisions;
             this.Controls.Add(this.MS_Equipe);
             this.Controls.Add(this.FB_SupprimerDivision);
@@ -309,6 +311,7 @@
             this.Controls.Add(this.FB_Fermer);
             this.Controls.Add(this.DGV_Divisions);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form_Divisions";
             this.Text = "Form_Divisions";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Divisions_FormClosed);

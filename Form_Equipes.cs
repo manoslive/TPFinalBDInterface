@@ -28,11 +28,22 @@ namespace TPFinal
         {
             Properties.Settings.Default.Form_EquipeSize = this.Size;
             Properties.Settings.Default.Form_EquipeLocation = this.Location;
+            Properties.Settings.Default.Form_Equipe_CouleurForm = this.BackColor;
+            Properties.Settings.Default.Form_Equipe_Police = this.Font;
+            Properties.Settings.Default.Form_Equipe_CouleurPolice = this.ForeColor;
+            Properties.Settings.Default.Form_Equipe_DGVPolice = this.DGV_Equipes.Font;
+            Properties.Settings.Default.Form_Equipe_DGVCouleurPolice = this.DGV_Equipes.ForeColor;
+            Properties.Settings.Default.Save();
         }
         private void LoadSettings()
         {
             this.Size = Properties.Settings.Default.Form_EquipeSize;
             this.Location = Properties.Settings.Default.Form_EquipeLocation;
+            this.BackColor = Properties.Settings.Default.Form_Equipe_CouleurForm;
+            this.Font = Properties.Settings.Default.Form_Equipe_Police;
+            this.ForeColor = Properties.Settings.Default.Form_Equipe_CouleurPolice;
+            this.DGV_Equipes.Font = Properties.Settings.Default.Form_Equipe_DGVPolice;
+            this.DGV_Equipes.ForeColor = Properties.Settings.Default.Form_Equipe_DGVCouleurPolice;
         }
 
         private void Form_Equipe_Load(object sender, EventArgs e)
@@ -553,6 +564,25 @@ namespace TPFinal
         {
             this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Close();
+        }
+
+        private void paramètresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Preferences preferences = new Form_Preferences(true,Properties.Settings.Default.Form_Equipe_Police, Properties.Settings.Default.Form_Equipe_CouleurPolice, Properties.Settings.Default.Form_Equipe_CouleurForm, Properties.Settings.Default.Form_Equipe_DGVPolice, Properties.Settings.Default.Form_Equipe_DGVCouleurPolice);
+            this.Enabled = false;
+            preferences.ShowDialog();
+            this.Enabled = true;
+            modificationPreferences();
+        }
+        private void modificationPreferences()
+        {
+            SaveSettings();
+            Properties.Settings.Default.Form_Equipe_CouleurForm = Properties.Settings.Default.Preferences_CouleurForm;
+            Properties.Settings.Default.Form_Equipe_Police = Properties.Settings.Default.Preferences_Police;
+            Properties.Settings.Default.Form_Equipe_CouleurPolice = Properties.Settings.Default.Preferences_CouleurPolice;
+            Properties.Settings.Default.Form_Equipe_DGVPolice = Properties.Settings.Default.Preferences_DGVPolice;
+            Properties.Settings.Default.Form_Equipe_DGVCouleurPolice = Properties.Settings.Default.Preferences_DGVCouleurPolice;
+            LoadSettings();
         }
     }
 }

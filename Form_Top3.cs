@@ -26,6 +26,7 @@ namespace TPFinal
         {
             Properties.Settings.Default.Form_Top3Size = this.Size;
             Properties.Settings.Default.Form_Top3Location = this.Location;
+            Properties.Settings.Default.Save();
         }
         private void LoadSettings()
         {

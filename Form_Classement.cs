@@ -28,11 +28,22 @@ namespace TPFinal
         {
             Properties.Settings.Default.Form_ClassementSize = this.Size;
             Properties.Settings.Default.Form_ClassementLocation = this.Location;
+            Properties.Settings.Default.Form_Classement_CouleurForm = this.BackColor;
+            Properties.Settings.Default.Form_Classement_Police = this.Font;
+            Properties.Settings.Default.Form_Classement_CouleurPolice = this.ForeColor;
+            Properties.Settings.Default.Form_Classement_DGVPolice = this.DGV_Classement.Font;
+            Properties.Settings.Default.Form_Classement_DGVCouleurPolice = this.DGV_Classement.ForeColor;
+            Properties.Settings.Default.Save();
         }
         private void LoadSettings()
         {
             this.Size = Properties.Settings.Default.Form_ClassementSize;
             this.Location = Properties.Settings.Default.Form_ClassementLocation;
+            this.BackColor = Properties.Settings.Default.Form_Classement_CouleurForm;
+            this.Font = Properties.Settings.Default.Form_Classement_Police;
+            this.ForeColor = Properties.Settings.Default.Form_Classement_CouleurPolice;
+            this.DGV_Classement.Font = Properties.Settings.Default.Form_Classement_DGVPolice;
+            this.DGV_Classement.ForeColor = Properties.Settings.Default.Form_Classement_DGVCouleurPolice;
         }
         private void LoadDGV()
         {
@@ -129,6 +140,25 @@ namespace TPFinal
         private void quitterToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+        }
+
+        private void paramètresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Preferences preferences = new Form_Preferences(true, Properties.Settings.Default.Form_Classement_Police, Properties.Settings.Default.Form_Classement_CouleurPolice, Properties.Settings.Default.Form_Classement_CouleurForm, Properties.Settings.Default.Form_Classement_DGVPolice, Properties.Settings.Default.Form_Classement_DGVCouleurPolice);
+            this.Enabled = false;
+            preferences.ShowDialog();
+            this.Enabled = true;
+            modificationPreferences();
+        }
+        private void modificationPreferences()
+        {
+            SaveSettings();
+            Properties.Settings.Default.Form_Classement_CouleurForm = Properties.Settings.Default.Preferences_CouleurForm;
+            Properties.Settings.Default.Form_Classement_Police = Properties.Settings.Default.Preferences_Police;
+            Properties.Settings.Default.Form_Classement_CouleurPolice = Properties.Settings.Default.Preferences_CouleurPolice;
+            Properties.Settings.Default.Form_Classement_DGVPolice = Properties.Settings.Default.Preferences_DGVPolice;
+            Properties.Settings.Default.Form_Classement_DGVCouleurPolice = Properties.Settings.Default.Preferences_DGVCouleurPolice;
+            LoadSettings();
         }
     }
 }

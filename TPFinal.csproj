@@ -391,21 +391,49 @@
     <None Include="Resources\joueur hockey lego.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5 %28x86 et x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
+    <None Include="Resources\ModifierCouleurPolice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModifierCouleurPolice_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModifierCouleurPolice_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModifierCouleurForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModifierCouleurForm_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModifierCouleurForm_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modifier_DGVPolice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modifier_DGVPolice_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modifier_DGVPolice_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modifier_DGVCouleurPolice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modifier_DGVCouleurPolice_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modifier_DGVCouleurPolice_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Division.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Division_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Division_Over.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
