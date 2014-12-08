@@ -181,6 +181,7 @@
             // 
             // CB_EquipeJoueur
             // 
+            this.CB_EquipeJoueur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_EquipeJoueur.Enabled = false;
             this.CB_EquipeJoueur.FormattingEnabled = true;
             this.CB_EquipeJoueur.Location = new System.Drawing.Point(237, 322);
@@ -191,6 +192,7 @@
             // 
             // CB_PosJoueur
             // 
+            this.CB_PosJoueur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_PosJoueur.Enabled = false;
             this.CB_PosJoueur.FormattingEnabled = true;
             this.CB_PosJoueur.Items.AddRange(new object[] {

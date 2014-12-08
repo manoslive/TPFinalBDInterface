@@ -187,25 +187,25 @@ namespace TPFinal
                     OracleCommand oraAjout = new OracleCommand(sql, oracon);
 
                     OracleParameter OraParaNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParamDateIntroLigue = new OracleParameter(":DateIntroLigue", OracleDbType.Date);
-                    OracleParameter OraParamLogoEquipe = new OracleParameter(":LogoEquipe", OracleDbType.Blob);
+                    OracleParameter OraParaDateIntroLigue = new OracleParameter(":DateIntroLigue", OracleDbType.Date);
+                    OracleParameter OraParaLogoEquipe = new OracleParameter(":LogoEquipe", OracleDbType.Blob);
                     OracleParameter OraParaDivEquipe = new OracleParameter(":DivisionEquipe", OracleDbType.Varchar2, 40);
                     OracleParameter OraParaVilleEquipe = new OracleParameter(":VilleEquipe", OracleDbType.Varchar2, 40);
 
                     OraParaNomEquipe.Value = aEquipe.nomEquipe;
-                    OraParamDateIntroLigue.Value = DateTime.Parse(aEquipe.dateIntroLigue);
-                    OraParamLogoEquipe.Value = null;
+                    OraParaDateIntroLigue.Value = DateTime.Parse(aEquipe.dateIntroLigue);
+                    OraParaLogoEquipe.Value = null;
                     OraParaDivEquipe.Value = aEquipe.divisionEquipe;
                     OraParaVilleEquipe.Value = aEquipe.villeEquipe;
 
                     if (aEquipe.image != null)
                     {
-                        OraParamLogoEquipe.Value = aEquipe.image;
+                        OraParaLogoEquipe.Value = aEquipe.image;
                     }
 
                     oraAjout.Parameters.Add(OraParaNomEquipe);
-                    oraAjout.Parameters.Add(OraParamDateIntroLigue);
-                    oraAjout.Parameters.Add(OraParamLogoEquipe);
+                    oraAjout.Parameters.Add(OraParaDateIntroLigue);
+                    oraAjout.Parameters.Add(OraParaLogoEquipe);
                     oraAjout.Parameters.Add(OraParaDivEquipe);
                     oraAjout.Parameters.Add(OraParaVilleEquipe);
 

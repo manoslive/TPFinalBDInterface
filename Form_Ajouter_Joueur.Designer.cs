@@ -44,6 +44,7 @@
             this.TB_Url = new System.Windows.Forms.TextBox();
             this.LB_Url = new System.Windows.Forms.Label();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
+            this.TB_NumeroJoueur = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // BTN_Fermer
@@ -200,11 +201,20 @@
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
             this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
+            // TB_NumeroJoueur
+            // 
+            this.TB_NumeroJoueur.Location = new System.Drawing.Point(29, 450);
+            this.TB_NumeroJoueur.Name = "TB_NumeroJoueur";
+            this.TB_NumeroJoueur.Size = new System.Drawing.Size(39, 26);
+            this.TB_NumeroJoueur.TabIndex = 24;
+            this.TB_NumeroJoueur.Visible = false;
+            // 
             // Form_Ajouter_Joueur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 497);
+            this.Controls.Add(this.TB_NumeroJoueur);
             this.Controls.Add(this.TB_Url);
             this.Controls.Add(this.LB_Url);
             this.Controls.Add(this.BTN_Ajouter);
@@ -249,5 +259,6 @@
         private System.Windows.Forms.TextBox TB_Url;
         private System.Windows.Forms.Label LB_Url;
         public System.Windows.Forms.Button BTN_Ajouter;
+        private System.Windows.Forms.TextBox TB_NumeroJoueur;
     }
 }

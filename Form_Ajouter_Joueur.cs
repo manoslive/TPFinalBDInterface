@@ -15,15 +15,19 @@ namespace TPFinal
 {
     public partial class Form_Ajouter_Joueur : Form
     {
+        public string equipeDuJoueur = null;
         private OracleConnection oracon = null;
         private MaConnection cConnection = null;
         private DataSet dataSetJoueur = new DataSet();
         public Form callBackForm = null;
-        public Form_Ajouter_Joueur(OracleConnection connection, MaConnection maBelleConnection)
+        public Form_Ajouter_Joueur(OracleConnection connection, MaConnection maBelleConnection, string equipeEnCours, string numeroJoueurEnCours)
         {
             InitializeComponent();
             oracon = connection;
             cConnection = maBelleConnection;
+            equipeDuJoueur = equipeEnCours;
+            if (numeroJoueurEnCours != "")
+                numeroJoueur = numeroJoueurEnCours;
         }
 
         public string nomJoueurs
@@ -35,6 +39,17 @@ namespace TPFinal
             set
             {
                 TB_NomJoueur.Text = value;
+            }
+        }
+        public string numeroJoueur
+        {
+            get
+            {
+                return TB_NumeroJoueur.Text;
+            }
+            set
+            {
+                TB_NumeroJoueur.Text = value;
             }
         }
 
@@ -118,10 +133,8 @@ namespace TPFinal
                 callBackForm.Show();
             }
         }
-
-        private void Form_Ajouter_Joueur_Load(object sender, EventArgs e)
+        private void LoadCBEquipes()
         {
-            TB_NomJoueur.Select();
             OracleCommand oraSelect = oracon.CreateCommand();
             oraSelect.CommandText = "SELECT NomEquipe FROM Equipe";
             using (OracleDataReader oraReader = oraSelect.ExecuteReader())
@@ -131,6 +144,17 @@ namespace TPFinal
                     CB_EquipeJoueur.Items.Add(oraReader.GetString(0));
                 }
                 oraReader.Close();
+            }
+        }
+
+        private void Form_Ajouter_Joueur_Load(object sender, EventArgs e)
+        {
+            CB_EquipeJoueur.Items.Add(equipeDuJoueur);
+            CB_EquipeJoueur.SelectedItem = 0;
+            TB_NomJoueur.Select();
+            if (CB_EquipeJoueur.Items.Count == 0)
+            {
+                LoadCBEquipes();
             }
         }
         private bool VerifChamps()
@@ -159,7 +183,7 @@ namespace TPFinal
         private void TB_NumMaillot_TextChanged(object sender, EventArgs e)
         {
             VerifChamps();
-            if(!Regex.IsMatch(TB_NumMaillot.Text, @"^[0-9]+$"))
+            if (!Regex.IsMatch(TB_NumMaillot.Text, @"^[0-9]+$"))
                 TB_NumMaillot.Text = "";
         }
 

@@ -104,20 +104,21 @@ namespace TPFinal
             {
                 OracleCommand oraSelect = oracon.CreateCommand();
                 oraSelect.CommandText = "SELECT NumeroMatch FROM Match " +
-                                        "group by NumeroMatch " +
-                                        "where NumeroJoueur=:NumeroJoueur";
-                OracleParameter OraParaNumJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Varchar2, 40);
+                                        "group by NumeroMatch ";
 
-                OraParaNumJoueur.Value = numJoueur;
-                oraSelect.Parameters.Add(OraParaNumJoueur);
-
+                //OracleParameter OraParaNumJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Varchar2, 40);
+                //OraParaNumJoueur.Value = numJoueur;
+                //oraSelect.Parameters.Add(OraParaNumJoueur);
+                //oraSelect.CommandType = CommandType.Text;
                 using (OracleDataReader oraReader = oraSelect.ExecuteReader())
                 {
                     while (oraReader.Read())
                     {
                         CB_NumeroMatch.Items.Add(oraReader.GetInt32(0));
                     }
+                    oraReader.Close();
                 }
+                //oraSelect.ExecuteNonQuery();
                 if (CB_NumeroMatch.Items.Count != 0)
                 {
                     CB_NumeroMatch.SelectedIndex = 0;
