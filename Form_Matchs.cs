@@ -30,11 +30,26 @@ namespace TPFinal
         {
             Properties.Settings.Default.Form_MatchsSize = this.Size;
             Properties.Settings.Default.Form_MatchsLocation = this.Location;
+            Properties.Settings.Default.Form_Matchs_CouleurForm=this.BackColor;
+            Properties.Settings.Default.Form_Matchs_Police = this.Font;
+            Properties.Settings.Default.Form_Matchs_CouleurPolice = this.ForeColor;
+            Properties.Settings.Default.Form_Matchs_DGVPolice = this.DGV_Matchs.Font;
+            Properties.Settings.Default.Form_Matchs_DGVCouleurPolice = this.DGV_Matchs.ForeColor;
+            Properties.Settings.Default.Form_Matchs_DGVPolice = this.DGV_Joueurs.Font;
+            Properties.Settings.Default.Form_Matchs_DGVCouleurPolice = this.DGV_Joueurs.ForeColor;
+            Properties.Settings.Default.Save();
         }
         private void LoadSettings()
         {
             this.Size = Properties.Settings.Default.Form_MatchsSize;
             this.Location = Properties.Settings.Default.Form_MatchsLocation;
+            this.BackColor = Properties.Settings.Default.Form_Matchs_CouleurForm;
+            this.Font = Properties.Settings.Default.Form_Matchs_Police;
+            this.ForeColor = Properties.Settings.Default.Form_Matchs_CouleurPolice;
+            this.DGV_Matchs.Font = Properties.Settings.Default.Form_Matchs_DGVPolice;
+            this.DGV_Matchs.ForeColor = Properties.Settings.Default.Form_Matchs_DGVCouleurPolice;
+            this.DGV_Joueurs.Font = Properties.Settings.Default.Form_Matchs_DGVPolice;
+            this.DGV_Joueurs.ForeColor = Properties.Settings.Default.Form_Matchs_DGVCouleurPolice;
         }
         private void Ajouter()
         {
@@ -458,6 +473,25 @@ namespace TPFinal
             this.Hide();
             propos.callBackForm = this;
             propos.ShowDialog();
+        }
+
+        private void paramètresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Preferences preferences = new Form_Preferences(true, Properties.Settings.Default.Form_Matchs_Police, Properties.Settings.Default.Form_Matchs_CouleurPolice, Properties.Settings.Default.Form_Matchs_CouleurForm, Properties.Settings.Default.Form_Matchs_DGVPolice, Properties.Settings.Default.Form_Matchs_DGVCouleurPolice);
+            this.Enabled = false;
+            preferences.ShowDialog();
+            this.Enabled = true;
+            modificationPreferences();
+        }
+        private void modificationPreferences()
+        {
+            SaveSettings();
+            Properties.Settings.Default.Form_Matchs_CouleurForm = Properties.Settings.Default.Preferences_CouleurForm;
+            Properties.Settings.Default.Form_Matchs_Police = Properties.Settings.Default.Preferences_Police;
+            Properties.Settings.Default.Form_Matchs_CouleurPolice = Properties.Settings.Default.Preferences_CouleurPolice;
+            Properties.Settings.Default.Form_Matchs_DGVPolice = Properties.Settings.Default.Preferences_DGVPolice;
+            Properties.Settings.Default.Form_Matchs_DGVCouleurPolice = Properties.Settings.Default.Preferences_DGVCouleurPolice;
+            LoadSettings();
         }
     }
 }

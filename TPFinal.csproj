@@ -376,6 +376,33 @@
   <ItemGroup>
     <None Include="Resources\ModifierCouleurForm_Over.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modifier_DGVPolice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modifier_DGVPolice_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modifier_DGVPolice_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modifier_DGVCouleurPolice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modifier_DGVCouleurPolice_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modifier_DGVCouleurPolice_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Division.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Division_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Division_Over.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

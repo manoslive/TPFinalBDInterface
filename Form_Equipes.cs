@@ -33,6 +33,7 @@ namespace TPFinal
             Properties.Settings.Default.Form_Equipe_CouleurPolice = this.ForeColor;
             Properties.Settings.Default.Form_Equipe_DGVPolice = this.DGV_Equipes.Font;
             Properties.Settings.Default.Form_Equipe_DGVCouleurPolice = this.DGV_Equipes.ForeColor;
+            Properties.Settings.Default.Save();
         }
         private void LoadSettings()
         {
@@ -568,13 +569,14 @@ namespace TPFinal
         private void paramètresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_Preferences preferences = new Form_Preferences(true,Properties.Settings.Default.Form_Equipe_Police, Properties.Settings.Default.Form_Equipe_CouleurPolice, Properties.Settings.Default.Form_Equipe_CouleurForm, Properties.Settings.Default.Form_Equipe_DGVPolice, Properties.Settings.Default.Form_Equipe_DGVCouleurPolice);
-            this.Hide();
-            preferences.callBackForm = this;
+            this.Enabled = false;
             preferences.ShowDialog();
+            this.Enabled = true;
             modificationPreferences();
         }
         private void modificationPreferences()
         {
+            SaveSettings();
             Properties.Settings.Default.Form_Equipe_CouleurForm = Properties.Settings.Default.Preferences_CouleurForm;
             Properties.Settings.Default.Form_Equipe_Police = Properties.Settings.Default.Preferences_Police;
             Properties.Settings.Default.Form_Equipe_CouleurPolice = Properties.Settings.Default.Preferences_CouleurPolice;

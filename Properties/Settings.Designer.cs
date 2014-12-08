@@ -334,5 +334,225 @@ namespace TPFinal.Properties {
                 this["Preferences_DGVCouleurPolice"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Font Form_Matchs_Police {
+            get {
+                return ((global::System.Drawing.Font)(this["Form_Matchs_Police"]));
+            }
+            set {
+                this["Form_Matchs_Police"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Form_Matchs_CouleurPolice {
+            get {
+                return ((global::System.Drawing.Color)(this["Form_Matchs_CouleurPolice"]));
+            }
+            set {
+                this["Form_Matchs_CouleurPolice"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Form_Matchs_CouleurForm {
+            get {
+                return ((global::System.Drawing.Color)(this["Form_Matchs_CouleurForm"]));
+            }
+            set {
+                this["Form_Matchs_CouleurForm"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Font Form_Matchs_DGVPolice {
+            get {
+                return ((global::System.Drawing.Font)(this["Form_Matchs_DGVPolice"]));
+            }
+            set {
+                this["Form_Matchs_DGVPolice"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Form_Matchs_DGVCouleurPolice {
+            get {
+                return ((global::System.Drawing.Color)(this["Form_Matchs_DGVCouleurPolice"]));
+            }
+            set {
+                this["Form_Matchs_DGVCouleurPolice"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Font Form_Divisions_Police {
+            get {
+                return ((global::System.Drawing.Font)(this["Form_Divisions_Police"]));
+            }
+            set {
+                this["Form_Divisions_Police"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Form_Divisions_CouleurPolice {
+            get {
+                return ((global::System.Drawing.Color)(this["Form_Divisions_CouleurPolice"]));
+            }
+            set {
+                this["Form_Divisions_CouleurPolice"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Form_Divisions_CouleurForm {
+            get {
+                return ((global::System.Drawing.Color)(this["Form_Divisions_CouleurForm"]));
+            }
+            set {
+                this["Form_Divisions_CouleurForm"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Font Form_Divisions_DGVPolice {
+            get {
+                return ((global::System.Drawing.Font)(this["Form_Divisions_DGVPolice"]));
+            }
+            set {
+                this["Form_Divisions_DGVPolice"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Form_Divisions_DGVCouleurPolice {
+            get {
+                return ((global::System.Drawing.Color)(this["Form_Divisions_DGVCouleurPolice"]));
+            }
+            set {
+                this["Form_Divisions_DGVCouleurPolice"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Font Form_Classement_Police {
+            get {
+                return ((global::System.Drawing.Font)(this["Form_Classement_Police"]));
+            }
+            set {
+                this["Form_Classement_Police"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Form_Classement_CouleurPolice {
+            get {
+                return ((global::System.Drawing.Color)(this["Form_Classement_CouleurPolice"]));
+            }
+            set {
+                this["Form_Classement_CouleurPolice"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Form_Classement_CouleurForm {
+            get {
+                return ((global::System.Drawing.Color)(this["Form_Classement_CouleurForm"]));
+            }
+            set {
+                this["Form_Classement_CouleurForm"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Font Form_Classement_DGVPolice {
+            get {
+                return ((global::System.Drawing.Font)(this["Form_Classement_DGVPolice"]));
+            }
+            set {
+                this["Form_Classement_DGVPolice"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Form_Classement_DGVCouleurPolice {
+            get {
+                return ((global::System.Drawing.Color)(this["Form_Classement_DGVCouleurPolice"]));
+            }
+            set {
+                this["Form_Classement_DGVCouleurPolice"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Font Form_Calendrier_Police {
+            get {
+                return ((global::System.Drawing.Font)(this["Form_Calendrier_Police"]));
+            }
+            set {
+                this["Form_Calendrier_Police"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Form_Calendrier_CouleurPolice {
+            get {
+                return ((global::System.Drawing.Color)(this["Form_Calendrier_CouleurPolice"]));
+            }
+            set {
+                this["Form_Calendrier_CouleurPolice"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Form_Calendrier_CouleurForm {
+            get {
+                return ((global::System.Drawing.Color)(this["Form_Calendrier_CouleurForm"]));
+            }
+            set {
+                this["Form_Calendrier_CouleurForm"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Font Form_Calendrier_DGVPolice {
+            get {
+                return ((global::System.Drawing.Font)(this["Form_Calendrier_DGVPolice"]));
+            }
+            set {
+                this["Form_Calendrier_DGVPolice"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color Form_Calendrier_DGVCouleurPolice {
+            get {
+                return ((global::System.Drawing.Color)(this["Form_Calendrier_DGVCouleurPolice"]));
+            }
+            set {
+                this["Form_Calendrier_DGVCouleurPolice"] = value;
+            }
+        }
     }
 }

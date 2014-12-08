@@ -36,6 +36,7 @@ namespace TPFinal
         {
             Properties.Settings.Default.Form_JoueursSize = this.Size;
             Properties.Settings.Default.Form_JoueursLocation = this.Location;
+            Properties.Settings.Default.Save();
         }
         private void LoadSettings()
         {

@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ICON_Classement_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Classement_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Podium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Podium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,9 +133,6 @@
   <data name="ICON_Equipe_Modifier_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Equipe_Modifier_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="joueur hockey lego" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\joueur hockey lego.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ICON_Suivant" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Suivant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,8 +142,11 @@
   <data name="ICON_Fermer_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Fermer_Over.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICON_Equipe_Ajouter_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Equipe_Ajouter_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Modifier_DGVCouleurPolice_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Modifier_DGVCouleurPolice_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICON_Equipe_Modifier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Equipe_Modifier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ModifierPolice_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ModifierPolice_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,14 +157,23 @@
   <data name="ICON_Equipe_Ajouter_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Equipe_Ajouter_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ModifierCouleurForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ModifierCouleurForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ICON_Top3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Top3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ModifierCouleurPolice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ModifierCouleurPolice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ModifierCouleurPolice_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ModifierCouleurPolice_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avatar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICON_Puck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Puck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hockey-face-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hockey-face-off.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICON_Fin_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Fin_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,29 +184,41 @@
   <data name="ICON_Equipe_Supprimer_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Equipe_Supprimer_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICON_Suivant_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Suivant_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Modifier_DGVCouleurPolice_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Modifier_DGVCouleurPolice_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICON_Debut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Debut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Hockey_croise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hockey_croise.BMP;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICON_Precedent_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Precedent_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ModifierCouleurForm_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ModifierCouleurForm_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICON_Equipe_Supprimer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Equipe_Supprimer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ICON_Fermer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Fermer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICON_Precedent_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Precedent_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shaun tête" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shaun tête.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="no_picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\no_picture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Modifier_DGVCouleurPolice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Modifier_DGVCouleurPolice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICON_Classement_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Classement_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ICON_Precedent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Precedent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICON_Equipe_Supprimer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Equipe_Supprimer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="joueur hockey lego" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\joueur hockey lego.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICON_Classement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Classement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ModifierPolice_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ModifierPolice_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,14 +229,17 @@
   <data name="ICON_Top3_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Top3_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Modifier_DGVPolice_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Modifier_DGVPolice_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ICON_Equipe_Supprimer_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Equipe_Supprimer_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICON_Debut_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Debut_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICON_Equipe_Modifier" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Equipe_Modifier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="no_picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\no_picture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICON_Classement_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Classement_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,20 +250,20 @@
   <data name="ModifierPolice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ModifierPolice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICON_Precedent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Precedent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ICON_Debut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Debut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hockey-face-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hockey-face-off.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Modifier_DGVPolice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Modifier_DGVPolice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICON_Suivant_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Suivant_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\avatar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ICON_Equipe_Ajouter_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Equipe_Ajouter_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Hockey_croise" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hockey_croise.BMP;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Modifier_DGVPolice_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Modifier_DGVPolice_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICON_Top3_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Top3_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,22 +274,22 @@
   <data name="ICON_Fin_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Fin_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICON_Precedent_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Precedent_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ICON_Puck" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Puck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ICON_Classement" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Classement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ModifierCouleurForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ModifierCouleurForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ICON_Suivant_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Suivant_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ModifierCouleurForm_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ModifierCouleurForm_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ModifierCouleurForm_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ModifierCouleurForm_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ModifierCouleurPolice_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ModifierCouleurPolice_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICON_Division" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Division.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICON_Division_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Division_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICON_Division_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Division_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

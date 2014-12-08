@@ -163,6 +163,36 @@ namespace TPFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ICON_Division {
+            get {
+                object obj = ResourceManager.GetObject("ICON_Division", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ICON_Division_Click {
+            get {
+                object obj = ResourceManager.GetObject("ICON_Division_Click", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ICON_Division_Over {
+            get {
+                object obj = ResourceManager.GetObject("ICON_Division_Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ICON_Equipe_Ajouter {
             get {
                 object obj = ResourceManager.GetObject("ICON_Equipe_Ajouter", resourceCulture);
@@ -416,6 +446,66 @@ namespace TPFinal.Properties {
         internal static System.Drawing.Bitmap joueur_hockey_lego {
             get {
                 object obj = ResourceManager.GetObject("joueur hockey lego", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Modifier_DGVCouleurPolice {
+            get {
+                object obj = ResourceManager.GetObject("Modifier_DGVCouleurPolice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Modifier_DGVCouleurPolice_Click {
+            get {
+                object obj = ResourceManager.GetObject("Modifier_DGVCouleurPolice_Click", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Modifier_DGVCouleurPolice_Over {
+            get {
+                object obj = ResourceManager.GetObject("Modifier_DGVCouleurPolice_Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Modifier_DGVPolice {
+            get {
+                object obj = ResourceManager.GetObject("Modifier_DGVPolice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Modifier_DGVPolice_Click {
+            get {
+                object obj = ResourceManager.GetObject("Modifier_DGVPolice_Click", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Modifier_DGVPolice_Over {
+            get {
+                object obj = ResourceManager.GetObject("Modifier_DGVPolice_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

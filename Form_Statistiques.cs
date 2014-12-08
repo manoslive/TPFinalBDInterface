@@ -34,6 +34,7 @@ namespace TPFinal
         {
             Properties.Settings.Default.Form_StatsSize = this.Size;
             Properties.Settings.Default.Form_StatsLocation = this.Location;
+            Properties.Settings.Default.Save();
         }
         private void LoadSettings()
         {

@@ -12,12 +12,15 @@ namespace TPFinal
 {
     public partial class Form_Preferences : Form
     {
-        public Form callBackForm = null;
         public Form_Preferences(bool DGV,System.Drawing.Font Police, System.Drawing.Color CouleurPolice, System.Drawing.Color CouleurForm,
                                 System.Drawing.Font DGVPolice, System.Drawing.Color DGVCouleurPolice) 
         {
             InitializeComponent();
             LoadSettings(Police, CouleurPolice, CouleurForm, DGVPolice, DGVCouleurPolice);
+            if(!DGV)
+            {
+                this.Size = new System.Drawing.Size(354, 162);
+            }
         }
         public void LoadSettings(System.Drawing.Font Police, System.Drawing.Color CouleurPolice, System.Drawing.Color CouleurForm,
                                 System.Drawing.Font DGVPolice, System.Drawing.Color DGVCouleurPolice)
@@ -37,6 +40,7 @@ namespace TPFinal
         }
         private void FB_PoliceForm_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
             FontDialog monFont = new FontDialog();
             monFont.MaxSize = 18;
             monFont.Font = Properties.Settings.Default.Preferences_Police;
@@ -44,28 +48,56 @@ namespace TPFinal
             {
                 Properties.Settings.Default.Preferences_Police = monFont.Font;
             }
+            this.Enabled = true;
         }
 
         private void FB_CouleurPoliceForm_Click(object sender, EventArgs e)
         {
-            //Application.OpenForms["Form_Preferences"].Enabled = false;
-            //FORM_BackColor colorPicker = new FORM_BackColor();
-            //if (colorPicker.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            //{
-            //    Properties.Settings.Default.CouleurImpaire = colorPicker.color;
-            //    FB_CouleurPoliceForm.BackColor = colorPicker.color;
-            //}
+            this.Enabled = false;
+            ColorDialog colorPicker = new ColorDialog();
+            if (colorPicker.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                Properties.Settings.Default.Preferences_CouleurPolice = colorPicker.Color;
+                PN_CouleurPolice.BackColor = colorPicker.Color;
+            }
+            this.Enabled = true;
         }
 
         private void FB_CouleurForm_Click(object sender, EventArgs e)
         {
-            //Application.OpenForms["Form_Preferences"].Enabled = false;
-            //FORM_BackColor colorPicker = new FORM_BackColor();
-            //if (colorPicker.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            //{
-            //    Properties.Settings.Default.Preferences_CouleurForm = colorPicker.color;
-            //    FB_CouleurForm.BackColor = colorPicker.color;
-            //}
+            this.Enabled = false;
+            ColorDialog colorPicker = new ColorDialog();
+            if (colorPicker.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                Properties.Settings.Default.Preferences_CouleurForm = colorPicker.Color;
+                PN_CouleurForm.BackColor = colorPicker.Color;
+            }
+            this.Enabled = true;
+        }
+
+        private void FB_DGVPolice_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            FontDialog monFont = new FontDialog();
+            monFont.MaxSize = 14;
+            monFont.Font = Properties.Settings.Default.Preferences_DGVPolice;
+            if (monFont.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                Properties.Settings.Default.Preferences_DGVPolice = monFont.Font;
+            }
+            this.Enabled = true;
+        }
+
+        private void FB_DGVCouleurPolice_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            ColorDialog colorPicker = new ColorDialog();
+            if (colorPicker.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                Properties.Settings.Default.Preferences_DGVCouleurPolice = colorPicker.Color;
+                PN_DGVCouleurPolice.BackColor = colorPicker.Color;
+            }
+            this.Enabled = true;
         }
     }
 }
