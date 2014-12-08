@@ -471,6 +471,7 @@
             // 
             // flashButton1
             // 
+            this.flashButton1.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Division;
             this.flashButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flashButton1.ImageClick = global::TPFinal.Properties.Resources.ICON_Division_Click;
             this.flashButton1.ImageDisable = global::TPFinal.Properties.Resources.ICON_Division;
