@@ -203,9 +203,9 @@
             // 
             // TB_NumeroJoueur
             // 
-            this.TB_NumeroJoueur.Location = new System.Drawing.Point(29, 450);
+            this.TB_NumeroJoueur.Location = new System.Drawing.Point(216, 510);
             this.TB_NumeroJoueur.Name = "TB_NumeroJoueur";
-            this.TB_NumeroJoueur.Size = new System.Drawing.Size(39, 26);
+            this.TB_NumeroJoueur.Size = new System.Drawing.Size(10, 26);
             this.TB_NumeroJoueur.TabIndex = 24;
             this.TB_NumeroJoueur.Visible = false;
             // 
@@ -213,7 +213,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 497);
+            this.ClientSize = new System.Drawing.Size(507, 494);
             this.Controls.Add(this.TB_NumeroJoueur);
             this.Controls.Add(this.TB_Url);
             this.Controls.Add(this.LB_Url);

@@ -139,7 +139,7 @@ namespace TPFinal
             DataGridViewColumn ville = DGV_Equipes.Columns[3];
             ville.Width = 85;
         }
-
+        
         private void updateControls() // Met à jours l'état des boutons
         {
             if (DGV_Equipes.RowCount > 0)
