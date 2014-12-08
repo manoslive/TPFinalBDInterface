@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
+using System.Runtime.InteropServices;
 
 namespace TPFinal
 {
@@ -15,14 +16,22 @@ namespace TPFinal
     {
         private OracleConnection oracon;
         private MaConnection maBelleConnection;
-
         public Form_Connection(OracleConnection connection, MaConnection maBelleConnection) //recoit la connection en parametre
         {
             InitializeComponent();
             SetOracleConnection(connection); //set la connection dans l'attribut
             SetMaConnection(maBelleConnection);
         }
+        // DLLs et constantes pour le movement de la Form_Main
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
 
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd,
+                         int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+        // Fin de DLLs et constantes pour le movement de la Form_Main
         public void SetMaConnection(MaConnection laConnection)
         {
             maBelleConnection = laConnection;
@@ -63,6 +72,15 @@ namespace TPFinal
         {
             if (e.KeyCode == Keys.Enter)
                 BTN_Connection_Click(sender, e);
+        }
+
+        private void Form_Connection_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
 
 
