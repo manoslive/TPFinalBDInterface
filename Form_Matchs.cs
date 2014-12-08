@@ -105,6 +105,7 @@ namespace TPFinal
         }
         private void BTN_AjoutRencontre_Click(object sender, EventArgs e)
         {
+            // test
             AjouterStats();
         }
         private void LoadDGVmatch()
