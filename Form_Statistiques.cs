@@ -20,8 +20,6 @@ namespace TPFinal
         private MaConnection connection = null;
         private DataSet statsDataSet = new DataSet();
         public Form callBackForm = null;
-        private bool currval { get; set; }
-        private string commandeSQL { get; set; }
         private string numeroJoueur {get; set;}
         public Form_Statistiques(OracleConnection connect, MaConnection maBelleConnection, string numeroJoueurEnCours)
         {
@@ -139,34 +137,35 @@ namespace TPFinal
             aJ.Text = "Ajout de stats";
             aJ.Location = this.Location;
             this.Hide(); // Cache la fenêtre actuelle
-
             if (aJ.ShowDialog() == DialogResult.OK)
             {
+                //string sql = "insert into FicheJoueur" +
+                //             "(NumeroMatch, NumeroJoueur, NombreButs, NombrePasses, TempsPunition) " +
+                //             "Values(:NumeroMatch, :NumeroJoueur, :NombreButs, :NombrePasses, :TempsPunition)";
                 string sql = "insert into FicheJoueur" +
                              "(NumeroMatch, NumeroJoueur, NombreButs, NombrePasses, TempsPunition) " +
-                             "Values(:NumeroMatch, :NumeroJoueur, :NombreButs, :NombrePasses, :TempsPunition)";
-                currval = true;
+                             "Values(1,97,1,1,1)";
                 try
                 {
                     OracleCommand oraAjout = new OracleCommand(sql, oracon);
 
-                    OracleParameter OraParaNumeroMatch = new OracleParameter(":NumeroMatch", OracleDbType.Int32);
-                    OracleParameter OraParamNumeroJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParamNombreButs = new OracleParameter(":NombreButs", OracleDbType.Int32);
-                    OracleParameter OraParaNombrePasses = new OracleParameter(":NombrePasses", OracleDbType.Int32);
-                    OracleParameter OraParaTempsPunition = new OracleParameter(":TempsPunition", OracleDbType.Int32);
+                    //OracleParameter OraParaNumeroMatch = new OracleParameter(":NumeroMatch", OracleDbType.Int32);
+                    //OracleParameter OraParamNumeroJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Varchar2, 40);
+                    //OracleParameter OraParamNombreButs = new OracleParameter(":NombreButs", OracleDbType.Int32);
+                    //OracleParameter OraParaNombrePasses = new OracleParameter(":NombrePasses", OracleDbType.Int32);
+                    //OracleParameter OraParaTempsPunition = new OracleParameter(":TempsPunition", OracleDbType.Int32);
 
-                    OraParaNumeroMatch.Value = aJ.numMatch;
-                    OraParamNumeroJoueur.Value = aJ.numJoueur;
-                    OraParamNombreButs.Value = aJ.nbButs;
-                    OraParaNombrePasses.Value = aJ.nbPasses;
-                    OraParaTempsPunition.Value = aJ.tempsPunition;
+                    //OraParaNumeroMatch.Value = aJ.numMatch;
+                    //OraParamNumeroJoueur.Value = aJ.numJoueur;
+                    //OraParamNombreButs.Value = aJ.nbButs;
+                    //OraParaNombrePasses.Value = aJ.nbPasses;
+                    //OraParaTempsPunition.Value = aJ.tempsPunition;
 
-                    oraAjout.Parameters.Add(OraParaNumeroMatch);
-                    oraAjout.Parameters.Add(OraParamNumeroJoueur);
-                    oraAjout.Parameters.Add(OraParamNombreButs);
-                    oraAjout.Parameters.Add(OraParaNombrePasses);
-                    oraAjout.Parameters.Add(OraParaTempsPunition);
+                    //oraAjout.Parameters.Add(OraParaNumeroMatch);
+                    //oraAjout.Parameters.Add(OraParamNumeroJoueur);
+                    //oraAjout.Parameters.Add(OraParamNombreButs);
+                    //oraAjout.Parameters.Add(OraParaNombrePasses);
+                    //oraAjout.Parameters.Add(OraParaTempsPunition);
 
                     // Ajouter les buts au total
                     //string sqlButs = "insert into Match" +
