@@ -120,7 +120,8 @@ namespace TPFinal
             //                        "inner join FicheJoueur F on F.NumeroMatch=M.NumeroMatch" +
             //                        "inner join Equipe E on E.NomEquipe=M.EquipeReceveur " +
             //                        "order by NumeroMatch";
-            oraSelect.CommandText = "SELECT * FROM Match";
+            oraSelect.CommandText = "SELECT * FROM Match" + 
+                                    " order by numeromatch";
             OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect); 
             matchDataSet = new DataSet();
             oraAdapter.Fill(matchDataSet);

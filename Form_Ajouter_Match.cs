@@ -168,20 +168,21 @@ namespace TPFinal
         private void CB_EquipeHome_SelectedIndexChanged(object sender, EventArgs e)
         {
             VerifCases();
-            if (!Regex.IsMatch(TB_Lieu.Text, @"^[a-zA-Z]+$"))
-                TB_Lieu.Text = "";
         }
 
         private void TB_ScoreVisiteur_TextChanged(object sender, EventArgs e)
         {
             VerifCases();
-            if (!Regex.IsMatch(TB_Lieu.Text, @"^[a-zA-Z]+$"))
-                TB_Lieu.Text = "";
+            if (!Regex.IsMatch(TB_ScoreVisiteur.Text, @"^[0-9]+$"))
+                TB_ScoreVisiteur.Text = "";
+
         }
 
         private void TB_ScoreReceveur_TextChanged(object sender, EventArgs e)
         {
             VerifCases();
+            if (!Regex.IsMatch(TB_ScoreReceveur.Text, @"^[0-9]+$"))
+                TB_ScoreReceveur.Text = "";
         }
     }
 }
