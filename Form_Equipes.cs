@@ -504,7 +504,7 @@ namespace TPFinal
                                 "Ctrl+Shift+D - Page division\n" +
                                 "Ctrl+Shift+M - Page match\n" +
                                 "Ctrl+Shift+C - Page classement\n" +
-                                "Ctrl+Shift+T - Page top3" +
+                                "Ctrl+Shift+T - Page top3\n" +
                                 "Ctrl+Shift+J - Page joueur", "Aide", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return true;
         }
