@@ -89,29 +89,29 @@ namespace TPFinal
                 TB_Lieu.Text = value;
             }
         }
-        //public string scoreHome
-        //{
-        //    get
-        //    {
-        //        return TB_ScoreHome.Text;
-        //    }
-        //    set
-        //    {
-        //        TB_ScoreHome.Text = value;
-        //    }
-        //}
-        //public string scoreVisiteur
-        //{
-        //    get
-        //    {
-        //        return TB_ScoreAway.Text;
-        //    }
-        //    set
-        //    {
-        //        TB_ScoreAway.Text = value;
+        public string scoreHome
+        {
+            get
+            {
+                return TB_ScoreReceveur.Text;
+            }
+            set
+            {
+                TB_ScoreReceveur.Text = value;
+            }
+        }
+        public string scoreVisiteur
+        {
+            get
+            {
+                return TB_ScoreVisiteur.Text;
+            }
+            set
+            {
+                TB_ScoreVisiteur.Text = value;
 
-        //    }
-        //}
+            }
+        }
 
         private void VerifScoreValide(object sender, KeyPressEventArgs e)
         {
@@ -150,7 +150,7 @@ namespace TPFinal
 
         private void VerifCases()
         {
-            if (TB_Lieu.Text != "" && CB_EquipeAway.Text != "" && CB_EquipeHome.Text != "")
+            if (TB_Lieu.Text != "" && CB_EquipeAway.Text != "" && CB_EquipeHome.Text != "" && TB_ScoreReceveur.Text != "" && TB_ScoreVisiteur.Text != "")
                 BTN_Ajouter.Enabled = true;
             else
                 BTN_Ajouter.Enabled = false;
@@ -166,6 +166,20 @@ namespace TPFinal
         }
 
         private void CB_EquipeHome_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VerifCases();
+            if (!Regex.IsMatch(TB_Lieu.Text, @"^[a-zA-Z]+$"))
+                TB_Lieu.Text = "";
+        }
+
+        private void TB_ScoreVisiteur_TextChanged(object sender, EventArgs e)
+        {
+            VerifCases();
+            if (!Regex.IsMatch(TB_Lieu.Text, @"^[a-zA-Z]+$"))
+                TB_Lieu.Text = "";
+        }
+
+        private void TB_ScoreReceveur_TextChanged(object sender, EventArgs e)
         {
             VerifCases();
         }

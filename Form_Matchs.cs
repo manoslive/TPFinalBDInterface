@@ -63,9 +63,8 @@ namespace TPFinal
             oraCMD.CommandType = CommandType.Text;
             if (ajm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                //Currval = true;
-                string sqlMatchAjout = "insert into Match (EquipeReceveur,EquipeVisiteur,DateRecontre,LieuRencontre)" +
-                    " VALUES(:EquipeHome,:EquipeVisiteur,:DateRencontre,:Lieu)";
+                string sqlMatchAjout = "insert into Match (EquipeReceveur,EquipeVisiteur,DateRecontre,LieuRencontre,ScoreFinalReceveur, ScoreFinalVisiteur)" +
+                    " VALUES(:EquipeHome,:EquipeVisiteur,:DateRencontre,:Lieu,:scorehome,:scorevisiteur)";
 
                 try
                 {
@@ -76,22 +75,22 @@ namespace TPFinal
                     OracleParameter OraParaEquipeVisiteur = new OracleParameter(":EquipeVisiteur", OracleDbType.Varchar2, 40);
                     OracleParameter OraParaDateRencontre = new OracleParameter(":DateRencontre", OracleDbType.Date);
                     OracleParameter OraParaLieu = new OracleParameter(":Lieu", OracleDbType.Varchar2, 40);
-                    //OracleParameter OraParaScoreHome = new OracleParameter(":ScoreHome", OracleDbType.Int32);
-                    //OracleParameter OraParaScoreVisiteur = new OracleParameter(":ScoreVisiteur", OracleDbType.Int32);
+                    OracleParameter OraParaScoreHome = new OracleParameter(":ScoreHome", OracleDbType.Int32);
+                    OracleParameter OraParaScoreVisiteur = new OracleParameter(":ScoreVisiteur", OracleDbType.Int32);
 
                     OraParaEquipeHome.Value = ajm.equipeHome;
                     OraParaEquipeVisiteur.Value = ajm.equipeVisiteur;
                     OraParaDateRencontre.Value = DateTime.Parse(ajm.dateRencontre);
                     OraParaLieu.Value = ajm.lieuRencontre;
-                    //OraParaScoreHome.Value = ajm.scoreHome;
-                    //OraParaScoreVisiteur.Value = ajm.scoreVisiteur;
+                    OraParaScoreHome.Value = ajm.scoreHome;
+                    OraParaScoreVisiteur.Value = ajm.scoreVisiteur;
 
                     oraMatchAjout.Parameters.Add(OraParaEquipeHome);
                     oraMatchAjout.Parameters.Add(OraParaEquipeVisiteur);
                     oraMatchAjout.Parameters.Add(OraParaDateRencontre);
                     oraMatchAjout.Parameters.Add(OraParaLieu);
-                    //oraMatchAjout.Parameters.Add(OraParaScoreHome);
-                    //oraMatchAjout.Parameters.Add(OraParaScoreVisiteur);
+                    oraMatchAjout.Parameters.Add(OraParaScoreHome);
+                    oraMatchAjout.Parameters.Add(OraParaScoreVisiteur);
 
                     oraMatchAjout.ExecuteNonQuery();
 
@@ -106,7 +105,7 @@ namespace TPFinal
         private void BTN_AjoutRencontre_Click(object sender, EventArgs e)
         {
             // test
-            AjouterStats();
+            Ajouter();
         }
         private void LoadDGVmatch()
         {
@@ -493,6 +492,11 @@ namespace TPFinal
             Properties.Settings.Default.Form_Matchs_DGVPolice = Properties.Settings.Default.Preferences_DGVPolice;
             Properties.Settings.Default.Form_Matchs_DGVCouleurPolice = Properties.Settings.Default.Preferences_DGVCouleurPolice;
             LoadSettings();
+        }
+
+        private void BTN_AjoutStats_Click_1(object sender, EventArgs e)
+        {
+            AjouterStats();
         }
     }
 }

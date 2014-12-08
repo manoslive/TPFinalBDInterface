@@ -40,10 +40,15 @@
             this.LB_EquipeHome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
+            this.LB_Scorevisiteur = new System.Windows.Forms.Label();
+            this.LB_ScoreReceveur = new System.Windows.Forms.Label();
+            this.TB_ScoreVisiteur = new System.Windows.Forms.TextBox();
+            this.TB_ScoreReceveur = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CB_EquipeHome
             // 
+            this.CB_EquipeHome.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_EquipeHome.FormattingEnabled = true;
             this.CB_EquipeHome.Location = new System.Drawing.Point(174, 31);
             this.CB_EquipeHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -54,6 +59,7 @@
             // 
             // CB_EquipeAway
             // 
+            this.CB_EquipeAway.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_EquipeAway.FormattingEnabled = true;
             this.CB_EquipeAway.Location = new System.Drawing.Point(174, 97);
             this.CB_EquipeAway.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -65,7 +71,7 @@
             // BTN_Cancel
             // 
             this.BTN_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Cancel.Location = new System.Drawing.Point(291, 254);
+            this.BTN_Cancel.Location = new System.Drawing.Point(289, 416);
             this.BTN_Cancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(112, 35);
@@ -154,7 +160,7 @@
             // BTN_Ajouter
             // 
             this.BTN_Ajouter.Enabled = false;
-            this.BTN_Ajouter.Location = new System.Drawing.Point(157, 254);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(155, 416);
             this.BTN_Ajouter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(112, 35);
@@ -163,11 +169,49 @@
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
             this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
+            // LB_Scorevisiteur
+            // 
+            this.LB_Scorevisiteur.AutoSize = true;
+            this.LB_Scorevisiteur.Location = new System.Drawing.Point(25, 262);
+            this.LB_Scorevisiteur.Name = "LB_Scorevisiteur";
+            this.LB_Scorevisiteur.Size = new System.Drawing.Size(104, 20);
+            this.LB_Scorevisiteur.TabIndex = 25;
+            this.LB_Scorevisiteur.Text = "Score visiteur";
+            // 
+            // LB_ScoreReceveur
+            // 
+            this.LB_ScoreReceveur.AutoSize = true;
+            this.LB_ScoreReceveur.Location = new System.Drawing.Point(25, 316);
+            this.LB_ScoreReceveur.Name = "LB_ScoreReceveur";
+            this.LB_ScoreReceveur.Size = new System.Drawing.Size(116, 20);
+            this.LB_ScoreReceveur.TabIndex = 25;
+            this.LB_ScoreReceveur.Text = "Score receveur";
+            // 
+            // TB_ScoreVisiteur
+            // 
+            this.TB_ScoreVisiteur.Location = new System.Drawing.Point(174, 259);
+            this.TB_ScoreVisiteur.Name = "TB_ScoreVisiteur";
+            this.TB_ScoreVisiteur.Size = new System.Drawing.Size(196, 26);
+            this.TB_ScoreVisiteur.TabIndex = 26;
+            this.TB_ScoreVisiteur.TextChanged += new System.EventHandler(this.TB_ScoreVisiteur_TextChanged);
+            // 
+            // TB_ScoreReceveur
+            // 
+            this.TB_ScoreReceveur.Location = new System.Drawing.Point(174, 313);
+            this.TB_ScoreReceveur.Name = "TB_ScoreReceveur";
+            this.TB_ScoreReceveur.Size = new System.Drawing.Size(196, 26);
+            this.TB_ScoreReceveur.TabIndex = 26;
+            this.TB_ScoreReceveur.TextChanged += new System.EventHandler(this.TB_ScoreReceveur_TextChanged);
+            // 
             // Form_Ajouter_Match
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 299);
+            this.ClientSize = new System.Drawing.Size(416, 465);
+            this.Controls.Add(this.TB_ScoreReceveur);
+            this.Controls.Add(this.TB_ScoreVisiteur);
+            this.Controls.Add(this.LB_ScoreReceveur);
+            this.Controls.Add(this.LB_Scorevisiteur);
             this.Controls.Add(this.CB_EquipeHome);
             this.Controls.Add(this.CB_EquipeAway);
             this.Controls.Add(this.BTN_Cancel);
@@ -204,5 +248,9 @@
         private System.Windows.Forms.Label LB_EquipeHome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BTN_Ajouter;
+        private System.Windows.Forms.Label LB_Scorevisiteur;
+        private System.Windows.Forms.Label LB_ScoreReceveur;
+        private System.Windows.Forms.TextBox TB_ScoreVisiteur;
+        private System.Windows.Forms.TextBox TB_ScoreReceveur;
     }
 }
