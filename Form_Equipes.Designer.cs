@@ -46,6 +46,7 @@
             this.FB_AjouterEquipe = new FlashButton.FlashButton();
             this.FB_Classement = new FlashButton.FlashButton();
             this.FB_Top3 = new FlashButton.FlashButton();
+            this.FB_Matchs = new FlashButton.FlashButton();
             this.MS_Equipe = new System.Windows.Forms.MenuStrip();
             this.fonctionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.équipesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +68,6 @@
             this.classementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.top3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.FB_Matchs = new FlashButton.FlashButton();
             this.FB_Division = new FlashButton.FlashButton();
             this.PB_Equipe = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).BeginInit();
@@ -80,7 +80,9 @@
             // 
             // DGV_Equipes
             // 
-            this.DGV_Equipes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.DGV_Equipes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_Equipes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.DGV_Equipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Equipes.ContextMenuStrip = this.CM_EquipeDGV;
@@ -285,6 +287,23 @@
             this.toolTip_Equipe.SetToolTip(this.FB_Top3, "Top 3");
             this.FB_Top3.Click += new System.EventHandler(this.BTN_Top5_Click);
             // 
+            // FB_Matchs
+            // 
+            this.FB_Matchs.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.FB_Matchs.BackColor = System.Drawing.Color.Transparent;
+            this.FB_Matchs.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Match;
+            this.FB_Matchs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_Matchs.ImageClick = global::TPFinal.Properties.Resources.ICON_Match_Click;
+            this.FB_Matchs.ImageDisable = global::TPFinal.Properties.Resources.ICON_Match;
+            this.FB_Matchs.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Match;
+            this.FB_Matchs.ImageOver = global::TPFinal.Properties.Resources.ICON_Match_Over;
+            this.FB_Matchs.Location = new System.Drawing.Point(15, 205);
+            this.FB_Matchs.Name = "FB_Matchs";
+            this.FB_Matchs.Size = new System.Drawing.Size(36, 36);
+            this.FB_Matchs.TabIndex = 15;
+            this.toolTip_Equipe.SetToolTip(this.FB_Matchs, "Matchs");
+            this.FB_Matchs.Click += new System.EventHandler(this.BTN_Matchs_Click);
+            // 
             // MS_Equipe
             // 
             this.MS_Equipe.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -445,24 +464,9 @@
             this.quitterToolStripMenuItem1.Text = "Quitter";
             this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
             // 
-            // FB_Matchs
-            // 
-            this.FB_Matchs.BackColor = System.Drawing.Color.Transparent;
-            this.FB_Matchs.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Match;
-            this.FB_Matchs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.FB_Matchs.ImageClick = global::TPFinal.Properties.Resources.ICON_Match_Click;
-            this.FB_Matchs.ImageDisable = global::TPFinal.Properties.Resources.ICON_Match;
-            this.FB_Matchs.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Match;
-            this.FB_Matchs.ImageOver = global::TPFinal.Properties.Resources.ICON_Match_Over;
-            this.FB_Matchs.Location = new System.Drawing.Point(15, 205);
-            this.FB_Matchs.Name = "FB_Matchs";
-            this.FB_Matchs.Size = new System.Drawing.Size(36, 36);
-            this.FB_Matchs.TabIndex = 15;
-            this.toolTip_Equipe.SetToolTip(this.FB_Matchs, "Matchs");
-            this.FB_Matchs.Click += new System.EventHandler(this.BTN_Matchs_Click);
-            // 
             // FB_Division
             // 
+            this.FB_Division.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.FB_Division.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Division;
             this.FB_Division.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_Division.ImageClick = global::TPFinal.Properties.Resources.ICON_Division_Click;
@@ -516,6 +520,7 @@
             this.Text = "Form_Equipe";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Equipes_FormClosing);
             this.Load += new System.EventHandler(this.Form_Equipe_Load);
+            this.SizeChanged += new System.EventHandler(this.Form_Equipes_SizeChanged);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Equipes_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).EndInit();
             this.CM_EquipeDGV.ResumeLayout(false);

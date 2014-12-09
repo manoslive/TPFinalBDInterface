@@ -131,13 +131,13 @@ namespace TPFinal
         private void SetDGVLargeurColonne()
         {
             DataGridViewColumn nomEquipe = DGV_Equipes.Columns[0];
-            nomEquipe.Width = 80;
+            nomEquipe.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.22);
             DataGridViewColumn dateIntro = DGV_Equipes.Columns[1];
-            dateIntro.Width = 120;
+            dateIntro.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.32); ;
             DataGridViewColumn nomDivision = DGV_Equipes.Columns[2];
-            nomDivision.Width = 80;
+            nomDivision.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.22); ;
             DataGridViewColumn ville = DGV_Equipes.Columns[3];
-            ville.Width = 85;
+            ville.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.23); ;
         }
         
         private void updateControls() // Met à jours l'état des boutons
@@ -583,6 +583,11 @@ namespace TPFinal
             Properties.Settings.Default.Form_Equipe_DGVPolice = Properties.Settings.Default.Preferences_DGVPolice;
             Properties.Settings.Default.Form_Equipe_DGVCouleurPolice = Properties.Settings.Default.Preferences_DGVCouleurPolice;
             LoadSettings();
+        }
+
+        private void Form_Equipes_SizeChanged(object sender, EventArgs e)
+        {
+            SetDGVLargeurColonne();
         }
     }
 }
