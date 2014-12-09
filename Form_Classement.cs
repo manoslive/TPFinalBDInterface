@@ -60,12 +60,14 @@ namespace TPFinal
             OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
 
             divisions = CB_Division.Text;
-            if (divisions != "Est" && divisions != "Ouest")
-                divisions = "Est' or nomdivision='Ouest'";
+            if (divisions == "Toutes")
+                oraSelect.CommandText = "SELECT * from classement ";
             else
-                divisions += "'";
-            oraSelect.CommandText = "SELECT * from classement " + 
-                                    "where nomdivision= '" + divisions ;
+            {
+                divisions += "' ";
+                oraSelect.CommandText = "SELECT * from classement " +
+                                        "where nomdivision= '" + divisions;
+            }
             oraAdapter.Fill(dataSetClassement, "tableclassement");
             DGV_Classement.DataSource = dataSetClassement.Tables[0];
             // SetDGVLargeurColonne();
