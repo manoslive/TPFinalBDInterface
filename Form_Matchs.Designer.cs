@@ -81,10 +81,9 @@
             // 
             this.LB_EquipeHome.AutoSize = true;
             this.LB_EquipeHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_EquipeHome.Location = new System.Drawing.Point(169, 27);
-            this.LB_EquipeHome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB_EquipeHome.Location = new System.Drawing.Point(254, 42);
             this.LB_EquipeHome.Name = "LB_EquipeHome";
-            this.LB_EquipeHome.Size = new System.Drawing.Size(127, 17);
+            this.LB_EquipeHome.Size = new System.Drawing.Size(169, 25);
             this.LB_EquipeHome.TabIndex = 0;
             this.LB_EquipeHome.Text = "Équipe receveur";
             // 
@@ -92,19 +91,19 @@
             // 
             this.LB_EquipeAway.AutoSize = true;
             this.LB_EquipeAway.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_EquipeAway.Location = new System.Drawing.Point(502, 27);
-            this.LB_EquipeAway.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB_EquipeAway.Location = new System.Drawing.Point(753, 42);
             this.LB_EquipeAway.Name = "LB_EquipeAway";
-            this.LB_EquipeAway.Size = new System.Drawing.Size(116, 17);
+            this.LB_EquipeAway.Size = new System.Drawing.Size(154, 25);
             this.LB_EquipeAway.TabIndex = 0;
             this.LB_EquipeAway.Text = "Équipe visiteur";
             // 
             // BTN_Fermer
             // 
             this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Fermer.Location = new System.Drawing.Point(992, 603);
+            this.BTN_Fermer.Location = new System.Drawing.Point(1488, 928);
+            this.BTN_Fermer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTN_Fermer.Name = "BTN_Fermer";
-            this.BTN_Fermer.Size = new System.Drawing.Size(164, 32);
+            this.BTN_Fermer.Size = new System.Drawing.Size(246, 49);
             this.BTN_Fermer.TabIndex = 4;
             this.BTN_Fermer.Text = "Fermer";
             this.BTN_Fermer.UseVisualStyleBackColor = true;
@@ -113,8 +112,7 @@
             // 
             this.DGV_Matchs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Matchs.ContextMenuStrip = this.CM_Match;
-            this.DGV_Matchs.Location = new System.Drawing.Point(8, 172);
-            this.DGV_Matchs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGV_Matchs.Location = new System.Drawing.Point(12, 265);
             this.DGV_Matchs.MultiSelect = false;
             this.DGV_Matchs.Name = "DGV_Matchs";
             this.DGV_Matchs.ReadOnly = true;
@@ -122,7 +120,7 @@
             this.DGV_Matchs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGV_Matchs.RowTemplate.Height = 28;
             this.DGV_Matchs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Matchs.Size = new System.Drawing.Size(763, 101);
+            this.DGV_Matchs.Size = new System.Drawing.Size(1144, 155);
             this.DGV_Matchs.TabIndex = 5;
             this.DGV_Matchs.SelectionChanged += new System.EventHandler(this.DGV_Matchs_SelectionChanged);
             // 
@@ -135,40 +133,40 @@
             this.calendrierToolStripMenuItem,
             this.quitterToolStripMenuItem});
             this.CM_Match.Name = "CM_Match";
-            this.CM_Match.Size = new System.Drawing.Size(157, 114);
+            this.CM_Match.Size = new System.Drawing.Size(206, 154);
             // 
             // ajouterMatchToolStripMenuItem
             // 
             this.ajouterMatchToolStripMenuItem.Name = "ajouterMatchToolStripMenuItem";
-            this.ajouterMatchToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.ajouterMatchToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
             this.ajouterMatchToolStripMenuItem.Text = "Ajouter match";
             this.ajouterMatchToolStripMenuItem.Click += new System.EventHandler(this.ajouterMatchToolStripMenuItem_Click);
             // 
             // modifierMatchToolStripMenuItem
             // 
             this.modifierMatchToolStripMenuItem.Name = "modifierMatchToolStripMenuItem";
-            this.modifierMatchToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.modifierMatchToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
             this.modifierMatchToolStripMenuItem.Text = "Modifier match";
             this.modifierMatchToolStripMenuItem.Click += new System.EventHandler(this.modifierMatchToolStripMenuItem_Click);
             // 
             // ajouterStatsToolStripMenuItem
             // 
             this.ajouterStatsToolStripMenuItem.Name = "ajouterStatsToolStripMenuItem";
-            this.ajouterStatsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.ajouterStatsToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
             this.ajouterStatsToolStripMenuItem.Text = "Ajouter stats";
             this.ajouterStatsToolStripMenuItem.Click += new System.EventHandler(this.ajouterStatsToolStripMenuItem_Click);
             // 
             // calendrierToolStripMenuItem
             // 
             this.calendrierToolStripMenuItem.Name = "calendrierToolStripMenuItem";
-            this.calendrierToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.calendrierToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
             this.calendrierToolStripMenuItem.Text = "Calendrier";
             this.calendrierToolStripMenuItem.Click += new System.EventHandler(this.calendrierToolStripMenuItem_Click);
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -176,8 +174,7 @@
             // 
             this.DGV_Joueurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Joueurs.ContextMenuStrip = this.CM_Match;
-            this.DGV_Joueurs.Location = new System.Drawing.Point(7, 324);
-            this.DGV_Joueurs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGV_Joueurs.Location = new System.Drawing.Point(10, 498);
             this.DGV_Joueurs.MultiSelect = false;
             this.DGV_Joueurs.Name = "DGV_Joueurs";
             this.DGV_Joueurs.ReadOnly = true;
@@ -185,27 +182,25 @@
             this.DGV_Joueurs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGV_Joueurs.RowTemplate.Height = 28;
             this.DGV_Joueurs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Joueurs.Size = new System.Drawing.Size(763, 101);
+            this.DGV_Joueurs.Size = new System.Drawing.Size(1144, 155);
             this.DGV_Joueurs.TabIndex = 5;
             this.DGV_Joueurs.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Joueurs_CellMouseDoubleClick);
             // 
             // LB_ScoreAway
             // 
             this.LB_ScoreAway.AutoSize = true;
-            this.LB_ScoreAway.Location = new System.Drawing.Point(530, 93);
-            this.LB_ScoreAway.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB_ScoreAway.Location = new System.Drawing.Point(795, 143);
             this.LB_ScoreAway.Name = "LB_ScoreAway";
-            this.LB_ScoreAway.Size = new System.Drawing.Size(57, 13);
+            this.LB_ScoreAway.Size = new System.Drawing.Size(84, 20);
             this.LB_ScoreAway.TabIndex = 7;
             this.LB_ScoreAway.Text = "Score final";
             // 
             // LB_ScoreHome
             // 
             this.LB_ScoreHome.AutoSize = true;
-            this.LB_ScoreHome.Location = new System.Drawing.Point(199, 93);
-            this.LB_ScoreHome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB_ScoreHome.Location = new System.Drawing.Point(298, 143);
             this.LB_ScoreHome.Name = "LB_ScoreHome";
-            this.LB_ScoreHome.Size = new System.Drawing.Size(57, 13);
+            this.LB_ScoreHome.Size = new System.Drawing.Size(84, 20);
             this.LB_ScoreHome.TabIndex = 7;
             this.LB_ScoreHome.Text = "Score final";
             // 
@@ -213,10 +208,9 @@
             // 
             this.LB_NbButsHome.AutoSize = true;
             this.LB_NbButsHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_NbButsHome.Location = new System.Drawing.Point(214, 115);
-            this.LB_NbButsHome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB_NbButsHome.Location = new System.Drawing.Point(321, 177);
             this.LB_NbButsHome.Name = "LB_NbButsHome";
-            this.LB_NbButsHome.Size = new System.Drawing.Size(25, 26);
+            this.LB_NbButsHome.Size = new System.Drawing.Size(36, 37);
             this.LB_NbButsHome.TabIndex = 8;
             this.LB_NbButsHome.Text = "#";
             // 
@@ -224,21 +218,19 @@
             // 
             this.LB_NbButsAway.AutoSize = true;
             this.LB_NbButsAway.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_NbButsAway.Location = new System.Drawing.Point(551, 115);
-            this.LB_NbButsAway.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB_NbButsAway.Location = new System.Drawing.Point(826, 177);
             this.LB_NbButsAway.Name = "LB_NbButsAway";
-            this.LB_NbButsAway.Size = new System.Drawing.Size(25, 26);
+            this.LB_NbButsAway.Size = new System.Drawing.Size(36, 37);
             this.LB_NbButsAway.TabIndex = 8;
             this.LB_NbButsAway.Text = "#";
             // 
             // TB_Receveur
             // 
             this.TB_Receveur.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TB_Receveur.Location = new System.Drawing.Point(172, 55);
-            this.TB_Receveur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_Receveur.Location = new System.Drawing.Point(258, 85);
             this.TB_Receveur.Name = "TB_Receveur";
             this.TB_Receveur.ReadOnly = true;
-            this.TB_Receveur.Size = new System.Drawing.Size(110, 13);
+            this.TB_Receveur.Size = new System.Drawing.Size(165, 19);
             this.TB_Receveur.TabIndex = 9;
             this.TB_Receveur.Text = "Home";
             this.TB_Receveur.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -246,11 +238,10 @@
             // TB_Visiteur
             // 
             this.TB_Visiteur.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TB_Visiteur.Location = new System.Drawing.Point(502, 55);
-            this.TB_Visiteur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_Visiteur.Location = new System.Drawing.Point(753, 85);
             this.TB_Visiteur.Name = "TB_Visiteur";
             this.TB_Visiteur.ReadOnly = true;
-            this.TB_Visiteur.Size = new System.Drawing.Size(110, 13);
+            this.TB_Visiteur.Size = new System.Drawing.Size(165, 19);
             this.TB_Visiteur.TabIndex = 9;
             this.TB_Visiteur.Text = "Away";
             this.TB_Visiteur.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -263,8 +254,7 @@
             this.toolStripMenuItem1});
             this.MS_Equipe.Location = new System.Drawing.Point(0, 0);
             this.MS_Equipe.Name = "MS_Equipe";
-            this.MS_Equipe.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.MS_Equipe.Size = new System.Drawing.Size(779, 24);
+            this.MS_Equipe.Size = new System.Drawing.Size(1168, 33);
             this.MS_Equipe.TabIndex = 14;
             this.MS_Equipe.Text = "menuStrip1";
             // 
@@ -276,7 +266,7 @@
             this.calendrierToolStripMenuItem1,
             this.quitterToolStripMenuItem1});
             this.fonctionsToolStripMenuItem.Name = "fonctionsToolStripMenuItem";
-            this.fonctionsToolStripMenuItem.Size = new System.Drawing.Size(80, 22);
+            this.fonctionsToolStripMenuItem.Size = new System.Drawing.Size(113, 29);
             this.fonctionsToolStripMenuItem.Text = "Fonctions...";
             // 
             // matchsToolStripMenuItem
@@ -285,20 +275,20 @@
             this.ajouterToolStripMenuItem,
             this.modifierToolStripMenuItem});
             this.matchsToolStripMenuItem.Name = "matchsToolStripMenuItem";
-            this.matchsToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.matchsToolStripMenuItem.Size = new System.Drawing.Size(187, 30);
             this.matchsToolStripMenuItem.Text = "Matchs...";
             // 
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(151, 30);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(151, 30);
             this.modifierToolStripMenuItem.Text = "Modifier";
             this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
             // 
@@ -307,41 +297,41 @@
             this.statistiqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterToolStripMenuItem1});
             this.statistiqueToolStripMenuItem.Name = "statistiqueToolStripMenuItem";
-            this.statistiqueToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.statistiqueToolStripMenuItem.Size = new System.Drawing.Size(187, 30);
             this.statistiqueToolStripMenuItem.Text = "Statistiques...";
             // 
             // ajouterToolStripMenuItem1
             // 
             this.ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
-            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(113, 22);
+            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(142, 30);
             this.ajouterToolStripMenuItem1.Text = "Ajouter";
             this.ajouterToolStripMenuItem1.Click += new System.EventHandler(this.ajouterToolStripMenuItem1_Click);
             // 
             // calendrierToolStripMenuItem1
             // 
             this.calendrierToolStripMenuItem1.Name = "calendrierToolStripMenuItem1";
-            this.calendrierToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
+            this.calendrierToolStripMenuItem1.Size = new System.Drawing.Size(187, 30);
             this.calendrierToolStripMenuItem1.Text = "Calendrier";
             this.calendrierToolStripMenuItem1.Click += new System.EventHandler(this.calendrierToolStripMenuItem1_Click);
             // 
             // quitterToolStripMenuItem1
             // 
             this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
-            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
+            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(187, 30);
             this.quitterToolStripMenuItem1.Text = "Quitter";
             this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
             // 
             // paramètresToolStripMenuItem
             // 
             this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
-            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(87, 22);
+            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(124, 29);
             this.paramètresToolStripMenuItem.Text = "Paramètres...";
             this.paramètresToolStripMenuItem.Click += new System.EventHandler(this.paramètresToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 29);
             this.toolStripMenuItem1.Text = "?";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -354,9 +344,10 @@
             this.FB_Statistiques.ImageDisable = global::TPFinal.Properties.Resources.ICON_Stats;
             this.FB_Statistiques.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Stats;
             this.FB_Statistiques.ImageOver = global::TPFinal.Properties.Resources.ICON_Stats_Over;
-            this.FB_Statistiques.Location = new System.Drawing.Point(12, 430);
+            this.FB_Statistiques.Location = new System.Drawing.Point(18, 662);
+            this.FB_Statistiques.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Statistiques.Name = "FB_Statistiques";
-            this.FB_Statistiques.Size = new System.Drawing.Size(40, 40);
+            this.FB_Statistiques.Size = new System.Drawing.Size(60, 62);
             this.FB_Statistiques.TabIndex = 18;
             this.toolTip1.SetToolTip(this.FB_Statistiques, "Statistiques");
             this.FB_Statistiques.Click += new System.EventHandler(this.BTN_AjoutStats_Click_1);
@@ -370,10 +361,10 @@
             this.FB_ModifierMatch.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Modifier;
             this.FB_ModifierMatch.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Modifier;
             this.FB_ModifierMatch.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Modifier_Over;
-            this.FB_ModifierMatch.Location = new System.Drawing.Point(56, 277);
-            this.FB_ModifierMatch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_ModifierMatch.Location = new System.Drawing.Point(84, 426);
+            this.FB_ModifierMatch.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_ModifierMatch.Name = "FB_ModifierMatch";
-            this.FB_ModifierMatch.Size = new System.Drawing.Size(40, 40);
+            this.FB_ModifierMatch.Size = new System.Drawing.Size(60, 62);
             this.FB_ModifierMatch.TabIndex = 17;
             this.toolTip1.SetToolTip(this.FB_ModifierMatch, "Modifier un match...");
             this.FB_ModifierMatch.Click += new System.EventHandler(this.BTN_ModifierMatch_Click);
@@ -387,10 +378,10 @@
             this.FB_AjoutRencontre.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_AjoutRencontre.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_AjoutRencontre.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter_Over;
-            this.FB_AjoutRencontre.Location = new System.Drawing.Point(8, 277);
-            this.FB_AjoutRencontre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_AjoutRencontre.Location = new System.Drawing.Point(12, 426);
+            this.FB_AjoutRencontre.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_AjoutRencontre.Name = "FB_AjoutRencontre";
-            this.FB_AjoutRencontre.Size = new System.Drawing.Size(40, 40);
+            this.FB_AjoutRencontre.Size = new System.Drawing.Size(60, 62);
             this.FB_AjoutRencontre.TabIndex = 16;
             this.toolTip1.SetToolTip(this.FB_AjoutRencontre, "Ajouter un match...");
             this.FB_AjoutRencontre.Click += new System.EventHandler(this.BTN_AjoutRencontre_Click);
@@ -405,10 +396,10 @@
             this.FB_Calendrier.ImageDisable = global::TPFinal.Properties.Resources.ICON_Calendrier;
             this.FB_Calendrier.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Calendrier;
             this.FB_Calendrier.ImageOver = global::TPFinal.Properties.Resources.ICON_Calendrier_Over;
-            this.FB_Calendrier.Location = new System.Drawing.Point(377, 277);
-            this.FB_Calendrier.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_Calendrier.Location = new System.Drawing.Point(566, 426);
+            this.FB_Calendrier.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Calendrier.Name = "FB_Calendrier";
-            this.FB_Calendrier.Size = new System.Drawing.Size(40, 40);
+            this.FB_Calendrier.Size = new System.Drawing.Size(59, 60);
             this.FB_Calendrier.TabIndex = 15;
             this.toolTip1.SetToolTip(this.FB_Calendrier, "Clendrier");
             this.FB_Calendrier.Click += new System.EventHandler(this.BTN_Calendrier_Click);
@@ -416,9 +407,10 @@
             // PB_Fermer_Gif
             // 
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
-            this.PB_Fermer_Gif.Location = new System.Drawing.Point(731, 430);
+            this.PB_Fermer_Gif.Location = new System.Drawing.Point(1096, 662);
+            this.PB_Fermer_Gif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
-            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(60, 62);
             this.PB_Fermer_Gif.TabIndex = 11;
             this.PB_Fermer_Gif.TabStop = false;
             this.toolTip1.SetToolTip(this.PB_Fermer_Gif, "Fermer");
@@ -436,49 +428,46 @@
             this.FB_Fermer.ImageDisable = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.ImageOver = null;
-            this.FB_Fermer.Location = new System.Drawing.Point(731, 427);
-            this.FB_Fermer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_Fermer.Location = new System.Drawing.Point(1096, 657);
+            this.FB_Fermer.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Fermer.Name = "FB_Fermer";
-            this.FB_Fermer.Size = new System.Drawing.Size(40, 40);
+            this.FB_Fermer.Size = new System.Drawing.Size(60, 62);
             this.FB_Fermer.TabIndex = 10;
             this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Fermer_MouseEnter);
             // 
             // PB_Faceoff
             // 
             this.PB_Faceoff.Image = global::TPFinal.Properties.Resources.hockey_face_off;
-            this.PB_Faceoff.Location = new System.Drawing.Point(300, 27);
-            this.PB_Faceoff.Margin = new System.Windows.Forms.Padding(2);
+            this.PB_Faceoff.Location = new System.Drawing.Point(450, 42);
             this.PB_Faceoff.Name = "PB_Faceoff";
-            this.PB_Faceoff.Size = new System.Drawing.Size(198, 121);
+            this.PB_Faceoff.Size = new System.Drawing.Size(297, 186);
             this.PB_Faceoff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Faceoff.TabIndex = 6;
             this.PB_Faceoff.TabStop = false;
             // 
             // PB_EquipeHome
             // 
-            this.PB_EquipeHome.Location = new System.Drawing.Point(8, 27);
-            this.PB_EquipeHome.Margin = new System.Windows.Forms.Padding(2);
+            this.PB_EquipeHome.Location = new System.Drawing.Point(12, 42);
             this.PB_EquipeHome.Name = "PB_EquipeHome";
-            this.PB_EquipeHome.Size = new System.Drawing.Size(149, 134);
+            this.PB_EquipeHome.Size = new System.Drawing.Size(224, 206);
             this.PB_EquipeHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_EquipeHome.TabIndex = 1;
             this.PB_EquipeHome.TabStop = false;
             // 
             // PB_EquipeAway
             // 
-            this.PB_EquipeAway.Location = new System.Drawing.Point(621, 27);
-            this.PB_EquipeAway.Margin = new System.Windows.Forms.Padding(2);
+            this.PB_EquipeAway.Location = new System.Drawing.Point(932, 42);
             this.PB_EquipeAway.Name = "PB_EquipeAway";
-            this.PB_EquipeAway.Size = new System.Drawing.Size(149, 134);
+            this.PB_EquipeAway.Size = new System.Drawing.Size(224, 206);
             this.PB_EquipeAway.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_EquipeAway.TabIndex = 1;
             this.PB_EquipeAway.TabStop = false;
             // 
             // Form_Matchs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 476);
+            this.ClientSize = new System.Drawing.Size(1168, 764);
             this.ContextMenuStrip = this.CM_Match;
             this.Controls.Add(this.FB_Statistiques);
             this.Controls.Add(this.FB_ModifierMatch);
@@ -502,7 +491,6 @@
             this.Controls.Add(this.LB_EquipeAway);
             this.Controls.Add(this.LB_EquipeHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form_Matchs";
             this.Text = "Form_Match";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Matchs_FormClosed);

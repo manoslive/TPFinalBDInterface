@@ -15,7 +15,7 @@
       <Value Profile="(Default)">0, 0</Value>
     </Setting>
     <Setting Name="Form_MatchsSize" Type="System.Drawing.Size" Scope="User">
-      <Value Profile="(Default)">795, 490</Value>
+      <Value Profile="(Default)">1190, 788</Value>
     </Setting>
     <Setting Name="Form_MatchsLocation" Type="System.Drawing.Point" Scope="User">
       <Value Profile="(Default)">0, 0</Value>

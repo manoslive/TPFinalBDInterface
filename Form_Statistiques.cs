@@ -61,7 +61,7 @@ namespace TPFinal
             OracleCommand oraSelect = oracon.CreateCommand();
             //oraSelect.CommandText = "Select * From Statistiques where NumeroJoueur = :NumeroJoueur";
             oraSelect.CommandText = "Select * From Statistiques " +
-                                    "order by NumeroJoueur"; // Problème ici avec le binding context
+                                    "order by NumeroMatch"; // Problème ici avec le binding context
             oraSelect.Parameters.Add(new OracleParameter(":NumeroJoueur", numeroJoueur));
             using (OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect))
             {
@@ -142,7 +142,7 @@ namespace TPFinal
             {
                 string sql = "insert into FicheJoueur" +
                              "(NumeroMatch, NumeroJoueur, NombreButs, NombrePasses, TempsPunition) " +
-                             "Values(64,5,1,1,1)";
+                             "Values(64,:NumeroJoueur,1,1,1)";
                 try
                 {
                     OracleCommand oraAjout = new OracleCommand(sql, oracon);
