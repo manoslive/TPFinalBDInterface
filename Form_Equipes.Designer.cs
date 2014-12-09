@@ -68,7 +68,7 @@
             this.top3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.FB_Matchs = new FlashButton.FlashButton();
-            this.flashButton1 = new FlashButton.FlashButton();
+            this.FB_Division = new FlashButton.FlashButton();
             this.PB_Equipe = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).BeginInit();
             this.CM_EquipeDGV.SuspendLayout();
@@ -461,18 +461,19 @@
             this.toolTip_Equipe.SetToolTip(this.FB_Matchs, "Matchs");
             this.FB_Matchs.Click += new System.EventHandler(this.BTN_Matchs_Click);
             // 
-            // flashButton1
+            // FB_Division
             // 
-            this.flashButton1.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Division;
-            this.flashButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.flashButton1.ImageClick = global::TPFinal.Properties.Resources.ICON_Division_Click;
-            this.flashButton1.ImageDisable = global::TPFinal.Properties.Resources.ICON_Division;
-            this.flashButton1.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Division;
-            this.flashButton1.ImageOver = global::TPFinal.Properties.Resources.ICON_Division_Over;
-            this.flashButton1.Location = new System.Drawing.Point(71, 205);
-            this.flashButton1.Name = "flashButton1";
-            this.flashButton1.Size = new System.Drawing.Size(36, 36);
-            this.flashButton1.TabIndex = 14;
+            this.FB_Division.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Division;
+            this.FB_Division.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_Division.ImageClick = global::TPFinal.Properties.Resources.ICON_Division_Click;
+            this.FB_Division.ImageDisable = global::TPFinal.Properties.Resources.ICON_Division;
+            this.FB_Division.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Division;
+            this.FB_Division.ImageOver = global::TPFinal.Properties.Resources.ICON_Division_Over;
+            this.FB_Division.Location = new System.Drawing.Point(71, 205);
+            this.FB_Division.Name = "FB_Division";
+            this.FB_Division.Size = new System.Drawing.Size(36, 36);
+            this.FB_Division.TabIndex = 14;
+            this.FB_Division.Click += new System.EventHandler(this.BTN_Divisions_Click);
             // 
             // PB_Equipe
             // 
@@ -493,7 +494,7 @@
             this.ClientSize = new System.Drawing.Size(555, 253);
             this.ContextMenuStrip = this.CM_Equipe;
             this.Controls.Add(this.FB_Matchs);
-            this.Controls.Add(this.flashButton1);
+            this.Controls.Add(this.FB_Division);
             this.Controls.Add(this.PB_Fermer_Gif);
             this.Controls.Add(this.FB_Fermer);
             this.Controls.Add(this.FB_SupprimerEquipe);
@@ -568,7 +569,7 @@
         private System.Windows.Forms.ToolStripMenuItem top3ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem joueursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem2;
-        private FlashButton.FlashButton flashButton1;
+        private FlashButton.FlashButton FB_Division;
         private FlashButton.FlashButton FB_Matchs;
     }
 }

@@ -151,9 +151,9 @@ namespace TPFinal
         private void VerifCases()
         {
             if (TB_Lieu.Text != "" && CB_EquipeAway.Text != "" && CB_EquipeHome.Text != "" && TB_ScoreReceveur.Text != "" && TB_ScoreVisiteur.Text != "")
-                BTN_Ajouter.Enabled = true;
+                FB_Ajouter.Enabled = true;
             else
-                BTN_Ajouter.Enabled = false;
+                FB_Ajouter.Enabled = false;
         }
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
@@ -183,6 +183,26 @@ namespace TPFinal
             VerifCases();
             if (!Regex.IsMatch(TB_ScoreReceveur.Text, @"^[0-9]+$"))
                 TB_ScoreReceveur.Text = "";
+        }
+
+        private void FB_Cancel_MouseEnter(object sender, EventArgs e)
+        {
+            PB_Fermer_Gif.Visible = true;
+        }
+        private void PB_Fermer_Gif_MouseLeave(object sender, EventArgs e)
+        {
+            PB_Fermer_Gif.Visible = false;
+        }
+
+        private void PB_Fermer_Gif_MouseDown(object sender, MouseEventArgs e)
+        {
+            PB_Fermer_Gif.Visible = false;
+            FB_Fermer.BackgroundImage = Properties.Resources.ICON_Fermer_Click;
+        }
+
+        private void PB_Fermer_Gif_MouseUp(object sender, MouseEventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
         }
     }
 }

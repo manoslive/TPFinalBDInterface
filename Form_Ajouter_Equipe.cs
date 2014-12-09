@@ -144,9 +144,9 @@ namespace TPFinal
         private void CheckCasesVides()
         {
             if (TB_Ville.Text != "" && TB_NomEquipe.Text != "" && CB_Division.Text != "")
-                BTN_Ajouter.Enabled = true;
+                FB_Ajouter.Enabled = true;
             else
-                BTN_Ajouter.Enabled = false;
+                FB_Ajouter.Enabled = false;
         }
         private void TB_Ville_TextChanged(object sender, EventArgs e)
         {
@@ -162,6 +162,24 @@ namespace TPFinal
         {
             CheckCasesVides();
         }
+        private void FB_Cancel_MouseEnter(object sender, EventArgs e)
+        {
+            PB_Fermer_Gif.Visible = true;
+        }
+        private void PB_Fermer_Gif_MouseLeave(object sender, EventArgs e)
+        {
+            PB_Fermer_Gif.Visible = false;
+        }
 
+        private void PB_Fermer_Gif_MouseDown(object sender, MouseEventArgs e)
+        {
+            PB_Fermer_Gif.Visible = false;
+            FB_Fermer.BackgroundImage = Properties.Resources.ICON_Fermer_Click;
+        }
+
+        private void PB_Fermer_Gif_MouseUp(object sender, MouseEventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+        }
     }
 }
