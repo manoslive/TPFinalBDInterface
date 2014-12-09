@@ -36,7 +36,6 @@
             this.modifierMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.BTN_Matchs = new System.Windows.Forms.Button();
             this.CB_Division = new System.Windows.Forms.ComboBox();
             this.LB_Division = new System.Windows.Forms.Label();
             this.toolTip_Equipe = new System.Windows.Forms.ToolTip(this.components);
@@ -62,20 +61,21 @@
             this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.PB_Equipe = new System.Windows.Forms.PictureBox();
             this.CM_Equipe = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.matchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.divisionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.top3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.FB_Matchs = new FlashButton.FlashButton();
             this.flashButton1 = new FlashButton.FlashButton();
+            this.PB_Equipe = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).BeginInit();
             this.CM_EquipeDGV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             this.MS_Equipe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).BeginInit();
             this.CM_Equipe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).BeginInit();
             this.SuspendLayout();
             // 
             // DGV_Equipes
@@ -136,18 +136,6 @@
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
-            // BTN_Matchs
-            // 
-            this.BTN_Matchs.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.BTN_Matchs.Location = new System.Drawing.Point(15, 207);
-            this.BTN_Matchs.Margin = new System.Windows.Forms.Padding(2);
-            this.BTN_Matchs.Name = "BTN_Matchs";
-            this.BTN_Matchs.Size = new System.Drawing.Size(79, 26);
-            this.BTN_Matchs.TabIndex = 3;
-            this.BTN_Matchs.Text = "Matchs";
-            this.BTN_Matchs.UseVisualStyleBackColor = true;
-            this.BTN_Matchs.Click += new System.EventHandler(this.BTN_Matchs_Click);
-            // 
             // CB_Division
             // 
             this.CB_Division.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -177,7 +165,7 @@
             this.PB_Fermer_Gif.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.PB_Fermer_Gif.BackColor = System.Drawing.Color.Transparent;
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
-            this.PB_Fermer_Gif.Location = new System.Drawing.Point(472, 197);
+            this.PB_Fermer_Gif.Location = new System.Drawing.Point(469, 205);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
             this.PB_Fermer_Gif.Size = new System.Drawing.Size(46, 41);
             this.PB_Fermer_Gif.TabIndex = 12;
@@ -198,7 +186,7 @@
             this.FB_Fermer.ImageDisable = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.ImageOver = null;
-            this.FB_Fermer.Location = new System.Drawing.Point(472, 197);
+            this.FB_Fermer.Location = new System.Drawing.Point(469, 202);
             this.FB_Fermer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Fermer.Name = "FB_Fermer";
             this.FB_Fermer.Size = new System.Drawing.Size(46, 41);
@@ -217,7 +205,7 @@
             this.FB_SupprimerEquipe.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
             this.FB_SupprimerEquipe.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
             this.FB_SupprimerEquipe.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer_Over;
-            this.FB_SupprimerEquipe.Location = new System.Drawing.Point(472, 149);
+            this.FB_SupprimerEquipe.Location = new System.Drawing.Point(469, 154);
             this.FB_SupprimerEquipe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_SupprimerEquipe.Name = "FB_SupprimerEquipe";
             this.FB_SupprimerEquipe.Size = new System.Drawing.Size(46, 46);
@@ -271,7 +259,7 @@
             this.FB_Classement.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_Classement.ImageDisable")));
             this.FB_Classement.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_Classement.ImageNeutral")));
             this.FB_Classement.ImageOver = global::TPFinal.Properties.Resources.ICON_Classement_Over;
-            this.FB_Classement.Location = new System.Drawing.Point(207, 197);
+            this.FB_Classement.Location = new System.Drawing.Point(123, 205);
             this.FB_Classement.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Classement.Name = "FB_Classement";
             this.FB_Classement.Size = new System.Drawing.Size(36, 36);
@@ -289,7 +277,7 @@
             this.FB_Top3.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_Top3.ImageDisable")));
             this.FB_Top3.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_Top3.ImageNeutral")));
             this.FB_Top3.ImageOver = global::TPFinal.Properties.Resources.ICON_Top3_Over;
-            this.FB_Top3.Location = new System.Drawing.Point(261, 197);
+            this.FB_Top3.Location = new System.Drawing.Point(177, 205);
             this.FB_Top3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Top3.Name = "FB_Top3";
             this.FB_Top3.Size = new System.Drawing.Size(36, 36);
@@ -411,18 +399,6 @@
             this.toolStripMenuItem1.Text = "?";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
-            // PB_Equipe
-            // 
-            this.PB_Equipe.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PB_Equipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PB_Equipe.ErrorImage = global::TPFinal.Properties.Resources.no_picture;
-            this.PB_Equipe.Location = new System.Drawing.Point(448, 28);
-            this.PB_Equipe.Margin = new System.Windows.Forms.Padding(2);
-            this.PB_Equipe.Name = "PB_Equipe";
-            this.PB_Equipe.Size = new System.Drawing.Size(93, 77);
-            this.PB_Equipe.TabIndex = 2;
-            this.PB_Equipe.TabStop = false;
-            // 
             // CM_Equipe
             // 
             this.CM_Equipe.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -469,6 +445,22 @@
             this.quitterToolStripMenuItem1.Text = "Quitter";
             this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
             // 
+            // FB_Matchs
+            // 
+            this.FB_Matchs.BackColor = System.Drawing.Color.Transparent;
+            this.FB_Matchs.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Match;
+            this.FB_Matchs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_Matchs.ImageClick = global::TPFinal.Properties.Resources.ICON_Match_Click;
+            this.FB_Matchs.ImageDisable = global::TPFinal.Properties.Resources.ICON_Match;
+            this.FB_Matchs.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Match;
+            this.FB_Matchs.ImageOver = global::TPFinal.Properties.Resources.ICON_Match_Over;
+            this.FB_Matchs.Location = new System.Drawing.Point(15, 205);
+            this.FB_Matchs.Name = "FB_Matchs";
+            this.FB_Matchs.Size = new System.Drawing.Size(36, 36);
+            this.FB_Matchs.TabIndex = 15;
+            this.toolTip_Equipe.SetToolTip(this.FB_Matchs, "Matchs");
+            this.FB_Matchs.Click += new System.EventHandler(this.BTN_Matchs_Click);
+            // 
             // flashButton1
             // 
             this.flashButton1.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Division;
@@ -477,10 +469,22 @@
             this.flashButton1.ImageDisable = global::TPFinal.Properties.Resources.ICON_Division;
             this.flashButton1.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Division;
             this.flashButton1.ImageOver = global::TPFinal.Properties.Resources.ICON_Division_Over;
-            this.flashButton1.Location = new System.Drawing.Point(155, 197);
+            this.flashButton1.Location = new System.Drawing.Point(71, 205);
             this.flashButton1.Name = "flashButton1";
             this.flashButton1.Size = new System.Drawing.Size(36, 36);
             this.flashButton1.TabIndex = 14;
+            // 
+            // PB_Equipe
+            // 
+            this.PB_Equipe.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PB_Equipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Equipe.ErrorImage = global::TPFinal.Properties.Resources.no_picture;
+            this.PB_Equipe.Location = new System.Drawing.Point(448, 28);
+            this.PB_Equipe.Margin = new System.Windows.Forms.Padding(2);
+            this.PB_Equipe.Name = "PB_Equipe";
+            this.PB_Equipe.Size = new System.Drawing.Size(93, 77);
+            this.PB_Equipe.TabIndex = 2;
+            this.PB_Equipe.TabStop = false;
             // 
             // Form_Equipes
             // 
@@ -488,6 +492,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 253);
             this.ContextMenuStrip = this.CM_Equipe;
+            this.Controls.Add(this.FB_Matchs);
             this.Controls.Add(this.flashButton1);
             this.Controls.Add(this.PB_Fermer_Gif);
             this.Controls.Add(this.FB_Fermer);
@@ -499,7 +504,6 @@
             this.Controls.Add(this.LB_Division);
             this.Controls.Add(this.CB_Division);
             this.Controls.Add(this.PB_Equipe);
-            this.Controls.Add(this.BTN_Matchs);
             this.Controls.Add(this.DGV_Equipes);
             this.Controls.Add(this.MS_Equipe);
             this.DoubleBuffered = true;
@@ -517,8 +521,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
             this.MS_Equipe.ResumeLayout(false);
             this.MS_Equipe.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).EndInit();
             this.CM_Equipe.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -528,7 +532,6 @@
 
         private System.Windows.Forms.DataGridView DGV_Equipes;
         private System.Windows.Forms.PictureBox PB_Equipe;
-        private System.Windows.Forms.Button BTN_Matchs;
         public System.Windows.Forms.ComboBox CB_Division;
         private System.Windows.Forms.Label LB_Division;
         private FlashButton.FlashButton FB_Top3;
@@ -566,5 +569,6 @@
         private System.Windows.Forms.ToolStripMenuItem joueursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem2;
         private FlashButton.FlashButton flashButton1;
+        private FlashButton.FlashButton FB_Matchs;
     }
 }
