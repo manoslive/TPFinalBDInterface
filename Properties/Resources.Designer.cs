@@ -103,6 +103,36 @@ namespace TPFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ICON_Calendrier {
+            get {
+                object obj = ResourceManager.GetObject("ICON_Calendrier", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ICON_Calendrier_Click {
+            get {
+                object obj = ResourceManager.GetObject("ICON_Calendrier_Click", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ICON_Calendrier_Over {
+            get {
+                object obj = ResourceManager.GetObject("ICON_Calendrier_Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ICON_Classement {
             get {
                 object obj = ResourceManager.GetObject("ICON_Classement", resourceCulture);
