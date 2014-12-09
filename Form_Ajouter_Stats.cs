@@ -197,7 +197,7 @@ namespace TPFinal
         }
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
-
+            DialogResult = DialogResult.OK;
         }
         private void VerifCases()
         {
