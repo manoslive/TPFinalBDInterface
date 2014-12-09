@@ -162,11 +162,11 @@ namespace TPFinal
             bool estCorrect = false;
             if (TB_NomJoueur.Text != "" && TB_NumMaillot.Text != "" && TB_PrenomJoueur.Text != "" && TB_Url.Text != "" && CB_EquipeJoueur.Text != "" && CB_PosJoueur.Text != "")
             {
-                BTN_Ajouter.Enabled = true;
+                FB_Ajouter.Enabled = true;
                 estCorrect = true;
             }
             else
-                BTN_Ajouter.Enabled = false;
+                FB_Ajouter.Enabled = false;
 
 
             return estCorrect;
@@ -220,5 +220,26 @@ namespace TPFinal
         {
             DialogResult = System.Windows.Forms.DialogResult.OK;
         }
+
+        private void FB_Cancel_MouseEnter(object sender, EventArgs e)
+        {
+            PB_Fermer_Gif.Visible = true;
+        }
+        private void PB_Fermer_Gif_MouseLeave(object sender, EventArgs e)
+        {
+            PB_Fermer_Gif.Visible = false;
+        }
+
+        private void PB_Fermer_Gif_MouseDown(object sender, MouseEventArgs e)
+        {
+            PB_Fermer_Gif.Visible = false;
+            FB_Fermer.BackgroundImage = Properties.Resources.ICON_Fermer_Click;
+        }
+
+        private void PB_Fermer_Gif_MouseUp(object sender, MouseEventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+        }
+
     }
 }

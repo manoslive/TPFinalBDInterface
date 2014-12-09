@@ -201,7 +201,6 @@ namespace TPFinal
             ajs.nbPasses = TB_NbPasses.Text;
             ajs.tempsPunition = TB_TempsPunition.Text;
             ajs.Location = this.Location;
-            ajs.BTN_Ajouter.Text = "Modifier";
             this.Hide();
 
             if (ajs.ShowDialog() == System.Windows.Forms.DialogResult.OK)
