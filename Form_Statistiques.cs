@@ -140,12 +140,9 @@ namespace TPFinal
             this.Hide(); // Cache la fenêtre actuelle
             if (aJ.ShowDialog() == DialogResult.OK)
             {
-                //string sql = "insert into FicheJoueur" +
-                //             "(NumeroMatch, NumeroJoueur, NombreButs, NombrePasses, TempsPunition) " +
-                //             "Values(:NumeroMatch, :NumeroJoueur, :NombreButs, :NombrePasses, :TempsPunition)";
                 string sql = "insert into FicheJoueur" +
                              "(NumeroMatch, NumeroJoueur, NombreButs, NombrePasses, TempsPunition) " +
-                             "Values(:NumeroMatch,97,1,1,1)";
+                             "Values(64,5,1,1,1)";
                 try
                 {
                     OracleCommand oraAjout = new OracleCommand(sql, oracon);

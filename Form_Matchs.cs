@@ -357,7 +357,6 @@ namespace TPFinal
         }
         private void AjouterStats()
         {
-            // PROBLÈME ICI
             Form_Statistiques stats = new Form_Statistiques(oracon, connection, DGV_Matchs.SelectedRows[0].Cells[0].Value.ToString());
             this.Hide();
             stats.Text = "Statistiques";
