@@ -463,6 +463,36 @@ namespace TPFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ICON_Stats {
+            get {
+                object obj = ResourceManager.GetObject("ICON_Stats", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ICON_Stats_Click {
+            get {
+                object obj = ResourceManager.GetObject("ICON_Stats_Click", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ICON_Stats_Over {
+            get {
+                object obj = ResourceManager.GetObject("ICON_Stats_Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ICON_Suivant {
             get {
                 object obj = ResourceManager.GetObject("ICON_Suivant", resourceCulture);

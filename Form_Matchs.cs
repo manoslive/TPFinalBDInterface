@@ -202,7 +202,7 @@ namespace TPFinal
         }
         private void Form_Matchs_Load(object sender, EventArgs e)
         {
-            BTN_AjoutRencontre.Select();
+            FB_AjoutRencontre.Select();
             LoadSettings();
             LoadDGVmatch();
         }

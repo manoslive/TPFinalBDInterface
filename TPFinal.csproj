@@ -459,6 +459,15 @@
   <ItemGroup>
     <None Include="Resources\ICON_Calendrier_Over.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Stats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Stats_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Stats_Over.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
