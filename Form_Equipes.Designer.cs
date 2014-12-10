@@ -164,7 +164,7 @@
             // 
             // PB_Fermer_Gif
             // 
-            this.PB_Fermer_Gif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PB_Fermer_Gif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.PB_Fermer_Gif.BackColor = System.Drawing.Color.Transparent;
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
             this.PB_Fermer_Gif.Location = new System.Drawing.Point(469, 205);
@@ -180,7 +180,7 @@
             // 
             // FB_Fermer
             // 
-            this.FB_Fermer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.FB_Fermer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.FB_Fermer.BackColor = System.Drawing.Color.Transparent;
             this.FB_Fermer.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

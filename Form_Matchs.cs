@@ -131,14 +131,47 @@ namespace TPFinal
         }
         private void SetDGVLargeurColonne()
         {
-            DataGridViewColumn nomEquipe = DGV_Matchs.Columns[0];
-            nomEquipe.Width = 80;
-            DataGridViewColumn dateIntro = DGV_Matchs.Columns[1];
-            dateIntro.Width = 120;
-            DataGridViewColumn nomDivision = DGV_Matchs.Columns[2];
-            nomDivision.Width = 80;
-            DataGridViewColumn ville = DGV_Matchs.Columns[3];
-            ville.Width = 85;
+            DataGridViewColumn numMatch = DGV_Matchs.Columns[0];
+            numMatch.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.10);
+            DataGridViewColumn receveur = DGV_Matchs.Columns[1];
+            receveur.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.18);
+            DataGridViewColumn visiteur = DGV_Matchs.Columns[2];
+            visiteur.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.18);
+            DataGridViewColumn date = DGV_Matchs.Columns[3];
+            date.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.15);
+            DataGridViewColumn lieu = DGV_Matchs.Columns[4];
+            lieu.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.15);
+            DataGridViewColumn scoreReceveur = DGV_Matchs.Columns[5];
+            scoreReceveur.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.10);
+            DataGridViewColumn scoreVisiteur = DGV_Matchs.Columns[6];
+            scoreVisiteur.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.10);
+            
+            System.Drawing.Point DGV_Joueurs_Location = new Point(DGV_Joueurs.Location.X, DGV_Matchs.Location.Y + DGV_Matchs.Size.Height + 52);
+            DGV_Joueurs.Location = DGV_Joueurs_Location ;
+
+            FB_Calendrier.Location = new Point(this.Size.Width/2 - FB_Calendrier.Size.Width/2 ,DGV_Matchs.Location.Y + DGV_Matchs.Size.Height + 4);
+            FB_ModifierMatch.Location = new Point(FB_ModifierMatch.Location.X, DGV_Matchs.Location.Y + DGV_Matchs.Size.Height + 4);
+            FB_AjoutRencontre.Location = new Point(FB_AjoutRencontre.Location.X, DGV_Matchs.Location.Y + DGV_Matchs.Size.Height + 4);
+            FB_Statistiques.Location = new Point(FB_Statistiques.Location.X, DGV_Joueurs.Size.Height+ DGV_Joueurs.Location.Y +7);
+            FB_Fermer.Location = new Point(FB_Fermer.Location.X, DGV_Joueurs.Size.Height + DGV_Joueurs.Location.Y + 7);
+            PB_Fermer_Gif.Location = new Point(PB_Fermer_Gif.Location.X, DGV_Joueurs.Size.Height + DGV_Joueurs.Location.Y + 7);
+
+            DataGridViewColumn numJoueur = DGV_Joueurs.Columns[0];
+            numJoueur.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
+            DataGridViewColumn numMaillot = DGV_Joueurs.Columns[1];
+            numMaillot.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
+            DataGridViewColumn nomJoueur = DGV_Joueurs.Columns[2];
+            nomJoueur.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.15);
+            DataGridViewColumn position = DGV_Joueurs.Columns[3];
+            position.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.15);
+            DataGridViewColumn nomEquipe = DGV_Joueurs.Columns[4];
+            nomEquipe.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.15);
+            DataGridViewColumn nbButs = DGV_Joueurs.Columns[5];
+            nbButs.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
+            DataGridViewColumn nbPasses = DGV_Joueurs.Columns[6];
+            nbPasses.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
+            DataGridViewColumn nbPoints = DGV_Joueurs.Columns[7];
+            nbPoints.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
         }
         private void Modifier()
         {
@@ -205,6 +238,7 @@ namespace TPFinal
             FB_AjoutRencontre.Select();
             LoadSettings();
             LoadDGVmatch();
+            SetDGVLargeurColonne();
         }
         private void DGV_Matchs_SelectionChanged(object sender, EventArgs e)
         {
@@ -497,6 +531,11 @@ namespace TPFinal
         private void BTN_AjoutStats_Click_1(object sender, EventArgs e)
         {
             AjouterStats();
+        }
+
+        private void Form_Matchs_SizeChanged(object sender, EventArgs e)
+        {
+            SetDGVLargeurColonne();
         }
     }
 }

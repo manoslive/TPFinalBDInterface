@@ -79,6 +79,7 @@
             // 
             // LB_EquipeHome
             // 
+            this.LB_EquipeHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LB_EquipeHome.AutoSize = true;
             this.LB_EquipeHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_EquipeHome.Location = new System.Drawing.Point(169, 27);
@@ -90,6 +91,7 @@
             // 
             // LB_EquipeAway
             // 
+            this.LB_EquipeAway.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LB_EquipeAway.AutoSize = true;
             this.LB_EquipeAway.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_EquipeAway.Location = new System.Drawing.Point(502, 27);
@@ -111,10 +113,14 @@
             // 
             // DGV_Matchs
             // 
+            this.DGV_Matchs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGV_Matchs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DGV_Matchs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Matchs.ContextMenuStrip = this.CM_Match;
             this.DGV_Matchs.Location = new System.Drawing.Point(8, 172);
-            this.DGV_Matchs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGV_Matchs.Margin = new System.Windows.Forms.Padding(2);
             this.DGV_Matchs.MultiSelect = false;
             this.DGV_Matchs.Name = "DGV_Matchs";
             this.DGV_Matchs.ReadOnly = true;
@@ -174,10 +180,14 @@
             // 
             // DGV_Joueurs
             // 
+            this.DGV_Joueurs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGV_Joueurs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DGV_Joueurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Joueurs.ContextMenuStrip = this.CM_Match;
             this.DGV_Joueurs.Location = new System.Drawing.Point(7, 324);
-            this.DGV_Joueurs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGV_Joueurs.Margin = new System.Windows.Forms.Padding(2);
             this.DGV_Joueurs.MultiSelect = false;
             this.DGV_Joueurs.Name = "DGV_Joueurs";
             this.DGV_Joueurs.ReadOnly = true;
@@ -191,6 +201,7 @@
             // 
             // LB_ScoreAway
             // 
+            this.LB_ScoreAway.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LB_ScoreAway.AutoSize = true;
             this.LB_ScoreAway.Location = new System.Drawing.Point(530, 93);
             this.LB_ScoreAway.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -201,6 +212,7 @@
             // 
             // LB_ScoreHome
             // 
+            this.LB_ScoreHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LB_ScoreHome.AutoSize = true;
             this.LB_ScoreHome.Location = new System.Drawing.Point(199, 93);
             this.LB_ScoreHome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -211,6 +223,7 @@
             // 
             // LB_NbButsHome
             // 
+            this.LB_NbButsHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LB_NbButsHome.AutoSize = true;
             this.LB_NbButsHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_NbButsHome.Location = new System.Drawing.Point(214, 115);
@@ -222,6 +235,7 @@
             // 
             // LB_NbButsAway
             // 
+            this.LB_NbButsAway.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LB_NbButsAway.AutoSize = true;
             this.LB_NbButsAway.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_NbButsAway.Location = new System.Drawing.Point(551, 115);
@@ -233,9 +247,10 @@
             // 
             // TB_Receveur
             // 
+            this.TB_Receveur.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TB_Receveur.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TB_Receveur.Location = new System.Drawing.Point(172, 55);
-            this.TB_Receveur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_Receveur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Receveur.Name = "TB_Receveur";
             this.TB_Receveur.ReadOnly = true;
             this.TB_Receveur.Size = new System.Drawing.Size(110, 13);
@@ -245,9 +260,10 @@
             // 
             // TB_Visiteur
             // 
+            this.TB_Visiteur.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TB_Visiteur.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TB_Visiteur.Location = new System.Drawing.Point(502, 55);
-            this.TB_Visiteur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_Visiteur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Visiteur.Name = "TB_Visiteur";
             this.TB_Visiteur.ReadOnly = true;
             this.TB_Visiteur.Size = new System.Drawing.Size(110, 13);
@@ -347,6 +363,7 @@
             // 
             // FB_Statistiques
             // 
+            this.FB_Statistiques.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.FB_Statistiques.BackColor = System.Drawing.Color.Transparent;
             this.FB_Statistiques.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Stats;
             this.FB_Statistiques.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -354,7 +371,7 @@
             this.FB_Statistiques.ImageDisable = global::TPFinal.Properties.Resources.ICON_Stats;
             this.FB_Statistiques.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Stats;
             this.FB_Statistiques.ImageOver = global::TPFinal.Properties.Resources.ICON_Stats_Over;
-            this.FB_Statistiques.Location = new System.Drawing.Point(12, 430);
+            this.FB_Statistiques.Location = new System.Drawing.Point(8, 432);
             this.FB_Statistiques.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Statistiques.Name = "FB_Statistiques";
             this.FB_Statistiques.Size = new System.Drawing.Size(40, 40);
@@ -364,6 +381,7 @@
             // 
             // FB_ModifierMatch
             // 
+            this.FB_ModifierMatch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.FB_ModifierMatch.BackColor = System.Drawing.Color.Transparent;
             this.FB_ModifierMatch.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Equipe_Modifier;
             this.FB_ModifierMatch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -381,6 +399,7 @@
             // 
             // FB_AjoutRencontre
             // 
+            this.FB_AjoutRencontre.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.FB_AjoutRencontre.BackColor = System.Drawing.Color.Transparent;
             this.FB_AjoutRencontre.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_AjoutRencontre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -398,6 +417,7 @@
             // 
             // FB_Calendrier
             // 
+            this.FB_Calendrier.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.FB_Calendrier.BackColor = System.Drawing.Color.Transparent;
             this.FB_Calendrier.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Calendrier;
             this.FB_Calendrier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -416,6 +436,7 @@
             // 
             // PB_Fermer_Gif
             // 
+            this.PB_Fermer_Gif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
             this.PB_Fermer_Gif.Location = new System.Drawing.Point(731, 430);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
@@ -430,6 +451,7 @@
             // 
             // FB_Fermer
             // 
+            this.FB_Fermer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.FB_Fermer.BackColor = System.Drawing.Color.Transparent;
             this.FB_Fermer.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -446,9 +468,10 @@
             // 
             // PB_Faceoff
             // 
+            this.PB_Faceoff.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PB_Faceoff.Image = global::TPFinal.Properties.Resources.hockey_face_off;
             this.PB_Faceoff.Location = new System.Drawing.Point(300, 27);
-            this.PB_Faceoff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_Faceoff.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Faceoff.Name = "PB_Faceoff";
             this.PB_Faceoff.Size = new System.Drawing.Size(198, 121);
             this.PB_Faceoff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -457,8 +480,9 @@
             // 
             // PB_EquipeHome
             // 
+            this.PB_EquipeHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PB_EquipeHome.Location = new System.Drawing.Point(8, 27);
-            this.PB_EquipeHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_EquipeHome.Margin = new System.Windows.Forms.Padding(2);
             this.PB_EquipeHome.Name = "PB_EquipeHome";
             this.PB_EquipeHome.Size = new System.Drawing.Size(149, 134);
             this.PB_EquipeHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -467,8 +491,9 @@
             // 
             // PB_EquipeAway
             // 
+            this.PB_EquipeAway.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PB_EquipeAway.Location = new System.Drawing.Point(621, 27);
-            this.PB_EquipeAway.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_EquipeAway.Margin = new System.Windows.Forms.Padding(2);
             this.PB_EquipeAway.Name = "PB_EquipeAway";
             this.PB_EquipeAway.Size = new System.Drawing.Size(149, 134);
             this.PB_EquipeAway.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -502,12 +527,13 @@
             this.Controls.Add(this.PB_EquipeAway);
             this.Controls.Add(this.LB_EquipeAway);
             this.Controls.Add(this.LB_EquipeHome);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(795, 522);
             this.Name = "Form_Matchs";
             this.Text = "Form_Match";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Matchs_FormClosed);
             this.Load += new System.EventHandler(this.Form_Matchs_Load);
+            this.SizeChanged += new System.EventHandler(this.Form_Matchs_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).EndInit();
             this.CM_Match.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).EndInit();
