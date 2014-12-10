@@ -87,7 +87,7 @@
             this.DGV_Equipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Equipes.ContextMenuStrip = this.CM_EquipeDGV;
             this.DGV_Equipes.Location = new System.Drawing.Point(15, 28);
-            this.DGV_Equipes.Margin = new System.Windows.Forms.Padding(2);
+            this.DGV_Equipes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DGV_Equipes.MultiSelect = false;
             this.DGV_Equipes.Name = "DGV_Equipes";
             this.DGV_Equipes.ReadOnly = true;
@@ -144,8 +144,8 @@
             this.CB_Division.FormattingEnabled = true;
             this.CB_Division.Items.AddRange(new object[] {
             "Toutes"});
-            this.CB_Division.Location = new System.Drawing.Point(313, 212);
-            this.CB_Division.Margin = new System.Windows.Forms.Padding(2);
+            this.CB_Division.Location = new System.Drawing.Point(303, 220);
+            this.CB_Division.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CB_Division.Name = "CB_Division";
             this.CB_Division.Size = new System.Drawing.Size(103, 21);
             this.CB_Division.TabIndex = 7;
@@ -155,7 +155,7 @@
             // 
             this.LB_Division.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.LB_Division.AutoSize = true;
-            this.LB_Division.Location = new System.Drawing.Point(312, 197);
+            this.LB_Division.Location = new System.Drawing.Point(302, 205);
             this.LB_Division.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Division.Name = "LB_Division";
             this.LB_Division.Size = new System.Drawing.Size(44, 13);
@@ -164,7 +164,7 @@
             // 
             // PB_Fermer_Gif
             // 
-            this.PB_Fermer_Gif.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PB_Fermer_Gif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PB_Fermer_Gif.BackColor = System.Drawing.Color.Transparent;
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
             this.PB_Fermer_Gif.Location = new System.Drawing.Point(469, 205);
@@ -180,7 +180,7 @@
             // 
             // FB_Fermer
             // 
-            this.FB_Fermer.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.FB_Fermer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FB_Fermer.BackColor = System.Drawing.Color.Transparent;
             this.FB_Fermer.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -199,7 +199,7 @@
             // 
             // FB_SupprimerEquipe
             // 
-            this.FB_SupprimerEquipe.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.FB_SupprimerEquipe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FB_SupprimerEquipe.BackColor = System.Drawing.Color.Transparent;
             this.FB_SupprimerEquipe.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
             this.FB_SupprimerEquipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -217,7 +217,7 @@
             // 
             // FB_ModifierEquipe
             // 
-            this.FB_ModifierEquipe.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.FB_ModifierEquipe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FB_ModifierEquipe.BackColor = System.Drawing.Color.Transparent;
             this.FB_ModifierEquipe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_ModifierEquipe.BackgroundImage")));
             this.FB_ModifierEquipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -235,7 +235,7 @@
             // 
             // FB_AjouterEquipe
             // 
-            this.FB_AjouterEquipe.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.FB_AjouterEquipe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FB_AjouterEquipe.BackColor = System.Drawing.Color.Transparent;
             this.FB_AjouterEquipe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_AjouterEquipe.BackgroundImage")));
             this.FB_AjouterEquipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -253,7 +253,7 @@
             // 
             // FB_Classement
             // 
-            this.FB_Classement.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.FB_Classement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.FB_Classement.BackColor = System.Drawing.Color.Transparent;
             this.FB_Classement.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_Classement.BackgroundImage")));
             this.FB_Classement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -271,7 +271,7 @@
             // 
             // FB_Top3
             // 
-            this.FB_Top3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.FB_Top3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.FB_Top3.BackColor = System.Drawing.Color.Transparent;
             this.FB_Top3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_Top3.BackgroundImage")));
             this.FB_Top3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -289,15 +289,16 @@
             // 
             // FB_Matchs
             // 
-            this.FB_Matchs.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.FB_Matchs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.FB_Matchs.BackColor = System.Drawing.Color.Transparent;
-            this.FB_Matchs.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Match;
+            this.FB_Matchs.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Match_Over;
             this.FB_Matchs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_Matchs.ImageClick = global::TPFinal.Properties.Resources.ICON_Match_Click;
-            this.FB_Matchs.ImageDisable = global::TPFinal.Properties.Resources.ICON_Match;
-            this.FB_Matchs.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Match;
-            this.FB_Matchs.ImageOver = global::TPFinal.Properties.Resources.ICON_Match_Over;
+            this.FB_Matchs.ImageDisable = global::TPFinal.Properties.Resources.ICON_Match_Over;
+            this.FB_Matchs.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Match_Over;
+            this.FB_Matchs.ImageOver = global::TPFinal.Properties.Resources.ICON_Match;
             this.FB_Matchs.Location = new System.Drawing.Point(15, 205);
+            this.FB_Matchs.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Matchs.Name = "FB_Matchs";
             this.FB_Matchs.Size = new System.Drawing.Size(36, 36);
             this.FB_Matchs.TabIndex = 15;
@@ -466,14 +467,15 @@
             // 
             // FB_Division
             // 
-            this.FB_Division.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.FB_Division.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Division;
+            this.FB_Division.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.FB_Division.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Division_Over;
             this.FB_Division.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_Division.ImageClick = global::TPFinal.Properties.Resources.ICON_Division_Click;
-            this.FB_Division.ImageDisable = global::TPFinal.Properties.Resources.ICON_Division;
-            this.FB_Division.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Division;
-            this.FB_Division.ImageOver = global::TPFinal.Properties.Resources.ICON_Division_Over;
+            this.FB_Division.ImageDisable = global::TPFinal.Properties.Resources.ICON_Division_Over;
+            this.FB_Division.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Division_Over;
+            this.FB_Division.ImageOver = global::TPFinal.Properties.Resources.ICON_Division;
             this.FB_Division.Location = new System.Drawing.Point(71, 205);
+            this.FB_Division.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Division.Name = "FB_Division";
             this.FB_Division.Size = new System.Drawing.Size(36, 36);
             this.FB_Division.TabIndex = 14;
@@ -481,11 +483,11 @@
             // 
             // PB_Equipe
             // 
-            this.PB_Equipe.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PB_Equipe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PB_Equipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PB_Equipe.ErrorImage = global::TPFinal.Properties.Resources.no_picture;
             this.PB_Equipe.Location = new System.Drawing.Point(448, 28);
-            this.PB_Equipe.Margin = new System.Windows.Forms.Padding(2);
+            this.PB_Equipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PB_Equipe.Name = "PB_Equipe";
             this.PB_Equipe.Size = new System.Drawing.Size(93, 77);
             this.PB_Equipe.TabIndex = 2;
@@ -514,7 +516,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MainMenuStrip = this.MS_Equipe;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MinimumSize = new System.Drawing.Size(571, 292);
             this.Name = "Form_Equipes";
             this.Text = "Form_Equipe";

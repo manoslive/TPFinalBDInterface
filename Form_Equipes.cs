@@ -133,11 +133,11 @@ namespace TPFinal
             DataGridViewColumn nomEquipe = DGV_Equipes.Columns[0];
             nomEquipe.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.22);
             DataGridViewColumn dateIntro = DGV_Equipes.Columns[1];
-            dateIntro.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.32); ;
+            dateIntro.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.32);
             DataGridViewColumn nomDivision = DGV_Equipes.Columns[2];
-            nomDivision.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.22); ;
+            nomDivision.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.22);
             DataGridViewColumn ville = DGV_Equipes.Columns[3];
-            ville.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.23); ;
+            ville.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.23);
         }
         
         private void updateControls() // Met à jours l'état des boutons
