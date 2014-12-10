@@ -554,5 +554,17 @@ namespace TPFinal.Properties {
                 this["Form_Calendrier_DGVCouleurPolice"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"\"")]
+        public string PositionJoueur {
+            get {
+                return ((string)(this["PositionJoueur"]));
+            }
+            set {
+                this["PositionJoueur"] = value;
+            }
+        }
     }
 }
