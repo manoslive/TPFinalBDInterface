@@ -59,9 +59,8 @@ namespace TPFinal
         private void RemplirFormulaire()
         {
             OracleCommand oraSelect = oracon.CreateCommand();
-            //oraSelect.CommandText = "Select * From Statistiques where NumeroJoueur = :NumeroJoueur";
             oraSelect.CommandText = "Select * From Statistiques " +
-                                    "order by NumeroMatch"; // Problème ici avec le binding context
+                                    "order by NumeroMatch";
             oraSelect.Parameters.Add(new OracleParameter(":NumeroJoueur", numeroJoueur));
             using (OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect))
             {
@@ -77,6 +76,7 @@ namespace TPFinal
         private void UpdateLinkTB()
         {
             UnbindTB();
+            TB_PosJoueur.DataBindings.Add("Text", statsDataSet, "Stats.PositionJoueur");
             TB_NumJoueur.DataBindings.Add("Text", statsDataSet, "Stats.NumeroJoueur");
             TB_NumMatch.DataBindings.Add("Text", statsDataSet, "Stats.NumeroMatch");
             TB_Nom.DataBindings.Add("Text", statsDataSet, "Stats.NomJoueur");
@@ -89,6 +89,8 @@ namespace TPFinal
         }
         private void UnbindTB()
         {
+            TB_PosJoueur.DataBindings.Clear();
+            TB_PosJoueur.Clear();
             TB_NumJoueur.DataBindings.Clear();
             TB_NumJoueur.Clear();
             TB_NumMatch.DataBindings.Clear();
