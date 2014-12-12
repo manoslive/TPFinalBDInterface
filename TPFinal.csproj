@@ -471,6 +471,24 @@
   <ItemGroup>
     <None Include="Resources\ICON_Fermer_Over_Transparence.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accepter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accepter_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accepter_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quitter_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quitter_Over.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

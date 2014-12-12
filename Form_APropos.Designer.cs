@@ -45,7 +45,7 @@
             // 
             this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BTN_Fermer.Location = new System.Drawing.Point(316, 233);
-            this.BTN_Fermer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTN_Fermer.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_Fermer.Name = "BTN_Fermer";
             this.BTN_Fermer.Size = new System.Drawing.Size(67, 20);
             this.BTN_Fermer.TabIndex = 0;
@@ -57,12 +57,12 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.57068F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.42932F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel1.Controls.Add(this.PB_Manu, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.PB_Shaun, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.PB_Lego, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 1);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.53791F));
@@ -73,7 +73,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(1, 127);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(381, 103);
@@ -88,7 +88,7 @@
             this.PB_Manu.Location = new System.Drawing.Point(2, 2);
             this.PB_Manu.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Manu.Name = "PB_Manu";
-            this.PB_Manu.Size = new System.Drawing.Size(125, 120);
+            this.PB_Manu.Size = new System.Drawing.Size(124, 120);
             this.PB_Manu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Manu.TabIndex = 0;
             this.PB_Manu.TabStop = false;
@@ -97,7 +97,7 @@
             // PB_Shaun
             // 
             this.PB_Shaun.Image = global::TPFinal.Properties.Resources.shaun;
-            this.PB_Shaun.Location = new System.Drawing.Point(252, 2);
+            this.PB_Shaun.Location = new System.Drawing.Point(250, 2);
             this.PB_Shaun.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Shaun.Name = "PB_Shaun";
             this.PB_Shaun.Size = new System.Drawing.Size(123, 120);
@@ -110,10 +110,10 @@
             // 
             this.PB_Lego.Dock = System.Windows.Forms.DockStyle.Right;
             this.PB_Lego.Image = global::TPFinal.Properties.Resources.joueur_hockey_lego;
-            this.PB_Lego.Location = new System.Drawing.Point(131, 2);
+            this.PB_Lego.Location = new System.Drawing.Point(130, 2);
             this.PB_Lego.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Lego.Name = "PB_Lego";
-            this.PB_Lego.Size = new System.Drawing.Size(117, 120);
+            this.PB_Lego.Size = new System.Drawing.Size(116, 120);
             this.PB_Lego.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Lego.TabIndex = 1;
             this.PB_Lego.TabStop = false;
@@ -127,7 +127,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.BTN_Fermer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_APropos";
             this.Text = "Form_APropos";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_APropos_FormClosed);

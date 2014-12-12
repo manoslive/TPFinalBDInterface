@@ -230,7 +230,7 @@
             // TB_NumMatch
             // 
             this.TB_NumMatch.Location = new System.Drawing.Point(128, 14);
-            this.TB_NumMatch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_NumMatch.Margin = new System.Windows.Forms.Padding(2);
             this.TB_NumMatch.Name = "TB_NumMatch";
             this.TB_NumMatch.ReadOnly = true;
             this.TB_NumMatch.Size = new System.Drawing.Size(115, 20);
@@ -240,7 +240,7 @@
             // TB_Equipe
             // 
             this.TB_Equipe.Location = new System.Drawing.Point(127, 157);
-            this.TB_Equipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_Equipe.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Equipe.Name = "TB_Equipe";
             this.TB_Equipe.ReadOnly = true;
             this.TB_Equipe.Size = new System.Drawing.Size(115, 20);
@@ -462,10 +462,11 @@
             // TB_PosJoueur
             // 
             this.TB_PosJoueur.Location = new System.Drawing.Point(253, 263);
-            this.TB_PosJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_PosJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_PosJoueur.Name = "TB_PosJoueur";
             this.TB_PosJoueur.Size = new System.Drawing.Size(68, 20);
             this.TB_PosJoueur.TabIndex = 48;
+            this.TB_PosJoueur.Visible = false;
             // 
             // Form_Statistiques
             // 
@@ -503,7 +504,7 @@
             this.Controls.Add(this.TB_Nom);
             this.Controls.Add(this.TB_Prenom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Statistiques";
             this.Text = "Form_Statistiques";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Statistiques_FormClosing);

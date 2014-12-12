@@ -54,19 +54,27 @@ namespace TPFinal
             Form_Connection connection = new Form_Connection(oracon, maBelleConnection);
             connection.Text = "Connection";
             connection.ShowDialog();
-            if (oracon.State == ConnectionState.Open)
+            if(connection.DialogResult == DialogResult.OK)
             {
-                // On rempli le DGV
-                LoadDGV();
-                this.Text = "Équipes"; // Set le nom de la form
-                PB_Equipe.SizeMode = PictureBoxSizeMode.StretchImage; // Met le picturebox en mode "stretch"
-                LoadCBDivision();
+                if (oracon.State == ConnectionState.Open)
+                {
+                    // On rempli le DGV
+                    LoadDGV();
+                    this.Text = "Équipes"; // Set le nom de la form
+                    PB_Equipe.SizeMode = PictureBoxSizeMode.StretchImage; // Met le picturebox en mode "stretch"
+                    LoadCBDivision();
+                }
+                else
+                {
+                    MessageBox.Show("Vous n'avez pas de OracleConnection active", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Close();
+                }
             }
             else
             {
-                MessageBox.Show("Vous n'avez pas de OracleConnection active", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
+
         }
 
         private void LoadCBDivision()
