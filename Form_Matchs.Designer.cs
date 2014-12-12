@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.LB_EquipeHome = new System.Windows.Forms.Label();
             this.LB_EquipeAway = new System.Windows.Forms.Label();
-            this.BTN_Fermer = new System.Windows.Forms.Button();
             this.DGV_Matchs = new System.Windows.Forms.DataGridView();
             this.CM_Match = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ajouterMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,16 +99,6 @@
             this.LB_EquipeAway.Size = new System.Drawing.Size(116, 17);
             this.LB_EquipeAway.TabIndex = 0;
             this.LB_EquipeAway.Text = "Équipe visiteur";
-            // 
-            // BTN_Fermer
-            // 
-            this.BTN_Fermer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Fermer.Location = new System.Drawing.Point(992, 603);
-            this.BTN_Fermer.Name = "BTN_Fermer";
-            this.BTN_Fermer.Size = new System.Drawing.Size(164, 32);
-            this.BTN_Fermer.TabIndex = 4;
-            this.BTN_Fermer.Text = "Fermer";
-            this.BTN_Fermer.UseVisualStyleBackColor = true;
             // 
             // DGV_Matchs
             // 
@@ -371,10 +360,10 @@
             this.FB_Statistiques.ImageDisable = global::TPFinal.Properties.Resources.ICON_Stats;
             this.FB_Statistiques.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Stats;
             this.FB_Statistiques.ImageOver = global::TPFinal.Properties.Resources.ICON_Stats_Over;
-            this.FB_Statistiques.Location = new System.Drawing.Point(8, 432);
+            this.FB_Statistiques.Location = new System.Drawing.Point(8, 434);
             this.FB_Statistiques.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Statistiques.Name = "FB_Statistiques";
-            this.FB_Statistiques.Size = new System.Drawing.Size(40, 40);
+            this.FB_Statistiques.Size = new System.Drawing.Size(36, 36);
             this.FB_Statistiques.TabIndex = 18;
             this.toolTip1.SetToolTip(this.FB_Statistiques, "Statistiques");
             this.FB_Statistiques.Click += new System.EventHandler(this.BTN_AjoutStats_Click_1);
@@ -522,12 +511,14 @@
             this.Controls.Add(this.PB_Faceoff);
             this.Controls.Add(this.DGV_Joueurs);
             this.Controls.Add(this.DGV_Matchs);
-            this.Controls.Add(this.BTN_Fermer);
             this.Controls.Add(this.PB_EquipeHome);
             this.Controls.Add(this.PB_EquipeAway);
             this.Controls.Add(this.LB_EquipeAway);
             this.Controls.Add(this.LB_EquipeHome);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1190, 780);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(795, 522);
             this.Name = "Form_Matchs";
             this.Text = "Form_Match";
@@ -554,7 +545,6 @@
         private System.Windows.Forms.Label LB_EquipeAway;
         private System.Windows.Forms.PictureBox PB_EquipeAway;
         private System.Windows.Forms.PictureBox PB_EquipeHome;
-        private System.Windows.Forms.Button BTN_Fermer;
         private System.Windows.Forms.DataGridView DGV_Matchs;
         private System.Windows.Forms.DataGridView DGV_Joueurs;
         private System.Windows.Forms.PictureBox PB_Faceoff;

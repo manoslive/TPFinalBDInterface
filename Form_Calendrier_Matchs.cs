@@ -52,6 +52,7 @@ namespace TPFinal
             PB_Fermer_Gif.Select();
             LoadSettings();
             LoadDGV();
+            SetDGVLargeurColonne();
         }
 
         private void Form_Calendrier_Matchs_FormClosing(object sender, FormClosingEventArgs e)
@@ -142,6 +143,25 @@ namespace TPFinal
             Properties.Settings.Default.Form_Calendrier_DGVPolice = Properties.Settings.Default.Preferences_DGVPolice;
             Properties.Settings.Default.Form_Calendrier_DGVCouleurPolice = Properties.Settings.Default.Preferences_DGVCouleurPolice;
             LoadSettings();
+        }
+
+        private void Form_Calendrier_Matchs_SizeChanged(object sender, EventArgs e)
+        {
+            SetDGVLargeurColonne();
+        }
+        private void SetDGVLargeurColonne()
+        {
+            if(DGV_CalendierMatch.Columns.Count != 0)
+            {
+                DGV_CalendierMatch.Columns[0].Width = Convert.ToInt32(DGV_CalendierMatch.Size.Width * 0.10);
+                DGV_CalendierMatch.Columns[1].Width = Convert.ToInt32(DGV_CalendierMatch.Size.Width * 0.19);
+                DGV_CalendierMatch.Columns[2].Width = Convert.ToInt32(DGV_CalendierMatch.Size.Width * 0.19);
+                DGV_CalendierMatch.Columns[3].Width = Convert.ToInt32(DGV_CalendierMatch.Size.Width * 0.15);
+                DGV_CalendierMatch.Columns[4].Width = Convert.ToInt32(DGV_CalendierMatch.Size.Width * 0.15);
+                DGV_CalendierMatch.Columns[5].Width = Convert.ToInt32(DGV_CalendierMatch.Size.Width * 0.10);
+                DGV_CalendierMatch.Columns[6].Width = Convert.ToInt32(DGV_CalendierMatch.Size.Width * 0.10);
+            }
+
         }
     }
 }

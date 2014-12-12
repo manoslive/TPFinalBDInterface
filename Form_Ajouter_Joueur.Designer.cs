@@ -60,7 +60,7 @@
             "Defenseur",
             "Gardien"});
             this.CB_PosJoueur.Location = new System.Drawing.Point(159, 213);
-            this.CB_PosJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CB_PosJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.CB_PosJoueur.Name = "CB_PosJoueur";
             this.CB_PosJoueur.Size = new System.Drawing.Size(153, 21);
             this.CB_PosJoueur.TabIndex = 5;
@@ -73,7 +73,7 @@
             this.CB_EquipeJoueur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_EquipeJoueur.FormattingEnabled = true;
             this.CB_EquipeJoueur.Location = new System.Drawing.Point(159, 174);
-            this.CB_EquipeJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CB_EquipeJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.CB_EquipeJoueur.Name = "CB_EquipeJoueur";
             this.CB_EquipeJoueur.Size = new System.Drawing.Size(153, 21);
             this.CB_EquipeJoueur.TabIndex = 4;
@@ -82,7 +82,7 @@
             // DTP_DateNaissance
             // 
             this.DTP_DateNaissance.Location = new System.Drawing.Point(159, 94);
-            this.DTP_DateNaissance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DTP_DateNaissance.Margin = new System.Windows.Forms.Padding(2);
             this.DTP_DateNaissance.Name = "DTP_DateNaissance";
             this.DTP_DateNaissance.Size = new System.Drawing.Size(153, 20);
             this.DTP_DateNaissance.TabIndex = 2;
@@ -91,7 +91,7 @@
             // TB_NumMaillot
             // 
             this.TB_NumMaillot.Location = new System.Drawing.Point(159, 135);
-            this.TB_NumMaillot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_NumMaillot.Margin = new System.Windows.Forms.Padding(2);
             this.TB_NumMaillot.MaxLength = 2;
             this.TB_NumMaillot.Name = "TB_NumMaillot";
             this.TB_NumMaillot.Size = new System.Drawing.Size(153, 20);
@@ -101,7 +101,7 @@
             // TB_PrenomJoueur
             // 
             this.TB_PrenomJoueur.Location = new System.Drawing.Point(159, 57);
-            this.TB_PrenomJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_PrenomJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_PrenomJoueur.Name = "TB_PrenomJoueur";
             this.TB_PrenomJoueur.Size = new System.Drawing.Size(153, 20);
             this.TB_PrenomJoueur.TabIndex = 1;
@@ -110,7 +110,7 @@
             // TB_NomJoueur
             // 
             this.TB_NomJoueur.Location = new System.Drawing.Point(159, 18);
-            this.TB_NomJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_NomJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_NomJoueur.Name = "TB_NomJoueur";
             this.TB_NomJoueur.Size = new System.Drawing.Size(153, 20);
             this.TB_NomJoueur.TabIndex = 0;
@@ -179,7 +179,7 @@
             // TB_Url
             // 
             this.TB_Url.Location = new System.Drawing.Point(159, 250);
-            this.TB_Url.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_Url.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Url.Name = "TB_Url";
             this.TB_Url.Size = new System.Drawing.Size(153, 20);
             this.TB_Url.TabIndex = 6;
@@ -198,7 +198,7 @@
             // TB_NumeroJoueur
             // 
             this.TB_NumeroJoueur.Location = new System.Drawing.Point(144, 331);
-            this.TB_NumeroJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_NumeroJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_NumeroJoueur.Name = "TB_NumeroJoueur";
             this.TB_NumeroJoueur.Size = new System.Drawing.Size(8, 20);
             this.TB_NumeroJoueur.TabIndex = 24;
@@ -209,7 +209,7 @@
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
             this.PB_Fermer_Gif.Location = new System.Drawing.Point(268, 277);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
-            this.PB_Fermer_Gif.Size = new System.Drawing.Size(42, 42);
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 27;
             this.PB_Fermer_Gif.TabStop = false;
             this.PB_Fermer_Gif.Visible = false;
@@ -227,7 +227,7 @@
             this.FB_Fermer.ImageOver = null;
             this.FB_Fermer.Location = new System.Drawing.Point(268, 277);
             this.FB_Fermer.Name = "FB_Fermer";
-            this.FB_Fermer.Size = new System.Drawing.Size(42, 42);
+            this.FB_Fermer.Size = new System.Drawing.Size(40, 40);
             this.FB_Fermer.TabIndex = 26;
             this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Cancel_MouseEnter);
             // 
@@ -239,7 +239,7 @@
             this.FB_Ajouter.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_Ajouter.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_Ajouter.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter_Over;
-            this.FB_Ajouter.Location = new System.Drawing.Point(220, 275);
+            this.FB_Ajouter.Location = new System.Drawing.Point(209, 277);
             this.FB_Ajouter.Name = "FB_Ajouter";
             this.FB_Ajouter.Size = new System.Drawing.Size(42, 42);
             this.FB_Ajouter.TabIndex = 25;
@@ -269,7 +269,7 @@
             this.Controls.Add(this.LB_NomJoueur);
             this.Controls.Add(this.LB_NumeroMaillot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Ajouter_Joueur";
             this.Text = "Form_Ajouter_Joueur";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ajouter_Joueur_FormClosing);

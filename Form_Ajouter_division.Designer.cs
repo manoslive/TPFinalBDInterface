@@ -61,7 +61,7 @@
             // TB_NomDivision
             // 
             this.TB_NomDivision.Location = new System.Drawing.Point(102, 14);
-            this.TB_NomDivision.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_NomDivision.Margin = new System.Windows.Forms.Padding(2);
             this.TB_NomDivision.Name = "TB_NomDivision";
             this.TB_NomDivision.Size = new System.Drawing.Size(173, 20);
             this.TB_NomDivision.TabIndex = 0;
@@ -69,7 +69,7 @@
             // DTP_DateCreation
             // 
             this.DTP_DateCreation.Location = new System.Drawing.Point(102, 45);
-            this.DTP_DateCreation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DTP_DateCreation.Margin = new System.Windows.Forms.Padding(2);
             this.DTP_DateCreation.Name = "DTP_DateCreation";
             this.DTP_DateCreation.Size = new System.Drawing.Size(173, 20);
             this.DTP_DateCreation.TabIndex = 1;
@@ -77,12 +77,13 @@
             // 
             // FB_Ajouter
             // 
+            this.FB_Ajouter.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_Ajouter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_Ajouter.ImageClick = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter_Click;
             this.FB_Ajouter.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_Ajouter.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_Ajouter.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter_Over;
-            this.FB_Ajouter.Location = new System.Drawing.Point(185, 74);
+            this.FB_Ajouter.Location = new System.Drawing.Point(176, 74);
             this.FB_Ajouter.Name = "FB_Ajouter";
             this.FB_Ajouter.Size = new System.Drawing.Size(42, 42);
             this.FB_Ajouter.TabIndex = 4;
@@ -90,6 +91,7 @@
             // 
             // FB_Fermer
             // 
+            this.FB_Fermer.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_Fermer.ImageClick = global::TPFinal.Properties.Resources.ICON_Fermer_Click;
             this.FB_Fermer.ImageDisable = global::TPFinal.Properties.Resources.ICON_Fermer;
@@ -97,7 +99,7 @@
             this.FB_Fermer.ImageOver = null;
             this.FB_Fermer.Location = new System.Drawing.Point(233, 76);
             this.FB_Fermer.Name = "FB_Fermer";
-            this.FB_Fermer.Size = new System.Drawing.Size(42, 42);
+            this.FB_Fermer.Size = new System.Drawing.Size(40, 40);
             this.FB_Fermer.TabIndex = 5;
             this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Cancel_MouseEnter);
             // 
@@ -106,7 +108,7 @@
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
             this.PB_Fermer_Gif.Location = new System.Drawing.Point(233, 74);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
-            this.PB_Fermer_Gif.Size = new System.Drawing.Size(42, 42);
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 6;
             this.PB_Fermer_Gif.TabStop = false;
             this.PB_Fermer_Gif.Visible = false;
@@ -125,7 +127,7 @@
             this.Controls.Add(this.TB_NomDivision);
             this.Controls.Add(this.LB_NomDivision);
             this.Controls.Add(this.LB_DateCreation);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Ajouter_Division";
             this.Text = "Form_Ajouter_division";
             this.Load += new System.EventHandler(this.Form_Ajouter_Division_Load);

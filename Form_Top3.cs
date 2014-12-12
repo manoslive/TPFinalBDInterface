@@ -36,6 +36,8 @@ namespace TPFinal
         private void Form_Top3_Load(object sender, EventArgs e)
         {
             LoadSettings();
+            RemplirTop3Photos();
+            RemplirTop3Labels();
             if (DGV_Top3.Rows.Count >= 3)
             {
                 RemplirTop3Labels();

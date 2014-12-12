@@ -63,6 +63,36 @@ namespace TPFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Accepter {
+            get {
+                object obj = ResourceManager.GetObject("Accepter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Accepter_Click {
+            get {
+                object obj = ResourceManager.GetObject("Accepter_Click", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Accepter_Over {
+            get {
+                object obj = ResourceManager.GetObject("Accepter_Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap avatar {
             get {
                 object obj = ResourceManager.GetObject("avatar", resourceCulture);
@@ -166,16 +196,6 @@ namespace TPFinal.Properties {
         internal static System.Drawing.Bitmap ICON_Connection {
             get {
                 object obj = ResourceManager.GetObject("ICON_Connection", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ICON_Connection_Red {
-            get {
-                object obj = ResourceManager.GetObject("ICON_Connection_Red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -733,6 +753,36 @@ namespace TPFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Quitter {
+            get {
+                object obj = ResourceManager.GetObject("Quitter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Quitter_Click {
+            get {
+                object obj = ResourceManager.GetObject("Quitter_Click", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Quitter_Over {
+            get {
+                object obj = ResourceManager.GetObject("Quitter_Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shaun {
             get {
                 object obj = ResourceManager.GetObject("shaun", resourceCulture);
@@ -746,6 +796,36 @@ namespace TPFinal.Properties {
         internal static System.Drawing.Bitmap shaun_tête {
             get {
                 object obj = ResourceManager.GetObject("shaun tête", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top3_1st {
+            get {
+                object obj = ResourceManager.GetObject("Top3_1st", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top3_2nd {
+            get {
+                object obj = ResourceManager.GetObject("Top3_2nd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top3_3rd {
+            get {
+                object obj = ResourceManager.GetObject("Top3_3rd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

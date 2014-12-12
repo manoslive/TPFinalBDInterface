@@ -230,18 +230,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -467,6 +467,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ICON_Stats_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON_Fermer_Over_Transparence.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accepter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accepter_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accepter_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quitter_Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quitter_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3_1st.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3_2nd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3_3rd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3_1st.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3_2nd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3_3rd.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

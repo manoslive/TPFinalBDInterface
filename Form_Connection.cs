@@ -53,9 +53,9 @@ namespace TPFinal
                 //MaConnection maBelleConnection = new MaConnection(); // replacé dans la form1 pour etre envoyer ici
                 if (maBelleConnection.Connect(user, password, GetOracleConnection())) //envoi les info à la classe pour effectuer la connection
                 {
+                    this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
-
             }
             catch (Exception ex)
             {
@@ -65,7 +65,8 @@ namespace TPFinal
 
         private void Form_Connection_Load(object sender, EventArgs e)
         {
-            BTN_Connect.Select();
+            FB_Connection.Select();
+            TB_Username_TextChanged(sender, e);
         }
 
         private void BTN_Connect_KeyDown(object sender, KeyEventArgs e)
@@ -83,6 +84,18 @@ namespace TPFinal
             }
         }
 
+        private void TB_Username_TextChanged(object sender, EventArgs e)
+        {
+            if (TB_Password.Text == "" || TB_Username.Text == "")
+                FB_Connection.Enabled = false;
+            else
+                FB_Connection.Enabled = true;
+        }
 
+        private void FB_Quitter_Click(object sender, EventArgs e)
+        {
+            oracon.Close();
+            this.Close();        
+        }
     }
 }
