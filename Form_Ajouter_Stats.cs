@@ -21,11 +21,13 @@ namespace TPFinal
         public string equipeHome = null;
         public string equipeVisiteur = null;
         public Form callBackForm = null;
-        public Form_Ajouter_Stats(OracleConnection connect, MaConnection maBelleConnection)
+        public string position = null;
+        public Form_Ajouter_Stats(OracleConnection connect, MaConnection maBelleConnection, string positionDuJoueur)
         {
             InitializeComponent();
             oracon = connect;
             connection = maBelleConnection;
+            position = positionDuJoueur;
         }
         public string numJoueur
         {
@@ -97,6 +99,13 @@ namespace TPFinal
         {
             CB_NumeroMatch.Select();
             RemplirCBMatchPremiereFois();
+            if(position == "Gardien")
+            {
+                TB_NbButs.Enabled = false;
+                TB_NbPasses.Enabled = false;
+                TB_NbPasses.Text = null;
+                TB_NbButs.Text = null;
+            }
         }
         private void RemplirCBMatchPremiereFois()
         {

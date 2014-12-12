@@ -135,7 +135,7 @@ namespace TPFinal
         }
         private void Ajouter()
         {
-            Form_Ajouter_Stats aJ = new Form_Ajouter_Stats(oracon, connection);
+            Form_Ajouter_Stats aJ = new Form_Ajouter_Stats(oracon, connection, TB_PosJoueur.Text);
             aJ.callBackForm = this;
             aJ.Text = "Ajout de stats";
             aJ.Location = this.Location;
@@ -191,7 +191,7 @@ namespace TPFinal
         }
         private void Modifier()
         {
-            Form_Ajouter_Stats ajs = new Form_Ajouter_Stats(oracon, connection);
+            Form_Ajouter_Stats ajs = new Form_Ajouter_Stats(oracon, connection, TB_PosJoueur.Text);
             ajs.callBackForm = this;
             ajs.Text = "Modification des Statistiques";
             ajs.numMatch = TB_NumMatch.Text;

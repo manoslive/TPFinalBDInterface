@@ -479,6 +479,7 @@
             this.TB_PosJoueur.Name = "TB_PosJoueur";
             this.TB_PosJoueur.Size = new System.Drawing.Size(100, 26);
             this.TB_PosJoueur.TabIndex = 48;
+            this.TB_PosJoueur.Visible = false;
             // 
             // Form_Statistiques
             // 
