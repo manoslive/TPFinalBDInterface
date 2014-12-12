@@ -302,7 +302,10 @@ namespace TPFinal
             Form_Calendrier_Matchs cal = new Form_Calendrier_Matchs(oracon, connection);
             this.Hide();
             cal.callBackForm = this;
-            cal.ShowDialog();
+            if(cal.ShowDialog() == System.Windows.Forms.DialogResult.Yes)
+                for (int i = 0 ; i < DGV_Matchs.RowCount; i++)
+                    if (DGV_Matchs.SelectedRows[i].Cells[0].Value.ToString() == cal.numeroMatch)
+                        DGV_Matchs.Rows[i].Selected = true;
         }
         private void BTN_Calendrier_Click(object sender, EventArgs e)
         {

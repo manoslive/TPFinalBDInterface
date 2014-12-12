@@ -15,6 +15,7 @@ namespace TPFinal
 {
     public partial class Form_Calendrier_Matchs : Form
     {
+        public string numeroMatch = null;
         private OracleConnection oracon = null;
         private MaConnection connection = null;
         private DataSet dateMatch = null;
@@ -161,6 +162,17 @@ namespace TPFinal
                 DGV_CalendierMatch.Columns[5].Width = Convert.ToInt32(DGV_CalendierMatch.Size.Width * 0.10);
                 DGV_CalendierMatch.Columns[6].Width = Convert.ToInt32(DGV_CalendierMatch.Size.Width * 0.10);
             }
+
+        }
+
+        private void DGV_CalendierMatch_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            numeroMatch = DGV_CalendierMatch.SelectedRows[0].Cells[0].Value.ToString();
+            DialogResult = System.Windows.Forms.DialogResult.Yes;
+        }
+
+        private void PB_Fermer_Gif_Click(object sender, EventArgs e)
+        {
 
         }
     }
