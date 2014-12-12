@@ -73,7 +73,7 @@
             this.FB_PoliceForm.Name = "FB_PoliceForm";
             this.FB_PoliceForm.Size = new System.Drawing.Size(89, 87);
             this.FB_PoliceForm.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.FB_PoliceForm, "Police d\'écriture...");
+            this.toolTip1.SetToolTip(this.FB_PoliceForm, "Police du text du formulaire...");
             this.FB_PoliceForm.Click += new System.EventHandler(this.FB_PoliceForm_Click);
             // 
             // PN_CouleurForm
@@ -101,7 +101,7 @@
             this.FB_CouleurForm.Name = "FB_CouleurForm";
             this.FB_CouleurForm.Size = new System.Drawing.Size(89, 87);
             this.FB_CouleurForm.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.FB_CouleurForm, "Couleur du background...");
+            this.toolTip1.SetToolTip(this.FB_CouleurForm, "Couleur de fond du formulaire...");
             this.FB_CouleurForm.Click += new System.EventHandler(this.FB_CouleurForm_Click);
             // 
             // PN_DGVPolice
@@ -130,7 +130,7 @@
             this.FB_DGVPolice.Name = "FB_DGVPolice";
             this.FB_DGVPolice.Size = new System.Drawing.Size(89, 87);
             this.FB_DGVPolice.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.FB_DGVPolice, "Police de la table...");
+            this.toolTip1.SetToolTip(this.FB_DGVPolice, "Police du text du tableau...");
             this.FB_DGVPolice.Click += new System.EventHandler(this.FB_DGVPolice_Click);
             // 
             // PN_DGVCouleurPolice
@@ -159,7 +159,7 @@
             this.FB_DGVCouleurPolice.Name = "FB_DGVCouleurPolice";
             this.FB_DGVCouleurPolice.Size = new System.Drawing.Size(89, 87);
             this.FB_DGVCouleurPolice.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.FB_DGVCouleurPolice, "Couleur de l\'écriture de la table...");
+            this.toolTip1.SetToolTip(this.FB_DGVCouleurPolice, "Couleur du text du tableau...");
             this.FB_DGVCouleurPolice.Click += new System.EventHandler(this.FB_DGVCouleurPolice_Click);
             // 
             // PN_CouleurPolice
@@ -188,7 +188,7 @@
             this.FB_CouleurPolice.Name = "FB_CouleurPolice";
             this.FB_CouleurPolice.Size = new System.Drawing.Size(89, 87);
             this.FB_CouleurPolice.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.FB_CouleurPolice, "Couleur de l\'écriture...");
+            this.toolTip1.SetToolTip(this.FB_CouleurPolice, "Couleur du text du formulaire...");
             this.FB_CouleurPolice.Click += new System.EventHandler(this.FB_CouleurPoliceForm_Click);
             // 
             // Form_Preferences
