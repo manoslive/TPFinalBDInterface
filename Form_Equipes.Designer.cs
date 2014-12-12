@@ -35,7 +35,6 @@
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CB_Division = new System.Windows.Forms.ComboBox();
             this.LB_Division = new System.Windows.Forms.Label();
             this.toolTip_Equipe = new System.Windows.Forms.ToolTip(this.components);
@@ -67,7 +66,6 @@
             this.divisionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.top3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.FB_Division = new FlashButton.FlashButton();
             this.PB_Equipe = new System.Windows.Forms.PictureBox();
             this.FB_Statistiques = new FlashButton.FlashButton();
@@ -105,10 +103,9 @@
             this.CM_EquipeDGV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterToolStripMenuItem,
             this.modifierMatchToolStripMenuItem,
-            this.supprimerMatchToolStripMenuItem,
-            this.quitterToolStripMenuItem});
+            this.supprimerMatchToolStripMenuItem});
             this.CM_EquipeDGV.Name = "contextMenuStrip1";
-            this.CM_EquipeDGV.Size = new System.Drawing.Size(222, 124);
+            this.CM_EquipeDGV.Size = new System.Drawing.Size(222, 94);
             // 
             // ajouterToolStripMenuItem
             // 
@@ -130,13 +127,6 @@
             this.supprimerMatchToolStripMenuItem.Size = new System.Drawing.Size(221, 30);
             this.supprimerMatchToolStripMenuItem.Text = "Supprimer match";
             this.supprimerMatchToolStripMenuItem.Click += new System.EventHandler(this.supprimerMatchToolStripMenuItem_Click);
-            // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(221, 30);
-            this.quitterToolStripMenuItem.Text = "Quitter";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // CB_Division
             // 
@@ -337,69 +327,83 @@
             this.modifierToolStripMenuItem,
             this.supprimerToolStripMenuItem});
             this.équipesToolStripMenuItem.Name = "équipesToolStripMenuItem";
-            this.équipesToolStripMenuItem.Size = new System.Drawing.Size(174, 30);
-            this.équipesToolStripMenuItem.Text = "Équipes...";
+            this.équipesToolStripMenuItem.Size = new System.Drawing.Size(289, 30);
+            this.équipesToolStripMenuItem.Text = "Équipes";
             // 
             // ajouterToolStripMenuItem1
             // 
             this.ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
-            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(167, 30);
-            this.ajouterToolStripMenuItem1.Text = "Ajouter";
+            this.ajouterToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(230, 30);
+            this.ajouterToolStripMenuItem1.Text = "Ajouter...";
             this.ajouterToolStripMenuItem1.Click += new System.EventHandler(this.ajouterToolStripMenuItem1_Click);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
-            this.modifierToolStripMenuItem.Text = "Modifier";
+            this.modifierToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(230, 30);
+            this.modifierToolStripMenuItem.Text = "Modifier...";
             this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
             // 
             // supprimerToolStripMenuItem
             // 
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
+            this.supprimerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(230, 30);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // matchToolStripMenuItem1
             // 
             this.matchToolStripMenuItem1.Name = "matchToolStripMenuItem1";
-            this.matchToolStripMenuItem1.Size = new System.Drawing.Size(174, 30);
-            this.matchToolStripMenuItem1.Text = "Matchs";
+            this.matchToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.M)));
+            this.matchToolStripMenuItem1.Size = new System.Drawing.Size(289, 30);
+            this.matchToolStripMenuItem1.Text = "Matchs...";
             this.matchToolStripMenuItem1.Click += new System.EventHandler(this.matchToolStripMenuItem1_Click);
             // 
             // divisionsToolStripMenuItem
             // 
             this.divisionsToolStripMenuItem.Name = "divisionsToolStripMenuItem";
-            this.divisionsToolStripMenuItem.Size = new System.Drawing.Size(174, 30);
-            this.divisionsToolStripMenuItem.Text = "Divisions";
+            this.divisionsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+            this.divisionsToolStripMenuItem.Size = new System.Drawing.Size(289, 30);
+            this.divisionsToolStripMenuItem.Text = "Divisions...";
             this.divisionsToolStripMenuItem.Click += new System.EventHandler(this.divisionsToolStripMenuItem_Click);
             // 
             // classementToolStripMenuItem1
             // 
             this.classementToolStripMenuItem1.Name = "classementToolStripMenuItem1";
-            this.classementToolStripMenuItem1.Size = new System.Drawing.Size(174, 30);
-            this.classementToolStripMenuItem1.Text = "Classement";
+            this.classementToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.C)));
+            this.classementToolStripMenuItem1.Size = new System.Drawing.Size(289, 30);
+            this.classementToolStripMenuItem1.Text = "Classement...";
             this.classementToolStripMenuItem1.Click += new System.EventHandler(this.classementToolStripMenuItem1_Click);
             // 
             // top3ToolStripMenuItem1
             // 
             this.top3ToolStripMenuItem1.Name = "top3ToolStripMenuItem1";
-            this.top3ToolStripMenuItem1.Size = new System.Drawing.Size(174, 30);
-            this.top3ToolStripMenuItem1.Text = "Top3";
+            this.top3ToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.T)));
+            this.top3ToolStripMenuItem1.Size = new System.Drawing.Size(289, 30);
+            this.top3ToolStripMenuItem1.Text = "Top3...";
             this.top3ToolStripMenuItem1.Click += new System.EventHandler(this.top3ToolStripMenuItem1_Click);
             // 
             // joueursToolStripMenuItem
             // 
             this.joueursToolStripMenuItem.Name = "joueursToolStripMenuItem";
-            this.joueursToolStripMenuItem.Size = new System.Drawing.Size(174, 30);
-            this.joueursToolStripMenuItem.Text = "Joueurs";
+            this.joueursToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.J)));
+            this.joueursToolStripMenuItem.Size = new System.Drawing.Size(289, 30);
+            this.joueursToolStripMenuItem.Text = "Joueurs...";
             this.joueursToolStripMenuItem.Click += new System.EventHandler(this.joueursToolStripMenuItem_Click);
             // 
             // quitterToolStripMenuItem2
             // 
             this.quitterToolStripMenuItem2.Name = "quitterToolStripMenuItem2";
-            this.quitterToolStripMenuItem2.Size = new System.Drawing.Size(174, 30);
+            this.quitterToolStripMenuItem2.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.quitterToolStripMenuItem2.Size = new System.Drawing.Size(289, 30);
             this.quitterToolStripMenuItem2.Text = "Quitter";
             this.quitterToolStripMenuItem2.Click += new System.EventHandler(this.quitterToolStripMenuItem2_Click);
             // 
@@ -423,10 +427,9 @@
             this.matchToolStripMenuItem,
             this.divisionToolStripMenuItem,
             this.classementToolStripMenuItem,
-            this.top3ToolStripMenuItem,
-            this.quitterToolStripMenuItem1});
+            this.top3ToolStripMenuItem});
             this.CM_Equipe.Name = "CM_Equipe";
-            this.CM_Equipe.Size = new System.Drawing.Size(175, 154);
+            this.CM_Equipe.Size = new System.Drawing.Size(199, 157);
             // 
             // matchToolStripMenuItem
             // 
@@ -456,13 +459,6 @@
             this.top3ToolStripMenuItem.Text = "Top3";
             this.top3ToolStripMenuItem.Click += new System.EventHandler(this.top3ToolStripMenuItem_Click);
             // 
-            // quitterToolStripMenuItem1
-            // 
-            this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
-            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(174, 30);
-            this.quitterToolStripMenuItem1.Text = "Quitter";
-            this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
-            // 
             // FB_Division
             // 
             this.FB_Division.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -477,6 +473,7 @@
             this.FB_Division.Name = "FB_Division";
             this.FB_Division.Size = new System.Drawing.Size(54, 55);
             this.FB_Division.TabIndex = 14;
+            this.toolTip_Equipe.SetToolTip(this.FB_Division, "Divisions");
             this.FB_Division.Click += new System.EventHandler(this.BTN_Divisions_Click);
             // 
             // PB_Equipe
@@ -572,13 +569,11 @@
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifierMatchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supprimerMatchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip CM_Equipe;
         private System.Windows.Forms.ToolStripMenuItem matchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem divisionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem classementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem top3ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem fonctionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem équipesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem1;
