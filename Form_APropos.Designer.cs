@@ -57,7 +57,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.57068F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.42932F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanel1.Controls.Add(this.PB_Manu, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.PB_Shaun, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.PB_Lego, 1, 0);
@@ -88,7 +88,7 @@
             this.PB_Manu.Location = new System.Drawing.Point(2, 2);
             this.PB_Manu.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Manu.Name = "PB_Manu";
-            this.PB_Manu.Size = new System.Drawing.Size(124, 120);
+            this.PB_Manu.Size = new System.Drawing.Size(119, 120);
             this.PB_Manu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Manu.TabIndex = 0;
             this.PB_Manu.TabStop = false;
@@ -97,7 +97,7 @@
             // PB_Shaun
             // 
             this.PB_Shaun.Image = global::TPFinal.Properties.Resources.shaun;
-            this.PB_Shaun.Location = new System.Drawing.Point(250, 2);
+            this.PB_Shaun.Location = new System.Drawing.Point(240, 2);
             this.PB_Shaun.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Shaun.Name = "PB_Shaun";
             this.PB_Shaun.Size = new System.Drawing.Size(123, 120);
@@ -110,10 +110,10 @@
             // 
             this.PB_Lego.Dock = System.Windows.Forms.DockStyle.Right;
             this.PB_Lego.Image = global::TPFinal.Properties.Resources.joueur_hockey_lego;
-            this.PB_Lego.Location = new System.Drawing.Point(130, 2);
+            this.PB_Lego.Location = new System.Drawing.Point(125, 2);
             this.PB_Lego.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Lego.Name = "PB_Lego";
-            this.PB_Lego.Size = new System.Drawing.Size(116, 120);
+            this.PB_Lego.Size = new System.Drawing.Size(111, 120);
             this.PB_Lego.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Lego.TabIndex = 1;
             this.PB_Lego.TabStop = false;

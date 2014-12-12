@@ -489,6 +489,24 @@
   <ItemGroup>
     <None Include="Resources\Quitter_Over.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3_1st.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3_2nd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3_3rd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3_1st.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3_2nd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3_3rd.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
