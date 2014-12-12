@@ -205,14 +205,14 @@ namespace TPFinal
             if (ajs.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 string sql = "update FicheJoueur set NumeroMatch=:NumeroMatch, NumeroJoueur=:NumeroJoueur, NombreButs=:NombreButs, NombrePasses=:NombrePasses, TempsPunition=:TempsPunition " +
-             "where numerojoueur=:numerojoueurs";
+                                "where numerojoueur=:numerojoueurs";
                 try
                 {
 
                     OracleCommand oraAjout = new OracleCommand(sql, oracon);
 
                     OracleParameter OraParaNumeroMatch = new OracleParameter(":NumeroMatch", OracleDbType.Int32);
-                    OracleParameter OraParamNumeroJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParamNumeroJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Int32);
                     OracleParameter OraParamNombreButs = new OracleParameter(":NombreButs", OracleDbType.Int32);
                     OracleParameter OraParaNombrePasses = new OracleParameter(":NombrePasses", OracleDbType.Int32);
                     OracleParameter OraParaTempsPunition = new OracleParameter(":TempsPunition", OracleDbType.Int32);
