@@ -227,28 +227,21 @@ namespace TPFinal
         }
         private void VerifPosition()
         {
-
+            TB_Position.Text = "";
             OracleCommand oraSelect = oracon.CreateCommand();
-            oraSelect.CommandText = "SELECT PositionJoueur FROM Statistiques " +
+            oraSelect.CommandText = "SELECT PositionJoueur FROM Joueur " +
                                     "where NumeroJoueur = :NumeroJoueur";
+            OracleParameter OraParaNumJoueur = new OracleParameter(":NumeroJoueur", OracleDbType.Varchar2, 40);
 
-            oraSelect.Parameters.Add(new OracleParameter(":NumeroJoueur", numJoueur));
-            using (OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect))
+            OraParaNumJoueur.Value = numJoueur;
+            oraSelect.Parameters.Add(OraParaNumJoueur);
+            using (OracleDataReader oraReader = oraSelect.ExecuteReader())
             {
-                if (dataSetPosition.Tables.Contains("Position"))
+                while (oraReader.Read())
                 {
-                    dataSetPosition.Tables["Position"].Clear();
+                    TB_Position.Text = oraReader.GetString(0).ToString();
                 }
-                oraAdapter.Fill(dataSetPosition, "Position");
-                oraAdapter.Dispose();
             }
-
-
-
-            TB_Position.DataBindings.Clear();
-            TB_Position.Clear();
-            TB_Position.DataBindings.Add("Text", dataSetPosition, "Stats.PositionJoueur");
-
         }
         private void TB_NbPasses_TextChanged(object sender, EventArgs e)
         {
@@ -282,6 +275,22 @@ namespace TPFinal
         private void PB_Fermer_Gif_MouseUp(object sender, MouseEventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+        }
+
+        private void TB_Position_TextChanged(object sender, EventArgs e)
+        {
+            if (TB_Position.Text == "Gardien")
+            {
+                TB_NbButs.Text = "0";
+                TB_NbPasses.Text = "0";
+                TB_NbButs.Enabled = false;
+                TB_NbPasses.Enabled = false;
+            }
+            else
+            {
+                TB_NbButs.Enabled = true;
+                TB_NbPasses.Enabled = true;
+            }
         }
     }
 }

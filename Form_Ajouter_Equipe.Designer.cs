@@ -147,9 +147,9 @@
             // PB_Fermer_Gif
             // 
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
-            this.PB_Fermer_Gif.Location = new System.Drawing.Point(257, 263);
+            this.PB_Fermer_Gif.Location = new System.Drawing.Point(275, 265);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
-            this.PB_Fermer_Gif.Size = new System.Drawing.Size(42, 42);
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 9;
             this.PB_Fermer_Gif.TabStop = false;
             this.PB_Fermer_Gif.Visible = false;
@@ -165,9 +165,9 @@
             this.FB_Fermer.ImageDisable = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.ImageOver = null;
-            this.FB_Fermer.Location = new System.Drawing.Point(257, 265);
+            this.FB_Fermer.Location = new System.Drawing.Point(275, 267);
             this.FB_Fermer.Name = "FB_Fermer";
-            this.FB_Fermer.Size = new System.Drawing.Size(42, 42);
+            this.FB_Fermer.Size = new System.Drawing.Size(40, 40);
             this.FB_Fermer.TabIndex = 8;
             this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Cancel_MouseEnter);
             // 
@@ -179,7 +179,7 @@
             this.FB_Ajouter.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_Ajouter.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_Ajouter.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter_Over;
-            this.FB_Ajouter.Location = new System.Drawing.Point(209, 263);
+            this.FB_Ajouter.Location = new System.Drawing.Point(215, 265);
             this.FB_Ajouter.Name = "FB_Ajouter";
             this.FB_Ajouter.Size = new System.Drawing.Size(42, 42);
             this.FB_Ajouter.TabIndex = 7;

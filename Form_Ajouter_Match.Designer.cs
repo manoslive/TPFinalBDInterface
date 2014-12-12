@@ -161,7 +161,7 @@
             // TB_ScoreVisiteur
             // 
             this.TB_ScoreVisiteur.Location = new System.Drawing.Point(116, 168);
-            this.TB_ScoreVisiteur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_ScoreVisiteur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_ScoreVisiteur.Name = "TB_ScoreVisiteur";
             this.TB_ScoreVisiteur.Size = new System.Drawing.Size(132, 20);
             this.TB_ScoreVisiteur.TabIndex = 26;
@@ -170,7 +170,7 @@
             // TB_ScoreReceveur
             // 
             this.TB_ScoreReceveur.Location = new System.Drawing.Point(116, 203);
-            this.TB_ScoreReceveur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_ScoreReceveur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_ScoreReceveur.Name = "TB_ScoreReceveur";
             this.TB_ScoreReceveur.Size = new System.Drawing.Size(132, 20);
             this.TB_ScoreReceveur.TabIndex = 26;
@@ -181,7 +181,7 @@
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
             this.PB_Fermer_Gif.Location = new System.Drawing.Point(206, 239);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
-            this.PB_Fermer_Gif.Size = new System.Drawing.Size(42, 42);
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 30;
             this.PB_Fermer_Gif.TabStop = false;
             this.PB_Fermer_Gif.Visible = false;
@@ -199,7 +199,7 @@
             this.FB_Fermer.ImageOver = null;
             this.FB_Fermer.Location = new System.Drawing.Point(206, 239);
             this.FB_Fermer.Name = "FB_Fermer";
-            this.FB_Fermer.Size = new System.Drawing.Size(42, 42);
+            this.FB_Fermer.Size = new System.Drawing.Size(40, 40);
             this.FB_Fermer.TabIndex = 29;
             this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Cancel_MouseEnter);
             // 
@@ -211,7 +211,7 @@
             this.FB_Ajouter.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_Ajouter.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_Ajouter.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter_Over;
-            this.FB_Ajouter.Location = new System.Drawing.Point(158, 237);
+            this.FB_Ajouter.Location = new System.Drawing.Point(149, 239);
             this.FB_Ajouter.Name = "FB_Ajouter";
             this.FB_Ajouter.Size = new System.Drawing.Size(42, 42);
             this.FB_Ajouter.TabIndex = 28;
@@ -240,7 +240,7 @@
             this.Controls.Add(this.LB_EquipeHome);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Ajouter_Match";
             this.Text = "Form_Ajouter_Match";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Ajouter_Match_FormClosed);

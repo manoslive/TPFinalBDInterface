@@ -144,7 +144,7 @@
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
             this.PB_Fermer_Gif.Location = new System.Drawing.Point(185, 209);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
-            this.PB_Fermer_Gif.Size = new System.Drawing.Size(42, 42);
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 33;
             this.PB_Fermer_Gif.TabStop = false;
             this.PB_Fermer_Gif.Visible = false;
@@ -163,7 +163,7 @@
             this.FB_Fermer.Location = new System.Drawing.Point(184, 211);
             this.FB_Fermer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Fermer.Name = "FB_Fermer";
-            this.FB_Fermer.Size = new System.Drawing.Size(42, 42);
+            this.FB_Fermer.Size = new System.Drawing.Size(40, 40);
             this.FB_Fermer.TabIndex = 32;
             this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Cancel_MouseEnter);
             // 
@@ -175,7 +175,7 @@
             this.FB_Ajouter.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_Ajouter.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_Ajouter.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter_Over;
-            this.FB_Ajouter.Location = new System.Drawing.Point(136, 209);
+            this.FB_Ajouter.Location = new System.Drawing.Point(123, 209);
             this.FB_Ajouter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Ajouter.Name = "FB_Ajouter";
             this.FB_Ajouter.Size = new System.Drawing.Size(42, 42);
@@ -184,10 +184,12 @@
             // 
             // TB_Position
             // 
-            this.TB_Position.Location = new System.Drawing.Point(12, 231);
+            this.TB_Position.Location = new System.Drawing.Point(20, 323);
             this.TB_Position.Name = "TB_Position";
             this.TB_Position.Size = new System.Drawing.Size(100, 20);
             this.TB_Position.TabIndex = 34;
+            this.TB_Position.Visible = false;
+            this.TB_Position.TextChanged += new System.EventHandler(this.TB_Position_TextChanged);
             // 
             // Form_Ajouter_Stats
             // 
