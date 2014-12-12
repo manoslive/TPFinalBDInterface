@@ -303,7 +303,7 @@
             this.FB_Division.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_Division.ImageClick = global::TPFinal.Properties.Resources.ICON_Division_Over;
             this.FB_Division.ImageDisable = null;
-            this.FB_Division.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Division_Click;
+            this.FB_Division.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Division_Over;
             this.FB_Division.ImageOver = global::TPFinal.Properties.Resources.ICON_Division;
             this.FB_Division.Location = new System.Drawing.Point(71, 205);
             this.FB_Division.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

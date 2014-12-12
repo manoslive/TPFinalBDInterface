@@ -143,12 +143,12 @@ namespace TPFinal
                 DGV_Matchs.Columns[6].Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.10);
             }
             System.Drawing.Point DGV_Joueurs_Location = new Point(DGV_Joueurs.Location.X, DGV_Matchs.Location.Y + DGV_Matchs.Size.Height + 52);
-            DGV_Joueurs.Location = DGV_Joueurs_Location ;
+            DGV_Joueurs.Location = DGV_Joueurs_Location;
 
-            FB_Calendrier.Location = new Point(this.Size.Width/2 - FB_Calendrier.Size.Width/2 ,DGV_Matchs.Location.Y + DGV_Matchs.Size.Height + 4);
+            FB_Calendrier.Location = new Point(FB_Calendrier.Location.X ,DGV_Matchs.Location.Y + DGV_Matchs.Size.Height + 4);
             FB_ModifierMatch.Location = new Point(FB_ModifierMatch.Location.X, DGV_Matchs.Location.Y + DGV_Matchs.Size.Height + 4);
             FB_AjoutRencontre.Location = new Point(FB_AjoutRencontre.Location.X, DGV_Matchs.Location.Y + DGV_Matchs.Size.Height + 4);
-            FB_Statistiques.Location = new Point(FB_Statistiques.Location.X, DGV_Joueurs.Size.Height+ DGV_Joueurs.Location.Y +7);
+            FB_Statistiques.Location = new Point(FB_Statistiques.Location.X, DGV_Matchs.Location.Y + DGV_Matchs.Size.Height + 4);
             FB_Fermer.Location = new Point(FB_Fermer.Location.X, DGV_Joueurs.Size.Height + DGV_Joueurs.Location.Y + 7);
             PB_Fermer_Gif.Location = new Point(PB_Fermer_Gif.Location.X, DGV_Joueurs.Size.Height + DGV_Joueurs.Location.Y + 7);
 
@@ -163,9 +163,8 @@ namespace TPFinal
                 DGV_Joueurs.Columns[6].Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
                 DGV_Joueurs.Columns[7].Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
             }
-
-
             DGV_Joueurs.Size = new Size(DGV_Joueurs.Width, Convert.ToInt32(this.Size.Height * 0.18));
+            PB_Milieu.Location = new Point(PB_Milieu.Location.X, Convert.ToInt32(FB_Calendrier.Location.Y - 59));
         }
         private void Modifier()
         {
@@ -229,12 +228,15 @@ namespace TPFinal
         }
         private void Form_Matchs_Load(object sender, EventArgs e)
         {
-            PB_Milieu.SendToBack();
             FB_AjoutRencontre.Select();
             LoadSettings();
             LoadDGVmatch();
             SetDGVLargeurColonne();
             Form_Matchs_SizeChanged(sender, e);
+            PB_Milieu.SendToBack();
+            FB_Calendrier.Location = new Point(686, 277);
+            FB_Statistiques.Location = new Point(735, 280);
+
         }
         private void DGV_Matchs_SelectionChanged(object sender, EventArgs e)
         {
