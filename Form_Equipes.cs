@@ -116,11 +116,11 @@ namespace TPFinal
 
                 oraAdapter.Fill(dataSetEquipe, "tableFormEquipe");
                 DGV_Equipes.DataSource = dataSetEquipe.Tables[0];
-                SetDGVLargeurColonne();
                 if (lastIndex > -1 && DGV_Equipes.Rows.Count > 0)
                     DGV_Equipes.Rows[Math.Min(lastIndex, DGV_Equipes.Rows.Count - 1)].Selected = true;
 
                 updateControls();
+                SetDGVLargeurColonne();
             }
             catch (OracleException ex)
             {
@@ -130,14 +130,13 @@ namespace TPFinal
 
         private void SetDGVLargeurColonne()
         {
-            DataGridViewColumn nomEquipe = DGV_Equipes.Columns[0];
-            nomEquipe.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.22);
-            DataGridViewColumn dateIntro = DGV_Equipes.Columns[1];
-            dateIntro.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.32);
-            DataGridViewColumn nomDivision = DGV_Equipes.Columns[2];
-            nomDivision.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.22);
-            DataGridViewColumn ville = DGV_Equipes.Columns[3];
-            ville.Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.23);
+            if (DGV_Equipes.Columns.Count != 0)
+            {
+                DGV_Equipes.Columns[0].Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.22);
+                DGV_Equipes.Columns[1].Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.32);
+                DGV_Equipes.Columns[2].Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.22);
+                DGV_Equipes.Columns[3].Width = Convert.ToInt32(DGV_Equipes.Size.Width * 0.23);
+            }
         }
         
         private void updateControls() // Met à jours l'état des boutons

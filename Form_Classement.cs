@@ -81,6 +81,7 @@ namespace TPFinal
             LoadSettings();
             LoadDGV();
             LoadCBDivision();
+            SetDGVLargeurColonne();
         }
 
         private void LoadCBDivision()
@@ -161,6 +162,21 @@ namespace TPFinal
             Properties.Settings.Default.Form_Classement_DGVPolice = Properties.Settings.Default.Preferences_DGVPolice;
             Properties.Settings.Default.Form_Classement_DGVCouleurPolice = Properties.Settings.Default.Preferences_DGVCouleurPolice;
             LoadSettings();
+        }
+
+        private void Form_Classement_SizeChanged(object sender, EventArgs e)
+        {
+            SetDGVLargeurColonne();
+        }
+        private void SetDGVLargeurColonne()
+        {
+            if (DGV_Classement.Columns.Count != 0)
+            {
+                DGV_Classement.Columns[0].Width = Convert.ToInt32(DGV_Classement.Size.Width * 0.3333);
+                DGV_Classement.Columns[1].Width = Convert.ToInt32(DGV_Classement.Size.Width * 0.3333);
+                DGV_Classement.Columns[2].Width = Convert.ToInt32(DGV_Classement.Size.Width * 0.3333);
+            }
+
         }
     }
 }

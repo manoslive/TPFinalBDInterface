@@ -144,7 +144,7 @@ namespace TPFinal
             {
                 string sql = "insert into FicheJoueur" +
                              "(NumeroMatch, NumeroJoueur, NombreButs, NombrePasses, TempsPunition) " +
-                             "Values(64,:NumeroJoueur,1,1,1)";
+                             "Values(:NumeroMatch,:NumeroJoueur,:NombreButs,:NombrePasses,:TempsPunition)";
                 try
                 {
                     OracleCommand oraAjout = new OracleCommand(sql, oracon);

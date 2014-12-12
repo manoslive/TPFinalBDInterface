@@ -20,6 +20,7 @@ namespace TPFinal
         public Form callBackForm = null;
         public DataSet matchDataSet = null;
         public DataSet joueursDataSet = null;
+        private Size size = new Size(0,0);
         public Form_Matchs(OracleConnection connect, MaConnection maBelleConnection)
         {
             InitializeComponent();
@@ -131,21 +132,16 @@ namespace TPFinal
         }
         private void SetDGVLargeurColonne()
         {
-            DataGridViewColumn numMatch = DGV_Matchs.Columns[0];
-            numMatch.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.10);
-            DataGridViewColumn receveur = DGV_Matchs.Columns[1];
-            receveur.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.18);
-            DataGridViewColumn visiteur = DGV_Matchs.Columns[2];
-            visiteur.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.18);
-            DataGridViewColumn date = DGV_Matchs.Columns[3];
-            date.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.15);
-            DataGridViewColumn lieu = DGV_Matchs.Columns[4];
-            lieu.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.15);
-            DataGridViewColumn scoreReceveur = DGV_Matchs.Columns[5];
-            scoreReceveur.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.10);
-            DataGridViewColumn scoreVisiteur = DGV_Matchs.Columns[6];
-            scoreVisiteur.Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.10);
-            
+            if (DGV_Matchs.Columns.Count != 0)
+            {
+                DGV_Matchs.Columns[0].Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.11);
+                DGV_Matchs.Columns[1].Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.18);
+                DGV_Matchs.Columns[2].Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.18);
+                DGV_Matchs.Columns[3].Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.15);
+                DGV_Matchs.Columns[4].Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.15);
+                DGV_Matchs.Columns[5].Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.10);
+                DGV_Matchs.Columns[6].Width = Convert.ToInt32(DGV_Matchs.Size.Width * 0.10);
+            }
             System.Drawing.Point DGV_Joueurs_Location = new Point(DGV_Joueurs.Location.X, DGV_Matchs.Location.Y + DGV_Matchs.Size.Height + 52);
             DGV_Joueurs.Location = DGV_Joueurs_Location ;
 
@@ -156,22 +152,20 @@ namespace TPFinal
             FB_Fermer.Location = new Point(FB_Fermer.Location.X, DGV_Joueurs.Size.Height + DGV_Joueurs.Location.Y + 7);
             PB_Fermer_Gif.Location = new Point(PB_Fermer_Gif.Location.X, DGV_Joueurs.Size.Height + DGV_Joueurs.Location.Y + 7);
 
-            DataGridViewColumn numJoueur = DGV_Joueurs.Columns[0];
-            numJoueur.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
-            DataGridViewColumn numMaillot = DGV_Joueurs.Columns[1];
-            numMaillot.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
-            DataGridViewColumn nomJoueur = DGV_Joueurs.Columns[2];
-            nomJoueur.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.15);
-            DataGridViewColumn position = DGV_Joueurs.Columns[3];
-            position.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.15);
-            DataGridViewColumn nomEquipe = DGV_Joueurs.Columns[4];
-            nomEquipe.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.15);
-            DataGridViewColumn nbButs = DGV_Joueurs.Columns[5];
-            nbButs.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
-            DataGridViewColumn nbPasses = DGV_Joueurs.Columns[6];
-            nbPasses.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
-            DataGridViewColumn nbPoints = DGV_Joueurs.Columns[7];
-            nbPoints.Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
+            if (DGV_Joueurs.Columns.Count != 0)
+            {
+                DGV_Joueurs.Columns[0].Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
+                DGV_Joueurs.Columns[1].Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
+                DGV_Joueurs.Columns[2].Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.15);
+                DGV_Joueurs.Columns[3].Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.15);
+                DGV_Joueurs.Columns[4].Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.15);
+                DGV_Joueurs.Columns[5].Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
+                DGV_Joueurs.Columns[6].Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
+                DGV_Joueurs.Columns[7].Width = Convert.ToInt32(DGV_Joueurs.Size.Width * 0.11);
+            }
+
+
+            DGV_Joueurs.Size = new Size(DGV_Joueurs.Width, Convert.ToInt32(this.Size.Height * 0.18));
         }
         private void Modifier()
         {
@@ -239,6 +233,7 @@ namespace TPFinal
             LoadSettings();
             LoadDGVmatch();
             SetDGVLargeurColonne();
+            Form_Matchs_SizeChanged(sender, e);
         }
         private void DGV_Matchs_SelectionChanged(object sender, EventArgs e)
         {

@@ -68,9 +68,11 @@ namespace TPFinal
         }
         private void Form_Divisions_Load(object sender, EventArgs e)
         {
+            this.Size = new Size(351, 207);
             FB_AjouterDivision.Select();
             LoadSettings();
             LoadDGV();
+            SetDGVLargeurColonne();
         }
         private void MiseAJourControles()
         {
@@ -304,6 +306,19 @@ namespace TPFinal
             Properties.Settings.Default.Form_Divisions_DGVPolice = Properties.Settings.Default.Preferences_DGVPolice;
             Properties.Settings.Default.Form_Divisions_DGVCouleurPolice = Properties.Settings.Default.Preferences_DGVCouleurPolice;
             LoadSettings();
+        }
+
+        private void Form_Divisions_SizeChanged(object sender, EventArgs e)
+        {
+            SetDGVLargeurColonne();
+        }
+        private void SetDGVLargeurColonne()
+        {
+            if (DGV_Divisions.Columns.Count != 0)
+            {
+                DGV_Divisions.Columns[0].Width = Convert.ToInt32(DGV_Divisions.Size.Width * 0.50);
+                DGV_Divisions.Columns[1].Width = Convert.ToInt32(DGV_Divisions.Size.Width * 0.50);
+            }
         }
     }
 }

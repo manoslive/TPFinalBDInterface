@@ -21,6 +21,7 @@ namespace TPFinal
         public string equipeHome = null;
         public string equipeVisiteur = null;
         public Form callBackForm = null;
+        private DataSet dataSetPosition = null;
         public Form_Ajouter_Stats(OracleConnection connect, MaConnection maBelleConnection)
         {
             InitializeComponent();
@@ -222,8 +223,33 @@ namespace TPFinal
         private void CB_NumeroJoueur_SelectedIndexChanged(object sender, EventArgs e)
         {
             VerifCases();
+            VerifPosition();
         }
+        private void VerifPosition()
+        {
 
+            OracleCommand oraSelect = oracon.CreateCommand();
+            oraSelect.CommandText = "SELECT PositionJoueur FROM Statistiques " +
+                                    "where NumeroJoueur = :NumeroJoueur";
+
+            oraSelect.Parameters.Add(new OracleParameter(":NumeroJoueur", numJoueur));
+            using (OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect))
+            {
+                if (dataSetPosition.Tables.Contains("Position"))
+                {
+                    dataSetPosition.Tables["Position"].Clear();
+                }
+                oraAdapter.Fill(dataSetPosition, "Position");
+                oraAdapter.Dispose();
+            }
+
+
+
+            TB_Position.DataBindings.Clear();
+            TB_Position.Clear();
+            TB_Position.DataBindings.Add("Text", dataSetPosition, "Stats.PositionJoueur");
+
+        }
         private void TB_NbPasses_TextChanged(object sender, EventArgs e)
         {
             VerifCases();

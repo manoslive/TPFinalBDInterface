@@ -87,7 +87,7 @@
             this.DGV_Equipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Equipes.ContextMenuStrip = this.CM_EquipeDGV;
             this.DGV_Equipes.Location = new System.Drawing.Point(15, 28);
-            this.DGV_Equipes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGV_Equipes.Margin = new System.Windows.Forms.Padding(2);
             this.DGV_Equipes.MultiSelect = false;
             this.DGV_Equipes.Name = "DGV_Equipes";
             this.DGV_Equipes.ReadOnly = true;
@@ -145,7 +145,7 @@
             this.CB_Division.Items.AddRange(new object[] {
             "Toutes"});
             this.CB_Division.Location = new System.Drawing.Point(303, 220);
-            this.CB_Division.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CB_Division.Margin = new System.Windows.Forms.Padding(2);
             this.CB_Division.Name = "CB_Division";
             this.CB_Division.Size = new System.Drawing.Size(103, 21);
             this.CB_Division.TabIndex = 7;
@@ -487,7 +487,7 @@
             this.PB_Equipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PB_Equipe.ErrorImage = global::TPFinal.Properties.Resources.no_picture;
             this.PB_Equipe.Location = new System.Drawing.Point(448, 28);
-            this.PB_Equipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_Equipe.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Equipe.Name = "PB_Equipe";
             this.PB_Equipe.Size = new System.Drawing.Size(93, 77);
             this.PB_Equipe.TabIndex = 2;
@@ -516,7 +516,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MainMenuStrip = this.MS_Equipe;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(571, 292);
             this.Name = "Form_Equipes";
             this.Text = "Form_Equipe";
