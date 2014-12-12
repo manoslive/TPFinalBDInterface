@@ -57,12 +57,12 @@
             this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.PB_Milieu = new System.Windows.Forms.PictureBox();
             this.FB_Statistiques = new FlashButton.FlashButton();
             this.FB_ModifierMatch = new FlashButton.FlashButton();
             this.FB_AjoutRencontre = new FlashButton.FlashButton();
             this.FB_Calendrier = new FlashButton.FlashButton();
             this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
+            this.PB_Milieu = new System.Windows.Forms.PictureBox();
             this.FB_Fermer = new FlashButton.FlashButton();
             this.PB_Faceoff = new System.Windows.Forms.PictureBox();
             this.PB_EquipeHome = new System.Windows.Forms.PictureBox();
@@ -71,8 +71,8 @@
             this.CM_Match.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).BeginInit();
             this.MS_Equipe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Milieu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Milieu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Faceoff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).BeginInit();
@@ -352,22 +352,9 @@
             this.toolStripMenuItem1.Text = "?";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
-            // PB_Milieu
-            // 
-            this.PB_Milieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PB_Milieu.BackColor = System.Drawing.Color.Transparent;
-            this.PB_Milieu.BackgroundImage = global::TPFinal.Properties.Resources.LigneMilieu;
-            this.PB_Milieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PB_Milieu.Location = new System.Drawing.Point(103, 218);
-            this.PB_Milieu.Name = "PB_Milieu";
-            this.PB_Milieu.Size = new System.Drawing.Size(576, 161);
-            this.PB_Milieu.TabIndex = 19;
-            this.PB_Milieu.TabStop = false;
-            // 
             // FB_Statistiques
             // 
-            this.FB_Statistiques.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.FB_Statistiques.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.FB_Statistiques.BackColor = System.Drawing.Color.Transparent;
             this.FB_Statistiques.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Stats;
             this.FB_Statistiques.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -421,7 +408,7 @@
             // 
             // FB_Calendrier
             // 
-            this.FB_Calendrier.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.FB_Calendrier.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.FB_Calendrier.BackColor = System.Drawing.Color.Transparent;
             this.FB_Calendrier.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Calendrier;
             this.FB_Calendrier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -451,6 +438,18 @@
             this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
             this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
             this.PB_Fermer_Gif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseUp);
+            // 
+            // PB_Milieu
+            // 
+            this.PB_Milieu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PB_Milieu.BackColor = System.Drawing.Color.Transparent;
+            this.PB_Milieu.BackgroundImage = global::TPFinal.Properties.Resources.LigneMilieu;
+            this.PB_Milieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Milieu.Location = new System.Drawing.Point(103, 218);
+            this.PB_Milieu.Name = "PB_Milieu";
+            this.PB_Milieu.Size = new System.Drawing.Size(576, 161);
+            this.PB_Milieu.TabIndex = 19;
+            this.PB_Milieu.TabStop = false;
             // 
             // FB_Fermer
             // 
@@ -545,8 +544,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).EndInit();
             this.MS_Equipe.ResumeLayout(false);
             this.MS_Equipe.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Milieu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Milieu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Faceoff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).EndInit();
