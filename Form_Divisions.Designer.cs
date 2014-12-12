@@ -134,7 +134,7 @@
             this.FB_SupprimerDivision.Name = "FB_SupprimerDivision";
             this.FB_SupprimerDivision.Size = new System.Drawing.Size(40, 40);
             this.FB_SupprimerDivision.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.FB_SupprimerDivision, "Supprimer une division");
+            this.toolTip1.SetToolTip(this.FB_SupprimerDivision, "Supprimer une division...");
             this.FB_SupprimerDivision.Click += new System.EventHandler(this.BTN_Supprimer_Click);
             // 
             // FB_ModifierDivision
@@ -152,7 +152,7 @@
             this.FB_ModifierDivision.Name = "FB_ModifierDivision";
             this.FB_ModifierDivision.Size = new System.Drawing.Size(40, 40);
             this.FB_ModifierDivision.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.FB_ModifierDivision, "Modifier une division");
+            this.toolTip1.SetToolTip(this.FB_ModifierDivision, "Modifier une division...");
             this.FB_ModifierDivision.Click += new System.EventHandler(this.BTN_Modifier_Click);
             // 
             // FB_AjouterDivision
@@ -170,7 +170,7 @@
             this.FB_AjouterDivision.Name = "FB_AjouterDivision";
             this.FB_AjouterDivision.Size = new System.Drawing.Size(40, 40);
             this.FB_AjouterDivision.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.FB_AjouterDivision, "Ajouter une division");
+            this.toolTip1.SetToolTip(this.FB_AjouterDivision, "Ajouter une division...");
             this.FB_AjouterDivision.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
             // PB_Fermer_Gif
@@ -182,7 +182,7 @@
             this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 15;
             this.PB_Fermer_Gif.TabStop = false;
-            this.toolTip1.SetToolTip(this.PB_Fermer_Gif, "Fermer");
+            this.toolTip1.SetToolTip(this.PB_Fermer_Gif, "Quitter");
             this.PB_Fermer_Gif.Visible = false;
             this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
             this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);

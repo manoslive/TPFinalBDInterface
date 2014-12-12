@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.CB_PosJoueur = new System.Windows.Forms.ComboBox();
             this.CB_EquipeJoueur = new System.Windows.Forms.ComboBox();
             this.DTP_DateNaissance = new System.Windows.Forms.DateTimePicker();
@@ -46,6 +47,7 @@
             this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
             this.FB_Fermer = new FlashButton.FlashButton();
             this.FB_Ajouter = new FlashButton.FlashButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             this.SuspendLayout();
             // 
@@ -212,6 +214,7 @@
             this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 27;
             this.PB_Fermer_Gif.TabStop = false;
+            this.toolTip1.SetToolTip(this.PB_Fermer_Gif, "Quitter");
             this.PB_Fermer_Gif.Visible = false;
             this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
             this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
@@ -243,6 +246,7 @@
             this.FB_Ajouter.Name = "FB_Ajouter";
             this.FB_Ajouter.Size = new System.Drawing.Size(42, 42);
             this.FB_Ajouter.TabIndex = 25;
+            this.toolTip1.SetToolTip(this.FB_Ajouter, "Ajouter joueur");
             this.FB_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
             // Form_Ajouter_Joueur
@@ -300,5 +304,6 @@
         private System.Windows.Forms.PictureBox PB_Fermer_Gif;
         private FlashButton.FlashButton FB_Fermer;
         private FlashButton.FlashButton FB_Ajouter;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

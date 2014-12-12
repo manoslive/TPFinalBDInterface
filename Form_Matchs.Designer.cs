@@ -433,7 +433,7 @@
             this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 11;
             this.PB_Fermer_Gif.TabStop = false;
-            this.toolTip1.SetToolTip(this.PB_Fermer_Gif, "Fermer");
+            this.toolTip1.SetToolTip(this.PB_Fermer_Gif, "Quitter");
             this.PB_Fermer_Gif.Visible = false;
             this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
             this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);

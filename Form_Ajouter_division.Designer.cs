@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LB_DateCreation = new System.Windows.Forms.Label();
             this.LB_NomDivision = new System.Windows.Forms.Label();
             this.TB_NomDivision = new System.Windows.Forms.TextBox();
@@ -35,6 +36,7 @@
             this.FB_Ajouter = new FlashButton.FlashButton();
             this.FB_Fermer = new FlashButton.FlashButton();
             this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +89,7 @@
             this.FB_Ajouter.Name = "FB_Ajouter";
             this.FB_Ajouter.Size = new System.Drawing.Size(42, 42);
             this.FB_Ajouter.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.FB_Ajouter, "Ajouter la division");
             this.FB_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
             // FB_Fermer
@@ -111,6 +114,7 @@
             this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 6;
             this.PB_Fermer_Gif.TabStop = false;
+            this.toolTip1.SetToolTip(this.PB_Fermer_Gif, "Quitter");
             this.PB_Fermer_Gif.Visible = false;
             this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
             this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
@@ -146,5 +150,6 @@
         private FlashButton.FlashButton FB_Ajouter;
         private FlashButton.FlashButton FB_Fermer;
         private System.Windows.Forms.PictureBox PB_Fermer_Gif;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

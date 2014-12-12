@@ -168,7 +168,7 @@
             this.FB_SupprimerEquipe.Name = "FB_SupprimerEquipe";
             this.FB_SupprimerEquipe.Size = new System.Drawing.Size(46, 46);
             this.FB_SupprimerEquipe.TabIndex = 2;
-            this.toolTip_Equipe.SetToolTip(this.FB_SupprimerEquipe, "Supprimer une équipe");
+            this.toolTip_Equipe.SetToolTip(this.FB_SupprimerEquipe, "Supprimer une équipe...");
             this.FB_SupprimerEquipe.Click += new System.EventHandler(this.BTN_Supprimer_Click);
             // 
             // FB_Matchs
@@ -186,7 +186,7 @@
             this.FB_Matchs.Name = "FB_Matchs";
             this.FB_Matchs.Size = new System.Drawing.Size(36, 36);
             this.FB_Matchs.TabIndex = 15;
-            this.toolTip_Equipe.SetToolTip(this.FB_Matchs, "Matchs");
+            this.toolTip_Equipe.SetToolTip(this.FB_Matchs, "Matchs...");
             this.FB_Matchs.Click += new System.EventHandler(this.BTN_Matchs_Click);
             // 
             // PB_Fermer_Gif
@@ -199,7 +199,7 @@
             this.PB_Fermer_Gif.Size = new System.Drawing.Size(46, 41);
             this.PB_Fermer_Gif.TabIndex = 12;
             this.PB_Fermer_Gif.TabStop = false;
-            this.toolTip_Equipe.SetToolTip(this.PB_Fermer_Gif, "Fermer");
+            this.toolTip_Equipe.SetToolTip(this.PB_Fermer_Gif, "Quitter");
             this.PB_Fermer_Gif.Visible = false;
             this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
             this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
@@ -239,7 +239,7 @@
             this.FB_ModifierEquipe.Name = "FB_ModifierEquipe";
             this.FB_ModifierEquipe.Size = new System.Drawing.Size(46, 46);
             this.FB_ModifierEquipe.TabIndex = 1;
-            this.toolTip_Equipe.SetToolTip(this.FB_ModifierEquipe, "Modifier une équipe");
+            this.toolTip_Equipe.SetToolTip(this.FB_ModifierEquipe, "Modifier une équipe...");
             this.FB_ModifierEquipe.Click += new System.EventHandler(this.BTN_Modifier_Click);
             // 
             // FB_AjouterEquipe
@@ -257,7 +257,7 @@
             this.FB_AjouterEquipe.Name = "FB_AjouterEquipe";
             this.FB_AjouterEquipe.Size = new System.Drawing.Size(46, 46);
             this.FB_AjouterEquipe.TabIndex = 0;
-            this.toolTip_Equipe.SetToolTip(this.FB_AjouterEquipe, "Ajouter une équipe");
+            this.toolTip_Equipe.SetToolTip(this.FB_AjouterEquipe, "Ajouter une équipe...");
             this.FB_AjouterEquipe.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
             // FB_Classement
@@ -275,7 +275,7 @@
             this.FB_Classement.Name = "FB_Classement";
             this.FB_Classement.Size = new System.Drawing.Size(36, 36);
             this.FB_Classement.TabIndex = 5;
-            this.toolTip_Equipe.SetToolTip(this.FB_Classement, "Classement");
+            this.toolTip_Equipe.SetToolTip(this.FB_Classement, "Classement...");
             this.FB_Classement.Click += new System.EventHandler(this.BTN_Classement_Click);
             // 
             // FB_Top3
@@ -293,7 +293,7 @@
             this.FB_Top3.Name = "FB_Top3";
             this.FB_Top3.Size = new System.Drawing.Size(36, 36);
             this.FB_Top3.TabIndex = 6;
-            this.toolTip_Equipe.SetToolTip(this.FB_Top3, "Top 3");
+            this.toolTip_Equipe.SetToolTip(this.FB_Top3, "Top 3...");
             this.FB_Top3.Click += new System.EventHandler(this.BTN_Top5_Click);
             // 
             // FB_Division
@@ -310,7 +310,7 @@
             this.FB_Division.Name = "FB_Division";
             this.FB_Division.Size = new System.Drawing.Size(36, 36);
             this.FB_Division.TabIndex = 14;
-            this.toolTip_Equipe.SetToolTip(this.FB_Division, "Divisions");
+            this.toolTip_Equipe.SetToolTip(this.FB_Division, "Divisions...");
             this.FB_Division.Click += new System.EventHandler(this.BTN_Divisions_Click);
             // 
             // FB_Statistiques
@@ -328,7 +328,7 @@
             this.FB_Statistiques.Name = "FB_Statistiques";
             this.FB_Statistiques.Size = new System.Drawing.Size(36, 36);
             this.FB_Statistiques.TabIndex = 6;
-            this.toolTip_Equipe.SetToolTip(this.FB_Statistiques, "Statistique joueur");
+            this.toolTip_Equipe.SetToolTip(this.FB_Statistiques, "Statistiques des joueurs...");
             this.FB_Statistiques.Click += new System.EventHandler(this.FB_Statistiques_Click);
             // 
             // MS_Equipe

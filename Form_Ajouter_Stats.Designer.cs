@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TB_TempsPunition = new System.Windows.Forms.TextBox();
             this.TB_NbPasses = new System.Windows.Forms.TextBox();
             this.TB_NbButs = new System.Windows.Forms.TextBox();
@@ -42,6 +43,7 @@
             this.FB_Fermer = new FlashButton.FlashButton();
             this.FB_Ajouter = new FlashButton.FlashButton();
             this.TB_Position = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,7 +124,7 @@
             this.CB_NumeroMatch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_NumeroMatch.FormattingEnabled = true;
             this.CB_NumeroMatch.Location = new System.Drawing.Point(106, 16);
-            this.CB_NumeroMatch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CB_NumeroMatch.Margin = new System.Windows.Forms.Padding(2);
             this.CB_NumeroMatch.Name = "CB_NumeroMatch";
             this.CB_NumeroMatch.Size = new System.Drawing.Size(121, 21);
             this.CB_NumeroMatch.TabIndex = 0;
@@ -133,7 +135,7 @@
             this.CB_NumeroJoueur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_NumeroJoueur.FormattingEnabled = true;
             this.CB_NumeroJoueur.Location = new System.Drawing.Point(106, 58);
-            this.CB_NumeroJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CB_NumeroJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.CB_NumeroJoueur.Name = "CB_NumeroJoueur";
             this.CB_NumeroJoueur.Size = new System.Drawing.Size(121, 21);
             this.CB_NumeroJoueur.TabIndex = 1;
@@ -147,6 +149,7 @@
             this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
             this.PB_Fermer_Gif.TabIndex = 33;
             this.PB_Fermer_Gif.TabStop = false;
+            this.toolTip1.SetToolTip(this.PB_Fermer_Gif, "Quitter");
             this.PB_Fermer_Gif.Visible = false;
             this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
             this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
@@ -180,6 +183,7 @@
             this.FB_Ajouter.Name = "FB_Ajouter";
             this.FB_Ajouter.Size = new System.Drawing.Size(42, 42);
             this.FB_Ajouter.TabIndex = 31;
+            this.toolTip1.SetToolTip(this.FB_Ajouter, "Ajouter les Statistiques");
             this.FB_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
             // TB_Position
@@ -211,7 +215,7 @@
             this.Controls.Add(this.LB_NumJoueur);
             this.Controls.Add(this.LB_NumMatch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Ajouter_Stats";
             this.Text = "Form_Ajouter_Stats";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ajouter_Stats_FormClosing);
@@ -238,5 +242,6 @@
         private FlashButton.FlashButton FB_Fermer;
         private FlashButton.FlashButton FB_Ajouter;
         private System.Windows.Forms.TextBox TB_Position;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
