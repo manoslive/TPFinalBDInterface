@@ -278,6 +278,7 @@ namespace TPFinal
             Modifier.dateIntroLigue = DGV_Equipes.SelectedRows[0].Cells[1].Value.ToString();
             Modifier.divisionEquipe = DGV_Equipes.SelectedRows[0].Cells[2].Value.ToString();
             Modifier.villeEquipe = DGV_Equipes.SelectedRows[0].Cells[3].Value.ToString();
+            Modifier.CB_Division.SelectedText = DGV_Equipes.SelectedRows[0].Cells[2].Value.ToString();
             if (image != null)
                 Modifier.image = image;
 
