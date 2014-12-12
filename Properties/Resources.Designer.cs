@@ -583,6 +583,16 @@ namespace TPFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LigneMilieu {
+            get {
+                object obj = ResourceManager.GetObject("LigneMilieu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Modifier_DGVCouleurPolice {
             get {
                 object obj = ResourceManager.GetObject("Modifier_DGVCouleurPolice", resourceCulture);

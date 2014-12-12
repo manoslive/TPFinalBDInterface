@@ -56,6 +56,8 @@
             this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.PB_Milieu = new System.Windows.Forms.PictureBox();
             this.FB_Statistiques = new FlashButton.FlashButton();
             this.FB_ModifierMatch = new FlashButton.FlashButton();
             this.FB_AjoutRencontre = new FlashButton.FlashButton();
@@ -65,11 +67,11 @@
             this.PB_Faceoff = new System.Windows.Forms.PictureBox();
             this.PB_EquipeHome = new System.Windows.Forms.PictureBox();
             this.PB_EquipeAway = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Matchs)).BeginInit();
             this.CM_Match.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).BeginInit();
             this.MS_Equipe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Milieu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Faceoff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).BeginInit();
@@ -175,7 +177,7 @@
             this.DGV_Joueurs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DGV_Joueurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Joueurs.ContextMenuStrip = this.CM_Match;
-            this.DGV_Joueurs.Location = new System.Drawing.Point(7, 324);
+            this.DGV_Joueurs.Location = new System.Drawing.Point(8, 324);
             this.DGV_Joueurs.Margin = new System.Windows.Forms.Padding(2);
             this.DGV_Joueurs.MultiSelect = false;
             this.DGV_Joueurs.Name = "DGV_Joueurs";
@@ -184,7 +186,7 @@
             this.DGV_Joueurs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGV_Joueurs.RowTemplate.Height = 28;
             this.DGV_Joueurs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Joueurs.Size = new System.Drawing.Size(763, 101);
+            this.DGV_Joueurs.Size = new System.Drawing.Size(762, 101);
             this.DGV_Joueurs.TabIndex = 5;
             this.DGV_Joueurs.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Joueurs_CellMouseDoubleClick);
             // 
@@ -350,6 +352,19 @@
             this.toolStripMenuItem1.Text = "?";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
+            // PB_Milieu
+            // 
+            this.PB_Milieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PB_Milieu.BackColor = System.Drawing.Color.Transparent;
+            this.PB_Milieu.BackgroundImage = global::TPFinal.Properties.Resources.LigneMilieu;
+            this.PB_Milieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Milieu.Location = new System.Drawing.Point(103, 218);
+            this.PB_Milieu.Name = "PB_Milieu";
+            this.PB_Milieu.Size = new System.Drawing.Size(576, 161);
+            this.PB_Milieu.TabIndex = 19;
+            this.PB_Milieu.TabStop = false;
+            // 
             // FB_Statistiques
             // 
             this.FB_Statistiques.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -360,7 +375,7 @@
             this.FB_Statistiques.ImageDisable = global::TPFinal.Properties.Resources.ICON_Stats;
             this.FB_Statistiques.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Stats;
             this.FB_Statistiques.ImageOver = global::TPFinal.Properties.Resources.ICON_Stats_Over;
-            this.FB_Statistiques.Location = new System.Drawing.Point(8, 434);
+            this.FB_Statistiques.Location = new System.Drawing.Point(735, 280);
             this.FB_Statistiques.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Statistiques.Name = "FB_Statistiques";
             this.FB_Statistiques.Size = new System.Drawing.Size(36, 36);
@@ -410,12 +425,11 @@
             this.FB_Calendrier.BackColor = System.Drawing.Color.Transparent;
             this.FB_Calendrier.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Calendrier;
             this.FB_Calendrier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.FB_Calendrier.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FB_Calendrier.ImageClick = global::TPFinal.Properties.Resources.ICON_Calendrier_Click;
             this.FB_Calendrier.ImageDisable = global::TPFinal.Properties.Resources.ICON_Calendrier;
             this.FB_Calendrier.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Calendrier;
             this.FB_Calendrier.ImageOver = global::TPFinal.Properties.Resources.ICON_Calendrier_Over;
-            this.FB_Calendrier.Location = new System.Drawing.Point(377, 277);
+            this.FB_Calendrier.Location = new System.Drawing.Point(686, 277);
             this.FB_Calendrier.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FB_Calendrier.Name = "FB_Calendrier";
             this.FB_Calendrier.Size = new System.Drawing.Size(40, 40);
@@ -495,6 +509,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 483);
             this.ContextMenuStrip = this.CM_Match;
+            this.Controls.Add(this.PB_Milieu);
             this.Controls.Add(this.FB_Statistiques);
             this.Controls.Add(this.FB_ModifierMatch);
             this.Controls.Add(this.FB_AjoutRencontre);
@@ -530,6 +545,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).EndInit();
             this.MS_Equipe.ResumeLayout(false);
             this.MS_Equipe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Milieu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Faceoff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).EndInit();
@@ -578,6 +594,7 @@
         private FlashButton.FlashButton FB_ModifierMatch;
         private FlashButton.FlashButton FB_Statistiques;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox PB_Milieu;
 
     }
 }

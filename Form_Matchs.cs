@@ -229,6 +229,7 @@ namespace TPFinal
         }
         private void Form_Matchs_Load(object sender, EventArgs e)
         {
+            PB_Milieu.SendToBack();
             FB_AjoutRencontre.Select();
             LoadSettings();
             LoadDGVmatch();
