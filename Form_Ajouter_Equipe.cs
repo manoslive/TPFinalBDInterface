@@ -35,6 +35,7 @@ namespace TPFinal
                     CB_Division.Items.Add(oraReader.GetString(0));
                 }
             }
+            CB_Division.Text = divisionEquipe;
             PB_Equipe.SizeMode = PictureBoxSizeMode.StretchImage; // Met le picturebox en mode "Stretch"
         }
         private byte[] image_;
@@ -78,17 +79,7 @@ namespace TPFinal
                 DTP_Creation.Value = DateTime.Parse(value);
             }
         }
-        public string divisionEquipe
-        {
-            get
-            {
-                return CB_Division.Text;
-            }
-            set
-            {
-                CB_Division.Text = value;
-            }
-        }
+        public string divisionEquipe;
         public string villeEquipe
         {
             get
