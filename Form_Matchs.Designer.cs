@@ -365,7 +365,7 @@
             this.FB_Statistiques.Name = "FB_Statistiques";
             this.FB_Statistiques.Size = new System.Drawing.Size(36, 36);
             this.FB_Statistiques.TabIndex = 18;
-            this.toolTip1.SetToolTip(this.FB_Statistiques, "Statistiques");
+            this.toolTip1.SetToolTip(this.FB_Statistiques, "Statistiques du joueur sélectionné...");
             this.FB_Statistiques.Click += new System.EventHandler(this.BTN_AjoutStats_Click_1);
             // 
             // FB_ModifierMatch
@@ -420,7 +420,7 @@
             this.FB_Calendrier.Name = "FB_Calendrier";
             this.FB_Calendrier.Size = new System.Drawing.Size(40, 40);
             this.FB_Calendrier.TabIndex = 15;
-            this.toolTip1.SetToolTip(this.FB_Calendrier, "Clendrier");
+            this.toolTip1.SetToolTip(this.FB_Calendrier, "Afficher un autre match...");
             this.FB_Calendrier.Click += new System.EventHandler(this.BTN_Calendrier_Click);
             // 
             // PB_Fermer_Gif

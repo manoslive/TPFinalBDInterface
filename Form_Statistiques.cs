@@ -20,13 +20,13 @@ namespace TPFinal
         private MaConnection connection = null;
         private DataSet statsDataSet = new DataSet();
         public Form callBackForm = null;
-        private string numeroJoueur {get; set;}
+        private string numeroJoueurStat {get; set;}
         public Form_Statistiques(OracleConnection connect, MaConnection maBelleConnection, string numeroJoueurEnCours)
         {
             InitializeComponent();
             oracon = connect;
             connection = maBelleConnection;
-            numeroJoueur = numeroJoueurEnCours;
+            numeroJoueurStat = numeroJoueurEnCours;
         }
         private void SaveSettings()
         {
@@ -59,9 +59,9 @@ namespace TPFinal
         private void RemplirFormulaire()
         {
             OracleCommand oraSelect = oracon.CreateCommand();
-            oraSelect.CommandText = "Select * From Statistiques " +
+            oraSelect.CommandText = "Select * From Statistiques " + 
                                     "order by NumeroMatch";
-            oraSelect.Parameters.Add(new OracleParameter(":NumeroJoueur", numeroJoueur));
+            oraSelect.Parameters.Add(new OracleParameter(":NumeroJoueur", numeroJoueurStat));
             using (OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect))
             {
                 if (statsDataSet.Tables.Contains("Stats"))
@@ -72,6 +72,18 @@ namespace TPFinal
                 oraAdapter.Dispose();
             }
             UpdateLinkTB();
+            TrouverJoueurActuel();
+        }
+        private void TrouverJoueurActuel()
+        {
+            bool trouver = false;
+            while(!trouver)
+            {
+                if (numeroJoueurStat == TB_NumJoueur.Text)
+                    trouver = true;
+                else
+                    Suivant();
+            }
         }
         private void UpdateLinkTB()
         {
