@@ -596,5 +596,19 @@ namespace TPFinal
         {
             SetDGVLargeurColonne();
         }
+
+        private void AfficherStats()
+        {
+            Form_Statistiques stats = new Form_Statistiques(oracon, maBelleConnection, "");
+            this.Hide();
+            stats.Text = "Statistiques";
+            stats.callBackForm = this;
+            stats.ShowDialog();
+        }
+
+        private void FB_Statistiques_Click(object sender, EventArgs e)
+        {
+            AfficherStats();
+        }
     }
 }

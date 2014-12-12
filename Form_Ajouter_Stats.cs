@@ -21,7 +21,8 @@ namespace TPFinal
         public string equipeHome = null;
         public string equipeVisiteur = null;
         public Form callBackForm = null;
-        private DataSet dataSetPosition = null;
+        public bool isModif = false;
+        private DataSet ajouterDataSet = new DataSet();
         public Form_Ajouter_Stats(OracleConnection connect, MaConnection maBelleConnection)
         {
             InitializeComponent();
@@ -98,7 +99,47 @@ namespace TPFinal
         {
             CB_NumeroMatch.Select();
             RemplirCBMatchPremiereFois();
+            TB_NbButs.Enabled = false;
+            TB_NbPasses.Enabled = false;
+            TB_NbPasses.Text = null;
+            TB_NbButs.Text = null;
         }
+
+        private void RemplirTB()
+        {
+            OracleCommand oraSelect = oracon.CreateCommand();
+            oraSelect.CommandText = "Select nombrebuts, nombrepasses, tempspunition From Statistiques " +
+                                    "where NumeroJoueur=:NumeroJoueur and NumeroMatch=:NumeroMatch";
+            oraSelect.Parameters.Add(new OracleParameter(":NumeroJoueur", numJoueur));
+            oraSelect.Parameters.Add(new OracleParameter(":NumeroMatch", numMatch));
+            using (OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect))
+            {
+                if (ajouterDataSet.Tables.Contains("AjoutStats"))
+                {
+                    ajouterDataSet.Tables["AjoutStats"].Clear();
+                }
+                oraAdapter.Fill(ajouterDataSet, "AjoutStats");
+                oraAdapter.Dispose();
+            }
+            UpdateLinkTB();
+        }
+        private void UpdateLinkTB()
+        {
+            UnbindTB();
+            TB_NbButs.DataBindings.Add("Text", ajouterDataSet, "AjoutStats.nombrebuts");
+            TB_NbPasses.DataBindings.Add("Text", ajouterDataSet, "AjoutStats.nombrepasses");
+            TB_TempsPunition.DataBindings.Add("Text", ajouterDataSet, "AjoutStats.tempspunition");
+        }
+        private void UnbindTB()
+        {
+            TB_NbButs.DataBindings.Clear();
+            TB_NbButs.Clear();
+            TB_NbPasses.DataBindings.Clear();
+            TB_NbPasses.Clear();
+            TB_TempsPunition.DataBindings.Clear();
+            TB_TempsPunition.Clear();
+        }
+
         private void RemplirCBMatchPremiereFois()
         {
             try
@@ -210,6 +251,8 @@ namespace TPFinal
         private void CB_NumeroMatch_SelectedIndexChanged(object sender, EventArgs e)
         {
             RemplirCBJoueur();
+            if (isModif)
+                RemplirTB();
         }
 
         private void TB_TempsPunition_TextChanged(object sender, EventArgs e)
@@ -224,6 +267,8 @@ namespace TPFinal
         {
             VerifCases();
             VerifPosition();
+            if (isModif)
+                RemplirTB();
         }
         private void VerifPosition()
         {

@@ -136,6 +136,7 @@ namespace TPFinal
         private void Ajouter()
         {
             Form_Ajouter_Stats aJ = new Form_Ajouter_Stats(oracon, connection);
+            aJ.isModif = true;
             aJ.callBackForm = this;
             aJ.Text = "Ajout de stats";
             aJ.Location = this.Location;
@@ -192,6 +193,7 @@ namespace TPFinal
         private void Modifier()
         {
             Form_Ajouter_Stats ajs = new Form_Ajouter_Stats(oracon, connection);
+            ajs.isModif = false;
             ajs.callBackForm = this;
             ajs.Text = "Modification des Statistiques";
             ajs.numMatch = TB_NumMatch.Text;
@@ -205,7 +207,7 @@ namespace TPFinal
             if (ajs.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 string sql = "update FicheJoueur set NumeroMatch=:NumeroMatch, NumeroJoueur=:NumeroJoueur, NombreButs=:NombreButs, NombrePasses=:NombrePasses, TempsPunition=:TempsPunition " +
-                                "where numerojoueur=:numerojoueurs";
+                                "where numerojoueur=:numerojoueur";
                 try
                 {
 
