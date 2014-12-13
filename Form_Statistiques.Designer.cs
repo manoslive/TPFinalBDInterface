@@ -76,174 +76,187 @@
             // DGV_Stats
             // 
             this.DGV_Stats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Stats.Location = new System.Drawing.Point(6, 396);
+            this.DGV_Stats.Location = new System.Drawing.Point(9, 609);
+            this.DGV_Stats.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DGV_Stats.Name = "DGV_Stats";
-            this.DGV_Stats.Size = new System.Drawing.Size(145, 23);
+            this.DGV_Stats.Size = new System.Drawing.Size(218, 35);
             this.DGV_Stats.TabIndex = 28;
             this.DGV_Stats.Visible = false;
             // 
             // LB_TempsPunition
             // 
             this.LB_TempsPunition.AutoSize = true;
-            this.LB_TempsPunition.Location = new System.Drawing.Point(5, 299);
+            this.LB_TempsPunition.Location = new System.Drawing.Point(8, 460);
+            this.LB_TempsPunition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_TempsPunition.Name = "LB_TempsPunition";
-            this.LB_TempsPunition.Size = new System.Drawing.Size(94, 13);
+            this.LB_TempsPunition.Size = new System.Drawing.Size(139, 20);
             this.LB_TempsPunition.TabIndex = 13;
             this.LB_TempsPunition.Text = "Temps de punition";
             // 
             // LB_NbPoints
             // 
             this.LB_NbPoints.AutoSize = true;
-            this.LB_NbPoints.Location = new System.Drawing.Point(5, 265);
+            this.LB_NbPoints.Location = new System.Drawing.Point(8, 408);
+            this.LB_NbPoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_NbPoints.Name = "LB_NbPoints";
-            this.LB_NbPoints.Size = new System.Drawing.Size(108, 13);
+            this.LB_NbPoints.Size = new System.Drawing.Size(163, 20);
             this.LB_NbPoints.TabIndex = 14;
             this.LB_NbPoints.Text = "Nombres points totals";
             // 
             // LB_NbPasses
             // 
             this.LB_NbPasses.AutoSize = true;
-            this.LB_NbPasses.Location = new System.Drawing.Point(5, 230);
+            this.LB_NbPasses.Location = new System.Drawing.Point(8, 354);
+            this.LB_NbPasses.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_NbPasses.Name = "LB_NbPasses";
-            this.LB_NbPasses.Size = new System.Drawing.Size(100, 13);
+            this.LB_NbPasses.Size = new System.Drawing.Size(150, 20);
             this.LB_NbPasses.TabIndex = 15;
             this.LB_NbPasses.Text = "Nombres de passes";
             // 
             // LB_NbButs
             // 
             this.LB_NbButs.AutoSize = true;
-            this.LB_NbButs.Location = new System.Drawing.Point(5, 195);
+            this.LB_NbButs.Location = new System.Drawing.Point(8, 300);
+            this.LB_NbButs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_NbButs.Name = "LB_NbButs";
-            this.LB_NbButs.Size = new System.Drawing.Size(87, 13);
+            this.LB_NbButs.Size = new System.Drawing.Size(130, 20);
             this.LB_NbButs.TabIndex = 16;
             this.LB_NbButs.Text = "Nombres de buts";
             // 
             // LB_Equipe
             // 
             this.LB_Equipe.AutoSize = true;
-            this.LB_Equipe.Location = new System.Drawing.Point(5, 159);
+            this.LB_Equipe.Location = new System.Drawing.Point(8, 245);
+            this.LB_Equipe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_Equipe.Name = "LB_Equipe";
-            this.LB_Equipe.Size = new System.Drawing.Size(75, 13);
+            this.LB_Equipe.Size = new System.Drawing.Size(112, 20);
             this.LB_Equipe.TabIndex = 17;
             this.LB_Equipe.Text = "Équipe Joueur";
             // 
             // LB_NumJoueur
             // 
             this.LB_NumJoueur.AutoSize = true;
-            this.LB_NumJoueur.Location = new System.Drawing.Point(5, 49);
+            this.LB_NumJoueur.Location = new System.Drawing.Point(8, 75);
+            this.LB_NumJoueur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_NumJoueur.Name = "LB_NumJoueur";
-            this.LB_NumJoueur.Size = new System.Drawing.Size(79, 13);
+            this.LB_NumJoueur.Size = new System.Drawing.Size(118, 20);
             this.LB_NumJoueur.TabIndex = 18;
             this.LB_NumJoueur.Text = "Numero Joueur";
             // 
             // LB_Nom
             // 
             this.LB_Nom.AutoSize = true;
-            this.LB_Nom.Location = new System.Drawing.Point(5, 88);
+            this.LB_Nom.Location = new System.Drawing.Point(8, 135);
+            this.LB_Nom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_Nom.Name = "LB_Nom";
-            this.LB_Nom.Size = new System.Drawing.Size(29, 13);
+            this.LB_Nom.Size = new System.Drawing.Size(42, 20);
             this.LB_Nom.TabIndex = 11;
             this.LB_Nom.Text = "Nom";
             // 
             // LB_Prenom
             // 
             this.LB_Prenom.AutoSize = true;
-            this.LB_Prenom.Location = new System.Drawing.Point(5, 123);
+            this.LB_Prenom.Location = new System.Drawing.Point(8, 189);
+            this.LB_Prenom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_Prenom.Name = "LB_Prenom";
-            this.LB_Prenom.Size = new System.Drawing.Size(43, 13);
+            this.LB_Prenom.Size = new System.Drawing.Size(64, 20);
             this.LB_Prenom.TabIndex = 19;
             this.LB_Prenom.Text = "Prénom";
             // 
             // TB_NbPoints
             // 
-            this.TB_NbPoints.Location = new System.Drawing.Point(127, 265);
+            this.TB_NbPoints.Location = new System.Drawing.Point(190, 408);
+            this.TB_NbPoints.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TB_NbPoints.Name = "TB_NbPoints";
             this.TB_NbPoints.ReadOnly = true;
-            this.TB_NbPoints.Size = new System.Drawing.Size(115, 20);
+            this.TB_NbPoints.Size = new System.Drawing.Size(170, 26);
             this.TB_NbPoints.TabIndex = 25;
             this.TB_NbPoints.TabStop = false;
             // 
             // TB_NbPasses
             // 
-            this.TB_NbPasses.Location = new System.Drawing.Point(127, 230);
+            this.TB_NbPasses.Location = new System.Drawing.Point(190, 354);
+            this.TB_NbPasses.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TB_NbPasses.Name = "TB_NbPasses";
             this.TB_NbPasses.ReadOnly = true;
-            this.TB_NbPasses.Size = new System.Drawing.Size(115, 20);
+            this.TB_NbPasses.Size = new System.Drawing.Size(170, 26);
             this.TB_NbPasses.TabIndex = 24;
             this.TB_NbPasses.TabStop = false;
             // 
             // TB_NbButs
             // 
-            this.TB_NbButs.Location = new System.Drawing.Point(127, 195);
+            this.TB_NbButs.Location = new System.Drawing.Point(190, 300);
+            this.TB_NbButs.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TB_NbButs.Name = "TB_NbButs";
             this.TB_NbButs.ReadOnly = true;
-            this.TB_NbButs.Size = new System.Drawing.Size(115, 20);
+            this.TB_NbButs.Size = new System.Drawing.Size(170, 26);
             this.TB_NbButs.TabIndex = 23;
             this.TB_NbButs.TabStop = false;
             // 
             // TB_NumJoueur
             // 
-            this.TB_NumJoueur.Location = new System.Drawing.Point(127, 49);
+            this.TB_NumJoueur.Location = new System.Drawing.Point(190, 75);
+            this.TB_NumJoueur.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TB_NumJoueur.Name = "TB_NumJoueur";
             this.TB_NumJoueur.ReadOnly = true;
-            this.TB_NumJoueur.Size = new System.Drawing.Size(115, 20);
+            this.TB_NumJoueur.Size = new System.Drawing.Size(170, 26);
             this.TB_NumJoueur.TabIndex = 12;
             this.TB_NumJoueur.TabStop = false;
             // 
             // TB_Nom
             // 
-            this.TB_Nom.Location = new System.Drawing.Point(127, 88);
+            this.TB_Nom.Location = new System.Drawing.Point(190, 135);
+            this.TB_Nom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TB_Nom.Name = "TB_Nom";
             this.TB_Nom.ReadOnly = true;
-            this.TB_Nom.Size = new System.Drawing.Size(115, 20);
+            this.TB_Nom.Size = new System.Drawing.Size(170, 26);
             this.TB_Nom.TabIndex = 20;
             this.TB_Nom.TabStop = false;
             // 
             // TB_Prenom
             // 
-            this.TB_Prenom.Location = new System.Drawing.Point(127, 123);
+            this.TB_Prenom.Location = new System.Drawing.Point(190, 189);
+            this.TB_Prenom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TB_Prenom.Name = "TB_Prenom";
             this.TB_Prenom.ReadOnly = true;
-            this.TB_Prenom.Size = new System.Drawing.Size(115, 20);
+            this.TB_Prenom.Size = new System.Drawing.Size(170, 26);
             this.TB_Prenom.TabIndex = 21;
             this.TB_Prenom.TabStop = false;
             // 
             // TB_TempsPunition
             // 
-            this.TB_TempsPunition.Location = new System.Drawing.Point(127, 297);
+            this.TB_TempsPunition.Location = new System.Drawing.Point(190, 457);
+            this.TB_TempsPunition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TB_TempsPunition.Name = "TB_TempsPunition";
             this.TB_TempsPunition.ReadOnly = true;
-            this.TB_TempsPunition.Size = new System.Drawing.Size(115, 20);
+            this.TB_TempsPunition.Size = new System.Drawing.Size(170, 26);
             this.TB_TempsPunition.TabIndex = 26;
             this.TB_TempsPunition.TabStop = false;
             // 
             // LB_NumMatch
             // 
             this.LB_NumMatch.AutoSize = true;
-            this.LB_NumMatch.Location = new System.Drawing.Point(5, 16);
-            this.LB_NumMatch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB_NumMatch.Location = new System.Drawing.Point(8, 25);
             this.LB_NumMatch.Name = "LB_NumMatch";
-            this.LB_NumMatch.Size = new System.Drawing.Size(76, 13);
+            this.LB_NumMatch.Size = new System.Drawing.Size(113, 20);
             this.LB_NumMatch.TabIndex = 36;
             this.LB_NumMatch.Text = "Numéro match";
             // 
             // TB_NumMatch
             // 
-            this.TB_NumMatch.Location = new System.Drawing.Point(128, 14);
-            this.TB_NumMatch.Margin = new System.Windows.Forms.Padding(2);
+            this.TB_NumMatch.Location = new System.Drawing.Point(192, 22);
             this.TB_NumMatch.Name = "TB_NumMatch";
             this.TB_NumMatch.ReadOnly = true;
-            this.TB_NumMatch.Size = new System.Drawing.Size(115, 20);
+            this.TB_NumMatch.Size = new System.Drawing.Size(170, 26);
             this.TB_NumMatch.TabIndex = 37;
             this.TB_NumMatch.TabStop = false;
             // 
             // TB_Equipe
             // 
-            this.TB_Equipe.Location = new System.Drawing.Point(127, 157);
-            this.TB_Equipe.Margin = new System.Windows.Forms.Padding(2);
+            this.TB_Equipe.Location = new System.Drawing.Point(190, 242);
             this.TB_Equipe.Name = "TB_Equipe";
             this.TB_Equipe.ReadOnly = true;
-            this.TB_Equipe.Size = new System.Drawing.Size(115, 20);
+            this.TB_Equipe.Size = new System.Drawing.Size(170, 26);
             this.TB_Equipe.TabIndex = 47;
             this.TB_Equipe.TabStop = false;
             // 
@@ -251,9 +264,10 @@
             // 
             this.PB_Fermer_Gif.BackColor = System.Drawing.Color.Transparent;
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
-            this.PB_Fermer_Gif.Location = new System.Drawing.Point(261, 336);
+            this.PB_Fermer_Gif.Location = new System.Drawing.Point(392, 517);
+            this.PB_Fermer_Gif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
-            this.PB_Fermer_Gif.Size = new System.Drawing.Size(40, 40);
+            this.PB_Fermer_Gif.Size = new System.Drawing.Size(60, 62);
             this.PB_Fermer_Gif.TabIndex = 46;
             this.PB_Fermer_Gif.TabStop = false;
             this.PB_Fermer_Gif.Visible = false;
@@ -270,10 +284,10 @@
             this.FB_Fermer.ImageDisable = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fermer;
             this.FB_Fermer.ImageOver = null;
-            this.FB_Fermer.Location = new System.Drawing.Point(261, 336);
-            this.FB_Fermer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_Fermer.Location = new System.Drawing.Point(392, 517);
+            this.FB_Fermer.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Fermer.Name = "FB_Fermer";
-            this.FB_Fermer.Size = new System.Drawing.Size(40, 40);
+            this.FB_Fermer.Size = new System.Drawing.Size(60, 62);
             this.FB_Fermer.TabIndex = 45;
             this.FB_Fermer.MouseEnter += new System.EventHandler(this.FB_Fermer_MouseEnter);
             // 
@@ -286,10 +300,10 @@
             this.FB_Precedent.ImageDisable = global::TPFinal.Properties.Resources.ICON_Puck;
             this.FB_Precedent.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Precedent;
             this.FB_Precedent.ImageOver = global::TPFinal.Properties.Resources.ICON_Precedent_Over;
-            this.FB_Precedent.Location = new System.Drawing.Point(76, 336);
-            this.FB_Precedent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_Precedent.Location = new System.Drawing.Point(114, 517);
+            this.FB_Precedent.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Precedent.Name = "FB_Precedent";
-            this.FB_Precedent.Size = new System.Drawing.Size(36, 36);
+            this.FB_Precedent.Size = new System.Drawing.Size(54, 55);
             this.FB_Precedent.TabIndex = 44;
             this.FB_Precedent.Click += new System.EventHandler(this.BTN_Precedent_Click);
             // 
@@ -302,10 +316,10 @@
             this.FB_Suivant.ImageDisable = global::TPFinal.Properties.Resources.ICON_Puck;
             this.FB_Suivant.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Suivant;
             this.FB_Suivant.ImageOver = global::TPFinal.Properties.Resources.ICON_Suivant_Over;
-            this.FB_Suivant.Location = new System.Drawing.Point(140, 336);
-            this.FB_Suivant.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_Suivant.Location = new System.Drawing.Point(210, 517);
+            this.FB_Suivant.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Suivant.Name = "FB_Suivant";
-            this.FB_Suivant.Size = new System.Drawing.Size(36, 36);
+            this.FB_Suivant.Size = new System.Drawing.Size(54, 55);
             this.FB_Suivant.TabIndex = 43;
             this.FB_Suivant.Click += new System.EventHandler(this.BTN_Suivant_Click);
             // 
@@ -318,10 +332,10 @@
             this.FB_Fin.ImageDisable = global::TPFinal.Properties.Resources.ICON_Puck;
             this.FB_Fin.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Fin;
             this.FB_Fin.ImageOver = global::TPFinal.Properties.Resources.ICON_Fin_Over;
-            this.FB_Fin.Location = new System.Drawing.Point(186, 336);
-            this.FB_Fin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_Fin.Location = new System.Drawing.Point(279, 517);
+            this.FB_Fin.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Fin.Name = "FB_Fin";
-            this.FB_Fin.Size = new System.Drawing.Size(36, 36);
+            this.FB_Fin.Size = new System.Drawing.Size(54, 55);
             this.FB_Fin.TabIndex = 42;
             this.FB_Fin.Click += new System.EventHandler(this.BTN_Fin_Click);
             // 
@@ -334,10 +348,10 @@
             this.FB_Debut.ImageDisable = global::TPFinal.Properties.Resources.ICON_Puck;
             this.FB_Debut.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Debut;
             this.FB_Debut.ImageOver = global::TPFinal.Properties.Resources.ICON_Debut_Over;
-            this.FB_Debut.Location = new System.Drawing.Point(30, 336);
-            this.FB_Debut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_Debut.Location = new System.Drawing.Point(45, 517);
+            this.FB_Debut.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_Debut.Name = "FB_Debut";
-            this.FB_Debut.Size = new System.Drawing.Size(36, 36);
+            this.FB_Debut.Size = new System.Drawing.Size(54, 55);
             this.FB_Debut.TabIndex = 41;
             this.FB_Debut.Click += new System.EventHandler(this.BTN_Debut_Click);
             // 
@@ -350,10 +364,10 @@
             this.FB_SupprimerStat.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
             this.FB_SupprimerStat.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
             this.FB_SupprimerStat.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer_Over;
-            this.FB_SupprimerStat.Location = new System.Drawing.Point(261, 126);
-            this.FB_SupprimerStat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_SupprimerStat.Location = new System.Drawing.Point(392, 100);
+            this.FB_SupprimerStat.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_SupprimerStat.Name = "FB_SupprimerStat";
-            this.FB_SupprimerStat.Size = new System.Drawing.Size(40, 40);
+            this.FB_SupprimerStat.Size = new System.Drawing.Size(60, 62);
             this.FB_SupprimerStat.TabIndex = 40;
             this.FB_SupprimerStat.Click += new System.EventHandler(this.BTN_Effacer_Click);
             // 
@@ -366,11 +380,12 @@
             this.FB_ModifierStat.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageDisable")));
             this.FB_ModifierStat.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageNeutral")));
             this.FB_ModifierStat.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageOver")));
-            this.FB_ModifierStat.Location = new System.Drawing.Point(261, 70);
-            this.FB_ModifierStat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_ModifierStat.Location = new System.Drawing.Point(392, 178);
+            this.FB_ModifierStat.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_ModifierStat.Name = "FB_ModifierStat";
-            this.FB_ModifierStat.Size = new System.Drawing.Size(40, 40);
+            this.FB_ModifierStat.Size = new System.Drawing.Size(60, 62);
             this.FB_ModifierStat.TabIndex = 39;
+            this.FB_ModifierStat.Visible = false;
             this.FB_ModifierStat.Click += new System.EventHandler(this.BTN_Modifier_Click);
             // 
             // FB_AjouterStat
@@ -382,10 +397,10 @@
             this.FB_AjouterStat.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageDisable")));
             this.FB_AjouterStat.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageNeutral")));
             this.FB_AjouterStat.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageOver")));
-            this.FB_AjouterStat.Location = new System.Drawing.Point(261, 14);
-            this.FB_AjouterStat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FB_AjouterStat.Location = new System.Drawing.Point(392, 22);
+            this.FB_AjouterStat.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.FB_AjouterStat.Name = "FB_AjouterStat";
-            this.FB_AjouterStat.Size = new System.Drawing.Size(40, 40);
+            this.FB_AjouterStat.Size = new System.Drawing.Size(60, 62);
             this.FB_AjouterStat.TabIndex = 38;
             this.FB_AjouterStat.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
@@ -401,78 +416,77 @@
             this.dernierToolStripMenuItem1,
             this.quitterToolStripMenuItem});
             this.CM_Stats.Name = "CM_Stats";
-            this.CM_Stats.Size = new System.Drawing.Size(130, 180);
+            this.CM_Stats.Size = new System.Drawing.Size(168, 244);
             // 
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.modifierToolStripMenuItem.Text = "Modifier";
             this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
             // 
             // supprimerToolStripMenuItem
             // 
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // premierToolStripMenuItem
             // 
             this.premierToolStripMenuItem.Name = "premierToolStripMenuItem";
-            this.premierToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.premierToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.premierToolStripMenuItem.Text = "Suivant";
             this.premierToolStripMenuItem.Click += new System.EventHandler(this.premierToolStripMenuItem_Click);
             // 
             // dernierToolStripMenuItem
             // 
             this.dernierToolStripMenuItem.Name = "dernierToolStripMenuItem";
-            this.dernierToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.dernierToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.dernierToolStripMenuItem.Text = "Précédent";
             this.dernierToolStripMenuItem.Click += new System.EventHandler(this.dernierToolStripMenuItem_Click);
             // 
             // premierToolStripMenuItem1
             // 
             this.premierToolStripMenuItem1.Name = "premierToolStripMenuItem1";
-            this.premierToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
+            this.premierToolStripMenuItem1.Size = new System.Drawing.Size(167, 30);
             this.premierToolStripMenuItem1.Text = "Premier";
             this.premierToolStripMenuItem1.Click += new System.EventHandler(this.premierToolStripMenuItem1_Click);
             // 
             // dernierToolStripMenuItem1
             // 
             this.dernierToolStripMenuItem1.Name = "dernierToolStripMenuItem1";
-            this.dernierToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
+            this.dernierToolStripMenuItem1.Size = new System.Drawing.Size(167, 30);
             this.dernierToolStripMenuItem1.Text = "Dernier";
             this.dernierToolStripMenuItem1.Click += new System.EventHandler(this.dernierToolStripMenuItem1_Click);
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // TB_PosJoueur
             // 
-            this.TB_PosJoueur.Location = new System.Drawing.Point(253, 263);
-            this.TB_PosJoueur.Margin = new System.Windows.Forms.Padding(2);
+            this.TB_PosJoueur.Location = new System.Drawing.Point(380, 405);
             this.TB_PosJoueur.Name = "TB_PosJoueur";
-            this.TB_PosJoueur.Size = new System.Drawing.Size(68, 20);
+            this.TB_PosJoueur.Size = new System.Drawing.Size(100, 26);
             this.TB_PosJoueur.TabIndex = 48;
             this.TB_PosJoueur.Visible = false;
             // 
             // Form_Statistiques
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 382);
+            this.ClientSize = new System.Drawing.Size(471, 588);
             this.ContextMenuStrip = this.CM_Stats;
             this.Controls.Add(this.TB_PosJoueur);
             this.Controls.Add(this.TB_Equipe);
@@ -504,7 +518,6 @@
             this.Controls.Add(this.TB_Nom);
             this.Controls.Add(this.TB_Prenom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Statistiques";
             this.Text = "Form_Statistiques";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Statistiques_FormClosing);

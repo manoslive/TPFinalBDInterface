@@ -144,13 +144,13 @@
             this.fonctionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quitterToolStripMenuItem1});
             this.fonctionsToolStripMenuItem.Name = "fonctionsToolStripMenuItem";
-            this.fonctionsToolStripMenuItem.Size = new System.Drawing.Size(113, 29);
-            this.fonctionsToolStripMenuItem.Text = "Fonctions...";
+            this.fonctionsToolStripMenuItem.Size = new System.Drawing.Size(101, 29);
+            this.fonctionsToolStripMenuItem.Text = "Fonctions";
             // 
             // quitterToolStripMenuItem1
             // 
             this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
-            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(139, 30);
+            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
             this.quitterToolStripMenuItem1.Text = "Quitter";
             this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
             // 
