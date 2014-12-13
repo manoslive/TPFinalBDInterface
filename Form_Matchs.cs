@@ -234,9 +234,6 @@ namespace TPFinal
             SetDGVLargeurColonne();
             Form_Matchs_SizeChanged(sender, e);
             PB_Milieu.SendToBack();
-            FB_Calendrier.Location = new Point(686, 277);
-            FB_Statistiques.Location = new Point(735, 280);
-
         }
         private void DGV_Matchs_SelectionChanged(object sender, EventArgs e)
         {
