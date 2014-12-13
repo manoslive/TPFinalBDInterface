@@ -35,7 +35,6 @@
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.FB_SupprimerDivision = new FlashButton.FlashButton();
             this.FB_ModifierDivision = new FlashButton.FlashButton();
@@ -77,10 +76,9 @@
             this.CM_Divisions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterToolStripMenuItem,
             this.modifierToolStripMenuItem,
-            this.supprimerToolStripMenuItem,
-            this.quitterToolStripMenuItem});
+            this.supprimerToolStripMenuItem});
             this.CM_Divisions.Name = "CM_Divisions";
-            this.CM_Divisions.Size = new System.Drawing.Size(168, 124);
+            this.CM_Divisions.Size = new System.Drawing.Size(199, 127);
             // 
             // ajouterToolStripMenuItem
             // 
@@ -102,13 +100,6 @@
             this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
-            // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
-            this.quitterToolStripMenuItem.Text = "Quitter";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // FB_SupprimerDivision
             // 
@@ -283,7 +274,6 @@
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.MenuStrip MS_Equipe;
         private System.Windows.Forms.ToolStripMenuItem fonctionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paramètresToolStripMenuItem;

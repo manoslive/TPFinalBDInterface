@@ -37,7 +37,6 @@
             this.modifierMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendrierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DGV_Joueurs = new System.Windows.Forms.DataGridView();
             this.LB_ScoreAway = new System.Windows.Forms.Label();
             this.LB_ScoreHome = new System.Windows.Forms.Label();
@@ -126,10 +125,9 @@
             this.ajouterMatchToolStripMenuItem,
             this.modifierMatchToolStripMenuItem,
             this.ajouterStatsToolStripMenuItem,
-            this.calendrierToolStripMenuItem,
-            this.quitterToolStripMenuItem});
+            this.calendrierToolStripMenuItem});
             this.CM_Match.Name = "CM_Match";
-            this.CM_Match.Size = new System.Drawing.Size(206, 154);
+            this.CM_Match.Size = new System.Drawing.Size(206, 157);
             // 
             // ajouterMatchToolStripMenuItem
             // 
@@ -158,13 +156,6 @@
             this.calendrierToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
             this.calendrierToolStripMenuItem.Text = "Calendrier";
             this.calendrierToolStripMenuItem.Click += new System.EventHandler(this.calendrierToolStripMenuItem_Click);
-            // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
-            this.quitterToolStripMenuItem.Text = "Quitter";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // DGV_Joueurs
             // 
@@ -570,7 +561,6 @@
         private System.Windows.Forms.ToolStripMenuItem modifierMatchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterStatsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calendrierToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.MenuStrip MS_Equipe;
         private System.Windows.Forms.ToolStripMenuItem fonctionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paramètresToolStripMenuItem;
