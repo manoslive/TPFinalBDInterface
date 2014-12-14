@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Connection));
             this.LB_Username = new System.Windows.Forms.Label();
             this.LB_Password = new System.Windows.Forms.Label();
             this.TB_Username = new System.Windows.Forms.TextBox();
@@ -119,8 +120,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Connection;
+            this.BackColor = System.Drawing.Color.Gray;
+            this.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Connection_Smooth;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(376, 302);
             this.Controls.Add(this.FB_Quitter);
@@ -131,10 +132,11 @@
             this.Controls.Add(this.LB_Username);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Connection";
             this.Text = "Form1";
-            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
             this.Load += new System.EventHandler(this.Form_Connection_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_Connection_MouseDown);
             this.ResumeLayout(false);

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ajouter_Joueur));
             this.CB_PosJoueur = new System.Windows.Forms.ComboBox();
             this.CB_EquipeJoueur = new System.Windows.Forms.ComboBox();
             this.DTP_DateNaissance = new System.Windows.Forms.DateTimePicker();
@@ -272,8 +273,11 @@
             this.Controls.Add(this.LB_EquipeJoueur);
             this.Controls.Add(this.LB_NomJoueur);
             this.Controls.Add(this.LB_NumeroMaillot);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Ajouter_Joueur";
             this.Text = "Form_Ajouter_Joueur";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ajouter_Joueur_FormClosing);

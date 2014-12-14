@@ -144,7 +144,7 @@
             // TB_NumJoueur
             // 
             this.TB_NumJoueur.Location = new System.Drawing.Point(158, 14);
-            this.TB_NumJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_NumJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_NumJoueur.Name = "TB_NumJoueur";
             this.TB_NumJoueur.ReadOnly = true;
             this.TB_NumJoueur.Size = new System.Drawing.Size(153, 20);
@@ -154,7 +154,7 @@
             // TB_NomJoueur
             // 
             this.TB_NomJoueur.Location = new System.Drawing.Point(158, 53);
-            this.TB_NomJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_NomJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_NomJoueur.Name = "TB_NomJoueur";
             this.TB_NomJoueur.ReadOnly = true;
             this.TB_NomJoueur.Size = new System.Drawing.Size(153, 20);
@@ -164,7 +164,7 @@
             // TB_PrenomJoueur
             // 
             this.TB_PrenomJoueur.Location = new System.Drawing.Point(158, 92);
-            this.TB_PrenomJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_PrenomJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_PrenomJoueur.Name = "TB_PrenomJoueur";
             this.TB_PrenomJoueur.ReadOnly = true;
             this.TB_PrenomJoueur.Size = new System.Drawing.Size(153, 20);
@@ -174,7 +174,7 @@
             // TB_NumMaillot
             // 
             this.TB_NumMaillot.Location = new System.Drawing.Point(158, 170);
-            this.TB_NumMaillot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_NumMaillot.Margin = new System.Windows.Forms.Padding(2);
             this.TB_NumMaillot.Name = "TB_NumMaillot";
             this.TB_NumMaillot.ReadOnly = true;
             this.TB_NumMaillot.Size = new System.Drawing.Size(153, 20);
@@ -185,7 +185,7 @@
             // 
             this.DTP_DateNaissance.Enabled = false;
             this.DTP_DateNaissance.Location = new System.Drawing.Point(158, 129);
-            this.DTP_DateNaissance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DTP_DateNaissance.Margin = new System.Windows.Forms.Padding(2);
             this.DTP_DateNaissance.Name = "DTP_DateNaissance";
             this.DTP_DateNaissance.Size = new System.Drawing.Size(153, 20);
             this.DTP_DateNaissance.TabIndex = 2;
@@ -197,7 +197,7 @@
             this.CB_EquipeJoueur.Enabled = false;
             this.CB_EquipeJoueur.FormattingEnabled = true;
             this.CB_EquipeJoueur.Location = new System.Drawing.Point(158, 209);
-            this.CB_EquipeJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CB_EquipeJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.CB_EquipeJoueur.Name = "CB_EquipeJoueur";
             this.CB_EquipeJoueur.Size = new System.Drawing.Size(153, 21);
             this.CB_EquipeJoueur.TabIndex = 3;
@@ -213,7 +213,7 @@
             "Defenseur",
             "Gardien"});
             this.CB_PosJoueur.Location = new System.Drawing.Point(158, 248);
-            this.CB_PosJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CB_PosJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.CB_PosJoueur.Name = "CB_PosJoueur";
             this.CB_PosJoueur.Size = new System.Drawing.Size(153, 21);
             this.CB_PosJoueur.TabIndex = 3;
@@ -222,7 +222,7 @@
             // TB_Url
             // 
             this.TB_Url.Location = new System.Drawing.Point(158, 287);
-            this.TB_Url.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_Url.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Url.Name = "TB_Url";
             this.TB_Url.ReadOnly = true;
             this.TB_Url.Size = new System.Drawing.Size(153, 20);
@@ -392,7 +392,7 @@
             // 
             this.PB_Joueur.ErrorImage = global::TPFinal.Properties.Resources.no_picture;
             this.PB_Joueur.Location = new System.Drawing.Point(341, 16);
-            this.PB_Joueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_Joueur.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Joueur.Name = "PB_Joueur";
             this.PB_Joueur.Size = new System.Drawing.Size(100, 97);
             this.PB_Joueur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -500,8 +500,11 @@
             this.Controls.Add(this.LB_NumeroMaillot);
             this.Controls.Add(this.LB_Url);
             this.Controls.Add(this.LB_NumJoueur);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Joueurs";
             this.Text = "Form_Joueurs";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Joueurs_FormClosed);

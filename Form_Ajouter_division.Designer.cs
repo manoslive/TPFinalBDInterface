@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ajouter_Division));
             this.LB_DateCreation = new System.Windows.Forms.Label();
             this.LB_NomDivision = new System.Windows.Forms.Label();
             this.TB_NomDivision = new System.Windows.Forms.TextBox();
@@ -131,7 +132,11 @@
             this.Controls.Add(this.TB_NomDivision);
             this.Controls.Add(this.LB_NomDivision);
             this.Controls.Add(this.LB_DateCreation);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Ajouter_Division";
             this.Text = "Form_Ajouter_division";
             this.Load += new System.EventHandler(this.Form_Ajouter_Division_Load);

@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_APropos));
             this.BTN_Fermer = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.PB_Manu = new System.Windows.Forms.PictureBox();
             this.PB_Shaun = new System.Windows.Forms.PictureBox();
             this.PB_Lego = new System.Windows.Forms.PictureBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Manu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Shaun)).BeginInit();
@@ -57,7 +57,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.57068F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.42932F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
             this.tableLayoutPanel1.Controls.Add(this.PB_Manu, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.PB_Shaun, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.PB_Lego, 1, 0);
@@ -70,17 +70,6 @@
             this.tableLayoutPanel1.TabIndex = 1;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(1, 127);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(381, 103);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
             // PB_Manu
             // 
             this.PB_Manu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -88,7 +77,7 @@
             this.PB_Manu.Location = new System.Drawing.Point(2, 2);
             this.PB_Manu.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Manu.Name = "PB_Manu";
-            this.PB_Manu.Size = new System.Drawing.Size(119, 120);
+            this.PB_Manu.Size = new System.Drawing.Size(118, 120);
             this.PB_Manu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Manu.TabIndex = 0;
             this.PB_Manu.TabStop = false;
@@ -97,7 +86,7 @@
             // PB_Shaun
             // 
             this.PB_Shaun.Image = global::TPFinal.Properties.Resources.shaun;
-            this.PB_Shaun.Location = new System.Drawing.Point(240, 2);
+            this.PB_Shaun.Location = new System.Drawing.Point(239, 2);
             this.PB_Shaun.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Shaun.Name = "PB_Shaun";
             this.PB_Shaun.Size = new System.Drawing.Size(123, 120);
@@ -110,13 +99,24 @@
             // 
             this.PB_Lego.Dock = System.Windows.Forms.DockStyle.Right;
             this.PB_Lego.Image = global::TPFinal.Properties.Resources.joueur_hockey_lego;
-            this.PB_Lego.Location = new System.Drawing.Point(125, 2);
+            this.PB_Lego.Location = new System.Drawing.Point(124, 2);
             this.PB_Lego.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Lego.Name = "PB_Lego";
             this.PB_Lego.Size = new System.Drawing.Size(111, 120);
             this.PB_Lego.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Lego.TabIndex = 1;
             this.PB_Lego.TabStop = false;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(1, 127);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(381, 103);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // Form_APropos
             // 
@@ -126,8 +126,11 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.BTN_Fermer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_APropos";
             this.Text = "Form_APropos";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_APropos_FormClosed);

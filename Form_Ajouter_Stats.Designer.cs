@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ajouter_Stats));
             this.TB_TempsPunition = new System.Windows.Forms.TextBox();
             this.TB_NbPasses = new System.Windows.Forms.TextBox();
             this.TB_NbButs = new System.Windows.Forms.TextBox();
@@ -214,8 +215,11 @@
             this.Controls.Add(this.LB_NbButs);
             this.Controls.Add(this.LB_NumJoueur);
             this.Controls.Add(this.LB_NumMatch);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Ajouter_Stats";
             this.Text = "Form_Ajouter_Stats";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ajouter_Stats_FormClosing);

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ajouter_Equipe));
             this.LB_Equipe = new System.Windows.Forms.Label();
             this.LB_DateCreation = new System.Windows.Forms.Label();
             this.LB_Division = new System.Windows.Forms.Label();
@@ -90,7 +91,7 @@
             // TB_NomEquipe
             // 
             this.TB_NomEquipe.Location = new System.Drawing.Point(11, 36);
-            this.TB_NomEquipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_NomEquipe.Margin = new System.Windows.Forms.Padding(2);
             this.TB_NomEquipe.Name = "TB_NomEquipe";
             this.TB_NomEquipe.Size = new System.Drawing.Size(135, 20);
             this.TB_NomEquipe.TabIndex = 0;
@@ -99,7 +100,7 @@
             // DTP_Creation
             // 
             this.DTP_Creation.Location = new System.Drawing.Point(11, 101);
-            this.DTP_Creation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DTP_Creation.Margin = new System.Windows.Forms.Padding(2);
             this.DTP_Creation.Name = "DTP_Creation";
             this.DTP_Creation.Size = new System.Drawing.Size(135, 20);
             this.DTP_Creation.TabIndex = 1;
@@ -111,7 +112,7 @@
             this.CB_Division.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_Division.FormattingEnabled = true;
             this.CB_Division.Location = new System.Drawing.Point(11, 164);
-            this.CB_Division.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CB_Division.Margin = new System.Windows.Forms.Padding(2);
             this.CB_Division.Name = "CB_Division";
             this.CB_Division.Size = new System.Drawing.Size(135, 21);
             this.CB_Division.TabIndex = 2;
@@ -120,7 +121,7 @@
             // TB_Ville
             // 
             this.TB_Ville.Location = new System.Drawing.Point(11, 229);
-            this.TB_Ville.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_Ville.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Ville.Name = "TB_Ville";
             this.TB_Ville.Size = new System.Drawing.Size(135, 20);
             this.TB_Ville.TabIndex = 3;
@@ -129,7 +130,7 @@
             // BTN_ChargerImage
             // 
             this.BTN_ChargerImage.Location = new System.Drawing.Point(193, 139);
-            this.BTN_ChargerImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTN_ChargerImage.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_ChargerImage.Name = "BTN_ChargerImage";
             this.BTN_ChargerImage.Size = new System.Drawing.Size(122, 25);
             this.BTN_ChargerImage.TabIndex = 4;
@@ -140,7 +141,7 @@
             // PB_Equipe
             // 
             this.PB_Equipe.Location = new System.Drawing.Point(193, 14);
-            this.PB_Equipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_Equipe.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Equipe.Name = "PB_Equipe";
             this.PB_Equipe.Size = new System.Drawing.Size(122, 104);
             this.PB_Equipe.TabIndex = 6;
@@ -209,8 +210,11 @@
             this.Controls.Add(this.LB_Division);
             this.Controls.Add(this.LB_DateCreation);
             this.Controls.Add(this.LB_Equipe);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Ajouter_Equipe";
             this.Text = "Form_Ajouter_Equipe";
             this.Load += new System.EventHandler(this.FormEquipe_Ajouter_Load);

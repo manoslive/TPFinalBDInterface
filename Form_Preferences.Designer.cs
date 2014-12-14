@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Preferences));
             this.PN_Police = new System.Windows.Forms.Panel();
             this.FB_PoliceForm = new FlashButton.FlashButton();
             this.PN_CouleurForm = new System.Windows.Forms.Panel();
@@ -201,6 +202,8 @@
             this.Controls.Add(this.PN_DGVPolice);
             this.Controls.Add(this.PN_CouleurForm);
             this.Controls.Add(this.PN_Police);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(577, 162);
             this.MinimizeBox = false;

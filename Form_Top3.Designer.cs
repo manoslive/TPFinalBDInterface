@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Top3));
             this.DGV_Top3 = new System.Windows.Forms.DataGridView();
             this.LB_Top1 = new System.Windows.Forms.Label();
             this.LB_Top2 = new System.Windows.Forms.Label();
@@ -209,7 +210,10 @@
             this.Controls.Add(this.PB_Top3);
             this.Controls.Add(this.PB_Top1);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Top3";
             this.Text = "Form_Top5";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Top3_FormClosing);
