@@ -26,7 +26,10 @@ namespace TPFinal
             InitializeComponent();
             oracon = connect;
             connection = maBelleConnection;
-            numeroJoueurStat = numeroJoueurEnCours;
+            if (numeroJoueurEnCours != "")
+                numeroJoueurStat = numeroJoueurEnCours;
+            else
+                numeroJoueurStat = "5";
         }
         private void SaveSettings()
         {

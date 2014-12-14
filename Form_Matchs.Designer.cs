@@ -111,7 +111,7 @@
             this.DGV_Matchs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Matchs.ContextMenuStrip = this.CM_Match;
             this.DGV_Matchs.Location = new System.Drawing.Point(8, 172);
-            this.DGV_Matchs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGV_Matchs.Margin = new System.Windows.Forms.Padding(2);
             this.DGV_Matchs.MultiSelect = false;
             this.DGV_Matchs.Name = "DGV_Matchs";
             this.DGV_Matchs.ReadOnly = true;
@@ -170,7 +170,7 @@
             this.DGV_Joueurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Joueurs.ContextMenuStrip = this.CM_Match;
             this.DGV_Joueurs.Location = new System.Drawing.Point(8, 324);
-            this.DGV_Joueurs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGV_Joueurs.Margin = new System.Windows.Forms.Padding(2);
             this.DGV_Joueurs.MultiSelect = false;
             this.DGV_Joueurs.Name = "DGV_Joueurs";
             this.DGV_Joueurs.ReadOnly = true;
@@ -233,7 +233,7 @@
             this.TB_Receveur.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TB_Receveur.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TB_Receveur.Location = new System.Drawing.Point(172, 55);
-            this.TB_Receveur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_Receveur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Receveur.Name = "TB_Receveur";
             this.TB_Receveur.ReadOnly = true;
             this.TB_Receveur.Size = new System.Drawing.Size(110, 13);
@@ -246,7 +246,7 @@
             this.TB_Visiteur.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TB_Visiteur.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TB_Visiteur.Location = new System.Drawing.Point(502, 55);
-            this.TB_Visiteur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_Visiteur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Visiteur.Name = "TB_Visiteur";
             this.TB_Visiteur.ReadOnly = true;
             this.TB_Visiteur.Size = new System.Drawing.Size(110, 13);
@@ -425,7 +425,8 @@
             // 
             // PB_Fermer_Gif
             // 
-            this.PB_Fermer_Gif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.PB_Fermer_Gif.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
             this.PB_Fermer_Gif.Location = new System.Drawing.Point(731, 430);
             this.PB_Fermer_Gif.Name = "PB_Fermer_Gif";
@@ -445,6 +446,7 @@
             this.PB_Milieu.BackgroundImage = global::TPFinal.Properties.Resources.LigneMilieu;
             this.PB_Milieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PB_Milieu.Location = new System.Drawing.Point(103, 218);
+            this.PB_Milieu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PB_Milieu.Name = "PB_Milieu";
             this.PB_Milieu.Size = new System.Drawing.Size(576, 161);
             this.PB_Milieu.TabIndex = 19;
@@ -472,7 +474,7 @@
             this.PB_Faceoff.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PB_Faceoff.Image = global::TPFinal.Properties.Resources.hockey_face_off;
             this.PB_Faceoff.Location = new System.Drawing.Point(300, 27);
-            this.PB_Faceoff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_Faceoff.Margin = new System.Windows.Forms.Padding(2);
             this.PB_Faceoff.Name = "PB_Faceoff";
             this.PB_Faceoff.Size = new System.Drawing.Size(198, 121);
             this.PB_Faceoff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -483,7 +485,7 @@
             // 
             this.PB_EquipeHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PB_EquipeHome.Location = new System.Drawing.Point(8, 27);
-            this.PB_EquipeHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_EquipeHome.Margin = new System.Windows.Forms.Padding(2);
             this.PB_EquipeHome.Name = "PB_EquipeHome";
             this.PB_EquipeHome.Size = new System.Drawing.Size(149, 134);
             this.PB_EquipeHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -494,7 +496,7 @@
             // 
             this.PB_EquipeAway.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PB_EquipeAway.Location = new System.Drawing.Point(621, 27);
-            this.PB_EquipeAway.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PB_EquipeAway.Margin = new System.Windows.Forms.Padding(2);
             this.PB_EquipeAway.Name = "PB_EquipeAway";
             this.PB_EquipeAway.Size = new System.Drawing.Size(149, 134);
             this.PB_EquipeAway.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -529,7 +531,7 @@
             this.Controls.Add(this.LB_EquipeAway);
             this.Controls.Add(this.LB_EquipeHome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1188, 774);
             this.MinimizeBox = false;
