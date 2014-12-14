@@ -56,12 +56,12 @@
             this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.PB_Milieu = new System.Windows.Forms.PictureBox();
             this.FB_Statistiques = new FlashButton.FlashButton();
             this.FB_ModifierMatch = new FlashButton.FlashButton();
             this.FB_AjoutRencontre = new FlashButton.FlashButton();
             this.FB_Calendrier = new FlashButton.FlashButton();
             this.PB_Fermer_Gif = new System.Windows.Forms.PictureBox();
-            this.PB_Milieu = new System.Windows.Forms.PictureBox();
             this.FB_Fermer = new FlashButton.FlashButton();
             this.PB_Faceoff = new System.Windows.Forms.PictureBox();
             this.PB_EquipeHome = new System.Windows.Forms.PictureBox();
@@ -70,8 +70,8 @@
             this.CM_Match.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).BeginInit();
             this.MS_Equipe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Milieu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Faceoff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).BeginInit();
@@ -127,7 +127,7 @@
             this.ajouterStatsToolStripMenuItem,
             this.calendrierToolStripMenuItem});
             this.CM_Match.Name = "CM_Match";
-            this.CM_Match.Size = new System.Drawing.Size(206, 157);
+            this.CM_Match.Size = new System.Drawing.Size(206, 124);
             // 
             // ajouterMatchToolStripMenuItem
             // 
@@ -339,6 +339,19 @@
             this.toolStripMenuItem1.Text = "?";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
+            // PB_Milieu
+            // 
+            this.PB_Milieu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PB_Milieu.BackColor = System.Drawing.Color.Transparent;
+            this.PB_Milieu.BackgroundImage = global::TPFinal.Properties.Resources.LigneMilieu;
+            this.PB_Milieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Milieu.Location = new System.Drawing.Point(154, 335);
+            this.PB_Milieu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PB_Milieu.Name = "PB_Milieu";
+            this.PB_Milieu.Size = new System.Drawing.Size(864, 248);
+            this.PB_Milieu.TabIndex = 19;
+            this.PB_Milieu.TabStop = false;
+            // 
             // FB_Statistiques
             // 
             this.FB_Statistiques.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -413,7 +426,8 @@
             // 
             // PB_Fermer_Gif
             // 
-            this.PB_Fermer_Gif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.PB_Fermer_Gif.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PB_Fermer_Gif.Image = global::TPFinal.Properties.Resources.ICON_Fermer_Over;
             this.PB_Fermer_Gif.Location = new System.Drawing.Point(1096, 662);
             this.PB_Fermer_Gif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -426,19 +440,6 @@
             this.PB_Fermer_Gif.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseDown);
             this.PB_Fermer_Gif.MouseLeave += new System.EventHandler(this.PB_Fermer_Gif_MouseLeave);
             this.PB_Fermer_Gif.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Fermer_Gif_MouseUp);
-            // 
-            // PB_Milieu
-            // 
-            this.PB_Milieu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PB_Milieu.BackColor = System.Drawing.Color.Transparent;
-            this.PB_Milieu.BackgroundImage = global::TPFinal.Properties.Resources.LigneMilieu;
-            this.PB_Milieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PB_Milieu.Location = new System.Drawing.Point(154, 335);
-            this.PB_Milieu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PB_Milieu.Name = "PB_Milieu";
-            this.PB_Milieu.Size = new System.Drawing.Size(864, 248);
-            this.PB_Milieu.TabIndex = 19;
-            this.PB_Milieu.TabStop = false;
             // 
             // FB_Fermer
             // 
@@ -529,8 +530,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).EndInit();
             this.MS_Equipe.ResumeLayout(false);
             this.MS_Equipe.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Milieu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Fermer_Gif)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Faceoff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeAway)).EndInit();
