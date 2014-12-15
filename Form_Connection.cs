@@ -57,14 +57,7 @@ namespace TPFinal
                 if (maBelleConnection.Connect(user, password, GetOracleConnection())) //envoi les info à la classe pour effectuer la connection
                 {
                     this.DialogResult = DialogResult.OK;
-                    monTimer = new System.Timers.Timer(2000);
-                    SoundPlayer simpleSound = new SoundPlayer(Properties.Resources.MontrealGoalHorn);
-                    monTimer.AutoReset = false;
-                    monTimer.Start();
-                    simpleSound.Play();
-                    while(monTimer.Enabled)
-                    {}
-                    simpleSound.Stop();
+                    PlayBuzzer();
                     this.Close();
                 }
             }
@@ -72,6 +65,17 @@ namespace TPFinal
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+        }
+        private void PlayBuzzer()
+        {
+            monTimer = new System.Timers.Timer(2000);
+            SoundPlayer simpleSound = new SoundPlayer(Properties.Resources.MontrealGoalHorn);
+            monTimer.AutoReset = false;
+            monTimer.Start();
+            simpleSound.Play();
+            while (monTimer.Enabled)
+            { }
+            simpleSound.Stop();
         }
         private void Form_Connection_Load(object sender, EventArgs e)
         {
