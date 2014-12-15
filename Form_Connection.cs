@@ -79,6 +79,7 @@ namespace TPFinal
         }
         private void Form_Connection_Load(object sender, EventArgs e)
         {
+            this.Location = Properties.Settings.Default.Form_Connection_Location;
             FB_Connection.Select();
             TB_Username_TextChanged(sender, e);
         }
@@ -110,6 +111,12 @@ namespace TPFinal
         {
             oracon.Close();
             this.Close();
+        }
+
+        private void Form_Connection_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.Form_Connection_Location= this.Location;
+            Properties.Settings.Default.Save();
         }
     }
 }

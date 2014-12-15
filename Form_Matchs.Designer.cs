@@ -376,7 +376,7 @@
             this.FB_ModifierMatch.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Equipe_Modifier;
             this.FB_ModifierMatch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_ModifierMatch.ImageClick = global::TPFinal.Properties.Resources.ICON_Equipe_Modifier_Click;
-            this.FB_ModifierMatch.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Modifier;
+            this.FB_ModifierMatch.ImageDisable = global::TPFinal.Properties.Resources.ICON_Disabled;
             this.FB_ModifierMatch.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Modifier;
             this.FB_ModifierMatch.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Modifier_Over;
             this.FB_ModifierMatch.Location = new System.Drawing.Point(56, 277);
@@ -394,7 +394,7 @@
             this.FB_AjoutRencontre.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_AjoutRencontre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_AjoutRencontre.ImageClick = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter_Click;
-            this.FB_AjoutRencontre.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
+            this.FB_AjoutRencontre.ImageDisable = global::TPFinal.Properties.Resources.ICON_Disabled;
             this.FB_AjoutRencontre.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter;
             this.FB_AjoutRencontre.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Ajouter_Over;
             this.FB_AjoutRencontre.Location = new System.Drawing.Point(8, 277);

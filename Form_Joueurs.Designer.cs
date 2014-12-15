@@ -313,7 +313,7 @@
             this.FB_SupprimerJoueur.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
             this.FB_SupprimerJoueur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_SupprimerJoueur.ImageClick = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer_Click;
-            this.FB_SupprimerJoueur.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
+            this.FB_SupprimerJoueur.ImageDisable = global::TPFinal.Properties.Resources.ICON_Disabled;
             this.FB_SupprimerJoueur.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
             this.FB_SupprimerJoueur.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer_Over;
             this.FB_SupprimerJoueur.Location = new System.Drawing.Point(368, 170);
@@ -330,7 +330,7 @@
             this.FB_ModifierJoueur.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_ModifierJoueur.BackgroundImage")));
             this.FB_ModifierJoueur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_ModifierJoueur.ImageClick = ((System.Drawing.Image)(resources.GetObject("FB_ModifierJoueur.ImageClick")));
-            this.FB_ModifierJoueur.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_ModifierJoueur.ImageDisable")));
+            this.FB_ModifierJoueur.ImageDisable = global::TPFinal.Properties.Resources.ICON_Disabled;
             this.FB_ModifierJoueur.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_ModifierJoueur.ImageNeutral")));
             this.FB_ModifierJoueur.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_ModifierJoueur.ImageOver")));
             this.FB_ModifierJoueur.Location = new System.Drawing.Point(395, 120);
@@ -347,7 +347,7 @@
             this.FB_AjouterJoueur.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_AjouterJoueur.BackgroundImage")));
             this.FB_AjouterJoueur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_AjouterJoueur.ImageClick = ((System.Drawing.Image)(resources.GetObject("FB_AjouterJoueur.ImageClick")));
-            this.FB_AjouterJoueur.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_AjouterJoueur.ImageDisable")));
+            this.FB_AjouterJoueur.ImageDisable = global::TPFinal.Properties.Resources.ICON_Disabled;
             this.FB_AjouterJoueur.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_AjouterJoueur.ImageNeutral")));
             this.FB_AjouterJoueur.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_AjouterJoueur.ImageOver")));
             this.FB_AjouterJoueur.Location = new System.Drawing.Point(341, 120);

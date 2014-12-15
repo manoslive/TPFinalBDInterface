@@ -230,7 +230,7 @@
             // TB_NumMatch
             // 
             this.TB_NumMatch.Location = new System.Drawing.Point(128, 14);
-            this.TB_NumMatch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_NumMatch.Margin = new System.Windows.Forms.Padding(2);
             this.TB_NumMatch.Name = "TB_NumMatch";
             this.TB_NumMatch.ReadOnly = true;
             this.TB_NumMatch.Size = new System.Drawing.Size(115, 20);
@@ -240,7 +240,7 @@
             // TB_Equipe
             // 
             this.TB_Equipe.Location = new System.Drawing.Point(127, 157);
-            this.TB_Equipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_Equipe.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Equipe.Name = "TB_Equipe";
             this.TB_Equipe.ReadOnly = true;
             this.TB_Equipe.Size = new System.Drawing.Size(115, 20);
@@ -347,7 +347,7 @@
             this.FB_SupprimerStat.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
             this.FB_SupprimerStat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_SupprimerStat.ImageClick = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer_Click;
-            this.FB_SupprimerStat.ImageDisable = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
+            this.FB_SupprimerStat.ImageDisable = global::TPFinal.Properties.Resources.ICON_Disabled;
             this.FB_SupprimerStat.ImageNeutral = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer;
             this.FB_SupprimerStat.ImageOver = global::TPFinal.Properties.Resources.ICON_Equipe_Supprimer_Over;
             this.FB_SupprimerStat.Location = new System.Drawing.Point(261, 65);
@@ -363,7 +363,7 @@
             this.FB_ModifierStat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.BackgroundImage")));
             this.FB_ModifierStat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_ModifierStat.ImageClick = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageClick")));
-            this.FB_ModifierStat.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageDisable")));
+            this.FB_ModifierStat.ImageDisable = global::TPFinal.Properties.Resources.ICON_Disabled;
             this.FB_ModifierStat.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageNeutral")));
             this.FB_ModifierStat.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_ModifierStat.ImageOver")));
             this.FB_ModifierStat.Location = new System.Drawing.Point(261, 116);
@@ -380,7 +380,7 @@
             this.FB_AjouterStat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.BackgroundImage")));
             this.FB_AjouterStat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_AjouterStat.ImageClick = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageClick")));
-            this.FB_AjouterStat.ImageDisable = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageDisable")));
+            this.FB_AjouterStat.ImageDisable = global::TPFinal.Properties.Resources.ICON_Disabled;
             this.FB_AjouterStat.ImageNeutral = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageNeutral")));
             this.FB_AjouterStat.ImageOver = ((System.Drawing.Image)(resources.GetObject("FB_AjouterStat.ImageOver")));
             this.FB_AjouterStat.Location = new System.Drawing.Point(261, 14);
@@ -463,7 +463,7 @@
             // TB_PosJoueur
             // 
             this.TB_PosJoueur.Location = new System.Drawing.Point(253, 263);
-            this.TB_PosJoueur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_PosJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.TB_PosJoueur.Name = "TB_PosJoueur";
             this.TB_PosJoueur.Size = new System.Drawing.Size(68, 20);
             this.TB_PosJoueur.TabIndex = 48;
@@ -506,7 +506,7 @@
             this.Controls.Add(this.TB_Prenom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_Statistiques";

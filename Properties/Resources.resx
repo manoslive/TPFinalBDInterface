@@ -142,14 +142,14 @@
   <data name="ICON_Division_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Division_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MontrealGoalHorn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MontrealGoalHorn.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="ModifierCouleurForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ModifierCouleurForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Accepter_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Accepter_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Hockey_croise" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hockey_croise.BMP;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Quitter_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Quitter_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +181,8 @@
   <data name="ModifierCouleurForm_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ModifierCouleurForm_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICON_Top3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Top3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ICON_Connection_Smooth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Connection_Smooth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICON_Suivant_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Suivant_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -192,6 +192,9 @@
   </data>
   <data name="Top3_3rd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Top3_3rd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICON_Top3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Top3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICON_Classement" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Classement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -234,6 +237,9 @@
   </data>
   <data name="ICON_Suivant" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Suivant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICON_Precedent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Precedent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avatar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,11 +292,8 @@
   <data name="shaun tête" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shaun tête.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICON_Match_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Match_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ICON_Connection_Smooth" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Connection_Smooth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ModifierPolice_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ModifierPolice_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICON_Top3_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Top3_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -316,14 +319,17 @@
   <data name="joueur hockey lego" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\joueur hockey lego.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICON_Precedent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICON_Precedent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Hockey_croise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hockey_croise.BMP;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Connection_Lumiere" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Connection_Lumiere.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICON_Equipe_Modifier" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Equipe_Modifier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ModifierPolice_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ModifierPolice_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ICON_Match_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Match_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICON_Division_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Division_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -358,10 +364,7 @@
   <data name="ICON_Fermer_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ICON_Fermer_Over.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Connection_Lumiere" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Connection_Lumiere.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MontrealGoalHorn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MontrealGoalHorn.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ICON_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICON_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

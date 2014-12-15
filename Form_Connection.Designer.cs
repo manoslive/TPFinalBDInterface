@@ -137,6 +137,7 @@
             this.Name = "Form_Connection";
             this.Text = "Form1";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Connection_FormClosing);
             this.Load += new System.EventHandler(this.Form_Connection_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_Connection_MouseDown);
             this.ResumeLayout(false);
