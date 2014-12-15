@@ -25,6 +25,7 @@ namespace TPFinal
         }
         private void FormEquipe_Ajouter_Load(object sender, EventArgs e)
         {
+            FB_Ajouter.Visible = false;
             TB_NomEquipe.Select();
             OracleCommand oraSelect = oracon.CreateCommand();
             oraSelect.CommandText = "SELECT NomDivision FROM Division";
@@ -135,13 +136,15 @@ namespace TPFinal
         private void CheckCasesVides()
         {
             if (TB_Ville.Text != "" && TB_NomEquipe.Text != "" && CB_Division.Text != "")
-                FB_Ajouter.Enabled = true;
+                FB_Ajouter.Visible = true;
             else
-                FB_Ajouter.Enabled = false;
+                FB_Ajouter.Visible = false;
         }
         private void TB_Ville_TextChanged(object sender, EventArgs e)
         {
             CheckCasesVides();
+            if (!Regex.IsMatch(TB_Ville.Text, @"^[a-zA-Z]+$"))
+                TB_Ville.Text = "";
         }
 
         private void CB_Division_SelectedIndexChanged(object sender, EventArgs e)
@@ -152,6 +155,8 @@ namespace TPFinal
         private void TB_NomEquipe_TextChanged(object sender, EventArgs e)
         {
             CheckCasesVides();
+            if (!Regex.IsMatch(TB_NomEquipe.Text, @"^[a-zA-Z]+$"))
+                TB_NomEquipe.Text = "";
         }
         private void FB_Cancel_MouseEnter(object sender, EventArgs e)
         {
@@ -171,6 +176,12 @@ namespace TPFinal
         private void PB_Fermer_Gif_MouseUp(object sender, MouseEventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+        }
+
+        private void DTP_Creation_ValueChanged(object sender, EventArgs e)
+        {
+            if (DTP_Creation.Value > DateTime.Now)
+                DTP_Creation.Value = DateTime.Now;
         }
     }
 }
