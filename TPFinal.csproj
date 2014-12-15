@@ -518,6 +518,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ICON_Connection_Smooth.png" />
+    <None Include="Resources\Connection_Lumiere.png" />
     <Content Include="Uriy1966-Wooden-Sports-Hockey.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -41,12 +41,12 @@
             // 
             this.LB_Username.AutoSize = true;
             this.LB_Username.BackColor = System.Drawing.Color.Transparent;
-            this.LB_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_Username.ForeColor = System.Drawing.Color.White;
-            this.LB_Username.Location = new System.Drawing.Point(83, 117);
+            this.LB_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Username.ForeColor = System.Drawing.Color.Black;
+            this.LB_Username.Location = new System.Drawing.Point(130, 430);
             this.LB_Username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Username.Name = "LB_Username";
-            this.LB_Username.Size = new System.Drawing.Size(88, 13);
+            this.LB_Username.Size = new System.Drawing.Size(100, 15);
             this.LB_Username.TabIndex = 0;
             this.LB_Username.Text = "Nom d\'usagé :";
             // 
@@ -54,32 +54,32 @@
             // 
             this.LB_Password.AutoSize = true;
             this.LB_Password.BackColor = System.Drawing.Color.Transparent;
-            this.LB_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_Password.ForeColor = System.Drawing.Color.White;
-            this.LB_Password.Location = new System.Drawing.Point(83, 143);
+            this.LB_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Password.ForeColor = System.Drawing.Color.Black;
+            this.LB_Password.Location = new System.Drawing.Point(130, 459);
             this.LB_Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Password.Name = "LB_Password";
-            this.LB_Password.Size = new System.Drawing.Size(91, 13);
+            this.LB_Password.Size = new System.Drawing.Size(101, 15);
             this.LB_Password.TabIndex = 0;
             this.LB_Password.Text = "Mot de passe :";
             // 
             // TB_Username
             // 
-            this.TB_Username.Location = new System.Drawing.Point(171, 117);
+            this.TB_Username.Location = new System.Drawing.Point(227, 430);
             this.TB_Username.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Username.Name = "TB_Username";
-            this.TB_Username.Size = new System.Drawing.Size(127, 20);
+            this.TB_Username.Size = new System.Drawing.Size(90, 20);
             this.TB_Username.TabIndex = 0;
             this.TB_Username.Text = "Cooperch";
             this.TB_Username.TextChanged += new System.EventHandler(this.TB_Username_TextChanged);
             // 
             // TB_Password
             // 
-            this.TB_Password.Location = new System.Drawing.Point(171, 143);
+            this.TB_Password.Location = new System.Drawing.Point(227, 456);
             this.TB_Password.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Password.Name = "TB_Password";
             this.TB_Password.PasswordChar = '*';
-            this.TB_Password.Size = new System.Drawing.Size(127, 20);
+            this.TB_Password.Size = new System.Drawing.Size(90, 20);
             this.TB_Password.TabIndex = 1;
             this.TB_Password.Text = "ORACLE1";
             this.TB_Password.TextChanged += new System.EventHandler(this.TB_Username_TextChanged);
@@ -94,9 +94,9 @@
             this.FB_Connection.ImageDisable = null;
             this.FB_Connection.ImageNeutral = global::TPFinal.Properties.Resources.Accepter;
             this.FB_Connection.ImageOver = global::TPFinal.Properties.Resources.Accepter_Over;
-            this.FB_Connection.Location = new System.Drawing.Point(240, 168);
+            this.FB_Connection.Location = new System.Drawing.Point(185, 506);
             this.FB_Connection.Name = "FB_Connection";
-            this.FB_Connection.Size = new System.Drawing.Size(26, 26);
+            this.FB_Connection.Size = new System.Drawing.Size(36, 36);
             this.FB_Connection.TabIndex = 3;
             this.FB_Connection.Click += new System.EventHandler(this.BTN_Connection_Click);
             this.FB_Connection.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BTN_Connect_KeyDown);
@@ -110,9 +110,9 @@
             this.FB_Quitter.ImageDisable = null;
             this.FB_Quitter.ImageNeutral = global::TPFinal.Properties.Resources.Quitter;
             this.FB_Quitter.ImageOver = global::TPFinal.Properties.Resources.Quitter_Over;
-            this.FB_Quitter.Location = new System.Drawing.Point(272, 168);
+            this.FB_Quitter.Location = new System.Drawing.Point(227, 506);
             this.FB_Quitter.Name = "FB_Quitter";
-            this.FB_Quitter.Size = new System.Drawing.Size(26, 26);
+            this.FB_Quitter.Size = new System.Drawing.Size(36, 36);
             this.FB_Quitter.TabIndex = 4;
             this.FB_Quitter.Click += new System.EventHandler(this.FB_Quitter_Click);
             // 
@@ -120,10 +120,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
-            this.BackgroundImage = global::TPFinal.Properties.Resources.ICON_Connection_Smooth;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.BackgroundImage = global::TPFinal.Properties.Resources.Connection_Lumiere;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(376, 302);
+            this.ClientSize = new System.Drawing.Size(425, 574);
             this.Controls.Add(this.FB_Quitter);
             this.Controls.Add(this.FB_Connection);
             this.Controls.Add(this.TB_Password);
@@ -136,7 +136,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Connection";
             this.Text = "Form1";
-            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.Load += new System.EventHandler(this.Form_Connection_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_Connection_MouseDown);
             this.ResumeLayout(false);
