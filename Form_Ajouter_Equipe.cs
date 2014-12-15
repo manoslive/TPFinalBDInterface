@@ -25,7 +25,14 @@ namespace TPFinal
         }
         private void FormEquipe_Ajouter_Load(object sender, EventArgs e)
         {
-            FB_Ajouter.Visible = false;
+            if (this.Text == "Modification équipe")
+            {
+                FB_Ajouter.BackgroundImage = Properties.Resources.ICON_Equipe_Modifier;
+                FB_Ajouter.ImageClick = Properties.Resources.ICON_Equipe_Modifier_Click;
+                FB_Ajouter.ImageNeutral = Properties.Resources.ICON_Equipe_Modifier;
+                FB_Ajouter.ImageOver = Properties.Resources.ICON_Equipe_Modifier_Over;
+            }
+            FB_Ajouter.Enabled = false;
             TB_NomEquipe.Select();
             OracleCommand oraSelect = oracon.CreateCommand();
             oraSelect.CommandText = "SELECT NomDivision FROM Division";
@@ -136,9 +143,9 @@ namespace TPFinal
         private void CheckCasesVides()
         {
             if (TB_Ville.Text != "" && TB_NomEquipe.Text != "" && CB_Division.Text != "")
-                FB_Ajouter.Visible = true;
+                FB_Ajouter.Enabled = true;
             else
-                FB_Ajouter.Visible = false;
+                FB_Ajouter.Enabled = false;
         }
         private void TB_Ville_TextChanged(object sender, EventArgs e)
         {

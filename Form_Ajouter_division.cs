@@ -71,6 +71,14 @@ namespace TPFinal
         private void Form_Ajouter_Division_Load(object sender, EventArgs e)
         {
             TB_NomDivision.Select();
+            if(this.Text == "Modification de la division")
+            {
+                FB_Ajouter.BackgroundImage = Properties.Resources.ICON_Equipe_Modifier;
+                FB_Ajouter.ImageClick = Properties.Resources.ICON_Equipe_Modifier_Click;
+                FB_Ajouter.ImageNeutral = Properties.Resources.ICON_Equipe_Modifier;
+                FB_Ajouter.ImageOver = Properties.Resources.ICON_Equipe_Modifier_Over;
+                
+            }        
         }
 
         private void FB_Cancel_MouseEnter(object sender, EventArgs e)
@@ -88,6 +96,21 @@ namespace TPFinal
         private void PB_Fermer_Gif_MouseLeave(object sender, EventArgs e)
         {
             PB_Fermer_Gif.Visible = false;
+        }
+
+        private void CheckCases()
+        {
+            if (TB_NomDivision.Text != "")
+                FB_Ajouter.Enabled = true;
+            else
+                FB_Ajouter.Enabled = false;
+        }
+
+        private void TB_NomDivision_TextChanged(object sender, EventArgs e)
+        {
+            CheckCases();
+            if (!Regex.IsMatch(TB_NomDivision.Text, @"^[a-zA-Z]+$"))
+                TB_NomDivision.Text = "";
         }
     }
 }

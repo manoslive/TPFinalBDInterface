@@ -129,6 +129,8 @@ namespace TPFinal
         private void Modifier()
         {
             Form_Ajouter_Division Modifier = new Form_Ajouter_Division(oracon, connection);
+            Modifier.Text = "Modification de la division";
+            
             Modifier.nomDivision = DGV_Divisions.SelectedRows[0].Cells[0].Value.ToString();
             Modifier.dateCreation = DGV_Divisions.SelectedRows[0].Cells[1].Value.ToString();
             if (Modifier.ShowDialog() == System.Windows.Forms.DialogResult.OK)

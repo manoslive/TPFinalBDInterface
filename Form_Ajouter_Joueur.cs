@@ -149,6 +149,13 @@ namespace TPFinal
 
         private void Form_Ajouter_Joueur_Load(object sender, EventArgs e)
         {
+            if (this.Text == "Modification du joueur")
+            {
+                FB_Ajouter.BackgroundImage = Properties.Resources.ICON_Equipe_Modifier;
+                FB_Ajouter.ImageClick = Properties.Resources.ICON_Equipe_Modifier_Click;
+                FB_Ajouter.ImageNeutral = Properties.Resources.ICON_Equipe_Modifier;
+                FB_Ajouter.ImageOver = Properties.Resources.ICON_Equipe_Modifier_Over;
+            } 
             CB_EquipeJoueur.Items.Add(equipeDuJoueur);
             CB_EquipeJoueur.SelectedItem = 0;
             TB_NomJoueur.Select();

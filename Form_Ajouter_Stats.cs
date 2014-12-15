@@ -97,6 +97,13 @@ namespace TPFinal
 
         private void Form_Ajouter_Stats_Load(object sender, EventArgs e)
         {
+            if (this.Text == "Modification des Statistiques")
+            {
+                FB_Ajouter.BackgroundImage = Properties.Resources.ICON_Equipe_Modifier;
+                FB_Ajouter.ImageClick = Properties.Resources.ICON_Equipe_Modifier_Click;
+                FB_Ajouter.ImageNeutral = Properties.Resources.ICON_Equipe_Modifier;
+                FB_Ajouter.ImageOver = Properties.Resources.ICON_Equipe_Modifier_Over;
+            } 
             CB_NumeroMatch.Select();
             RemplirCBMatchPremiereFois();
             TB_NbButs.Enabled = false;
