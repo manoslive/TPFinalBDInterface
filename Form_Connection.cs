@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
 using System.Runtime.InteropServices;
+using System.Media;
+using System.Timers;
 
 namespace TPFinal
 {
@@ -16,6 +18,7 @@ namespace TPFinal
     {
         private OracleConnection oracon;
         private MaConnection maBelleConnection;
+        private static System.Timers.Timer monTimer;
         public Form_Connection(OracleConnection connection, MaConnection maBelleConnection) //recoit la connection en parametre
         {
             InitializeComponent();
@@ -54,6 +57,14 @@ namespace TPFinal
                 if (maBelleConnection.Connect(user, password, GetOracleConnection())) //envoi les info à la classe pour effectuer la connection
                 {
                     this.DialogResult = DialogResult.OK;
+                    monTimer = new System.Timers.Timer(2000);
+                    SoundPlayer simpleSound = new SoundPlayer(Properties.Resources.MontrealGoalHorn);
+                    monTimer.AutoReset = false;
+                    monTimer.Start();
+                    simpleSound.Play();
+                    while(monTimer.Enabled)
+                    {}
+                    simpleSound.Stop();
                     this.Close();
                 }
             }
@@ -62,7 +73,6 @@ namespace TPFinal
                 MessageBox.Show(ex.Message.ToString());
             }
         }
-
         private void Form_Connection_Load(object sender, EventArgs e)
         {
             FB_Connection.Select();
@@ -95,7 +105,7 @@ namespace TPFinal
         private void FB_Quitter_Click(object sender, EventArgs e)
         {
             oracon.Close();
-            this.Close();        
+            this.Close();
         }
     }
 }
