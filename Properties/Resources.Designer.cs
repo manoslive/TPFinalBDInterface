@@ -842,16 +842,6 @@ namespace TPFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap shaun_tête {
-            get {
-                object obj = ResourceManager.GetObject("shaun tête", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Top3_1st {
             get {
                 object obj = ResourceManager.GetObject("Top3_1st", resourceCulture);
