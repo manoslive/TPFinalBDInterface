@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ *  Shaun Cooper - Emmanuel Beloin
+ *  TP Final
+ *  Remise: 16 décembre 2014
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
